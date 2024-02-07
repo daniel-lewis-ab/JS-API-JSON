@@ -1,0 +1,163 @@
+[
+  {
+    "name": "Intl.RelativeTimeFormat()",
+    "description": "Creates a new Intl.RelativeTimeFormat object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat",
+    "parameters": [
+      {
+        "name": "locales",
+        "optional": true,
+        "description": "A string with a BCP 47 language tag or an Intl.Locale instance, or an array of such locale identifiers. For the general form and interpretation of the locales argument, see the parameter description on the Intl main page.\nThe following Unicode extension key is allowed:\n\nnu\n\nSee numberingSystem.\n\n\nThis key can also be set with options (as listed below). When both are set, the options property takes precedence."
+      },
+      {
+        "name": "nu",
+        "optional": false,
+        "description": "See numberingSystem."
+      },
+      {
+        "name": "options",
+        "optional": true,
+        "description": "An object containing the following properties, in the order they are retrieved (all of them are optional):\n\nlocaleMatcher\n\nThe locale matching algorithm to use. Possible values are \"lookup\" and \"best fit\"; the default is \"best fit\". For information about this option, see Locale identification and negotiation.\n\nnumberingSystem\n\nThe numbering system to use for number formatting, such as \"arab\", \"hans\", \"mathsans\", and so on. For a list of supported numbering system types, see Intl.Locale.prototype.getNumberingSystems(). This option can also be set through the nu Unicode extension key; if both are provided, this options property takes precedence.\n\nstyle\n\nThe style of the formatted relative time. Possible values are:\n\n\"long\" (default)\n\nE.g., \"in 1 month\"\n\n\"short\"\n\nE.g., \"in 1 mo.\"\n\n\"narrow\"\n\nE.g., \"in 1 mo.\". The narrow style could be similar to the short style for some locales.\n\n\n\nnumeric\n\nWhether to use numeric values in the output. Possible values are \"always\" and \"auto\"; the default is \"always\". When set to \"auto\", the output may use more idiomatic phrasing such as \"yesterday\" instead of \"1 day ago\"."
+      },
+      {
+        "name": "localeMatcher",
+        "optional": false,
+        "description": "The locale matching algorithm to use. Possible values are \"lookup\" and \"best fit\"; the default is \"best fit\". For information about this option, see Locale identification and negotiation."
+      },
+      {
+        "name": "numberingSystem",
+        "optional": false,
+        "description": "The numbering system to use for number formatting, such as \"arab\", \"hans\", \"mathsans\", and so on. For a list of supported numbering system types, see Intl.Locale.prototype.getNumberingSystems(). This option can also be set through the nu Unicode extension key; if both are provided, this options property takes precedence."
+      },
+      {
+        "name": "style",
+        "optional": false,
+        "description": "The style of the formatted relative time. Possible values are:\n\n\"long\" (default)\n\nE.g., \"in 1 month\"\n\n\"short\"\n\nE.g., \"in 1 mo.\"\n\n\"narrow\"\n\nE.g., \"in 1 mo.\". The narrow style could be similar to the short style for some locales."
+      },
+      {
+        "name": "\"long\"",
+        "optional": false,
+        "description": "E.g., \"in 1 month\""
+      },
+      {
+        "name": "\"short\"",
+        "optional": false,
+        "description": "E.g., \"in 1 mo.\""
+      },
+      {
+        "name": "\"narrow\"",
+        "optional": false,
+        "description": "E.g., \"in 1 mo.\". The narrow style could be similar to the short style for some locales."
+      },
+      {
+        "name": "numeric",
+        "optional": false,
+        "description": "Whether to use numeric values in the output. Possible values are \"always\" and \"auto\"; the default is \"always\". When set to \"auto\", the output may use more idiomatic phrasing such as \"yesterday\" instead of \"1 day ago\"."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if locales or options contain invalid values."
+      }
+    ]
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.supportedLocalesOf()",
+    "description": "Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/supportedLocalesOf",
+    "return_value": "An array of strings representing a subset of the given locale tags that are supported in relative time formatting without having to fall back to the runtime's default locale.",
+    "parameters": [
+      {
+        "name": "locales",
+        "optional": false,
+        "description": "A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the locales argument, see the parameter description on the Intl main page."
+      },
+      {
+        "name": "options",
+        "optional": true,
+        "description": "An object that may have the following property:\n\nlocaleMatcher\n\nThe locale matching algorithm to use. Possible values are \"lookup\" and \"best fit\"; the default is \"best fit\". For information about this option, see the Intl page."
+      },
+      {
+        "name": "localeMatcher",
+        "optional": false,
+        "description": "The locale matching algorithm to use. Possible values are \"lookup\" and \"best fit\"; the default is \"best fit\". For information about this option, see the Intl page."
+      }
+    ]
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.prototype.constructor",
+    "description": "The constructor function that created the instance object. For Intl.RelativeTimeFormat instances, the initial value is the Intl.RelativeTimeFormat constructor.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor",
+    "parameters": []
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.prototype[@@toStringTag]",
+    "description": "The initial value of the @@toStringTag property is the string \"Intl.RelativeTimeFormat\". This property is used in Object.prototype.toString().",
+    "link": "https://developer.mozilla.org/#intl.relativetimeformat.prototypetostringtag",
+    "parameters": []
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.prototype.format()",
+    "description": "Formats a value and a unit according to the locale and formatting options of the given Intl.RelativeTimeFormat object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format",
+    "return_value": "A string representing the given value and unit formatted according to the locale and formatting options of this Intl.RelativeTimeFormat object.",
+    "parameters": [
+      {
+        "name": "value",
+        "optional": false,
+        "description": "Numeric value to use in the internationalized relative time message."
+      },
+      {
+        "name": "unit",
+        "optional": false,
+        "description": "Unit to use in the relative time internationalized message. Possible values are: \"year\", \"quarter\", \"month\", \"week\", \"day\", \"hour\", \"minute\", \"second\". Plural forms are also permitted."
+      }
+    ]
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.prototype.formatToParts()",
+    "description": "Returns an Array of objects representing the relative time format in parts that can be used for custom locale-aware formatting.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/formatToParts",
+    "return_value": "An Array of objects containing the formatted relative time in parts.",
+    "parameters": [
+      {
+        "name": "value",
+        "optional": false,
+        "description": "Numeric value to use in the internationalized relative time message."
+      },
+      {
+        "name": "unit",
+        "optional": false,
+        "description": "Unit to use in the relative time internationalized message. Possible values are: \"year\", \"quarter\", \"month\", \"week\", \"day\", \"hour\", \"minute\", \"second\". Plural forms are also permitted."
+      }
+    ]
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.prototype.resolvedOptions()",
+    "description": "Returns a new object with properties reflecting the locale and formatting options computed during initialization of the object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions",
+    "return_value": "A new object with properties reflecting the locale and number formatting options computed during the initialization of the given Intl.RelativeTimeFormat object.",
+    "parameters": [
+      {
+        "name": "locale",
+        "optional": false,
+        "description": "The BCP 47 language tag for the locale actually used. If any Unicode extension values were requested in the input BCP 47 language tag that led to this locale, the key-value pairs that were requested and are supported for this locale are included in locale."
+      },
+      {
+        "name": "style",
+        "optional": false,
+        "description": "The length of the internationalized message. Possible values are:\n\n\"long\" (default, e.g., in 1 month)\n\"short\" (e.g., in 1 mo.),\nor \"narrow\" (e.g., in 1 mo.). The narrow style could be similar to the short style for some locales."
+      },
+      {
+        "name": "numeric",
+        "optional": false,
+        "description": "The format of output message. Possible values are:\n\n\"always\" (default, e.g., 1 day ago),\nor \"auto\" (e.g., yesterday). The \"auto\" value allows to not always have to use numeric values in the output."
+      },
+      {
+        "name": "numberingSystem",
+        "optional": false,
+        "description": "The value requested using the Unicode extension key \"nu\" or filled in as a default."
+      }
+    ]
+  }
+]

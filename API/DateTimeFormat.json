@@ -1,0 +1,418 @@
+[
+  {
+    "name": "Intl.DateTimeFormat()",
+    "description": "Creates a new Intl.DateTimeFormat object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat",
+    "return_value": "A new Intl.DateTimeFormat object.\n\nNote: The text below describes behavior that is marked by the specification as \"optional\". It may not work in all environments. Check the browser compatibility table.\n\nNormally, Intl.DateTimeFormat() can be called with or without new, and a new Intl.DateTimeFormat instance is returned in both cases. However, if the this value is an object that is instanceof Intl.DateTimeFormat (doesn't necessarily mean it's created via new Intl.DateTimeFormat; just that it has Intl.DateTimeFormat.prototype in its prototype chain), then the value of this is returned instead, with the newly created Intl.DateTimeFormat object hidden in a [Symbol(IntlLegacyConstructedSymbol)] property (a unique symbol that's reused between instances).\njsconst formatter = Intl.DateTimeFormat.call(\n  { __proto__: Intl.DateTimeFormat.prototype },\n  \"en-US\",\n  { dateStyle: \"full\" },\n);\nconsole.log(Object.getOwnPropertyDescriptors(formatter));\n// {\n//   [Symbol(IntlLegacyConstructedSymbol)]: {\n//     value: DateTimeFormat [Intl.DateTimeFormat] {},\n//     writable: false,\n//     enumerable: false,\n//     configurable: false\n//   }\n// }\n\nNote that there's only one actual Intl.DateTimeFormat instance here: the one hidden in [Symbol(IntlLegacyConstructedSymbol)]. Calling the format() and resolvedOptions() methods on formatter would correctly use the options stored in that instance, but calling all other methods (e.g. formatRange()) would fail: \"TypeError: formatRange method called on incompatible Object\", because those methods don't consult the hidden instance's options.\nThis behavior, called ChainDateTimeFormat, does not happen when Intl.DateTimeFormat() is called without new but with this set to anything else that's not an instanceof Intl.DateTimeFormat. If you call it directly as Intl.DateTimeFormat(), the this value is Intl, and a new Intl.DateTimeFormat instance is created normally.",
+    "parameters": [
+      {
+        "name": "locales",
+        "optional": true,
+        "description": "A string with a BCP 47 language tag or an Intl.Locale instance, or an array of such locale identifiers. For the general form and interpretation of the locales argument, see the parameter description on the Intl main page.\nThe following Unicode extension key is allowed:\n\nnu\n\nSee numberingSystem.\n\nca\n\nSee calendar.\n\nhc\n\nSee hourCycle.\n\n\nThese keys can also be set with options (as listed below). When both are set, the options property takes precedence."
+      },
+      {
+        "name": "nu",
+        "optional": false,
+        "description": "See numberingSystem."
+      },
+      {
+        "name": "ca",
+        "optional": false,
+        "description": "See calendar."
+      },
+      {
+        "name": "hc",
+        "optional": false,
+        "description": "See hourCycle."
+      },
+      {
+        "name": "options",
+        "optional": true,
+        "description": "An object. For ease of reading, the property list is broken into sections based on their purposes, including locale options, date-time component options, and style shortcuts."
+      },
+      {
+        "name": "localeMatcher",
+        "optional": false,
+        "description": "The locale matching algorithm to use. Possible values are \"lookup\" and \"best fit\"; the default is \"best fit\". For information about this option, see Locale identification and negotiation."
+      },
+      {
+        "name": "calendar",
+        "optional": false,
+        "description": "The calendar to use, such as \"chinese\", \"gregory\", \"persian\", and so on. For a list of supported calendar types, see Intl.Locale.prototype.getCalendars(). This option can also be set through the ca Unicode extension key; if both are provided, this options property takes precedence."
+      },
+      {
+        "name": "numberingSystem",
+        "optional": false,
+        "description": "The numbering system to use for number formatting, such as \"arab\", \"hans\", \"mathsans\", and so on. For a list of supported numbering system types, see Intl.Locale.prototype.getNumberingSystems(). This option can also be set through the nu Unicode extension key; if both are provided, this options property takes precedence."
+      },
+      {
+        "name": "hour12",
+        "optional": false,
+        "description": "Whether to use 12-hour time (as opposed to 24-hour time). Possible values are true and false; the default is locale dependent. This option overrides the hc locale extension tag and/or the hourCycle option in case both are present. It sets hourCycle to \"h11\" or \"h12\" when true, and \"h23\" or \"h24\" when false, the exact choice depending on the locale \u00e2\u0080\u0094 for example, if the locale most prefers \"h23\" but hour12 is true, then the final hour cycle is \"h11\"."
+      },
+      {
+        "name": "hourCycle",
+        "optional": false,
+        "description": "The hour cycle to use. Possible values are \"h11\", \"h12\", \"h23\", and \"h24\". This option can also be set through the hc Unicode extension key; if both are provided, this options property takes precedence."
+      },
+      {
+        "name": "timeZone",
+        "optional": false,
+        "description": "The time zone to use. The only value implementations must recognize is \"UTC\"; the default is the runtime's default time zone. Implementations may also recognize the time zone names of the IANA time zone database, such as \"Asia/Shanghai\", \"Asia/Kolkata\", \"America/New_York\"."
+      },
+      {
+        "name": "weekday",
+        "optional": false,
+        "description": "The representation of the weekday. Possible values are:\n\n\"long\"\n\nE.g., Thursday\n\n\"short\"\n\nE.g., Thu\n\n\"narrow\"\n\nE.g., T. Two weekdays may have the same narrow style for some locales (e.g. Tuesday's narrow style is also T)."
+      },
+      {
+        "name": "\"long\"",
+        "optional": false,
+        "description": "E.g., Thursday"
+      },
+      {
+        "name": "\"short\"",
+        "optional": false,
+        "description": "E.g., Thu"
+      },
+      {
+        "name": "\"narrow\"",
+        "optional": false,
+        "description": "E.g., T. Two weekdays may have the same narrow style for some locales (e.g. Tuesday's narrow style is also T)."
+      },
+      {
+        "name": "era",
+        "optional": false,
+        "description": "The representation of the era. Possible values are:\n\n\"long\"\n\nE.g., Anno Domini\n\n\"short\"\n\nE.g., AD\n\n\"narrow\"\n\nE.g., A"
+      },
+      {
+        "name": "\"long\"",
+        "optional": false,
+        "description": "E.g., Anno Domini"
+      },
+      {
+        "name": "\"short\"",
+        "optional": false,
+        "description": "E.g., AD"
+      },
+      {
+        "name": "\"narrow\"",
+        "optional": false,
+        "description": "E.g., A"
+      },
+      {
+        "name": "year",
+        "optional": false,
+        "description": "The representation of the year. Possible values are \"numeric\" and \"2-digit\"."
+      },
+      {
+        "name": "month",
+        "optional": false,
+        "description": "The representation of the month. Possible values are:\n\n\"numeric\"\n\nE.g., 3\n\n\"2-digit\"\n\nE.g., 03\n\n\"long\"\n\nE.g., March\n\n\"short\"\n\nE.g., Mar\n\n\"narrow\"\n\nE.g., M). Two months may have the same narrow style for some locales (e.g. May's narrow style is also M)."
+      },
+      {
+        "name": "\"numeric\"",
+        "optional": false,
+        "description": "E.g., 3"
+      },
+      {
+        "name": "\"2-digit\"",
+        "optional": false,
+        "description": "E.g., 03"
+      },
+      {
+        "name": "\"long\"",
+        "optional": false,
+        "description": "E.g., March"
+      },
+      {
+        "name": "\"short\"",
+        "optional": false,
+        "description": "E.g., Mar"
+      },
+      {
+        "name": "\"narrow\"",
+        "optional": false,
+        "description": "E.g., M). Two months may have the same narrow style for some locales (e.g. May's narrow style is also M)."
+      },
+      {
+        "name": "day",
+        "optional": false,
+        "description": "The representation of the day. Possible values are \"numeric\" and \"2-digit\"."
+      },
+      {
+        "name": "dayPeriod",
+        "optional": false,
+        "description": "The formatting style used for day periods like \"in the morning\", \"am\", \"noon\", \"n\" etc. Possible values are\n      \"narrow\", \"short\", and \"long\".\n    \n\nNote: This option only has an effect if a 12-hour clock (hourCycle: \"h12\" or hourCycle: \"h11\") is used. Many locales use the same string irrespective of the width specified."
+      },
+      {
+        "name": "hour",
+        "optional": false,
+        "description": "The representation of the hour. Possible values are \"numeric\" and \"2-digit\"."
+      },
+      {
+        "name": "minute",
+        "optional": false,
+        "description": "The representation of the minute. Possible values are \"numeric\" and \"2-digit\"."
+      },
+      {
+        "name": "second",
+        "optional": false,
+        "description": "The representation of the second. Possible values are \"numeric\" and \"2-digit\"."
+      },
+      {
+        "name": "fractionalSecondDigits",
+        "optional": false,
+        "description": "The number of digits used to represent fractions of a second (any additional digits are truncated). Possible values are from 1 to 3."
+      },
+      {
+        "name": "timeZoneName",
+        "optional": false,
+        "description": "The localized representation of the time zone name. Possible values are:\n\n\"long\"\n\nLong localized form (e.g., Pacific Standard Time, Nordamerikanische Westk\u00c3\u00bcsten-Normalzeit)\n\n\"short\"\n\nShort localized form (e.g.: PST, GMT-8)\n\n\"shortOffset\"\n\nShort localized GMT format (e.g., GMT-8)\n\n\"longOffset\"\n\nLong localized GMT format (e.g., GMT-08:00)\n\n\"shortGeneric\"\n\nShort generic non-location format (e.g.: PT, Los Angeles Zeit).\n\n\"longGeneric\"\n\nLong generic non-location format (e.g.: Pacific Time, Nordamerikanische Westk\u00c3\u00bcstenzeit)\n\n\n\nNote: Timezone display may fall back to another format if a required string is unavailable. For example, the non-location formats should display the timezone without a specific country/city location like \"Pacific Time\", but may fall back to a timezone like \"Los Angeles Time\"."
+      },
+      {
+        "name": "\"long\"",
+        "optional": false,
+        "description": "Long localized form (e.g., Pacific Standard Time, Nordamerikanische Westk\u00c3\u00bcsten-Normalzeit)"
+      },
+      {
+        "name": "\"short\"",
+        "optional": false,
+        "description": "Short localized form (e.g.: PST, GMT-8)"
+      },
+      {
+        "name": "\"shortOffset\"",
+        "optional": false,
+        "description": "Short localized GMT format (e.g., GMT-8)"
+      },
+      {
+        "name": "\"longOffset\"",
+        "optional": false,
+        "description": "Long localized GMT format (e.g., GMT-08:00)"
+      },
+      {
+        "name": "\"shortGeneric\"",
+        "optional": false,
+        "description": "Short generic non-location format (e.g.: PT, Los Angeles Zeit)."
+      },
+      {
+        "name": "\"longGeneric\"",
+        "optional": false,
+        "description": "Long generic non-location format (e.g.: Pacific Time, Nordamerikanische Westk\u00c3\u00bcstenzeit)"
+      },
+      {
+        "name": "formatMatcher",
+        "optional": false,
+        "description": "The format matching algorithm to use. Possible values are \"basic\" and \"best fit\"; the default is \"best fit\". Implementations are required to support displaying at least the following subsets of date-time components:\n\nweekday, year, month, day, hour, minute, second\nweekday, year, month, day\nyear, month, day\nyear, month\nmonth, day\nhour, minute, second\nhour, minute\n\nImplementations may support other subsets, and requests will be negotiated against all available subset-representation combinations to find the best match. The algorithm for \"best fit\" is implementation-defined, and \"basic\" is defined by the spec. This option is only used when both dateStyle and timeStyle are undefined (so that each date-time component's format is individually customizable)."
+      },
+      {
+        "name": "dateStyle",
+        "optional": false,
+        "description": "The date formatting style to use when calling format(). Possible values are \"full\", \"long\", \"medium\", and \"short\"."
+      },
+      {
+        "name": "timeStyle",
+        "optional": false,
+        "description": "The time formatting style to use when calling format(). Possible values are \"full\", \"long\", \"medium\", and \"short\"."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if locales or options contain invalid values."
+      }
+    ]
+  },
+  {
+    "name": "Intl.DateTimeFormat.supportedLocalesOf()",
+    "description": "Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/supportedLocalesOf",
+    "return_value": "An array of strings representing a subset of the given locale tags that are supported in date and time formatting without having to fall back to the runtime's default locale.",
+    "parameters": [
+      {
+        "name": "locales",
+        "optional": false,
+        "description": "A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the locales argument, see the parameter description on the Intl main page."
+      },
+      {
+        "name": "options",
+        "optional": true,
+        "description": "An object that may have the following property:\n\nlocaleMatcher\n\nThe locale matching algorithm to use. Possible values are \"lookup\" and \"best fit\"; the default is \"best fit\". For information about this option, see the Intl page."
+      },
+      {
+        "name": "localeMatcher",
+        "optional": false,
+        "description": "The locale matching algorithm to use. Possible values are \"lookup\" and \"best fit\"; the default is \"best fit\". For information about this option, see the Intl page."
+      }
+    ]
+  },
+  {
+    "name": "Intl.DateTimeFormat.prototype.constructor",
+    "description": "The constructor function that created the instance object. For Intl.DateTimeFormat instances, the initial value is the Intl.DateTimeFormat constructor.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor",
+    "parameters": []
+  },
+  {
+    "name": "Intl.DateTimeFormat.prototype[@@toStringTag]",
+    "description": "The initial value of the @@toStringTag property is the string \"Intl.DateTimeFormat\". This property is used in Object.prototype.toString().",
+    "link": "https://developer.mozilla.org/#intl.datetimeformat.prototypetostringtag",
+    "parameters": []
+  },
+  {
+    "name": "Intl.DateTimeFormat.prototype.format()",
+    "description": "Getter function that formats a date according to the locale and formatting options of this DateTimeFormat object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format",
+    "return_value": "A string representing the given date formatted according to the locale and formatting options of this Intl.DateTimeFormat object.",
+    "parameters": [
+      {
+        "name": "date",
+        "optional": false,
+        "description": "The date to format."
+      }
+    ]
+  },
+  {
+    "name": "Intl.DateTimeFormat.prototype.formatRange()",
+    "description": "This method receives two Dates and formats the date range in the most concise way based on the locale and options provided when instantiating DateTimeFormat.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRange",
+    "return_value": "A string representing the given date range formatted according to the locale and formatting options of this Intl.DateTimeFormat object.",
+    "parameters": [
+      {
+        "name": "startDate",
+        "optional": false,
+        "description": "A Date object representing the start of the date range."
+      },
+      {
+        "name": "endDate",
+        "optional": false,
+        "description": "A Date object representing the end of the date range."
+      }
+    ]
+  },
+  {
+    "name": "Intl.DateTimeFormat.prototype.formatRangeToParts()",
+    "description": "This method receives two Dates and returns an Array of objects containing the locale-specific tokens representing each part of the formatted date range.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRangeToParts",
+    "parameters": []
+  },
+  {
+    "name": "Intl.DateTimeFormat.prototype.formatToParts()",
+    "description": "Returns an Array of objects representing the date string in parts that can be used for custom locale-aware formatting.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatToParts",
+    "return_value": "An Array of objects containing the formatted date in parts.",
+    "parameters": [
+      {
+        "name": "date",
+        "optional": true,
+        "description": "The date to format."
+      },
+      {
+        "name": "day",
+        "optional": false,
+        "description": "The string used for the day, for example \"17\"."
+      },
+      {
+        "name": "dayPeriod",
+        "optional": false,
+        "description": "The string used for the day period, for example, \"AM\",\n      \"PM\", \"in the morning\", or \"noon\""
+      },
+      {
+        "name": "era",
+        "optional": false,
+        "description": "The string used for the era, for example \"BC\" or \"AD\"."
+      },
+      {
+        "name": "fractionalSecond",
+        "optional": false,
+        "description": "The string used for the fractional seconds, for example \"0\" or \"00\" or \"000\"."
+      },
+      {
+        "name": "hour",
+        "optional": false,
+        "description": "The string used for the hour, for example \"3\" or \"03\"."
+      },
+      {
+        "name": "literal",
+        "optional": false,
+        "description": "The string used for separating date and time values, for example \"/\",\n      \",\", \"o'clock\", \"de\", etc."
+      },
+      {
+        "name": "minute",
+        "optional": false,
+        "description": "The string used for the minute, for example \"00\"."
+      },
+      {
+        "name": "month",
+        "optional": false,
+        "description": "The string used for the month, for example \"12\"."
+      },
+      {
+        "name": "relatedYear",
+        "optional": false,
+        "description": "The string used for the related 4-digit Gregorian year, in the event that the\n      calendar's representation would be a yearName instead of a year, for example \"2019\"."
+      },
+      {
+        "name": "second",
+        "optional": false,
+        "description": "The string used for the second, for example \"07\" or \"42\"."
+      },
+      {
+        "name": "timeZone",
+        "optional": false,
+        "description": "The string used for the name of the time zone, for example \"UTC\". Default is the timezone of the current environment."
+      },
+      {
+        "name": "weekday",
+        "optional": false,
+        "description": "The string used for the weekday, for example \"M\", \"Monday\", or \"Montag\"."
+      },
+      {
+        "name": "year",
+        "optional": false,
+        "description": "The string used for the year, for example \"2012\" or \"96\"."
+      },
+      {
+        "name": "yearName",
+        "optional": false,
+        "description": "The string used for the yearName in relevant contexts, for example \"geng-zi\""
+      }
+    ]
+  },
+  {
+    "name": "Intl.DateTimeFormat.prototype.resolvedOptions()",
+    "description": "Returns a new object with properties reflecting the locale and formatting options computed during initialization of the object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions",
+    "return_value": "A new object with properties reflecting the locale and date and time formatting options\n  computed during the initialization of the given Intl.DateTimeFormat object.",
+    "parameters": [
+      {
+        "name": "locale",
+        "optional": false,
+        "description": "The BCP 47 language tag for the locale actually used. If any Unicode extension\n      values were requested in the input BCP 47 language tag that led to this locale,\n      the key-value pairs that were requested and are supported for this locale are\n      included in locale."
+      },
+      {
+        "name": "calendar",
+        "optional": false,
+        "description": "E.g. \"gregory\""
+      },
+      {
+        "name": "numberingSystem",
+        "optional": false,
+        "description": "The values requested using the Unicode extension keys \"ca\" and\n      \"nu\" or filled in as default values."
+      },
+      {
+        "name": "timeZone",
+        "optional": false,
+        "description": "The value provided for this property in the options argument;\n      defaults to the runtime's default time zone. Should never be undefined."
+      },
+      {
+        "name": "hour12",
+        "optional": false,
+        "description": "The value provided for this property in the options argument or\n      filled in as a default."
+      },
+      {
+        "name": "weekday",
+        "optional": false,
+        "description": "The values resulting from format matching between the corresponding properties in\n      the options argument and the available combinations and\n      representations for date-time formatting in the selected locale. Some of these\n      properties may not be present, indicating that the corresponding components will\n      not be represented in formatted output."
+      }
+    ]
+  }
+]

@@ -1,0 +1,46 @@
+[
+  {
+    "name": "TypeError()",
+    "description": "Creates a new TypeError object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError/TypeError",
+    "parameters": [
+      {
+        "name": "message",
+        "optional": true,
+        "description": "Human-readable description of the error"
+      },
+      {
+        "name": "options",
+        "optional": true,
+        "description": "An object that has the following properties:\n\ncause Optional\n\n\n          A property indicating the specific cause of the error.\n          When catching and re-throwing an error with a more-specific or useful error message, this property can be used to pass the original error."
+      },
+      {
+        "name": "cause",
+        "optional": true,
+        "description": "A property indicating the specific cause of the error.\n          When catching and re-throwing an error with a more-specific or useful error message, this property can be used to pass the original error."
+      },
+      {
+        "name": "fileName",
+        "optional": true,
+        "description": "The name of the file containing the code that caused the exception"
+      },
+      {
+        "name": "lineNumber",
+        "optional": true,
+        "description": "The line number of the code that caused the exception"
+      }
+    ]
+  },
+  {
+    "name": "TypeError.prototype.constructor",
+    "description": "The constructor function that created the instance object. For TypeError instances, the initial value is the TypeError constructor.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor",
+    "parameters": []
+  },
+  {
+    "name": "TypeError.prototype.name",
+    "description": "Represents the name for the type of error. For TypeError.prototype.name, the initial value is \"TypeError\".",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/name",
+    "parameters": []
+  }
+]

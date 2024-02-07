@@ -1,0 +1,276 @@
+[
+  {
+    "name": "Promise.all()",
+    "description": "Fulfills when all of the promises fulfill; rejects when any of the promises rejects.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all",
+    "return_value": "A Promise that is:\n\nAlready fulfilled, if the iterable passed is empty.\nAsynchronously fulfilled, when all the promises in the given iterable fulfill. The fulfillment value is an array of fulfillment values, in the order of the promises passed, regardless of completion order. If the iterable passed is non-empty but contains no pending promises, the returned promise is still asynchronously (instead of synchronously) fulfilled.\nAsynchronously rejected, when any of the promises in the given iterable rejects. The rejection reason is the rejection reason of the first promise that was rejected.",
+    "parameters": [
+      {
+        "name": "iterable",
+        "optional": false,
+        "description": "An iterable (such as an Array) of promises."
+      }
+    ]
+  },
+  {
+    "name": "Promise.allSettled()",
+    "description": "Fulfills when all promises settle.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled",
+    "return_value": "A Promise that is:\n\nAlready fulfilled, if the iterable passed is empty.\nAsynchronously fulfilled, when all promises in the given iterable have settled (either fulfilled or rejected). The fulfillment value is an array of objects, each describing the outcome of one promise in the iterable, in the order of the promises passed, regardless of completion order. Each outcome object has the following properties:\n    \nstatus\n\nA string, either \"fulfilled\" or \"rejected\", indicating the eventual state of the promise.\n\nvalue\n\nOnly present if status is \"fulfilled\". The value that the promise was fulfilled with.\n\nreason\n\nOnly present if status is \"rejected\". The reason that the promise was rejected with.\n\nIf the iterable passed is non-empty but contains no pending promises, the returned promise is still asynchronously (instead of synchronously) fulfilled.",
+    "parameters": [
+      {
+        "name": "iterable",
+        "optional": false,
+        "description": "An iterable (such as an Array) of promises."
+      },
+      {
+        "name": "status",
+        "optional": false,
+        "description": "A string, either \"fulfilled\" or \"rejected\", indicating the eventual state of the promise."
+      },
+      {
+        "name": "value",
+        "optional": false,
+        "description": "Only present if status is \"fulfilled\". The value that the promise was fulfilled with."
+      },
+      {
+        "name": "reason",
+        "optional": false,
+        "description": "Only present if status is \"rejected\". The reason that the promise was rejected with."
+      }
+    ]
+  },
+  {
+    "name": "Promise.any()",
+    "description": "Fulfills when any of the promises fulfills; rejects when all of the promises reject.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/any",
+    "return_value": "A Promise that is:\n\nAlready rejected, if the iterable passed is empty.\nAsynchronously fulfilled, when any of the promises in the given iterable fulfills. The fulfillment value is the fulfillment value of the first promise that was fulfilled.\nAsynchronously rejected, when all of the promises in the given iterable reject. The rejection reason is an AggregateError containing an array of rejection reasons in its errors property. The errors are in the order of the promises passed, regardless of completion order. If the iterable passed is non-empty but contains no pending promises, the returned promise is still asynchronously (instead of synchronously) rejected.",
+    "parameters": [
+      {
+        "name": "iterable",
+        "optional": false,
+        "description": "An iterable (such as an Array) of promises."
+      }
+    ]
+  },
+  {
+    "name": "Promise.race()",
+    "description": "Settles when any of the promises settles. In other words, fulfills when any of the promises fulfills; rejects when any of the promises rejects.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/race",
+    "return_value": "A Promise that asynchronously settles with the eventual state of the first promise in the iterable to settle. In other words, it fulfills if the first promise to settle is fulfilled, and rejects if the first promise to settle is rejected. The returned promise remains pending forever if the iterable passed is empty. If the iterable passed is non-empty but contains no pending promises, the returned promise is still asynchronously (instead of synchronously) settled.",
+    "parameters": [
+      {
+        "name": "iterable",
+        "optional": false,
+        "description": "An iterable (such as an Array) of promises."
+      }
+    ]
+  },
+  {
+    "name": "Promise()",
+    "description": "Creates a new Promise object. The constructor is primarily used to wrap functions that do not already support promises.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise",
+    "return_value": "When called via new, the Promise constructor returns a promise object. The promise object will become resolved when either of the functions resolveFunc or rejectFunc are invoked. Note that if you call resolveFunc or rejectFunc and pass another Promise object as an argument, it can be said to be \"resolved\", but still not \"settled\". See the Promise description for more explanation.",
+    "parameters": [
+      {
+        "name": "executor",
+        "optional": false,
+        "description": "A function to be executed by the constructor. It receives two functions as parameters: resolveFunc and rejectFunc. Any errors thrown in the executor will cause the promise to be rejected, and the return value will be neglected. The semantics of executor are detailed below."
+      }
+    ]
+  },
+  {
+    "name": "Promise[@@species]",
+    "description": "Returns the constructor used to construct return values from promise methods.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/@@species",
+    "return_value": "The value of the constructor (this) on which get @@species was called. The return value is used to construct return values from promise chaining methods that create new promises.",
+    "parameters": []
+  },
+  {
+    "name": "Promise.all()",
+    "description": "Takes an iterable of promises as input and returns a single Promise. This returned promise fulfills when all of the input's promises fulfill (including when an empty iterable is passed), with an array of the fulfillment values. It rejects when any of the input's promises reject, with this first rejection reason.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all",
+    "return_value": "A Promise that is:\n\nAlready fulfilled, if the iterable passed is empty.\nAsynchronously fulfilled, when all the promises in the given iterable fulfill. The fulfillment value is an array of fulfillment values, in the order of the promises passed, regardless of completion order. If the iterable passed is non-empty but contains no pending promises, the returned promise is still asynchronously (instead of synchronously) fulfilled.\nAsynchronously rejected, when any of the promises in the given iterable rejects. The rejection reason is the rejection reason of the first promise that was rejected.",
+    "parameters": [
+      {
+        "name": "iterable",
+        "optional": false,
+        "description": "An iterable (such as an Array) of promises."
+      }
+    ]
+  },
+  {
+    "name": "Promise.allSettled()",
+    "description": "Takes an iterable of promises as input and returns a single Promise. This returned promise fulfills when all of the input's promises settle (including when an empty iterable is passed), with an array of objects that describe the outcome of each promise.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled",
+    "return_value": "A Promise that is:\n\nAlready fulfilled, if the iterable passed is empty.\nAsynchronously fulfilled, when all promises in the given iterable have settled (either fulfilled or rejected). The fulfillment value is an array of objects, each describing the outcome of one promise in the iterable, in the order of the promises passed, regardless of completion order. Each outcome object has the following properties:\n    \nstatus\n\nA string, either \"fulfilled\" or \"rejected\", indicating the eventual state of the promise.\n\nvalue\n\nOnly present if status is \"fulfilled\". The value that the promise was fulfilled with.\n\nreason\n\nOnly present if status is \"rejected\". The reason that the promise was rejected with.\n\nIf the iterable passed is non-empty but contains no pending promises, the returned promise is still asynchronously (instead of synchronously) fulfilled.",
+    "parameters": [
+      {
+        "name": "iterable",
+        "optional": false,
+        "description": "An iterable (such as an Array) of promises."
+      },
+      {
+        "name": "status",
+        "optional": false,
+        "description": "A string, either \"fulfilled\" or \"rejected\", indicating the eventual state of the promise."
+      },
+      {
+        "name": "value",
+        "optional": false,
+        "description": "Only present if status is \"fulfilled\". The value that the promise was fulfilled with."
+      },
+      {
+        "name": "reason",
+        "optional": false,
+        "description": "Only present if status is \"rejected\". The reason that the promise was rejected with."
+      }
+    ]
+  },
+  {
+    "name": "Promise.any()",
+    "description": "Takes an iterable of promises as input and returns a single Promise. This returned promise fulfills when any of the input's promises fulfill, with this first fulfillment value. It rejects when all of the input's promises reject (including when an empty iterable is passed), with an AggregateError containing an array of rejection reasons.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/any",
+    "return_value": "A Promise that is:\n\nAlready rejected, if the iterable passed is empty.\nAsynchronously fulfilled, when any of the promises in the given iterable fulfills. The fulfillment value is the fulfillment value of the first promise that was fulfilled.\nAsynchronously rejected, when all of the promises in the given iterable reject. The rejection reason is an AggregateError containing an array of rejection reasons in its errors property. The errors are in the order of the promises passed, regardless of completion order. If the iterable passed is non-empty but contains no pending promises, the returned promise is still asynchronously (instead of synchronously) rejected.",
+    "parameters": [
+      {
+        "name": "iterable",
+        "optional": false,
+        "description": "An iterable (such as an Array) of promises."
+      }
+    ]
+  },
+  {
+    "name": "Promise.race()",
+    "description": "Takes an iterable of promises as input and returns a single Promise. This returned promise settles with the eventual state of the first promise that settles.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/race",
+    "return_value": "A Promise that asynchronously settles with the eventual state of the first promise in the iterable to settle. In other words, it fulfills if the first promise to settle is fulfilled, and rejects if the first promise to settle is rejected. The returned promise remains pending forever if the iterable passed is empty. If the iterable passed is non-empty but contains no pending promises, the returned promise is still asynchronously (instead of synchronously) settled.",
+    "parameters": [
+      {
+        "name": "iterable",
+        "optional": false,
+        "description": "An iterable (such as an Array) of promises."
+      }
+    ]
+  },
+  {
+    "name": "Promise.reject()",
+    "description": "Returns a new Promise object that is rejected with the given reason.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject",
+    "return_value": "A Promise that is rejected with the given reason.",
+    "parameters": [
+      {
+        "name": "reason",
+        "optional": false,
+        "description": "Reason why this Promise rejected."
+      }
+    ]
+  },
+  {
+    "name": "Promise.resolve()",
+    "description": "Returns a Promise object that is resolved with the given value. If the value is a thenable (i.e. has a then method), the returned promise will \"follow\" that thenable, adopting its eventual state; otherwise, the returned promise will be fulfilled with the value.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve",
+    "return_value": "A Promise that is resolved with the given value, or the promise passed as value, if the value was a promise object. A resolved promise can be in any of the states \u00e2\u0080\u0094 fulfilled, rejected, or pending. For example, resolving a rejected promise will still result in a rejected promise.",
+    "parameters": [
+      {
+        "name": "value",
+        "optional": false,
+        "description": "Argument to be resolved by this Promise. Can also be a Promise or a thenable to resolve."
+      }
+    ]
+  },
+  {
+    "name": "Promise.withResolvers()",
+    "description": "Returns an object containing a new Promise object and two functions to resolve or reject it, corresponding to the two parameters passed to the executor of the Promise() constructor.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/withResolvers",
+    "return_value": "A plain object containing the following properties:\n\npromise\n\nA Promise object.\n\nresolve\n\nA function that resolves the promise. For its semantics, see the Promise() constructor reference.\n\nreject\n\nA function that rejects the promise. For its semantics, see the Promise() constructor reference.",
+    "parameters": [
+      {
+        "name": "promise",
+        "optional": false,
+        "description": "A Promise object."
+      },
+      {
+        "name": "resolve",
+        "optional": false,
+        "description": "A function that resolves the promise. For its semantics, see the Promise() constructor reference."
+      },
+      {
+        "name": "reject",
+        "optional": false,
+        "description": "A function that rejects the promise. For its semantics, see the Promise() constructor reference."
+      }
+    ]
+  },
+  {
+    "name": "Promise.prototype.constructor",
+    "description": "The constructor function that created the instance object. For Promise instances, the initial value is the Promise constructor.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor",
+    "parameters": []
+  },
+  {
+    "name": "Promise.prototype[@@toStringTag]",
+    "description": "The initial value of the @@toStringTag property is the string \"Promise\". This property is used in Object.prototype.toString().",
+    "link": "https://developer.mozilla.org/#promise.prototypetostringtag",
+    "parameters": []
+  },
+  {
+    "name": "Promise.prototype.catch()",
+    "description": "Appends a rejection handler callback to the promise, and returns a new promise resolving to the return value of the callback if it is called, or to its original fulfillment value if the promise is instead fulfilled.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch",
+    "return_value": "Returns a new Promise. This new promise is always pending when returned, regardless of the current promise's status. If onRejected is called, the returned promise will resolve based on the return value of this call, or reject with the thrown error from this call. If the current promise fulfills, onRejected is not called and the returned promise fulfills to the same value.",
+    "parameters": [
+      {
+        "name": "onRejected",
+        "optional": false,
+        "description": "A function to asynchronously execute when this promise becomes rejected. Its return value becomes the fulfillment value of the promise returned by catch(). The function is called with the following arguments:\n\nreason\n\nThe value that the promise was rejected with."
+      },
+      {
+        "name": "reason",
+        "optional": false,
+        "description": "The value that the promise was rejected with."
+      }
+    ]
+  },
+  {
+    "name": "Promise.prototype.finally()",
+    "description": "Appends a handler to the promise, and returns a new promise that is resolved when the original promise is resolved. The handler is called when the promise is settled, whether fulfilled or rejected.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/finally",
+    "return_value": "Returns an equivalent Promise. If the handler throws an error or returns a rejected promise, the promise returned by finally() will be rejected with that value instead. Otherwise, the return value of the handler does not affect the state of the original promise.",
+    "parameters": [
+      {
+        "name": "onFinally",
+        "optional": false,
+        "description": "A function to asynchronously execute when this promise becomes settled. Its return value is ignored unless the returned value is a rejected promise. The function is called with no arguments."
+      }
+    ]
+  },
+  {
+    "name": "Promise.prototype.then()",
+    "description": "Appends fulfillment and rejection handlers to the promise, and returns a new promise resolving to the return value of the called handler, or to its original settled value if the promise was not handled (i.e. if the relevant handler onFulfilled or onRejected is not a function).",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then",
+    "return_value": "Returns a new Promise immediately. This new promise is always pending when returned, regardless of the current promise's status.\nOne of the onFulfilled and onRejected handlers will be executed to handle the current promise's fulfillment or rejection. The call always happens asynchronously, even when the current promise is already settled. The behavior of the returned promise (call it p) depends on the handler's execution result, following a specific set of rules. If the handler function:\n\nreturns a value: p gets fulfilled with the returned value as its value.\ndoesn't return anything: p gets fulfilled with undefined as its value.\nthrows an error: p gets rejected with the thrown error as its value.\nreturns an already fulfilled promise: p gets fulfilled with that promise's value as its value.\nreturns an already rejected promise: p gets rejected with that promise's value as its value.\nreturns another pending promise: p is pending and becomes fulfilled/rejected with that promise's value as its value immediately after that promise becomes fulfilled/rejected.",
+    "parameters": [
+      {
+        "name": "onFulfilled",
+        "optional": false,
+        "description": "A function to asynchronously execute when this promise becomes fulfilled. Its return value becomes the fulfillment value of the promise returned by then(). The function is called with the following arguments:\n\nvalue\n\nThe value that the promise was fulfilled with.\n\n\nIf it is not a function, it is internally replaced with an identity function ((x) => x) which simply passes the fulfillment value forward."
+      },
+      {
+        "name": "value",
+        "optional": false,
+        "description": "The value that the promise was fulfilled with."
+      },
+      {
+        "name": "onRejected",
+        "optional": true,
+        "description": "A function to asynchronously execute when this promise becomes rejected. Its return value becomes the fulfillment value of the promise returned by then(). The function is called with the following arguments:\n\nreason\n\nThe value that the promise was rejected with.\n\n\nIf it is not a function, it is internally replaced with a thrower function ((x) => { throw x; }) which throws the rejection reason it received."
+      },
+      {
+        "name": "reason",
+        "optional": false,
+        "description": "The value that the promise was rejected with."
+      }
+    ]
+  }
+]

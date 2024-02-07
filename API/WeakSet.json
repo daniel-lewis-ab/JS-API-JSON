@@ -1,0 +1,70 @@
+[
+  {
+    "name": "WeakSet()",
+    "description": "Creates a new WeakSet object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/WeakSet",
+    "parameters": [
+      {
+        "name": "iterable",
+        "optional": true,
+        "description": "If an iterable object is passed, all of its elements will be added to the new WeakSet. null is treated as undefined."
+      }
+    ]
+  },
+  {
+    "name": "WeakSet.prototype.constructor",
+    "description": "The constructor function that created the instance object. For WeakSet instances, the initial value is the WeakSet constructor.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor",
+    "parameters": []
+  },
+  {
+    "name": "WeakSet.prototype[@@toStringTag]",
+    "description": "The initial value of the @@toStringTag property is the string \"WeakSet\". This property is used in Object.prototype.toString().",
+    "link": "https://developer.mozilla.org/#weakset.prototypetostringtag",
+    "parameters": []
+  },
+  {
+    "name": "WeakSet.prototype.add()",
+    "description": "Appends value to the WeakSet object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/add",
+    "return_value": "The WeakSet object.",
+    "parameters": [
+      {
+        "name": "value",
+        "optional": false,
+        "description": "Must be either an object or a non-registered symbol. The value to add to the WeakSet collection."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown if value is not an object or a non-registered symbol."
+      }
+    ]
+  },
+  {
+    "name": "WeakSet.prototype.delete()",
+    "description": "Removes value from the WeakSet. WeakSet.prototype.has(value) will return false afterwards.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/delete",
+    "return_value": "true if an element in the WeakSet object has been removed successfully. false if the value is not found in the WeakSet. Always returns false if value is not an object or a non-registered symbol.",
+    "parameters": [
+      {
+        "name": "value",
+        "optional": false,
+        "description": "The value to remove from the WeakSet object."
+      }
+    ]
+  },
+  {
+    "name": "WeakSet.prototype.has()",
+    "description": "Returns a boolean asserting whether value is present in the WeakSet object or not.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/has",
+    "return_value": "Returns true if an element with the specified value exists in the WeakSet object; otherwise false. Always returns false if value is not an object or a non-registered symbol.",
+    "parameters": [
+      {
+        "name": "value",
+        "optional": false,
+        "description": "The value to test for presence in the WeakSet."
+      }
+    ]
+  }
+]

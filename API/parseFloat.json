@@ -1,0 +1,8 @@
+[
+  {
+    "name": "string",
+    "description": "The value to parse, coerced to a string. Leading whitespace in this argument is ignored.",
+    "link": "https://developer.mozilla.org/#string",
+    "parameters": []
+  }
+]

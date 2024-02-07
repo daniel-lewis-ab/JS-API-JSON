@@ -1,0 +1,39 @@
+[
+  {
+    "name": "WeakRef()",
+    "description": "Creates a new WeakRef object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef/WeakRef",
+    "return_value": "A new WeakRef object referring to the given target value.",
+    "parameters": [
+      {
+        "name": "target",
+        "optional": false,
+        "description": "The target value the WeakRef should refer to (also called the referent). Must be an object or a non-registered symbol."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown if target is not an object or a non-registered symbol."
+      }
+    ]
+  },
+  {
+    "name": "WeakRef.prototype.constructor",
+    "description": "The constructor function that created the instance object. For WeakRef instances, the initial value is the WeakRef constructor.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor",
+    "parameters": []
+  },
+  {
+    "name": "WeakRef.prototype[@@toStringTag]",
+    "description": "The initial value of the @@toStringTag property is the string \"WeakRef\". This property is used in Object.prototype.toString().",
+    "link": "https://developer.mozilla.org/#weakref.prototypetostringtag",
+    "parameters": []
+  },
+  {
+    "name": "WeakRef.prototype.deref()",
+    "description": "Returns the WeakRef object's target object, or undefined if the target object has been reclaimed.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef/deref",
+    "return_value": "The target value of the WeakRef, which is either an object or a non-registered symbol. Returns undefined if the value has been garbage-collected.",
+    "parameters": []
+  }
+]

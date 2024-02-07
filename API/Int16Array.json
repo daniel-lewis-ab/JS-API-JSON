@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Int16Array()",
+    "description": "Creates a new Int16Array object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array/Int16Array",
+    "parameters": []
+  },
+  {
+    "name": "Int16Array.BYTES_PER_ELEMENT",
+    "description": "Returns a number value of the element size. 2 in the case of Int16Array.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT",
+    "parameters": []
+  },
+  {
+    "name": "Int16Array.prototype.BYTES_PER_ELEMENT",
+    "description": "Returns a number value of the element size. 2 in the case of a Int16Array.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT",
+    "parameters": []
+  },
+  {
+    "name": "Int16Array.prototype.constructor",
+    "description": "The constructor function that created the instance object. For Int16Array instances, the initial value is the Int16Array constructor.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor",
+    "parameters": []
+  }
+]

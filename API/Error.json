@@ -1,0 +1,288 @@
+[
+  {
+    "name": "EvalError",
+    "description": "Creates an instance representing an error that occurs regarding the global function eval().",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "parameters": [
+      {
+        "name": "EvalError()",
+        "optional": false,
+        "description": "Creates a new EvalError object."
+      },
+      {
+        "name": "EvalError.prototype.constructor",
+        "optional": false,
+        "description": "The constructor function that created the instance object. For EvalError instances, the initial value is the EvalError constructor."
+      },
+      {
+        "name": "EvalError.prototype.name",
+        "optional": false,
+        "description": "Represents the name for the type of error. For EvalError.prototype.name, the initial value is \"EvalError\"."
+      }
+    ]
+  },
+  {
+    "name": "RangeError",
+    "description": "Creates an instance representing an error that occurs when a numeric variable or parameter is outside its valid range.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "parameters": [
+      {
+        "name": "RangeError()",
+        "optional": false,
+        "description": "Creates a new RangeError object."
+      },
+      {
+        "name": "RangeError.prototype.constructor",
+        "optional": false,
+        "description": "The constructor function that created the instance object. For RangeError instances, the initial value is the RangeError constructor."
+      },
+      {
+        "name": "RangeError.prototype.name",
+        "optional": false,
+        "description": "Represents the name for the type of error. For RangeError.prototype.name, the initial value is \"RangeError\"."
+      }
+    ]
+  },
+  {
+    "name": "ReferenceError",
+    "description": "Creates an instance representing an error that occurs when de-referencing an invalid reference.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "parameters": [
+      {
+        "name": "ReferenceError()",
+        "optional": false,
+        "description": "Creates a new ReferenceError object."
+      },
+      {
+        "name": "ReferenceError.prototype.constructor",
+        "optional": false,
+        "description": "The constructor function that created the instance object. For ReferenceError instances, the initial value is the ReferenceError constructor."
+      },
+      {
+        "name": "ReferenceError.prototype.name",
+        "optional": false,
+        "description": "Represents the name for the type of error. For ReferenceError.prototype.name, the initial value is \"ReferenceError\"."
+      }
+    ]
+  },
+  {
+    "name": "SyntaxError",
+    "description": "Creates an instance representing a syntax error.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "parameters": [
+      {
+        "name": "SyntaxError()",
+        "optional": false,
+        "description": "Creates a new SyntaxError object."
+      },
+      {
+        "name": "SyntaxError.prototype.constructor",
+        "optional": false,
+        "description": "The constructor function that created the instance object. For SyntaxError instances, the initial value is the SyntaxError constructor."
+      },
+      {
+        "name": "SyntaxError.prototype.name",
+        "optional": false,
+        "description": "Represents the name for the type of error. For SyntaxError.prototype.name, the initial value is \"SyntaxError\"."
+      }
+    ]
+  },
+  {
+    "name": "TypeError",
+    "description": "Creates an instance representing an error that occurs when a variable or parameter is not of a valid type.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "parameters": [
+      {
+        "name": "TypeError()",
+        "optional": false,
+        "description": "Creates a new TypeError object."
+      },
+      {
+        "name": "TypeError.prototype.constructor",
+        "optional": false,
+        "description": "The constructor function that created the instance object. For TypeError instances, the initial value is the TypeError constructor."
+      },
+      {
+        "name": "TypeError.prototype.name",
+        "optional": false,
+        "description": "Represents the name for the type of error. For TypeError.prototype.name, the initial value is \"TypeError\"."
+      }
+    ]
+  },
+  {
+    "name": "URIError",
+    "description": "Creates an instance representing an error that occurs when encodeURI() or decodeURI() are passed invalid parameters.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "parameters": [
+      {
+        "name": "URIError()",
+        "optional": false,
+        "description": "Creates a new URIError object."
+      },
+      {
+        "name": "URIError.prototype.constructor",
+        "optional": false,
+        "description": "The constructor function that created the instance object. For URIError instances, the initial value is the URIError constructor."
+      },
+      {
+        "name": "URIError.prototype.name",
+        "optional": false,
+        "description": "Represents the name for the type of error. For URIError.prototype.name, the initial value is \"URIError\"."
+      }
+    ]
+  },
+  {
+    "name": "AggregateError",
+    "description": "Creates an instance representing several errors wrapped in a single error when multiple errors need to be reported by an operation, for example by Promise.any().",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AggregateError",
+    "parameters": [
+      {
+        "name": "AggregateError()",
+        "optional": false,
+        "description": "Creates a new AggregateError object."
+      },
+      {
+        "name": "AggregateError.prototype.constructor",
+        "optional": false,
+        "description": "The constructor function that created the instance object. For AggregateError instances, the initial value is the AggregateError constructor."
+      },
+      {
+        "name": "AggregateError.prototype.name",
+        "optional": false,
+        "description": "Represents the name for the type of error. For AggregateError.prototype.name, the initial value is \"AggregateError\"."
+      },
+      {
+        "name": "errors",
+        "optional": false,
+        "description": "An array representing the errors that were aggregated."
+      }
+    ]
+  },
+  {
+    "name": "InternalError",
+    "description": "Creates an instance representing an error that occurs when an internal error in the JavaScript engine is thrown. E.g. \"too much recursion\".",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "parameters": [
+      {
+        "name": "InternalError()",
+        "optional": false,
+        "description": "Creates a new InternalError object."
+      },
+      {
+        "name": "InternalError.prototype.constructor",
+        "optional": false,
+        "description": "The constructor function that created the instance object. For InternalError instances, the initial value is the InternalError constructor."
+      },
+      {
+        "name": "InternalError.prototype.name",
+        "optional": false,
+        "description": "Represents the name for the type of error. For InternalError.prototype.name, the initial value is \"InternalError\"."
+      }
+    ]
+  },
+  {
+    "name": "Error()",
+    "description": "Creates a new Error object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Error",
+    "parameters": [
+      {
+        "name": "message",
+        "optional": true,
+        "description": "A human-readable description of the error."
+      },
+      {
+        "name": "options",
+        "optional": true,
+        "description": "An object that has the following properties:\n\ncause Optional\n\nA value indicating the specific cause of the error, reflected in the cause property. When catching and re-throwing an error with a more-specific or useful error message, this property can be used to pass the original error."
+      },
+      {
+        "name": "cause",
+        "optional": true,
+        "description": "A value indicating the specific cause of the error, reflected in the cause property. When catching and re-throwing an error with a more-specific or useful error message, this property can be used to pass the original error."
+      },
+      {
+        "name": "fileName",
+        "optional": true,
+        "description": "The path to the file that raised this error, reflected in the fileName property. Defaults to the name of the file containing the code that called the Error() constructor."
+      },
+      {
+        "name": "lineNumber",
+        "optional": true,
+        "description": "The line number within the file on which the error was raised, reflected in the lineNumber property. Defaults to the line number containing the Error() constructor invocation."
+      }
+    ]
+  },
+  {
+    "name": "Error.captureStackTrace()",
+    "description": "A non-standard V8 function that creates the stack property on an Error instance.",
+    "link": "https://developer.mozilla.org/#error.capturestacktrace",
+    "parameters": []
+  },
+  {
+    "name": "Error.stackTraceLimit",
+    "description": "A non-standard V8 numerical property that limits how many stack frames to include in an error stacktrace.",
+    "link": "https://developer.mozilla.org/#error.stacktracelimit",
+    "parameters": []
+  },
+  {
+    "name": "Error.prepareStackTrace()",
+    "description": "A non-standard V8 function that, if provided by usercode, is called by the V8 JavaScript engine for thrown exceptions, allowing the user to provide custom formatting for stacktraces.",
+    "link": "https://developer.mozilla.org/#error.preparestacktrace",
+    "parameters": []
+  },
+  {
+    "name": "Error.prototype.constructor",
+    "description": "The constructor function that created the instance object. For Error instances, the initial value is the Error constructor.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor",
+    "parameters": []
+  },
+  {
+    "name": "Error.prototype.name",
+    "description": "Represents the name for the type of error. For Error.prototype.name, the initial value is \"Error\". Subclasses like TypeError and SyntaxError provide their own name properties.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/name",
+    "parameters": []
+  },
+  {
+    "name": "Error.prototype.stack",
+    "description": "A non-standard property for a stack trace.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/stack",
+    "parameters": []
+  },
+  {
+    "name": "cause",
+    "description": "Error cause indicating the reason why the current error is thrown \u00e2\u0080\u0094 usually another caught error. For user-created Error objects, this is the value provided as the cause property of the constructor's second argument.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/cause",
+    "parameters": []
+  },
+  {
+    "name": "columnNumber",
+    "description": "A non-standard Mozilla property for the column number in the line that raised this error.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/columnNumber",
+    "parameters": []
+  },
+  {
+    "name": "fileName",
+    "description": "A non-standard Mozilla property for the path to the file that raised this error.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/fileName",
+    "parameters": []
+  },
+  {
+    "name": "lineNumber",
+    "description": "A non-standard Mozilla property for the line number in the file that raised this error.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/lineNumber",
+    "parameters": []
+  },
+  {
+    "name": "message",
+    "description": "Error message. For user-created Error objects, this is the string provided as the constructor's first argument.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/message",
+    "parameters": []
+  },
+  {
+    "name": "Error.prototype.toString()",
+    "description": "Returns a string representing the specified object. Overrides the Object.prototype.toString() method.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/toString",
+    "return_value": "A string representing the specified Error object.",
+    "parameters": []
+  }
+]

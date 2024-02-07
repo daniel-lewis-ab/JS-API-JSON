@@ -1,0 +1,88 @@
+[
+  {
+    "name": "WeakMap()",
+    "description": "Creates a new WeakMap object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/WeakMap",
+    "parameters": [
+      {
+        "name": "iterable",
+        "optional": false,
+        "description": "An Array or other iterable object that implements an @@iterator method that returns an iterator object that produces a two-element array-like object whose first element is a value that will be used as a WeakMap key and whose second element is the value to associate with that key. Each key-value pair will be added to the new WeakMap. null is treated as undefined."
+      }
+    ]
+  },
+  {
+    "name": "WeakMap.prototype.constructor",
+    "description": "The constructor function that created the instance object. For WeakMap instances, the initial value is the WeakMap constructor.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor",
+    "parameters": []
+  },
+  {
+    "name": "WeakMap.prototype[@@toStringTag]",
+    "description": "The initial value of the @@toStringTag property is the string \"WeakMap\". This property is used in Object.prototype.toString().",
+    "link": "https://developer.mozilla.org/#weakmap.prototypetostringtag",
+    "parameters": []
+  },
+  {
+    "name": "WeakMap.prototype.delete()",
+    "description": "Removes any value associated to the key. WeakMap.prototype.has(key) will return false afterwards.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/delete",
+    "return_value": "true if an element in the WeakMap object has been removed successfully. false if the key is not found in the WeakMap. Always returns false if key is not an object or a non-registered symbol.",
+    "parameters": [
+      {
+        "name": "key",
+        "optional": false,
+        "description": "The key of the element to remove from the WeakMap object."
+      }
+    ]
+  },
+  {
+    "name": "WeakMap.prototype.get()",
+    "description": "Returns the value associated to the key, or undefined if there is none.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/get",
+    "return_value": "The element associated with the specified key in the WeakMap object. If\n  the key can't be found, undefined is returned. Always returns\n  undefined if key is not an object or a non-registered symbol.",
+    "parameters": [
+      {
+        "name": "key",
+        "optional": false,
+        "description": "The key of the element to return from the WeakMap object."
+      }
+    ]
+  },
+  {
+    "name": "WeakMap.prototype.has()",
+    "description": "Returns a Boolean asserting whether a value has been associated to the key in the WeakMap object or not.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/has",
+    "return_value": "Returns true if an element with the specified key exists in the WeakMap object; otherwise false. Always returns false if key is not an object or a non-registered symbol.",
+    "parameters": [
+      {
+        "name": "key",
+        "optional": false,
+        "description": "The key of the element to test for presence in the WeakMap object."
+      }
+    ]
+  },
+  {
+    "name": "WeakMap.prototype.set()",
+    "description": "Sets the value for the key in the WeakMap object. Returns the WeakMap object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/set",
+    "return_value": "The WeakMap object.",
+    "parameters": [
+      {
+        "name": "key",
+        "optional": false,
+        "description": "Must be either an object or a non-registered symbol. The key of the entry to add to the WeakMap object."
+      },
+      {
+        "name": "value",
+        "optional": false,
+        "description": "Any value representing the value of the entry to add to the WeakMap object."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown if key is not an object or a non-registered symbol."
+      }
+    ]
+  }
+]

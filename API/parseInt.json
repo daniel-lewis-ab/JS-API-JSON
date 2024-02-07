@@ -1,0 +1,14 @@
+[
+  {
+    "name": "string",
+    "description": "A string starting with an integer. Leading whitespace in this argument is ignored.",
+    "link": "https://developer.mozilla.org/#string",
+    "parameters": []
+  },
+  {
+    "name": "radix",
+    "description": "An integer between 2 and 36 that represents the radix (the base in mathematical numeral systems) of the string. It is converted to a 32-bit integer; if it's nonzero and outside the range of [2, 36] after conversion, the function will always return NaN. If 0 or not provided, the radix will be inferred based on string's value. Be careful \u00e2\u0080\u0094 this does not always default to 10! The description below explains in more detail what happens when radix is not provided.",
+    "link": "https://developer.mozilla.org/#radix",
+    "parameters": []
+  }
+]

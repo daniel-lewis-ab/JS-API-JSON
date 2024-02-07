@@ -1,0 +1,46 @@
+[
+  {
+    "name": "InternalError()",
+    "description": "Creates a new InternalError object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError/InternalError",
+    "parameters": [
+      {
+        "name": "message",
+        "optional": true,
+        "description": "Human-readable description of the error."
+      },
+      {
+        "name": "options",
+        "optional": true,
+        "description": "An object that has the following properties:\n\ncause Optional\n\n\n          A property indicating the specific cause of the error.\n          When catching and re-throwing an error with a more-specific or useful error message, this property can be used to pass the original error."
+      },
+      {
+        "name": "cause",
+        "optional": true,
+        "description": "A property indicating the specific cause of the error.\n          When catching and re-throwing an error with a more-specific or useful error message, this property can be used to pass the original error."
+      },
+      {
+        "name": "fileName",
+        "optional": true,
+        "description": "The name of the file containing the code that caused the exception"
+      },
+      {
+        "name": "lineNumber",
+        "optional": true,
+        "description": "The line number of the code that caused the exception"
+      }
+    ]
+  },
+  {
+    "name": "InternalError.prototype.constructor",
+    "description": "The constructor function that created the instance object. For InternalError instances, the initial value is the InternalError constructor.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor",
+    "parameters": []
+  },
+  {
+    "name": "InternalError.prototype.name",
+    "description": "Represents the name for the type of error. For InternalError.prototype.name, the initial value is \"InternalError\".",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/name",
+    "parameters": []
+  }
+]

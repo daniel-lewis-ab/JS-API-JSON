@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Float32Array()",
+    "description": "Creates a new Float32Array object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array/Float32Array",
+    "parameters": []
+  },
+  {
+    "name": "Float32Array.BYTES_PER_ELEMENT",
+    "description": "Returns a number value of the element size. 4 in the case of Float32Array.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT",
+    "parameters": []
+  },
+  {
+    "name": "Float32Array.prototype.BYTES_PER_ELEMENT",
+    "description": "Returns a number value of the element size. 4 in the case of a Float32Array.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT",
+    "parameters": []
+  },
+  {
+    "name": "Float32Array.prototype.constructor",
+    "description": "The constructor function that created the instance object. For Float32Array instances, the initial value is the Float32Array constructor.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor",
+    "parameters": []
+  }
+]

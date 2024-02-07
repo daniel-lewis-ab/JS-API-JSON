@@ -1,0 +1,150 @@
+[
+  {
+    "name": "Function()",
+    "description": "Creates a new Function object. Calling the constructor directly can create functions dynamically but suffers from security and similar (but far less significant) performance issues to eval(). However, unlike eval(), the Function constructor creates functions that execute in the global scope only.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function",
+    "parameters": [
+      {
+        "name": "arg1",
+        "optional": true,
+        "description": "Names to be used by the function as formal argument names. Each must be a string that corresponds to a valid JavaScript parameter (any of plain identifier, rest parameter, or destructured parameter, optionally with a default), or a list of such strings separated with commas.\nAs the parameters are parsed in the same way as function expressions, whitespace and comments are accepted. For example: \"x\", \"theValue = 42\", \"[a, b] /* numbers */\" \u00e2\u0080\u0094 or \"x, theValue = 42, [a, b] /* numbers */\". (\"x, theValue = 42\", \"[a, b]\" is also correct, though very confusing to read.)"
+      },
+      {
+        "name": "functionBody",
+        "optional": false,
+        "description": "A string containing the JavaScript statements comprising the function definition."
+      }
+    ]
+  },
+  {
+    "name": "Function.prototype.arguments",
+    "description": "Represents the arguments passed to this function. For strict, arrow, async, and generator functions, accessing the arguments property throws a TypeError. Use the arguments object inside function closures instead.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/arguments",
+    "parameters": []
+  },
+  {
+    "name": "Function.prototype.caller",
+    "description": "Represents the function that invoked this function. For strict, arrow, async, and generator functions, accessing the caller property throws a TypeError.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/caller",
+    "parameters": []
+  },
+  {
+    "name": "Function.prototype.constructor",
+    "description": "The constructor function that created the instance object. For Function instances, the initial value is the Function constructor.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor",
+    "parameters": []
+  },
+  {
+    "name": "displayName",
+    "description": "The display name of the function.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/displayName",
+    "parameters": []
+  },
+  {
+    "name": "length",
+    "description": "Specifies the number of arguments expected by the function.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length",
+    "parameters": []
+  },
+  {
+    "name": "name",
+    "description": "The name of the function.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name",
+    "parameters": []
+  },
+  {
+    "name": "prototype",
+    "description": "Used when the function is used as a constructor with the new operator. It will become the new object's prototype.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype",
+    "parameters": []
+  },
+  {
+    "name": "Function.prototype.apply()",
+    "description": "Calls a function with a given this value and optional arguments provided as an array (or an array-like object).",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply",
+    "return_value": "The result of calling the function with the specified this value and arguments.",
+    "parameters": [
+      {
+        "name": "thisArg",
+        "optional": false,
+        "description": "The value of this provided for the call to func. If the function is not in strict mode, null and undefined will be replaced with the global object, and primitive values will be converted to objects."
+      },
+      {
+        "name": "argsArray",
+        "optional": true,
+        "description": "An array-like object, specifying the arguments with which func should be called, or null or undefined if no arguments should be provided to the function."
+      }
+    ]
+  },
+  {
+    "name": "Function.prototype.bind()",
+    "description": "Creates a new function that, when called, has its this keyword set to a provided value, optionally with a given sequence of arguments preceding any provided when the new function is called.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind",
+    "return_value": "A copy of the given function with the specified this value, and initial arguments (if provided).",
+    "parameters": [
+      {
+        "name": "thisArg",
+        "optional": false,
+        "description": "The value to be passed as the this parameter to the target function func when the bound function is called. If the function is not in strict mode, null and undefined will be replaced with the global object, and primitive values will be converted to objects. The value is ignored if the bound function is constructed using the new operator."
+      },
+      {
+        "name": "arg1",
+        "optional": true,
+        "description": "Arguments to prepend to arguments provided to the bound function when invoking func."
+      },
+      {
+        "name": "length",
+        "optional": false,
+        "description": "The length of the target function minus the number of arguments being bound (not counting the thisArg parameter), with 0 being the minimum value."
+      },
+      {
+        "name": "name",
+        "optional": false,
+        "description": "The name of the target function plus a \"bound \" prefix."
+      }
+    ]
+  },
+  {
+    "name": "Function.prototype.call()",
+    "description": "Calls a function with a given this value and optional arguments.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call",
+    "return_value": "The result of calling the function with the specified this value and arguments.",
+    "parameters": [
+      {
+        "name": "thisArg",
+        "optional": false,
+        "description": "The value to use as this when calling func. If the function is not in strict mode, null and undefined will be replaced with the global object, and primitive values will be converted to objects."
+      },
+      {
+        "name": "arg1",
+        "optional": true,
+        "description": "Arguments for the function."
+      }
+    ]
+  },
+  {
+    "name": "Function.prototype.toString()",
+    "description": "Returns a string representing the source code of the function.\n      Overrides the Object.prototype.toString method.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/toString",
+    "return_value": "A string representing the source code of the function.",
+    "parameters": []
+  },
+  {
+    "name": "Function.prototype[@@hasInstance]()",
+    "description": "Specifies the default procedure for determining if a constructor function recognizes an object as one of the constructor's instances. Called by the instanceof operator.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/@@hasInstance",
+    "return_value": "true if func.prototype is in the prototype chain of value; otherwise, false. Always returns false if value is not an object or this is not a function. If this is a bound function, returns the result of a instanceof test on value and the underlying target function.",
+    "parameters": [
+      {
+        "name": "value",
+        "optional": false,
+        "description": "The object to test. Primitive values always return false."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown if this is not a bound function and this.prototype is not an object."
+      }
+    ]
+  }
+]

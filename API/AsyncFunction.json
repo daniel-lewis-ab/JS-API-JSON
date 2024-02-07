@@ -1,0 +1,20 @@
+[
+  {
+    "name": "AsyncFunction()",
+    "description": "Creates a new AsyncFunction object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction/AsyncFunction",
+    "parameters": []
+  },
+  {
+    "name": "AsyncFunction.prototype.constructor",
+    "description": "The constructor function that created the instance object. For AsyncFunction instances, the initial value is the AsyncFunction constructor.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor",
+    "parameters": []
+  },
+  {
+    "name": "AsyncFunction.prototype[@@toStringTag]",
+    "description": "The initial value of the @@toStringTag property is the string \"AsyncFunction\". This property is used in Object.prototype.toString().",
+    "link": "https://developer.mozilla.org/#asyncfunction.prototypetostringtag",
+    "parameters": []
+  }
+]

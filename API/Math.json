@@ -1,0 +1,520 @@
+[
+  {
+    "name": "Math.E",
+    "description": "Euler's number and the base of natural logarithms; approximately 2.718.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/E",
+    "parameters": []
+  },
+  {
+    "name": "Math.LN10",
+    "description": "Natural logarithm of 10; approximately 2.303.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/LN10",
+    "parameters": []
+  },
+  {
+    "name": "Math.LN2",
+    "description": "Natural logarithm of 2; approximately 0.693.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/LN2",
+    "parameters": []
+  },
+  {
+    "name": "Math.LOG10E",
+    "description": "Base-10 logarithm of E; approximately 0.434.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/LOG10E",
+    "parameters": []
+  },
+  {
+    "name": "Math.LOG2E",
+    "description": "Base-2 logarithm of E; approximately 1.443.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/LOG2E",
+    "parameters": []
+  },
+  {
+    "name": "Math.PI",
+    "description": "Ratio of a circle's circumference to its diameter; approximately 3.14159.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/PI",
+    "parameters": []
+  },
+  {
+    "name": "Math.SQRT1_2",
+    "description": "Square root of \u00c2\u00bd; approximately 0.707.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/SQRT1_2",
+    "parameters": []
+  },
+  {
+    "name": "Math.SQRT2",
+    "description": "Square root of 2; approximately 1.414.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/SQRT2",
+    "parameters": []
+  },
+  {
+    "name": "Math[@@toStringTag]",
+    "description": "The initial value of the @@toStringTag property is the string \"Math\". This property is used in Object.prototype.toString().",
+    "link": "https://developer.mozilla.org/#mathtostringtag",
+    "parameters": []
+  },
+  {
+    "name": "Math.abs()",
+    "description": "Returns the absolute value of x.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/abs",
+    "return_value": "The absolute value of x. If x is negative (including -0), returns -x. Otherwise, returns x. The result is therefore always a positive number or 0.",
+    "parameters": [
+      {
+        "name": "x",
+        "optional": false,
+        "description": "A number."
+      }
+    ]
+  },
+  {
+    "name": "Math.acos()",
+    "description": "Returns the arccosine of x.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/acos",
+    "return_value": "The inverse cosine (angle in radians between 0 and \u00cf\u0080, inclusive) of x. If x is less than -1 or greater than 1, returns NaN.",
+    "parameters": [
+      {
+        "name": "x",
+        "optional": false,
+        "description": "A number between -1 and 1, inclusive, representing the angle's cosine value."
+      }
+    ]
+  },
+  {
+    "name": "Math.acosh()",
+    "description": "Returns the hyperbolic arccosine of x.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/acosh",
+    "return_value": "The inverse hyperbolic cosine of x. If x is less than 1, returns NaN.",
+    "parameters": [
+      {
+        "name": "x",
+        "optional": false,
+        "description": "A number greater than or equal to 1."
+      }
+    ]
+  },
+  {
+    "name": "Math.asin()",
+    "description": "Returns the arcsine of x.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/asin",
+    "return_value": "The inverse sine (angle in radians between \n  \n\n\n-\n\n\u00cf\u0080\n2\n\n\n-\\frac{\\pi}{2}\n\n and \n  \n\n\n\u00cf\u0080\n2\n\n\\frac{\\pi}{2}\n\n, inclusive) of x. If x is less than -1 or greater than 1, returns NaN.",
+    "parameters": [
+      {
+        "name": "x",
+        "optional": false,
+        "description": "A number between -1 and 1, inclusive, representing the angle's sine value."
+      }
+    ]
+  },
+  {
+    "name": "Math.asinh()",
+    "description": "Returns the hyperbolic arcsine of a number.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/asinh",
+    "return_value": "The inverse hyperbolic sine of x.",
+    "parameters": [
+      {
+        "name": "x",
+        "optional": false,
+        "description": "A number."
+      }
+    ]
+  },
+  {
+    "name": "Math.atan()",
+    "description": "Returns the arctangent of x.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/atan",
+    "return_value": "The inverse tangent (angle in radians between \n  \n\n\n-\n\n\u00cf\u0080\n2\n\n\n-\\frac{\\pi}{2}\n\n and \n  \n\n\n\u00cf\u0080\n2\n\n\\frac{\\pi}{2}\n\n, inclusive) of x. If x is Infinity, it returns \n  \n\n\n\u00cf\u0080\n2\n\n\\frac{\\pi}{2}\n\n. If x is -Infinity, it returns \n  \n\n\n-\n\n\u00cf\u0080\n2\n\n\n-\\frac{\\pi}{2}\n\n.",
+    "parameters": [
+      {
+        "name": "x",
+        "optional": false,
+        "description": "A number."
+      }
+    ]
+  },
+  {
+    "name": "Math.atan2()",
+    "description": "Returns the arctangent of the quotient of its arguments.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/atan2",
+    "return_value": "The angle in radians (between -\u00cf\u0080 and \u00cf\u0080, inclusive) between the positive x-axis and the ray from (0, 0) to the point (x, y).",
+    "parameters": [
+      {
+        "name": "y",
+        "optional": false,
+        "description": "The y coordinate of the point."
+      },
+      {
+        "name": "x",
+        "optional": false,
+        "description": "The x coordinate of the point."
+      }
+    ]
+  },
+  {
+    "name": "Math.atanh()",
+    "description": "Returns the hyperbolic arctangent of x.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/atanh",
+    "return_value": "The inverse hyperbolic tangent of x. If x is 1, returns Infinity. If x is -1, returns -Infinity. If x is less than -1 or greater than 1, returns NaN.",
+    "parameters": [
+      {
+        "name": "x",
+        "optional": false,
+        "description": "A number between -1 and 1, inclusive."
+      }
+    ]
+  },
+  {
+    "name": "Math.cbrt()",
+    "description": "Returns the cube root of x.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/cbrt",
+    "return_value": "The cube root of x.",
+    "parameters": [
+      {
+        "name": "x",
+        "optional": false,
+        "description": "A number."
+      }
+    ]
+  },
+  {
+    "name": "Math.ceil()",
+    "description": "Returns the smallest integer greater than or equal to x.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil",
+    "return_value": "The smallest integer greater than or equal to x. It's the same value as -Math.floor(-x).",
+    "parameters": [
+      {
+        "name": "x",
+        "optional": false,
+        "description": "A number."
+      }
+    ]
+  },
+  {
+    "name": "Math.clz32()",
+    "description": "Returns the number of leading zero bits of the 32-bit integer x.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/clz32",
+    "return_value": "The number of leading zero bits in the 32-bit binary representation of x.",
+    "parameters": [
+      {
+        "name": "x",
+        "optional": false,
+        "description": "A number."
+      }
+    ]
+  },
+  {
+    "name": "Math.cos()",
+    "description": "Returns the cosine of x.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/cos",
+    "return_value": "The cosine of x, between -1 and 1, inclusive. If x is Infinity, -Infinity, or NaN, returns NaN.",
+    "parameters": [
+      {
+        "name": "x",
+        "optional": false,
+        "description": "A number representing an angle in radians."
+      }
+    ]
+  },
+  {
+    "name": "Math.cosh()",
+    "description": "Returns the hyperbolic cosine of x.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/cosh",
+    "return_value": "The hyperbolic cosine of x.",
+    "parameters": [
+      {
+        "name": "x",
+        "optional": false,
+        "description": "A number."
+      }
+    ]
+  },
+  {
+    "name": "Math.exp()",
+    "description": "Returns ex, where x is the argument, and e is Euler's number (2.718\u00e2\u0080\u00a6, the base of the natural logarithm).",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/exp",
+    "return_value": "A nonnegative number representing ex, where e is the base of the natural logarithm.",
+    "parameters": [
+      {
+        "name": "x",
+        "optional": false,
+        "description": "A number."
+      }
+    ]
+  },
+  {
+    "name": "Math.expm1()",
+    "description": "Returns subtracting 1 from exp(x).",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/expm1",
+    "return_value": "A number representing ex - 1, where e is the base of the natural logarithm.",
+    "parameters": [
+      {
+        "name": "x",
+        "optional": false,
+        "description": "A number."
+      }
+    ]
+  },
+  {
+    "name": "Math.floor()",
+    "description": "Returns the largest integer less than or equal to x.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor",
+    "return_value": "The largest integer smaller than or equal to x. It's the same value as -Math.ceil(-x).",
+    "parameters": [
+      {
+        "name": "x",
+        "optional": false,
+        "description": "A number."
+      }
+    ]
+  },
+  {
+    "name": "Math.fround()",
+    "description": "Returns the nearest single precision float representation of x.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/fround",
+    "return_value": "The nearest 32-bit single precision float representation of x.",
+    "parameters": [
+      {
+        "name": "doubleFloat",
+        "optional": false,
+        "description": "A number."
+      }
+    ]
+  },
+  {
+    "name": "Math.hypot()",
+    "description": "Returns the square root of the sum of squares of its arguments.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/hypot",
+    "return_value": "The square root of the sum of squares of the given arguments. Returns Infinity if any of the arguments is \u00c2\u00b1Infinity. Otherwise, if at least one of the arguments is or is converted to NaN, returns NaN. Returns 0 if no arguments are given or all arguments are \u00c2\u00b10.",
+    "parameters": [
+      {
+        "name": "value1",
+        "optional": false,
+        "description": "Numbers."
+      }
+    ]
+  },
+  {
+    "name": "Math.imul()",
+    "description": "Returns the result of the 32-bit integer multiplication of x and y.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/imul",
+    "return_value": "The result of the C-like 32-bit multiplication of the given arguments.",
+    "parameters": [
+      {
+        "name": "a",
+        "optional": false,
+        "description": "First number."
+      },
+      {
+        "name": "b",
+        "optional": false,
+        "description": "Second number."
+      }
+    ]
+  },
+  {
+    "name": "Math.log()",
+    "description": "Returns the natural logarithm (\u00e3\u008f\u0092e; also, \u00e3\u008f\u0091) of x.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/log",
+    "return_value": "The natural logarithm (base e) of x. If x is \u00c2\u00b10, returns -Infinity. If x < 0, returns NaN.",
+    "parameters": [
+      {
+        "name": "x",
+        "optional": false,
+        "description": "A number greater than or equal to 0."
+      }
+    ]
+  },
+  {
+    "name": "Math.log10()",
+    "description": "Returns the base-10 logarithm of x.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/log10",
+    "return_value": "The base 10 logarithm of x. If x < 0, returns NaN.",
+    "parameters": [
+      {
+        "name": "x",
+        "optional": false,
+        "description": "A number greater than or equal to 0."
+      }
+    ]
+  },
+  {
+    "name": "Math.log1p()",
+    "description": "Returns the natural logarithm (\u00e3\u008f\u0092e; also \u00e3\u008f\u0091) of 1 + x for the number x.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/log1p",
+    "return_value": "The natural logarithm (base e) of x + 1. If x is -1, returns -Infinity. If x < -1, returns NaN.",
+    "parameters": [
+      {
+        "name": "x",
+        "optional": false,
+        "description": "A number greater than or equal to -1."
+      }
+    ]
+  },
+  {
+    "name": "Math.log2()",
+    "description": "Returns the base-2 logarithm of x.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/log2",
+    "return_value": "The base 2 logarithm of x. If x < 0, returns NaN.",
+    "parameters": [
+      {
+        "name": "x",
+        "optional": false,
+        "description": "A number greater than or equal to 0."
+      }
+    ]
+  },
+  {
+    "name": "Math.max()",
+    "description": "Returns the largest of zero or more numbers.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max",
+    "return_value": "The largest of the given numbers. Returns NaN if any of the parameters is or is converted into NaN. Returns -Infinity if no parameters are provided.",
+    "parameters": [
+      {
+        "name": "value1",
+        "optional": false,
+        "description": "Zero or more numbers among which the largest value will be selected and returned."
+      }
+    ]
+  },
+  {
+    "name": "Math.min()",
+    "description": "Returns the smallest of zero or more numbers.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/min",
+    "return_value": "The smallest of the given numbers. Returns NaN if any of the parameters is or is converted into NaN. Returns Infinity if no parameters are provided.",
+    "parameters": [
+      {
+        "name": "value1",
+        "optional": false,
+        "description": "Zero or more numbers among which the lowest value will be selected and returned."
+      }
+    ]
+  },
+  {
+    "name": "Math.pow()",
+    "description": "Returns base x to the exponent power y (that is, xy).",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow",
+    "return_value": "A number representing base taken to the power of exponent. Returns NaN in one of the following cases:\n\nexponent is NaN.\nbase is NaN and exponent is not 0.\nbase is \u00c2\u00b11 and exponent is \u00c2\u00b1Infinity.\nbase < 0 and exponent is not an integer.",
+    "parameters": [
+      {
+        "name": "base",
+        "optional": false,
+        "description": "The base number."
+      },
+      {
+        "name": "exponent",
+        "optional": false,
+        "description": "The exponent number."
+      }
+    ]
+  },
+  {
+    "name": "Math.random()",
+    "description": "Returns a pseudo-random number between 0 and 1.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random",
+    "return_value": "A floating-point, pseudo-random number between 0 (inclusive) and 1 (exclusive).",
+    "parameters": []
+  },
+  {
+    "name": "Math.round()",
+    "description": "Returns the value of the number x rounded to the nearest integer.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round",
+    "return_value": "The value of x rounded to the nearest integer.",
+    "parameters": [
+      {
+        "name": "x",
+        "optional": false,
+        "description": "A number."
+      }
+    ]
+  },
+  {
+    "name": "Math.sign()",
+    "description": "Returns the sign of the x, indicating whether x is positive, negative, or zero.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sign",
+    "return_value": "A number representing the sign of x:\n\nIf x is positive, returns 1.\nIf x is negative, returns -1.\nIf x is positive zero, returns 0.\nIf x is negative zero, returns -0.\nOtherwise, returns NaN.",
+    "parameters": [
+      {
+        "name": "x",
+        "optional": false,
+        "description": "A number."
+      }
+    ]
+  },
+  {
+    "name": "Math.sin()",
+    "description": "Returns the sine of x.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sin",
+    "return_value": "The sine of x, between -1 and 1, inclusive. If x is Infinity, -Infinity, or NaN, returns NaN.",
+    "parameters": [
+      {
+        "name": "x",
+        "optional": false,
+        "description": "A number representing an angle in radians."
+      }
+    ]
+  },
+  {
+    "name": "Math.sinh()",
+    "description": "Returns the hyperbolic sine of x.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sinh",
+    "return_value": "The hyperbolic sine of x.",
+    "parameters": [
+      {
+        "name": "x",
+        "optional": false,
+        "description": "A number."
+      }
+    ]
+  },
+  {
+    "name": "Math.sqrt()",
+    "description": "Returns the positive square root of x.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt",
+    "return_value": "The square root of x, a nonnegative number. If x < 0, returns NaN.",
+    "parameters": [
+      {
+        "name": "x",
+        "optional": false,
+        "description": "A number greater than or equal to 0."
+      }
+    ]
+  },
+  {
+    "name": "Math.tan()",
+    "description": "Returns the tangent of x.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/tan",
+    "return_value": "The tangent of x. If x is Infinity, -Infinity, or NaN, returns NaN.\n\nNote: Due to floating point precision, it's not possible to obtain the exact value \u00cf\u0080/2, so the result is always finite if not NaN.",
+    "parameters": [
+      {
+        "name": "x",
+        "optional": false,
+        "description": "A number representing an angle in radians."
+      }
+    ]
+  },
+  {
+    "name": "Math.tanh()",
+    "description": "Returns the hyperbolic tangent of x.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/tanh",
+    "return_value": "The hyperbolic tangent of x.",
+    "parameters": [
+      {
+        "name": "x",
+        "optional": false,
+        "description": "A number."
+      }
+    ]
+  },
+  {
+    "name": "Math.trunc()",
+    "description": "Returns the integer portion of x, removing any fractional digits.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc",
+    "return_value": "The integer part of x.",
+    "parameters": [
+      {
+        "name": "x",
+        "optional": false,
+        "description": "A number."
+      }
+    ]
+  }
+]

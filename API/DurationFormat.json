@@ -1,0 +1,358 @@
+[
+  {
+    "name": "Intl.DurationFormat()",
+    "description": "Creates a new Intl.DurationFormat object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat/DurationFormat",
+    "parameters": [
+      {
+        "name": "locales",
+        "optional": true,
+        "description": "A string with a BCP 47 language tag or an Intl.Locale instance, or an array of such locale identifiers. For the general form and interpretation of the locales argument, see the parameter description on the Intl main page.\nThe following Unicode extension key is allowed:\n\nnu\n\nSee numberingSystem.\n\n\nThis key can also be set with options (as listed below). When both are set, the options property takes precedence."
+      },
+      {
+        "name": "nu",
+        "optional": false,
+        "description": "See numberingSystem."
+      },
+      {
+        "name": "options",
+        "optional": true,
+        "description": "An object containing the following properties, in the order they are retrieved (all of them are optional):\n\nlocaleMatcher\n\nThe locale matching algorithm to use. Possible values are \"lookup\" and \"best fit\"; the default is \"best fit\". For information about this option, see Locale identification and negotiation.\n\nnumberingSystem\n\nThe numbering system to use for number formatting, such as \"arab\", \"hans\", \"mathsans\", and so on. For a list of supported numbering system types, see Intl.Locale.prototype.getNumberingSystems(). This option can also be set through the nu Unicode extension key; if both are provided, this options property takes precedence.\n\nstyle\n\nThe style of the formatted duration. Possible values are:\n\n\"long\"\n\nE.g., 1 hour and 50 minutes\n\n\"short\" (default)\n\nE.g., 1 hr, 50 min\n\n\"narrow\"\n\nE.g., 1h 50m\n\n\"digital\"\n\nE.g., 1:50:00\n\n\n\nyears\n\nThe style of the formatted years. Possible values are \"long\", \"short\", and \"narrow\"; the default is options.style if it's not \"digital\", and \"short\" otherwise.\n\nyearsDisplay\n\nWhether to always display years, or only if nonzero. Possible values are \"always\" and \"auto\"; the default is \"auto\" if years is unspecified, and \"always\" otherwise.\n\nmonths\n\nThe style of the formatted months. Possible values are \"long\", \"short\", and \"narrow\"; the default is options.style if it's not \"digital\", and \"short\" otherwise.\n\nmonthsDisplay\n\nWhether to always display months, or only if nonzero. Possible values are \"always\" and \"auto\"; the default is \"auto\" if months is unspecified, and \"always\" otherwise.\n\nweeks\n\nThe style of the formatted weeks. Possible values are \"long\", \"short\", and \"narrow\"; the default is options.style if it's not \"digital\", and \"short\" otherwise.\n\nweeksDisplay\n\nWhether to always display weeks, or only if nonzero. Possible values are \"always\" and \"auto\"; the default is \"auto\" if weeks is unspecified, and \"always\" otherwise.\n\ndays\n\nThe style of the formatted days. Possible values are \"long\", \"short\", and \"narrow\"; the default is options.style if it's not \"digital\", and \"short\" otherwise.\n\ndaysDisplay\n\nWhether to always display days, or only if nonzero. Possible values are \"always\" and \"auto\"; the default is \"auto\" if days is unspecified, and \"always\" otherwise.\n\nhours\n\nThe style of the formatted hours. Possible values are \"long\", \"short\", \"narrow\", \"numeric\", and \"2-digit\"; the default is options.style if it's not \"digital\", and \"numeric\" otherwise.\n\nhoursDisplay\n\nWhether to always display hours, or only if nonzero. Possible values are \"always\" and \"auto\"; the default is \"auto\" if hours is unspecified and options.style is not \"digital\", and \"always\" otherwise.\n\nminutes\n\nThe style of the formatted minutes.\n\nIf hours is \"numeric\" or \"2-digit\", possible values are \"numeric\" and \"2-digit\", and \"numeric\" is normalized to \"2-digit\"; the default is \"numeric\".\nOtherwise, possible values are \"long\", \"short\", \"narrow\", \"numeric\", and \"2-digit\"; the default is options.style if it's not \"digital\", and \"numeric\" otherwise.\n\n\nminutesDisplay\n\nWhether to always display minutes, or only if nonzero. Possible values are \"always\" and \"auto\"; the default is \"auto\" if minutes is unspecified and options.style is not \"digital\", and \"always\" otherwise.\n\nseconds\n\nThe style of the formatted seconds.\n\nIf minutes is \"numeric\" or \"2-digit\", possible values are \"numeric\" and \"2-digit\", and \"numeric\" is normalized to \"2-digit\"; the default is \"numeric\".\nOtherwise, possible values are \"long\", \"short\", \"narrow\", \"numeric\", and \"2-digit\"; the default is options.style if it's not \"digital\", and \"numeric\" otherwise.\n\n\nsecondsDisplay\n\nWhether to always display seconds, or only if nonzero. Possible values are \"always\" and \"auto\"; the default is \"auto\" if seconds is unspecified and options.style is not \"digital\", and \"always\" otherwise.\n\nmilliseconds\n\nThe style of the formatted milliseconds.\n\nIf seconds is \"numeric\" or \"2-digit\", the only possible value is \"numeric\"; the default is \"numeric\".\nOtherwise, possible values are \"long\", \"short\", \"narrow\", and \"numeric\"; the default is options.style if it's not \"digital\", and \"numeric\" otherwise.\n\n\nmillisecondsDisplay\n\nWhether to always display milliseconds, or only if nonzero.\n\nIf seconds is \"numeric\" or \"2-digit\", the only possible value is \"auto\"; the default is only \"auto\" when milliseconds is unspecified.\nOtherwise, possible values are \"always\" and \"auto\"; the default is \"auto\" if milliseconds is unspecified, and \"always\" otherwise.\n\n\nmicroseconds\n\nThe style of the formatted microseconds.\n\nIf milliseconds is \"numeric\", the only possible value is \"numeric\"; the default is \"numeric\".\nOtherwise, possible values are \"long\", \"short\", \"narrow\", and \"numeric\"; the default is options.style if it's not \"digital\", and \"numeric\" otherwise.\n\n\nmicrosecondsDisplay\n\nWhether to always display microseconds, or only if nonzero.\n\nIf milliseconds is \"numeric\", the only possible value is \"auto\"; the default is only \"auto\" when microseconds is unspecified.\nOtherwise, possible values are \"always\" and \"auto\"; the default is \"auto\" if microseconds is unspecified, and \"always\" otherwise.\n\n\nnanoseconds\n\nThe style of the formatted nanoseconds.\n\nIf microseconds is \"numeric\", the only possible value is \"numeric\"; the default is \"numeric\".\nOtherwise, possible values are \"long\", \"short\", \"narrow\", and \"numeric\"; the default is options.style if it's not \"digital\", and \"numeric\" otherwise.\n\n\nnanosecondsDisplay\n\nWhether to always display nanoseconds, or only if nonzero.\n\nIf microseconds is \"numeric\", the only possible value is \"auto\"; the default is only \"auto\" when nanoseconds is unspecified.\nOtherwise, possible values are \"always\" and \"auto\"; the default is \"auto\" if nanoseconds is unspecified, and \"always\" otherwise.\n\n\nfractionalDigits\n\nNumber of how many fractional second digits to display in the output. Possible values are from 0 to 9; the default is undefined (include as many fractional digits as necessary)."
+      },
+      {
+        "name": "localeMatcher",
+        "optional": false,
+        "description": "The locale matching algorithm to use. Possible values are \"lookup\" and \"best fit\"; the default is \"best fit\". For information about this option, see Locale identification and negotiation."
+      },
+      {
+        "name": "numberingSystem",
+        "optional": false,
+        "description": "The numbering system to use for number formatting, such as \"arab\", \"hans\", \"mathsans\", and so on. For a list of supported numbering system types, see Intl.Locale.prototype.getNumberingSystems(). This option can also be set through the nu Unicode extension key; if both are provided, this options property takes precedence."
+      },
+      {
+        "name": "style",
+        "optional": false,
+        "description": "The style of the formatted duration. Possible values are:\n\n\"long\"\n\nE.g., 1 hour and 50 minutes\n\n\"short\" (default)\n\nE.g., 1 hr, 50 min\n\n\"narrow\"\n\nE.g., 1h 50m\n\n\"digital\"\n\nE.g., 1:50:00"
+      },
+      {
+        "name": "\"long\"",
+        "optional": false,
+        "description": "E.g., 1 hour and 50 minutes"
+      },
+      {
+        "name": "\"short\"",
+        "optional": false,
+        "description": "E.g., 1 hr, 50 min"
+      },
+      {
+        "name": "\"narrow\"",
+        "optional": false,
+        "description": "E.g., 1h 50m"
+      },
+      {
+        "name": "\"digital\"",
+        "optional": false,
+        "description": "E.g., 1:50:00"
+      },
+      {
+        "name": "years",
+        "optional": false,
+        "description": "The style of the formatted years. Possible values are \"long\", \"short\", and \"narrow\"; the default is options.style if it's not \"digital\", and \"short\" otherwise."
+      },
+      {
+        "name": "yearsDisplay",
+        "optional": false,
+        "description": "Whether to always display years, or only if nonzero. Possible values are \"always\" and \"auto\"; the default is \"auto\" if years is unspecified, and \"always\" otherwise."
+      },
+      {
+        "name": "months",
+        "optional": false,
+        "description": "The style of the formatted months. Possible values are \"long\", \"short\", and \"narrow\"; the default is options.style if it's not \"digital\", and \"short\" otherwise."
+      },
+      {
+        "name": "monthsDisplay",
+        "optional": false,
+        "description": "Whether to always display months, or only if nonzero. Possible values are \"always\" and \"auto\"; the default is \"auto\" if months is unspecified, and \"always\" otherwise."
+      },
+      {
+        "name": "weeks",
+        "optional": false,
+        "description": "The style of the formatted weeks. Possible values are \"long\", \"short\", and \"narrow\"; the default is options.style if it's not \"digital\", and \"short\" otherwise."
+      },
+      {
+        "name": "weeksDisplay",
+        "optional": false,
+        "description": "Whether to always display weeks, or only if nonzero. Possible values are \"always\" and \"auto\"; the default is \"auto\" if weeks is unspecified, and \"always\" otherwise."
+      },
+      {
+        "name": "days",
+        "optional": false,
+        "description": "The style of the formatted days. Possible values are \"long\", \"short\", and \"narrow\"; the default is options.style if it's not \"digital\", and \"short\" otherwise."
+      },
+      {
+        "name": "daysDisplay",
+        "optional": false,
+        "description": "Whether to always display days, or only if nonzero. Possible values are \"always\" and \"auto\"; the default is \"auto\" if days is unspecified, and \"always\" otherwise."
+      },
+      {
+        "name": "hours",
+        "optional": false,
+        "description": "The style of the formatted hours. Possible values are \"long\", \"short\", \"narrow\", \"numeric\", and \"2-digit\"; the default is options.style if it's not \"digital\", and \"numeric\" otherwise."
+      },
+      {
+        "name": "hoursDisplay",
+        "optional": false,
+        "description": "Whether to always display hours, or only if nonzero. Possible values are \"always\" and \"auto\"; the default is \"auto\" if hours is unspecified and options.style is not \"digital\", and \"always\" otherwise."
+      },
+      {
+        "name": "minutes",
+        "optional": false,
+        "description": "The style of the formatted minutes.\n\nIf hours is \"numeric\" or \"2-digit\", possible values are \"numeric\" and \"2-digit\", and \"numeric\" is normalized to \"2-digit\"; the default is \"numeric\".\nOtherwise, possible values are \"long\", \"short\", \"narrow\", \"numeric\", and \"2-digit\"; the default is options.style if it's not \"digital\", and \"numeric\" otherwise."
+      },
+      {
+        "name": "minutesDisplay",
+        "optional": false,
+        "description": "Whether to always display minutes, or only if nonzero. Possible values are \"always\" and \"auto\"; the default is \"auto\" if minutes is unspecified and options.style is not \"digital\", and \"always\" otherwise."
+      },
+      {
+        "name": "seconds",
+        "optional": false,
+        "description": "The style of the formatted seconds.\n\nIf minutes is \"numeric\" or \"2-digit\", possible values are \"numeric\" and \"2-digit\", and \"numeric\" is normalized to \"2-digit\"; the default is \"numeric\".\nOtherwise, possible values are \"long\", \"short\", \"narrow\", \"numeric\", and \"2-digit\"; the default is options.style if it's not \"digital\", and \"numeric\" otherwise."
+      },
+      {
+        "name": "secondsDisplay",
+        "optional": false,
+        "description": "Whether to always display seconds, or only if nonzero. Possible values are \"always\" and \"auto\"; the default is \"auto\" if seconds is unspecified and options.style is not \"digital\", and \"always\" otherwise."
+      },
+      {
+        "name": "milliseconds",
+        "optional": false,
+        "description": "The style of the formatted milliseconds.\n\nIf seconds is \"numeric\" or \"2-digit\", the only possible value is \"numeric\"; the default is \"numeric\".\nOtherwise, possible values are \"long\", \"short\", \"narrow\", and \"numeric\"; the default is options.style if it's not \"digital\", and \"numeric\" otherwise."
+      },
+      {
+        "name": "millisecondsDisplay",
+        "optional": false,
+        "description": "Whether to always display milliseconds, or only if nonzero.\n\nIf seconds is \"numeric\" or \"2-digit\", the only possible value is \"auto\"; the default is only \"auto\" when milliseconds is unspecified.\nOtherwise, possible values are \"always\" and \"auto\"; the default is \"auto\" if milliseconds is unspecified, and \"always\" otherwise."
+      },
+      {
+        "name": "microseconds",
+        "optional": false,
+        "description": "The style of the formatted microseconds.\n\nIf milliseconds is \"numeric\", the only possible value is \"numeric\"; the default is \"numeric\".\nOtherwise, possible values are \"long\", \"short\", \"narrow\", and \"numeric\"; the default is options.style if it's not \"digital\", and \"numeric\" otherwise."
+      },
+      {
+        "name": "microsecondsDisplay",
+        "optional": false,
+        "description": "Whether to always display microseconds, or only if nonzero.\n\nIf milliseconds is \"numeric\", the only possible value is \"auto\"; the default is only \"auto\" when microseconds is unspecified.\nOtherwise, possible values are \"always\" and \"auto\"; the default is \"auto\" if microseconds is unspecified, and \"always\" otherwise."
+      },
+      {
+        "name": "nanoseconds",
+        "optional": false,
+        "description": "The style of the formatted nanoseconds.\n\nIf microseconds is \"numeric\", the only possible value is \"numeric\"; the default is \"numeric\".\nOtherwise, possible values are \"long\", \"short\", \"narrow\", and \"numeric\"; the default is options.style if it's not \"digital\", and \"numeric\" otherwise."
+      },
+      {
+        "name": "nanosecondsDisplay",
+        "optional": false,
+        "description": "Whether to always display nanoseconds, or only if nonzero.\n\nIf microseconds is \"numeric\", the only possible value is \"auto\"; the default is only \"auto\" when nanoseconds is unspecified.\nOtherwise, possible values are \"always\" and \"auto\"; the default is \"auto\" if nanoseconds is unspecified, and \"always\" otherwise."
+      },
+      {
+        "name": "fractionalDigits",
+        "optional": false,
+        "description": "Number of how many fractional second digits to display in the output. Possible values are from 0 to 9; the default is undefined (include as many fractional digits as necessary)."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if locales or options contain invalid values."
+      }
+    ]
+  },
+  {
+    "name": "Intl.DurationFormat.supportedLocalesOf()",
+    "description": "Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat/supportedLocalesOf",
+    "return_value": "An array of strings representing a subset of the given locale tags that are supported in duration formatting without having to fall back to the runtime's default locale.",
+    "parameters": [
+      {
+        "name": "locales",
+        "optional": false,
+        "description": "A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the locales argument, see the parameter description on the Intl main page."
+      },
+      {
+        "name": "options",
+        "optional": true,
+        "description": "An object that may have the following property:\n\nlocaleMatcher\n\nThe locale matching algorithm to use. Possible values are \"lookup\" and \"best fit\"; the default is \"best fit\". For information about this option, see the Intl page."
+      },
+      {
+        "name": "localeMatcher",
+        "optional": false,
+        "description": "The locale matching algorithm to use. Possible values are \"lookup\" and \"best fit\"; the default is \"best fit\". For information about this option, see the Intl page."
+      }
+    ]
+  },
+  {
+    "name": "Intl.DurationFormat.prototype.constructor",
+    "description": "The constructor function that created the instance object. For Intl.DurationFormat instances, the initial value is the Intl.DurationFormat constructor.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor",
+    "parameters": []
+  },
+  {
+    "name": "Intl.DurationFormat.prototype[@@toStringTag]",
+    "description": "The initial value of the @@toStringTag property is the string \"Intl.DurationFormat\". This property is used in Object.prototype.toString().",
+    "link": "https://developer.mozilla.org/#intl.durationformat.prototypetostringtag",
+    "parameters": []
+  },
+  {
+    "name": "Intl.DurationFormat.prototype.format()",
+    "description": "Getter function that formats a duration according to the locale and formatting options of this DurationFormat object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat/format",
+    "return_value": "A string representing the given duration formatted according to the locale and formatting options of this Intl.DurationFormat object.",
+    "parameters": [
+      {
+        "name": "duration",
+        "optional": false,
+        "description": "The duration object to be formatted. It should include some or all of the following properties: months, weeks, days, hours, minutes, seconds, milliseconds, microseconds, nanoseconds."
+      }
+    ]
+  },
+  {
+    "name": "Intl.DurationFormat.prototype.formatToParts()",
+    "description": "Returns an Array of objects representing the formatted duration in parts.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat/formatToParts",
+    "return_value": "An Array of objects containing the formatted duration in parts.",
+    "parameters": [
+      {
+        "name": "duration",
+        "optional": true,
+        "description": "The duration object to be formatted. It should include some or all of the following properties: \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", \"seconds\", \"milliseconds\", \"microseconds\", \"nanoseconds\"."
+      }
+    ]
+  },
+  {
+    "name": "Intl.DurationFormat.prototype.resolvedOptions()",
+    "description": "Returns a new object with properties reflecting the locale and formatting options computed during initialization of the object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat/resolvedOptions",
+    "return_value": "A new object with properties reflecting the locale and date and time formatting options computed during the initialization of the given Intl.DateTimeFormat object.",
+    "parameters": [
+      {
+        "name": "locale",
+        "optional": false,
+        "description": "The BCP 47 language tag for the locale used. If any Unicode extension values were requested in the input BCP 47 language tag that led to this locale, the key-value pairs that were requested and are supported for this locale are included in locale."
+      },
+      {
+        "name": "style",
+        "optional": false,
+        "description": "One of the strings \"long\", \"short\", \"narrow\", or \"digital\" identifying the duration formatting style used."
+      },
+      {
+        "name": "years",
+        "optional": false,
+        "description": "One of the strings \"long\", \"short\", or \"narrow\" identifying the formatting style used for the years field."
+      },
+      {
+        "name": "yearsDisplay",
+        "optional": false,
+        "description": "One of the strings \"auto\" or \"always\" identifying when to display the years field."
+      },
+      {
+        "name": "months",
+        "optional": false,
+        "description": "One of the strings \"long\", \"short\", and \"narrow\" identifying the formatting style used for the months field."
+      },
+      {
+        "name": "monthsDisplay",
+        "optional": false,
+        "description": "One of the strings \"auto\" or \"always\" identifying when to display the months field."
+      },
+      {
+        "name": "weeks",
+        "optional": false,
+        "description": "One of the strings \"long\", \"short\", and \"narrow\" identifying the formatting style used for the weeks field."
+      },
+      {
+        "name": "weeksDisplay",
+        "optional": false,
+        "description": "One of the strings \"auto\" or \"always\" identifying when to display the weeks field."
+      },
+      {
+        "name": "days",
+        "optional": false,
+        "description": "One of the strings \"long\", \"short\", and \"narrow\" identifying the formatting style used for the days field."
+      },
+      {
+        "name": "daysDisplay",
+        "optional": false,
+        "description": "One of the strings \"auto\" or \"always\" identifying when to display the days field."
+      },
+      {
+        "name": "hours",
+        "optional": false,
+        "description": "One of the strings \"long\", \"short\", \"narrow\", \"2-digit\", or \"numeric\" identifying the formatting style used for the hours field."
+      },
+      {
+        "name": "hoursDisplay",
+        "optional": false,
+        "description": "One of the strings \"auto\" or \"always\" identifying when to display the hours field."
+      },
+      {
+        "name": "minutes",
+        "optional": false,
+        "description": "One of the strings \"long\", \"short\", \"narrow\", \"2-digit\", or \"numeric\" identifying the formatting style used for the minutes field."
+      },
+      {
+        "name": "minutesDisplay",
+        "optional": false,
+        "description": "One of the strings \"auto\" or \"always\" identifying when to display the minutes field."
+      },
+      {
+        "name": "seconds",
+        "optional": false,
+        "description": "One of the strings \"long\", \"short\", \"narrow\", \"2-digit\", or \"numeric\" identifying the formatting style used for the seconds field."
+      },
+      {
+        "name": "secondsDisplay",
+        "optional": false,
+        "description": "One of the strings \"auto\" or \"always\" identifying when to display the seconds field."
+      },
+      {
+        "name": "milliseconds",
+        "optional": false,
+        "description": "One of the strings \"long\", \"short\", \"narrow\", or \"numeric\" identifying the formatting style used for the milliseconds field."
+      },
+      {
+        "name": "millisecondsDisplay",
+        "optional": false,
+        "description": "One of the strings \"auto\" or \"always\" identifying when to display the millisecondsDisplay field."
+      },
+      {
+        "name": "microseconds",
+        "optional": false,
+        "description": "One of the strings \"long\", \"short\", \"narrow\", or \"numeric\" identifying the formatting style used for the microseconds field."
+      },
+      {
+        "name": "microsecondsDisplay",
+        "optional": false,
+        "description": "One of the strings \"auto\" or \"always\" identifying when to display the microsecondsDisplay field."
+      },
+      {
+        "name": "nanoseconds",
+        "optional": false,
+        "description": "One of the strings \"long\", \"short\", \"narrow\", or \"numeric\" identifying the formatting style used for the nanoseconds field."
+      },
+      {
+        "name": "nanosecondsDisplay",
+        "optional": false,
+        "description": "One of the strings \"auto\" or \"always\" identifying when to display the nanosecondsDisplay field."
+      },
+      {
+        "name": "fractionalDigits",
+        "optional": false,
+        "description": "A number, identifying the number of fractional digits used with numeric styles."
+      },
+      {
+        "name": "numberingSystem",
+        "optional": false,
+        "description": "The value provided for this property in the options argument, if present, or the value requested using the Unicode extension key nu or filled in as a default."
+      }
+    ]
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "name": "uriComponent",
+    "description": "A string to be encoded as a URI component (a path, query string, fragment, etc.). Other values are converted to strings.",
+    "link": "https://developer.mozilla.org/#uricomponent",
+    "parameters": []
+  },
+  {
+    "name": "URIError",
+    "description": "Thrown if uriComponent contains a lone surrogate.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "parameters": [
+      {
+        "name": "URIError()",
+        "optional": false,
+        "description": "Creates a new URIError object."
+      },
+      {
+        "name": "URIError.prototype.constructor",
+        "optional": false,
+        "description": "The constructor function that created the instance object. For URIError instances, the initial value is the URIError constructor."
+      },
+      {
+        "name": "URIError.prototype.name",
+        "optional": false,
+        "description": "Represents the name for the type of error. For URIError.prototype.name, the initial value is \"URIError\"."
+      }
+    ]
+  }
+]

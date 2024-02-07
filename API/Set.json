@@ -1,0 +1,238 @@
+[
+  {
+    "name": "Set()",
+    "description": "Creates a new Set object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/Set",
+    "return_value": "A new Set object.",
+    "parameters": [
+      {
+        "name": "iterable",
+        "optional": true,
+        "description": "If an iterable object is passed, all of its elements will be added to the new\n      Set.\n    \n\n      If you don't specify this parameter, or its value is null, the new\n      Set is empty."
+      }
+    ]
+  },
+  {
+    "name": "Set[@@species]",
+    "description": "The constructor function that is used to create derived objects.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/@@species",
+    "return_value": "The value of the constructor (this) on which get @@species was called. The return value is used to construct copied Set instances.",
+    "parameters": []
+  },
+  {
+    "name": "Set.prototype.constructor",
+    "description": "The constructor function that created the instance object. For Set instances, the initial value is the Set constructor.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor",
+    "parameters": []
+  },
+  {
+    "name": "Set.prototype.size",
+    "description": "Returns the number of values in the Set object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/size",
+    "parameters": []
+  },
+  {
+    "name": "Set.prototype[@@toStringTag]",
+    "description": "The initial value of the @@toStringTag property is the string \"Set\". This property is used in Object.prototype.toString().",
+    "link": "https://developer.mozilla.org/#set.prototypetostringtag",
+    "parameters": []
+  },
+  {
+    "name": "Set.prototype.add()",
+    "description": "Inserts a new element with a specified value in to a Set object, if there isn't an element with the same value already in the Set.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/add",
+    "return_value": "The Set object with added value.",
+    "parameters": [
+      {
+        "name": "value",
+        "optional": false,
+        "description": "The value of the element to add to the Set object."
+      }
+    ]
+  },
+  {
+    "name": "Set.prototype.clear()",
+    "description": "Removes all elements from the Set object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/clear",
+    "return_value": "None (undefined).",
+    "parameters": []
+  },
+  {
+    "name": "Set.prototype.delete()",
+    "description": "Removes the element associated to the value and returns a boolean asserting whether an element was successfully removed or not. Set.prototype.has(value) will return false afterwards.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/delete",
+    "return_value": "Returns true if value was already in\n  Set; otherwise false.",
+    "parameters": [
+      {
+        "name": "value",
+        "optional": false,
+        "description": "The value to remove from Set."
+      }
+    ]
+  },
+  {
+    "name": "Set.prototype.difference()",
+    "description": "Takes a set and returns a new set containing elements in this set but not in the given set.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/difference",
+    "return_value": "A new Set object containing elements in this set but not in the other set.",
+    "parameters": [
+      {
+        "name": "other",
+        "optional": false,
+        "description": "A Set object, or set-like object."
+      }
+    ]
+  },
+  {
+    "name": "Set.prototype.entries()",
+    "description": "Returns a new iterator object that contains an array of [value, value] for each element in the Set object, in insertion order. This is similar to the Map object, so that each entry's key is the same as its value for a Set.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/entries",
+    "return_value": "A new iterable iterator object.",
+    "parameters": []
+  },
+  {
+    "name": "Set.prototype.forEach()",
+    "description": "Calls callbackFn once for each value present in the Set object, in insertion order. If a thisArg parameter is provided, it will be used as the this value for each invocation of callbackFn.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/forEach",
+    "return_value": "None (undefined).",
+    "parameters": [
+      {
+        "name": "callback",
+        "optional": false,
+        "description": "A function to execute for each entry in the set. The function is called with the following arguments:\n\nvalue\n\nValue of each iteration.\n\nkey\n\nKey of each iteration. This is always the same as value.\n\nset\n\nThe set being iterated."
+      },
+      {
+        "name": "value",
+        "optional": false,
+        "description": "Value of each iteration."
+      },
+      {
+        "name": "key",
+        "optional": false,
+        "description": "Key of each iteration. This is always the same as value."
+      },
+      {
+        "name": "set",
+        "optional": false,
+        "description": "The set being iterated."
+      },
+      {
+        "name": "thisArg",
+        "optional": true,
+        "description": "A value to use as this when executing callbackFn."
+      }
+    ]
+  },
+  {
+    "name": "Set.prototype.has()",
+    "description": "Returns a boolean asserting whether an element is present with the given value in the Set object or not.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has",
+    "return_value": "Returns true if an element with the specified value exists in the Set object; otherwise false.",
+    "parameters": [
+      {
+        "name": "value",
+        "optional": false,
+        "description": "The value to test for presence in the Set object."
+      }
+    ]
+  },
+  {
+    "name": "Set.prototype.intersection()",
+    "description": "Takes a set and returns a new set containing elements in both this set and the given set.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/intersection",
+    "return_value": "A new Set object containing elements in both this set and the other set.",
+    "parameters": [
+      {
+        "name": "other",
+        "optional": false,
+        "description": "A Set object, or set-like object."
+      }
+    ]
+  },
+  {
+    "name": "Set.prototype.isDisjointFrom()",
+    "description": "Takes a set and returns a boolean indicating if this set has no elements in common with the given set.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/isDisjointFrom",
+    "return_value": "true if this set has no elements in common with the other set, and false otherwise.",
+    "parameters": [
+      {
+        "name": "other",
+        "optional": false,
+        "description": "A Set object, or set-like object."
+      }
+    ]
+  },
+  {
+    "name": "Set.prototype.isSubsetOf()",
+    "description": "Takes a set and returns a boolean indicating if all elements of this set are in the given set.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/isSubsetOf",
+    "return_value": "true if all elements in this set are also in the other set, and false otherwise.",
+    "parameters": [
+      {
+        "name": "other",
+        "optional": false,
+        "description": "A Set object, or set-like object."
+      }
+    ]
+  },
+  {
+    "name": "Set.prototype.isSupersetOf()",
+    "description": "Takes a set and returns a boolean indicating if all elements of the given set are in this set.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/isSupersetOf",
+    "return_value": "true if all elements in the other set are also in this set, and false otherwise.",
+    "parameters": [
+      {
+        "name": "other",
+        "optional": false,
+        "description": "A Set object, or set-like object."
+      }
+    ]
+  },
+  {
+    "name": "Set.prototype.keys()",
+    "description": "An alias for Set.prototype.values().",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/keys",
+    "return_value": "A new iterable iterator object.",
+    "parameters": []
+  },
+  {
+    "name": "Set.prototype.symmetricDifference()",
+    "description": "Takes a set and returns a new set containing elements which are in either this set or the given set, but not in both.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/symmetricDifference",
+    "return_value": "A new Set object containing elements which are in either this set or the other set, but not in both.",
+    "parameters": [
+      {
+        "name": "other",
+        "optional": false,
+        "description": "A Set object, or set-like object."
+      }
+    ]
+  },
+  {
+    "name": "Set.prototype.union()",
+    "description": "Takes a set and returns a new set containing elements which are in either or both of this set and the given set.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/union",
+    "return_value": "A new Set object containing elements which are in either or both of this set and the other set.",
+    "parameters": [
+      {
+        "name": "other",
+        "optional": false,
+        "description": "A Set object, or set-like object."
+      }
+    ]
+  },
+  {
+    "name": "Set.prototype.values()",
+    "description": "Returns a new iterator object that yields the values for each element in the Set object in insertion order.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/values",
+    "return_value": "A new iterable iterator object.",
+    "parameters": []
+  },
+  {
+    "name": "Set.prototype[@@iterator]()",
+    "description": "Returns a new iterator object that yields the values for each element in the Set object in insertion order.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/@@iterator",
+    "return_value": "The same return value as Set.prototype.values(): a new iterable iterator object that yields the values of the set.",
+    "parameters": []
+  }
+]

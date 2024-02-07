@@ -1,0 +1,131 @@
+[
+  {
+    "name": "BigInt()",
+    "description": "Creates a new BigInt value.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt",
+    "return_value": "A BigInt value. Number values must be integers and are converted to BigInts. The boolean value true becomes 1n, and false becomes 0n. Strings are parsed as if they are source text for integer literals, which means they can have leading and trailing whitespaces and can be prefixed with 0b, 0o, or 0x.",
+    "parameters": [
+      {
+        "name": "value",
+        "optional": false,
+        "description": "The value to be converted to a BigInt value. It may be a string, an integer, a boolean, or another BigInt."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if the parameter is a non-integral number."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown in one of the following cases:\n\nThe parameter cannot be converted to a primitive.\nAfter conversion to a primitive, the result is undefined, null, symbol."
+      },
+      {
+        "name": "SyntaxError",
+        "optional": false,
+        "description": "Thrown if the parameter is a string that cannot be parsed as a BigInt."
+      }
+    ]
+  },
+  {
+    "name": "BigInt.asIntN()",
+    "description": "Clamps a BigInt value to a signed integer value, and returns that value.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/asIntN",
+    "return_value": "The value of bigint modulo 2^bits, as a signed integer.",
+    "parameters": [
+      {
+        "name": "bits",
+        "optional": false,
+        "description": "The amount of bits available for the returned BigInt. Should be an integer between 0 and 253 - 1, inclusive."
+      },
+      {
+        "name": "bigint",
+        "optional": false,
+        "description": "The BigInt value to truncate to fit into the supplied bits."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if bits is negative or greater than 253 - 1."
+      }
+    ]
+  },
+  {
+    "name": "BigInt.asUintN()",
+    "description": "Clamps a BigInt value to an unsigned integer value, and returns that value.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/asUintN",
+    "return_value": "The value of bigint modulo 2^bits, as an unsigned integer.",
+    "parameters": [
+      {
+        "name": "bits",
+        "optional": false,
+        "description": "The amount of bits available for the returned BigInt. Should be an integer between 0 and 253 - 1, inclusive."
+      },
+      {
+        "name": "bigint",
+        "optional": false,
+        "description": "The BigInt value to truncate to fit into the supplied bits."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if bits is negative or greater than 253 - 1."
+      }
+    ]
+  },
+  {
+    "name": "BigInt.prototype.constructor",
+    "description": "The constructor function that created the instance object. For BigInt instances, the initial value is the BigInt constructor.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor",
+    "parameters": []
+  },
+  {
+    "name": "BigInt.prototype[@@toStringTag]",
+    "description": "The initial value of the @@toStringTag property is the string \"BigInt\". This property is used in Object.prototype.toString(). However, because BigInt also has its own toString() method, this property is not used unless you call Object.prototype.toString.call() with a BigInt as thisArg.",
+    "link": "https://developer.mozilla.org/#bigint.prototypetostringtag",
+    "parameters": []
+  },
+  {
+    "name": "BigInt.prototype.toLocaleString()",
+    "description": "Returns a string with a language-sensitive representation of this BigInt value. Overrides the Object.prototype.toLocaleString() method.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toLocaleString",
+    "return_value": "A string representing the given BigInt according to language-specific conventions.\nIn implementations with Intl.NumberFormat, this is equivalent to new Intl.NumberFormat(locales, options).format(number).\n\nNote: Most of the time, the formatting returned by toLocaleString() is consistent. However, the output may vary with time, language, and implementation \u00e2\u0080\u0094 output variations are by design and allowed by the specification. You should not compare the results of toLocaleString() to static values.",
+    "parameters": [
+      {
+        "name": "locales",
+        "optional": true,
+        "description": "A string with a BCP 47 language tag, or an array of such strings. Corresponds to the locales parameter of the Intl.NumberFormat() constructor.\nIn implementations without Intl.NumberFormat support, this parameter is ignored and the host's locale is usually used."
+      },
+      {
+        "name": "options",
+        "optional": true,
+        "description": "An object adjusting the output format. Corresponds to the options parameter of the Intl.NumberFormat() constructor.\nIn implementations without Intl.NumberFormat support, this parameter is ignored."
+      }
+    ]
+  },
+  {
+    "name": "BigInt.prototype.toString()",
+    "description": "Returns a string representing this BigInt value in the specified radix (base). Overrides the Object.prototype.toString() method.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toString",
+    "return_value": "A string representing the specified BigInt value.",
+    "parameters": [
+      {
+        "name": "radix",
+        "optional": true,
+        "description": "An integer in the range 2 through 36 specifying the base to use for representing the BigInt value. Defaults to 10."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if radix is less than 2 or greater than 36."
+      }
+    ]
+  },
+  {
+    "name": "BigInt.prototype.valueOf()",
+    "description": "Returns this BigInt value. Overrides the Object.prototype.valueOf() method.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/valueOf",
+    "return_value": "A BigInt representing the primitive value of the specified BigInt object.",
+    "parameters": []
+  }
+]

@@ -1,0 +1,317 @@
+[
+  {
+    "name": "Reflect[@@toStringTag]",
+    "description": "The initial value of the @@toStringTag property is the string \"Reflect\". This property is used in Object.prototype.toString().",
+    "link": "https://developer.mozilla.org/#reflecttostringtag",
+    "parameters": []
+  },
+  {
+    "name": "Reflect.apply()",
+    "description": "Calls a target function with arguments as specified by the argumentsList parameter. See also Function.prototype.apply().",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/apply",
+    "return_value": "The result of calling the given target function with the specified this value and arguments.",
+    "parameters": [
+      {
+        "name": "target",
+        "optional": false,
+        "description": "The target function to call."
+      },
+      {
+        "name": "thisArgument",
+        "optional": false,
+        "description": "The value of this provided for the call to target."
+      },
+      {
+        "name": "argumentsList",
+        "optional": false,
+        "description": "An array-like object specifying the arguments with which target should be called."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown if target is not a function or argumentsList is not an object."
+      }
+    ]
+  },
+  {
+    "name": "Reflect.construct()",
+    "description": "The new operator as a function. Equivalent to calling new target(...argumentsList). Also provides the option to specify a different prototype.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/construct",
+    "return_value": "A new instance of target (or newTarget, if present), initialized by target as a constructor with the given argumentsList.",
+    "parameters": [
+      {
+        "name": "target",
+        "optional": false,
+        "description": "The target function to call."
+      },
+      {
+        "name": "argumentsList",
+        "optional": false,
+        "description": "An array-like object specifying the arguments with which target should be called."
+      },
+      {
+        "name": "newTarget",
+        "optional": true,
+        "description": "The value of new.target operator, which usually specifies the prototype of the returned object. If newTarget is not present, its value defaults to target."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown if target or newTarget is not a constructor, or if argumentsList is not an object."
+      }
+    ]
+  },
+  {
+    "name": "Reflect.defineProperty()",
+    "description": "Similar to Object.defineProperty(). Returns a boolean that is true if the property was successfully defined.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty",
+    "return_value": "A boolean indicating whether or not the property was successfully defined.",
+    "parameters": [
+      {
+        "name": "target",
+        "optional": false,
+        "description": "The target object on which to define the property."
+      },
+      {
+        "name": "propertyKey",
+        "optional": false,
+        "description": "The name of the property to be defined or modified."
+      },
+      {
+        "name": "attributes",
+        "optional": false,
+        "description": "The attributes for the property being defined or modified."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown if target or attributes is not an object."
+      }
+    ]
+  },
+  {
+    "name": "Reflect.deleteProperty()",
+    "description": "The delete operator as a function. Equivalent to calling delete target[propertyKey].",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/deleteProperty",
+    "return_value": "A boolean indicating whether or not the property was successfully deleted.",
+    "parameters": [
+      {
+        "name": "target",
+        "optional": false,
+        "description": "The target object on which to delete the property."
+      },
+      {
+        "name": "propertyKey",
+        "optional": false,
+        "description": "The name of the property to be deleted."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown if target is not an object."
+      }
+    ]
+  },
+  {
+    "name": "Reflect.get()",
+    "description": "Returns the value of the property. Works like getting a property from an object (target[propertyKey]) as a function.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/get",
+    "return_value": "The value of the property.",
+    "parameters": [
+      {
+        "name": "target",
+        "optional": false,
+        "description": "The target object on which to get the property."
+      },
+      {
+        "name": "propertyKey",
+        "optional": false,
+        "description": "The name of the property to get."
+      },
+      {
+        "name": "receiver",
+        "optional": true,
+        "description": "The value of this provided for the call to target if a getter is encountered."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown if target is not an object."
+      }
+    ]
+  },
+  {
+    "name": "Reflect.getOwnPropertyDescriptor()",
+    "description": "Similar to Object.getOwnPropertyDescriptor(). Returns a property descriptor of the given property if it exists on the object, undefined otherwise.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/getOwnPropertyDescriptor",
+    "return_value": "A property descriptor object if the property exists as an own property of target; otherwise, undefined.",
+    "parameters": [
+      {
+        "name": "target",
+        "optional": false,
+        "description": "The target object in which to look for the property."
+      },
+      {
+        "name": "propertyKey",
+        "optional": false,
+        "description": "The name of the property to get an own property descriptor for."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown if target is not an object."
+      }
+    ]
+  },
+  {
+    "name": "Reflect.getPrototypeOf()",
+    "description": "Same as Object.getPrototypeOf().",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/getPrototypeOf",
+    "return_value": "The prototype of the given object, which may be an object or null.",
+    "parameters": [
+      {
+        "name": "target",
+        "optional": false,
+        "description": "The target object of which to get the prototype."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown if target is not an object."
+      }
+    ]
+  },
+  {
+    "name": "Reflect.has()",
+    "description": "Returns a boolean indicating whether the target has the property. Either as own or inherited. Works like the in operator as a function.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/has",
+    "return_value": "A Boolean indicating whether or not the target has the property.",
+    "parameters": [
+      {
+        "name": "target",
+        "optional": false,
+        "description": "The target object in which to look for the property."
+      },
+      {
+        "name": "propertyKey",
+        "optional": false,
+        "description": "The name of the property to check."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown if target is not an object."
+      }
+    ]
+  },
+  {
+    "name": "Reflect.isExtensible()",
+    "description": "Same as Object.isExtensible(). Returns a boolean that is true if the target is extensible.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/isExtensible",
+    "return_value": "A Boolean indicating whether or not the target is extensible.",
+    "parameters": [
+      {
+        "name": "target",
+        "optional": false,
+        "description": "The target object which to check if it is extensible."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown if target is not an object."
+      }
+    ]
+  },
+  {
+    "name": "Reflect.ownKeys()",
+    "description": "Returns an array of the target object's own (not inherited) property keys.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/ownKeys",
+    "return_value": "An Array of the target object's own property keys, including strings and symbols. For most objects, the array will be in the order of:\n\nNon-negative integer indexes in increasing numeric order (but as strings)\nOther string keys in the order of property creation\nSymbol keys in the order of property creation.",
+    "parameters": [
+      {
+        "name": "target",
+        "optional": false,
+        "description": "The target object from which to get the own keys."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown if target is not an object."
+      }
+    ]
+  },
+  {
+    "name": "Reflect.preventExtensions()",
+    "description": "Similar to Object.preventExtensions(). Returns a boolean that is true if the update was successful.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/preventExtensions",
+    "return_value": "A Boolean indicating whether or not the target was successfully set to prevent extensions.",
+    "parameters": [
+      {
+        "name": "target",
+        "optional": false,
+        "description": "The target object on which to prevent extensions."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown if target is not an object."
+      }
+    ]
+  },
+  {
+    "name": "Reflect.set()",
+    "description": "A function that assigns values to properties. Returns a boolean that is true if the update was successful.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/set",
+    "return_value": "A Boolean indicating whether or not setting the property was successful.",
+    "parameters": [
+      {
+        "name": "target",
+        "optional": false,
+        "description": "The target object on which to set the property."
+      },
+      {
+        "name": "propertyKey",
+        "optional": false,
+        "description": "The name of the property to set."
+      },
+      {
+        "name": "value",
+        "optional": false,
+        "description": "The value to set."
+      },
+      {
+        "name": "receiver",
+        "optional": true,
+        "description": "The value of this provided for the call to the setter for propertyKey on target. If provided and target does not have a setter for propertyKey, the property will be set on receiver instead."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown if target is not an object."
+      }
+    ]
+  },
+  {
+    "name": "Reflect.setPrototypeOf()",
+    "description": "A function that sets the prototype of an object. Returns a boolean that is true if the update was successful.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/setPrototypeOf",
+    "return_value": "A Boolean indicating whether or not the prototype was successfully set.",
+    "parameters": [
+      {
+        "name": "target",
+        "optional": false,
+        "description": "The target object of which to set the prototype."
+      },
+      {
+        "name": "prototype",
+        "optional": false,
+        "description": "The object's new prototype (an object or null)."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown if target is not an object or if prototype is neither an object nor null."
+      }
+    ]
+  }
+]

@@ -1,0 +1,83 @@
+[
+  {
+    "name": "Generator.prototype.constructor",
+    "description": "The constructor function that created the instance object. For Generator instances, the initial value is GeneratorFunction.prototype.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor",
+    "parameters": []
+  },
+  {
+    "name": "Generator.prototype[@@toStringTag]",
+    "description": "The initial value of the @@toStringTag property is the string \"Generator\". This property is used in Object.prototype.toString().",
+    "link": "https://developer.mozilla.org/#generator.prototypetostringtag",
+    "parameters": []
+  },
+  {
+    "name": "Generator.prototype.next()",
+    "description": "Returns a value yielded by the yield expression.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator/next",
+    "return_value": "An Object with two properties:\n\ndone\n\nA boolean value:\n\ntrue if the generator is past the end of its control flow. In this case value specifies the return value of the generator (which may be undefined).\nfalse if the generator is able to produce more values.\n\n\nvalue\n\nAny JavaScript value yielded or returned by the generator.",
+    "parameters": [
+      {
+        "name": "value",
+        "optional": true,
+        "description": "The value to send to the generator.\n\n      The value will be assigned as a result of a yield expression. For\n      example, in variable = yield expression, the value\n      passed to the .next() function will be assigned to\n      variable."
+      },
+      {
+        "name": "done",
+        "optional": false,
+        "description": "A boolean value:\n\ntrue if the generator is past the end of its control flow. In this case value specifies the return value of the generator (which may be undefined).\nfalse if the generator is able to produce more values."
+      },
+      {
+        "name": "value",
+        "optional": false,
+        "description": "Any JavaScript value yielded or returned by the generator."
+      }
+    ]
+  },
+  {
+    "name": "Generator.prototype.return()",
+    "description": "Acts as if a return statement is inserted in the generator's body at the current suspended position, which finishes the generator and allows the generator to perform any cleanup tasks when combined with a try...finally block.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator/return",
+    "return_value": "An Object with two properties:\n\ndone\n\nA boolean value:\n\ntrue if the generator function's control flow has reached the end.\nfalse if the generator function's control flow hasn't reached the end and can produce more values. This can only happen if the return is captured in a try...finally and there are more yield expressions in the finally block.\n\n\nvalue\n\nThe value that is given as an argument, or, if the yield expression is wrapped in a try...finally, the value yielded/returned from the finally block.",
+    "parameters": [
+      {
+        "name": "value",
+        "optional": true,
+        "description": "The value to return."
+      },
+      {
+        "name": "done",
+        "optional": false,
+        "description": "A boolean value:\n\ntrue if the generator function's control flow has reached the end.\nfalse if the generator function's control flow hasn't reached the end and can produce more values. This can only happen if the return is captured in a try...finally and there are more yield expressions in the finally block."
+      },
+      {
+        "name": "value",
+        "optional": false,
+        "description": "The value that is given as an argument, or, if the yield expression is wrapped in a try...finally, the value yielded/returned from the finally block."
+      }
+    ]
+  },
+  {
+    "name": "Generator.prototype.throw()",
+    "description": "Acts as if a throw statement is inserted in the generator's body at the current suspended position, which informs the generator of an error condition and allows it to handle the error, or perform cleanup and close itself.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator/throw",
+    "return_value": "If the thrown exception is caught by a try...catch and the generator resumes to yield more values, it will return an Object with two properties:\n\ndone\n\nA boolean value:\n\ntrue if the generator function's control flow has reached the end.\nfalse if the generator function is able to produce more values.\n\n\nvalue\n\nThe value yielded from the next yield expression.",
+    "parameters": [
+      {
+        "name": "exception",
+        "optional": false,
+        "description": "The exception to throw. For debugging purposes, it is useful to make it an instanceof Error."
+      },
+      {
+        "name": "done",
+        "optional": false,
+        "description": "A boolean value:\n\ntrue if the generator function's control flow has reached the end.\nfalse if the generator function is able to produce more values."
+      },
+      {
+        "name": "value",
+        "optional": false,
+        "description": "The value yielded from the next yield expression."
+      }
+    ]
+  }
+]

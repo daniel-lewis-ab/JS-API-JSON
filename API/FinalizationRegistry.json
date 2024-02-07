@@ -1,0 +1,77 @@
+[
+  {
+    "name": "FinalizationRegistry()",
+    "description": "Creates a new FinalizationRegistry object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/FinalizationRegistry",
+    "parameters": [
+      {
+        "name": "callback",
+        "optional": false,
+        "description": "A function to be invoked each time a registered target value is garbage collected. Its return value is ignored. The function is called with the following arguments:\n\nheldValue\n\nThe value that was passed to the second parameter of the register() method when the target object was registered."
+      },
+      {
+        "name": "heldValue",
+        "optional": false,
+        "description": "The value that was passed to the second parameter of the register() method when the target object was registered."
+      }
+    ]
+  },
+  {
+    "name": "FinalizationRegistry.prototype.constructor",
+    "description": "The constructor function that created the instance object. For FinalizationRegistry instances, the initial value is the FinalizationRegistry constructor.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor",
+    "parameters": []
+  },
+  {
+    "name": "FinalizationRegistry.prototype[@@toStringTag]",
+    "description": "The initial value of the @@toStringTag property is the string \"FinalizationRegistry\". This property is used in Object.prototype.toString().",
+    "link": "https://developer.mozilla.org/#finalizationregistry.prototypetostringtag",
+    "parameters": []
+  },
+  {
+    "name": "FinalizationRegistry.prototype.register()",
+    "description": "Registers an object with the registry in order to get a cleanup callback when/if the object is garbage-collected.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/register",
+    "return_value": "None (undefined).",
+    "parameters": [
+      {
+        "name": "target",
+        "optional": false,
+        "description": "The target value to register."
+      },
+      {
+        "name": "heldValue",
+        "optional": false,
+        "description": "The value to pass to the finalizer for this target. This cannot be the target itself but can be anything else, including functions and primitives."
+      },
+      {
+        "name": "unregisterToken",
+        "optional": true,
+        "description": "A token that may be used with the unregister method later to unregister the target value. If provided (and not undefined), this must be an object or a non-registered symbol. If not provided, the target cannot be unregistered."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown in one of the following cases:\n\ntarget is not an object or a non-registered symbol (object as opposed to primitives; functions are objects as well)\ntarget is the same as heldvalue (target === heldValue)\nunregisterToken is not an object or a non-registered symbol"
+      }
+    ]
+  },
+  {
+    "name": "FinalizationRegistry.prototype.unregister()",
+    "description": "Unregisters an object from the registry.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/unregister",
+    "return_value": "A boolean value that is true if at least one cell was unregistered and false if no cell was unregistered.",
+    "parameters": [
+      {
+        "name": "unregisterToken",
+        "optional": false,
+        "description": "The token used with the register() method when registering the target value. Multiple cells registered with the same unregisterToken will be unregistered together."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown if unregisterToken is not an object or a non-registered symbol."
+      }
+    ]
+  }
+]

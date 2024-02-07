@@ -1,0 +1,30 @@
+[
+  {
+    "name": "encodedURI",
+    "description": "An encoded component of a Uniform Resource Identifier.",
+    "link": "https://developer.mozilla.org/#encodeduri",
+    "parameters": []
+  },
+  {
+    "name": "URIError",
+    "description": "Thrown if encodedURI contains a % not followed by two hexadecimal digits, or if the escape sequence does not encode a valid UTF-8 character.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "parameters": [
+      {
+        "name": "URIError()",
+        "optional": false,
+        "description": "Creates a new URIError object."
+      },
+      {
+        "name": "URIError.prototype.constructor",
+        "optional": false,
+        "description": "The constructor function that created the instance object. For URIError instances, the initial value is the URIError constructor."
+      },
+      {
+        "name": "URIError.prototype.name",
+        "optional": false,
+        "description": "Represents the name for the type of error. For URIError.prototype.name, the initial value is \"URIError\"."
+      }
+    ]
+  }
+]

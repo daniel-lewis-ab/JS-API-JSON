@@ -1,0 +1,103 @@
+[
+  {
+    "name": "SharedArrayBuffer()",
+    "description": "Creates a new SharedArrayBuffer object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffer",
+    "return_value": "A new SharedArrayBuffer object of the specified size, with its maxByteLength property set to the specified maxByteLength if one was specified. Its contents are\n  initialized to 0.",
+    "parameters": [
+      {
+        "name": "length",
+        "optional": false,
+        "description": "The size, in bytes, of the array buffer to create."
+      },
+      {
+        "name": "options",
+        "optional": true,
+        "description": "An object, which can contain the following properties:\n\nmaxByteLength Optional\n\nThe maximum size, in bytes, that the shared array buffer can be resized to."
+      },
+      {
+        "name": "maxByteLength",
+        "optional": true,
+        "description": "The maximum size, in bytes, that the shared array buffer can be resized to."
+      }
+    ]
+  },
+  {
+    "name": "SharedArrayBuffer[@@species]",
+    "description": "Returns the constructor used to construct return values from SharedArrayBuffer methods.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/@@species",
+    "return_value": "The value of the constructor (this) on which get @@species was called. The return value is used to construct return values from array buffer methods that create new array buffer.",
+    "parameters": []
+  },
+  {
+    "name": "SharedArrayBuffer.prototype.byteLength",
+    "description": "The size, in bytes, of the array. This is established when the array is constructed and can only be changed using the SharedArrayBuffer.prototype.grow() method if the SharedArrayBuffer is growable.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/byteLength",
+    "parameters": []
+  },
+  {
+    "name": "SharedArrayBuffer.prototype.constructor",
+    "description": "The constructor function that created the instance object. For SharedArrayBuffer instances, the initial value is the SharedArrayBuffer constructor.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor",
+    "parameters": []
+  },
+  {
+    "name": "SharedArrayBuffer.prototype.growable",
+    "description": "Read-only. Returns true if the SharedArrayBuffer can be grown, or false if not.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/growable",
+    "parameters": []
+  },
+  {
+    "name": "SharedArrayBuffer.prototype.maxByteLength",
+    "description": "The read-only maximum length, in bytes, that the SharedArrayBuffer can be grown to. This is established when the array is constructed and cannot be changed.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/maxByteLength",
+    "parameters": []
+  },
+  {
+    "name": "SharedArrayBuffer.prototype[@@toStringTag]",
+    "description": "The initial value of the @@toStringTag property is the string \"SharedArrayBuffer\". This property is used in Object.prototype.toString().",
+    "link": "https://developer.mozilla.org/#sharedarraybuffer.prototypetostringtag",
+    "parameters": []
+  },
+  {
+    "name": "SharedArrayBuffer.prototype.grow()",
+    "description": "Grows the SharedArrayBuffer to the specified size, in bytes.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/grow",
+    "return_value": "None (undefined).",
+    "parameters": [
+      {
+        "name": "newLength",
+        "optional": false,
+        "description": "The new length, in bytes, to resize the SharedArrayBuffer to."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown if the SharedArrayBuffer is not growable."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if newLength is larger than the maxByteLength of the SharedArrayBuffer or smaller than the byteLength."
+      }
+    ]
+  },
+  {
+    "name": "SharedArrayBuffer.prototype.slice()",
+    "description": "Returns a new SharedArrayBuffer whose contents are a copy of this SharedArrayBuffer's bytes from begin, inclusive, up to end, exclusive. If either begin or end is negative, it refers to an index from the end of the array, as opposed to from the beginning.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice",
+    "return_value": "A new SharedArrayBuffer containing the extracted elements.",
+    "parameters": [
+      {
+        "name": "start",
+        "optional": true,
+        "description": "Zero-based index at which to start extraction, converted to an integer.\n\nNegative index counts back from the end of the buffer \u00e2\u0080\u0094 if start < 0, start + buffer.length is used.\nIf start < -buffer.length or start is omitted, 0 is used.\nIf start >= buffer.length, nothing is extracted."
+      },
+      {
+        "name": "end",
+        "optional": true,
+        "description": "Zero-based index at which to end extraction, converted to an integer. slice() extracts up to but not including end.\n\nNegative index counts back from the end of the buffer \u00e2\u0080\u0094 if end < 0, end + buffer.length is used.\nIf end < -buffer.length, 0 is used.\nIf end >= buffer.length or end is omitted, buffer.length is used, causing all elements until the end to be extracted.\nIf end is positioned before or at start after normalization, nothing is extracted."
+      }
+    ]
+  }
+]

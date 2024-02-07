@@ -1,0 +1,116 @@
+[
+  {
+    "name": "Intl.Segmenter()",
+    "description": "Creates a new Intl.Segmenter object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/Segmenter",
+    "return_value": "A new Intl.Segmenter instance.",
+    "parameters": [
+      {
+        "name": "locales",
+        "optional": true,
+        "description": "A string with a BCP 47 language tag or an Intl.Locale instance, or an array of such locale identifiers. For the general form and interpretation of the locales argument, see the parameter description on the Intl main page."
+      },
+      {
+        "name": "options",
+        "optional": true,
+        "description": "An object containing the following properties, in the order they are retrieved (all of them are optional):\n\nlocaleMatcher\n\nThe locale matching algorithm to use. Possible values are \"lookup\" and \"best fit\"; the default is \"best fit\". For information about this option, see Locale identification and negotiation.\n\ngranularity\n\nHow granularly should the input be split. Possible values are:\n\n\"grapheme\" (default)\n\nSplit the input into segments at grapheme cluster (user-perceived character) boundaries, as determined by the locale.\n\n\"word\"\n\nSplit the input into segments at word boundaries, as determined by the locale.\n\n\"sentence\"\n\nSplit the input into segments at sentence boundaries, as determined by the locale."
+      },
+      {
+        "name": "localeMatcher",
+        "optional": false,
+        "description": "The locale matching algorithm to use. Possible values are \"lookup\" and \"best fit\"; the default is \"best fit\". For information about this option, see Locale identification and negotiation."
+      },
+      {
+        "name": "granularity",
+        "optional": false,
+        "description": "How granularly should the input be split. Possible values are:\n\n\"grapheme\" (default)\n\nSplit the input into segments at grapheme cluster (user-perceived character) boundaries, as determined by the locale.\n\n\"word\"\n\nSplit the input into segments at word boundaries, as determined by the locale.\n\n\"sentence\"\n\nSplit the input into segments at sentence boundaries, as determined by the locale."
+      },
+      {
+        "name": "\"grapheme\"",
+        "optional": false,
+        "description": "Split the input into segments at grapheme cluster (user-perceived character) boundaries, as determined by the locale."
+      },
+      {
+        "name": "\"word\"",
+        "optional": false,
+        "description": "Split the input into segments at word boundaries, as determined by the locale."
+      },
+      {
+        "name": "\"sentence\"",
+        "optional": false,
+        "description": "Split the input into segments at sentence boundaries, as determined by the locale."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if locales or options contain invalid values."
+      }
+    ]
+  },
+  {
+    "name": "Intl.Segmenter.supportedLocalesOf()",
+    "description": "Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/supportedLocalesOf",
+    "return_value": "An array of strings representing a subset of the given locale tags that are supported in segmentation without having to fall back to the runtime's default locale.",
+    "parameters": [
+      {
+        "name": "locales",
+        "optional": false,
+        "description": "A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the locales argument, see the parameter description on the Intl main page."
+      },
+      {
+        "name": "options",
+        "optional": true,
+        "description": "An object that may have the following property:\n\nlocaleMatcher\n\nThe locale matching algorithm to use. Possible values are \"lookup\" and \"best fit\"; the default is \"best fit\". For information about this option, see the Intl page."
+      },
+      {
+        "name": "localeMatcher",
+        "optional": false,
+        "description": "The locale matching algorithm to use. Possible values are \"lookup\" and \"best fit\"; the default is \"best fit\". For information about this option, see the Intl page."
+      }
+    ]
+  },
+  {
+    "name": "Intl.Segmenter.prototype.constructor",
+    "description": "The constructor function that created the instance object. For Intl.Segmenter instances, the initial value is the Intl.Segmenter constructor.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor",
+    "parameters": []
+  },
+  {
+    "name": "Intl.Segmenter.prototype[@@toStringTag]",
+    "description": "The initial value of the @@toStringTag property is the string \"Intl.Segmenter\". This property is used in Object.prototype.toString().",
+    "link": "https://developer.mozilla.org/#intl.segmenter.prototypetostringtag",
+    "parameters": []
+  },
+  {
+    "name": "Intl.Segmenter.prototype.resolvedOptions()",
+    "description": "Returns a new object with properties reflecting the locale and granularity options computed during initialization of this Intl.Segmenter object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/resolvedOptions",
+    "return_value": "A new object with properties reflecting the locale and collation options computed\n  during the initialization of the given Intl.Segmenter object.",
+    "parameters": [
+      {
+        "name": "locale",
+        "optional": false,
+        "description": "The BCP 47 language tag for the locale actually used. If any Unicode extension\n      values were requested in the input BCP 47 language tag that led to this locale,\n      the key-value pairs that were requested and are supported for this locale are\n      included in locale."
+      },
+      {
+        "name": "granularity",
+        "optional": false,
+        "description": "The value provided for this property in the options argument or filled\n      in as the default."
+      }
+    ]
+  },
+  {
+    "name": "Intl.Segmenter.prototype.segment()",
+    "description": "Returns a new iterable Segments instance representing the segments of a string according to the locale and granularity of this Intl.Segmenter instance.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment",
+    "return_value": "A new iterable Segments object containing the segments of the input string, using the segmenter's locale and granularity.",
+    "parameters": [
+      {
+        "name": "input",
+        "optional": false,
+        "description": "The text to be segmented as a string."
+      }
+    ]
+  }
+]

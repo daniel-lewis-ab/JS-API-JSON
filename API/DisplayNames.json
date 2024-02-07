@@ -1,0 +1,155 @@
+[
+  {
+    "name": "Intl.DisplayNames()",
+    "description": "Creates a new Intl.DisplayNames object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/DisplayNames",
+    "parameters": [
+      {
+        "name": "locales",
+        "optional": false,
+        "description": "A string with a BCP 47 language tag or an Intl.Locale instance, or an array of such locale identifiers. For the general form and interpretation of the locales argument, see the parameter description on the Intl main page."
+      },
+      {
+        "name": "options",
+        "optional": false,
+        "description": "An object containing the following properties, in the order they are retrieved:\n\nlocaleMatcher Optional\n\nThe locale matching algorithm to use. Possible values are \"lookup\" and \"best fit\"; the default is \"best fit\". For information about this option, see Locale identification and negotiation.\n\nstyle Optional\n\nThe formatting style to use. Possible values are \"narrow\", \"short\", and \"long\"; the default is \"long\".\n\ntype\n\nThe type of display names to return from of(). Possible values are \"language\", \"region\", \"script\", \"currency\", \"calendar\", and \"dateTimeField\".\n\nfallback Optional\n\nWhat to return from of() if the input is structurally valid but there's no matching display name. Possible values are:\n\n\"code\" (default)\n\nReturn the input code itself.\n\n\"none\"\n\nReturn undefined.\n\n\n\nlanguageDisplay Optional\n\nHow language names should be displayed. Only usable along with type: \"language\". Possible values are:\n\n\"dialect\" (default)\n\nDisplay special regional dialects using their own name. E.g. \"nl-BE\" will be displayed as \"Flemish\".\n\n\"standard\"\n\nDisplay all languages using standard format. E.g. \"nl-BE\" will be displayed as \"Dutch (Belgium)\"."
+      },
+      {
+        "name": "localeMatcher",
+        "optional": true,
+        "description": "The locale matching algorithm to use. Possible values are \"lookup\" and \"best fit\"; the default is \"best fit\". For information about this option, see Locale identification and negotiation."
+      },
+      {
+        "name": "style",
+        "optional": true,
+        "description": "The formatting style to use. Possible values are \"narrow\", \"short\", and \"long\"; the default is \"long\"."
+      },
+      {
+        "name": "type",
+        "optional": false,
+        "description": "The type of display names to return from of(). Possible values are \"language\", \"region\", \"script\", \"currency\", \"calendar\", and \"dateTimeField\"."
+      },
+      {
+        "name": "fallback",
+        "optional": true,
+        "description": "What to return from of() if the input is structurally valid but there's no matching display name. Possible values are:\n\n\"code\" (default)\n\nReturn the input code itself.\n\n\"none\"\n\nReturn undefined."
+      },
+      {
+        "name": "\"code\"",
+        "optional": false,
+        "description": "Return the input code itself."
+      },
+      {
+        "name": "\"none\"",
+        "optional": false,
+        "description": "Return undefined."
+      },
+      {
+        "name": "languageDisplay",
+        "optional": true,
+        "description": "How language names should be displayed. Only usable along with type: \"language\". Possible values are:\n\n\"dialect\" (default)\n\nDisplay special regional dialects using their own name. E.g. \"nl-BE\" will be displayed as \"Flemish\".\n\n\"standard\"\n\nDisplay all languages using standard format. E.g. \"nl-BE\" will be displayed as \"Dutch (Belgium)\"."
+      },
+      {
+        "name": "\"dialect\"",
+        "optional": false,
+        "description": "Display special regional dialects using their own name. E.g. \"nl-BE\" will be displayed as \"Flemish\"."
+      },
+      {
+        "name": "\"standard\"",
+        "optional": false,
+        "description": "Display all languages using standard format. E.g. \"nl-BE\" will be displayed as \"Dutch (Belgium)\"."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown if options.type is not provided."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if locales or options contain invalid values."
+      }
+    ]
+  },
+  {
+    "name": "Intl.DisplayNames.supportedLocalesOf()",
+    "description": "Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/supportedLocalesOf",
+    "return_value": "An array of strings representing a subset of the given locale tags that are supported in display names without having to fall back to the runtime's default locale.",
+    "parameters": [
+      {
+        "name": "locales",
+        "optional": false,
+        "description": "A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the locales argument, see the parameter description on the Intl main page."
+      },
+      {
+        "name": "options",
+        "optional": true,
+        "description": "An object that may have the following property:\n\nlocaleMatcher\n\nThe locale matching algorithm to use. Possible values are \"lookup\" and \"best fit\"; the default is \"best fit\". For information about this option, see the Intl page."
+      },
+      {
+        "name": "localeMatcher",
+        "optional": false,
+        "description": "The locale matching algorithm to use. Possible values are \"lookup\" and \"best fit\"; the default is \"best fit\". For information about this option, see the Intl page."
+      }
+    ]
+  },
+  {
+    "name": "Intl.DisplayNames.prototype.constructor",
+    "description": "The constructor function that created the instance object. For Intl.DisplayNames instances, the initial value is the Intl.DisplayNames constructor.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor",
+    "parameters": []
+  },
+  {
+    "name": "Intl.DisplayNames.prototype[@@toStringTag]",
+    "description": "The initial value of the @@toStringTag property is the string \"Intl.DisplayNames\". This property is used in Object.prototype.toString().",
+    "link": "https://developer.mozilla.org/#intl.displaynames.prototypetostringtag",
+    "parameters": []
+  },
+  {
+    "name": "Intl.DisplayNames.prototype.of()",
+    "description": "This method receives a code and returns a string based on the locale and options provided when instantiating Intl.DisplayNames.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/of",
+    "return_value": "A language-specific formatted string, or undefined if there's no data for the input and fallback is \"none\".\n\nNote: fallback is only used if code is structurally valid. See using fallback.",
+    "parameters": [
+      {
+        "name": "code",
+        "optional": false,
+        "description": "The code to provide depends on the type:\n\nIf the type is \"region\", code should be either an two-letter ISO 3166 region code, or a three-digit UN M49 geographic region. It is required to follow the unicode_region_subtag grammar.\nIf the type is \"script\", code should be an four-letter ISO 15924 script code. It is required to follow the unicode_script_subtag grammar.\nIf the type is \"language\", code should be a languageCode [\"-\" scriptCode] [\"-\" regionCode ] *(\"-\" variant ) subsequence of the unicode_language_id grammar. languageCode is either a two-letter ISO 639-1 language code or a three-letter ISO 639-2 language code.\nIf the type is \"currency\", code should be a three-letter ISO 4217 currency code. It is required to have exactly three alphabetic characters.\nIf the type is \"dateTimeField\", code should be one of: \"era\", \"year\", \"quarter\", \"month\", \"weekOfYear\", \"weekday\", \"day\", \"dayPeriod\", \"hour\", \"minute\", \"second\", \"timeZoneName\".\nIf the type is \"calendar\", code should be a calendar key. It is required to follow the type grammar of a Unicode locale identifier."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if code is not structurally valid for the given type."
+      }
+    ]
+  },
+  {
+    "name": "Intl.DisplayNames.prototype.resolvedOptions()",
+    "description": "Returns a new object with properties reflecting the locale and formatting options computed during initialization of the object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/resolvedOptions",
+    "return_value": "An object with properties reflecting the locale and formatting options computed during\n  the construction of the given Intl.DisplayNames object.",
+    "parameters": [
+      {
+        "name": "locale",
+        "optional": false,
+        "description": "The BCP 47 language tag for the locale actually used. If any Unicode extension\n      values were requested in the input BCP 47 language tag that led to this locale,\n      the key-value pairs that were requested and are supported for this locale are\n      included in locale."
+      },
+      {
+        "name": "style",
+        "optional": false,
+        "description": "The value provided for this property in the options argument of the\n      constructor or the default value (\"long\"). Its value is either\n      \"long\", \"short\", or \"narrow\"."
+      },
+      {
+        "name": "type",
+        "optional": false,
+        "description": "The value provided for this property in the options argument of the\n      constructor or the default value (\"language\"). Its value is either\n      \"language\", \"region\", \"script\", or\n      \"currency\"."
+      },
+      {
+        "name": "fallback",
+        "optional": false,
+        "description": "The value provided for this property in the options argument of the constructor or\n      the default value (\"code\"). Its value is either \"code\"\n      or \"none\"."
+      }
+    ]
+  }
+]

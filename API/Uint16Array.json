@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Uint16Array()",
+    "description": "Creates a new Uint16Array object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array/Uint16Array",
+    "parameters": []
+  },
+  {
+    "name": "Uint16Array.BYTES_PER_ELEMENT",
+    "description": "Returns a number value of the element size. 2 in the case of Uint16Array.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT",
+    "parameters": []
+  },
+  {
+    "name": "Uint16Array.prototype.BYTES_PER_ELEMENT",
+    "description": "Returns a number value of the element size. 2 in the case of a Uint16Array.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT",
+    "parameters": []
+  },
+  {
+    "name": "Uint16Array.prototype.constructor",
+    "description": "The constructor function that created the instance object. For Uint16Array instances, the initial value is the Uint16Array constructor.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor",
+    "parameters": []
+  }
+]

@@ -1,0 +1,441 @@
+[
+  {
+    "name": "Intl.Locale()",
+    "description": "Creates a new Locale object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale",
+    "parameters": [
+      {
+        "name": "tag",
+        "optional": false,
+        "description": "The Unicode locale identifier string. For the syntax of locale identifier strings, see the Intl main page. Note that the Intl.Locale constructor, unlike most other Intl constructors, does not accept an array of locales or undefined."
+      },
+      {
+        "name": "options",
+        "optional": false,
+        "description": "An object that contains configuration for the Locale. Option values here take priority over extension keys in the locale identifier. Possible properties are:\n\nlanguage\n\nThe language. Any syntactically valid string following the unicode_language_subtag grammar (2\u00e2\u0080\u00933 or 5\u00e2\u0080\u00938 letters) is accepted, but the implementation only recognizes certain kinds.\n\nscript\n\nThe script. Any syntactically valid string following the unicode_script_subtag grammar (4 letters) is accepted, but the implementation only recognizes certain kinds.\n\nregion\n\nThe region. Any syntactically valid string following the unicode_region_subtag grammar (either 2 letters or 3 digits) is accepted, but the implementation only recognizes certain kinds.\n\ncalendar\n\nThe calendar. Any syntactically valid string following the type grammar (one or more segments of 3\u00e2\u0080\u00938 alphanumerals, joined by hyphens) is accepted, but the implementation only recognizes certain kinds, which are listed in Intl.Locale.prototype.getCalendars.\n\ncollation\n\nThe collation. Any syntactically valid string following the type grammar is accepted, but the implementation only recognizes certain kinds, which are listed in Intl.Locale.prototype.getCollations.\n\nnumberingSystem\n\nThe numbering system. Any syntactically valid string following the type grammar is accepted, but the implementation only recognizes certain kinds, which are listed in Intl.Locale.prototype.getNumberingSystems.\n\ncaseFirst\n\nThe case-first sort option. Possible values are \"upper\", \"lower\", or \"false\".\n\nhourCycle\n\nThe hour cycle. Possible values are \"h23\", \"h12\", \"h11\", or the practically unused \"h24\", which are explained in Intl.Locale.prototype.getHourCycles\n\nnumeric\n\nThe numeric sort option. A boolean."
+      },
+      {
+        "name": "language",
+        "optional": false,
+        "description": "The language. Any syntactically valid string following the unicode_language_subtag grammar (2\u00e2\u0080\u00933 or 5\u00e2\u0080\u00938 letters) is accepted, but the implementation only recognizes certain kinds."
+      },
+      {
+        "name": "script",
+        "optional": false,
+        "description": "The script. Any syntactically valid string following the unicode_script_subtag grammar (4 letters) is accepted, but the implementation only recognizes certain kinds."
+      },
+      {
+        "name": "region",
+        "optional": false,
+        "description": "The region. Any syntactically valid string following the unicode_region_subtag grammar (either 2 letters or 3 digits) is accepted, but the implementation only recognizes certain kinds."
+      },
+      {
+        "name": "calendar",
+        "optional": false,
+        "description": "The calendar. Any syntactically valid string following the type grammar (one or more segments of 3\u00e2\u0080\u00938 alphanumerals, joined by hyphens) is accepted, but the implementation only recognizes certain kinds, which are listed in Intl.Locale.prototype.getCalendars."
+      },
+      {
+        "name": "collation",
+        "optional": false,
+        "description": "The collation. Any syntactically valid string following the type grammar is accepted, but the implementation only recognizes certain kinds, which are listed in Intl.Locale.prototype.getCollations."
+      },
+      {
+        "name": "numberingSystem",
+        "optional": false,
+        "description": "The numbering system. Any syntactically valid string following the type grammar is accepted, but the implementation only recognizes certain kinds, which are listed in Intl.Locale.prototype.getNumberingSystems."
+      },
+      {
+        "name": "caseFirst",
+        "optional": false,
+        "description": "The case-first sort option. Possible values are \"upper\", \"lower\", or \"false\"."
+      },
+      {
+        "name": "hourCycle",
+        "optional": false,
+        "description": "The hour cycle. Possible values are \"h23\", \"h12\", \"h11\", or the practically unused \"h24\", which are explained in Intl.Locale.prototype.getHourCycles"
+      },
+      {
+        "name": "numeric",
+        "optional": false,
+        "description": "The numeric sort option. A boolean."
+      }
+    ]
+  },
+  {
+    "name": "Intl.Locale.prototype.baseName",
+    "description": "Returns basic, core information about the Locale in the form of a substring of the complete data string.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/baseName",
+    "parameters": []
+  },
+  {
+    "name": "Intl.Locale.prototype.calendar",
+    "description": "Returns the part of the Locale that indicates the Locale's calendar era.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendar",
+    "parameters": []
+  },
+  {
+    "name": "Intl.Locale.prototype.caseFirst",
+    "description": "Returns whether case is taken into account for the locale's collation rules.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/caseFirst",
+    "parameters": []
+  },
+  {
+    "name": "Intl.Locale.prototype.collation",
+    "description": "Returns the collation type for the Locale, which is used to order strings according to the locale's rules.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/collation",
+    "parameters": []
+  },
+  {
+    "name": "Intl.Locale.prototype.constructor",
+    "description": "The constructor function that created the instance object. For Intl.Locale instances, the initial value is the Intl.Locale constructor.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor",
+    "parameters": []
+  },
+  {
+    "name": "Intl.Locale.prototype.hourCycle",
+    "description": "Returns the time keeping format convention used by the locale.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle",
+    "parameters": []
+  },
+  {
+    "name": "Intl.Locale.prototype.language",
+    "description": "Returns the language associated with the locale.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/language",
+    "parameters": []
+  },
+  {
+    "name": "Intl.Locale.prototype.numberingSystem",
+    "description": "Returns the numeral system used by the locale.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystem",
+    "parameters": []
+  },
+  {
+    "name": "Intl.Locale.prototype.numeric",
+    "description": "Returns whether the locale has special collation handling for numeric characters.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/numeric",
+    "parameters": []
+  },
+  {
+    "name": "Intl.Locale.prototype.region",
+    "description": "Returns the region of the world (usually a country) associated with the locale.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/region",
+    "parameters": []
+  },
+  {
+    "name": "Intl.Locale.prototype.script",
+    "description": "Returns the script used for writing the particular language used in the locale.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/script",
+    "parameters": []
+  },
+  {
+    "name": "Intl.Locale.prototype[@@toStringTag]",
+    "description": "The initial value of the @@toStringTag property is the string \"Intl.Locale\". This property is used in Object.prototype.toString().",
+    "link": "https://developer.mozilla.org/#intl.locale.prototypetostringtag",
+    "parameters": []
+  },
+  {
+    "name": "Intl.Locale.prototype.getCalendars()",
+    "description": "Returns an Array of available calendar identifiers, according to the locale's rules.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getCalendars",
+    "return_value": "An array of strings representing all calendars commonly used for the Locale, sorted in descending preference. If the Locale already has a calendar, then the returned array contains that single value.\nBelow is a list of the supported calendar era types.",
+    "parameters": [
+      {
+        "name": "buddhist",
+        "optional": false,
+        "description": "Thai Buddhist calendar"
+      },
+      {
+        "name": "chinese",
+        "optional": false,
+        "description": "Traditional Chinese calendar"
+      },
+      {
+        "name": "coptic",
+        "optional": false,
+        "description": "Coptic calendar"
+      },
+      {
+        "name": "dangi",
+        "optional": false,
+        "description": "Traditional Korean calendar"
+      },
+      {
+        "name": "ethioaa",
+        "optional": false,
+        "description": "Ethiopic calendar, Amete Alem (epoch approx. 5493 B.C.E)"
+      },
+      {
+        "name": "ethiopic",
+        "optional": false,
+        "description": "Ethiopic calendar, Amete Mihret (epoch approx, 8 C.E.)"
+      },
+      {
+        "name": "gregory",
+        "optional": false,
+        "description": "Gregorian calendar"
+      },
+      {
+        "name": "hebrew",
+        "optional": false,
+        "description": "Traditional Hebrew calendar"
+      },
+      {
+        "name": "indian",
+        "optional": false,
+        "description": "Indian calendar"
+      },
+      {
+        "name": "islamic",
+        "optional": false,
+        "description": "Islamic calendar"
+      },
+      {
+        "name": "islamic-umalqura",
+        "optional": false,
+        "description": "Islamic calendar, Umm al-Qura"
+      },
+      {
+        "name": "islamic-tbla",
+        "optional": false,
+        "description": "Islamic calendar, tabular (intercalary years [2,5,7,10,13,16,18,21,24,26,29] - astronomical epoch)"
+      },
+      {
+        "name": "islamic-civil",
+        "optional": false,
+        "description": "Islamic calendar, tabular (intercalary years [2,5,7,10,13,16,18,21,24,26,29] - civil epoch)"
+      },
+      {
+        "name": "islamic-rgsa",
+        "optional": false,
+        "description": "Islamic calendar, Saudi Arabia sighting"
+      },
+      {
+        "name": "iso8601",
+        "optional": false,
+        "description": "ISO calendar (Gregorian calendar using the ISO 8601 calendar week rules)"
+      },
+      {
+        "name": "japanese",
+        "optional": false,
+        "description": "Japanese Imperial calendar"
+      },
+      {
+        "name": "persian",
+        "optional": false,
+        "description": "Persian calendar"
+      },
+      {
+        "name": "roc",
+        "optional": false,
+        "description": "Civil (algorithmic) Arabic calendar"
+      },
+      {
+        "name": "islamicc",
+        "optional": false,
+        "description": "Civil (algorithmic) Arabic calendar\n\nWarning: The islamicc calendar key has been deprecated. Please use islamic-civil."
+      }
+    ]
+  },
+  {
+    "name": "Intl.Locale.prototype.getCollations()",
+    "description": "Returns an Array of the collation types for the Locale.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getCollations",
+    "return_value": "An array of strings representing all collation types commonly used for the Locale, sorted in alphabetical order, with the standard and search values always excluded. If the Locale already has a collation, then the returned array contains that single value.\nBelow is a list of the supported collation types, adapted from the Unicode collation specification.",
+    "parameters": [
+      {
+        "name": "big5han",
+        "optional": false,
+        "description": "Pinyin ordering for Latin, big5 charset ordering for CJK characters (for Chinese)\n\nWarning: The big5han collation type is deprecated, not available in Firefox, Chrome or Edge."
+      },
+      {
+        "name": "compat",
+        "optional": false,
+        "description": "A previous version of the ordering, for compatibility (for Arabic)"
+      },
+      {
+        "name": "dict",
+        "optional": false,
+        "description": "Dictionary style ordering (for Sinhala)"
+      },
+      {
+        "name": "direct",
+        "optional": false,
+        "description": "Binary code point order\n\nWarning: The direct collation type has been deprecated. Do not use."
+      },
+      {
+        "name": "ducet",
+        "optional": false,
+        "description": "The default Unicode collation element table order\n\nWarning: The ducet collation type is not available to the Web. Use the und locale without a collation type specifier instead. und is the collation that is the closest to ducet."
+      },
+      {
+        "name": "emoji",
+        "optional": false,
+        "description": "Recommended ordering for emoji characters (for the und locale)"
+      },
+      {
+        "name": "eor",
+        "optional": false,
+        "description": "European ordering rules (for the und locale)"
+      },
+      {
+        "name": "gb2312",
+        "optional": false,
+        "description": "Pinyin ordering for Latin, gb2312han charset ordering for CJK characters (for Chinese)\n\nWarning: The gb2312 collation type is deprecated, not available in Firefox, Chrome or Edge."
+      },
+      {
+        "name": "phonebk",
+        "optional": false,
+        "description": "Phonebook style ordering (for German)"
+      },
+      {
+        "name": "phonetic",
+        "optional": false,
+        "description": "Phonetic ordering (sorting based on pronunciation; for Lingala)"
+      },
+      {
+        "name": "pinyin",
+        "optional": false,
+        "description": "Pinyin ordering for Latin and for CJK characters (for Chinese)"
+      },
+      {
+        "name": "reformed",
+        "optional": false,
+        "description": "Reformed ordering (formerly for Swedish)\n\nWarning: Do not use explicitly. This is the old name for the default ordering for Swedish whose collation naming used to differ from other languages. Since this was the default, request sv instead of requesting sv-u-co-reformed."
+      },
+      {
+        "name": "search",
+        "optional": false,
+        "description": "Special collation type for string search\n\nWarning: Do not use as a collation type, since in Intl.Collator, this collation is activated via the \"search\" value for the usage option. There is currently no API for substring search, so this is currently only good for filtering a list of strings by trying a full-string match of the key against each list item."
+      },
+      {
+        "name": "searchjl",
+        "optional": false,
+        "description": "Special collation type for Korean initial consonant search\n\nWarning: This collation is not for sorting, even though it is made available through Intl.Collator instantiated with usage \"sort\" as opposed to usage \"search\"."
+      },
+      {
+        "name": "standard",
+        "optional": false,
+        "description": "Default ordering for each language, except Chinese (and, previously, Swedish)\n\nWarning: Do not use explicitly. In general, it's unnecessary to specify this explicitly and specifying this for Swedish is problematic due to the different meaning for Swedish in the past."
+      },
+      {
+        "name": "stroke",
+        "optional": false,
+        "description": "Pinyin ordering for Latin, stroke order for CJK characters (for Chinese)"
+      },
+      {
+        "name": "trad",
+        "optional": false,
+        "description": "Traditional style ordering (such as in Spanish)"
+      },
+      {
+        "name": "unihan",
+        "optional": false,
+        "description": "Radical-stroke ordering for Han characters (for Chinese, Japanese, and Korean). Pinyin ordering for Latin in the case of Chinese.\n\nNote: The unihan collation type is not available in Chrome or Edge."
+      },
+      {
+        "name": "zhuyin",
+        "optional": false,
+        "description": "Pinyin ordering for Latin, zhuyin order for Bopomofo and CJK characters (for Chinese)"
+      }
+    ]
+  },
+  {
+    "name": "Intl.Locale.prototype.getHourCycles()",
+    "description": "Returns an Array of hour cycle identifiers, indicating either the 12-hour clock (\"h12\"), the Japanese 12-hour clock (\"h11\"), the 24-hour clock (\"h23\"), or the unused format \"h24\".",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getHourCycles",
+    "return_value": "An array of strings representing all hour cycle types commonly used for the Locale, sorted in descending preference. If the Locale already has an hourCycle, then the returned array contains that single value.\nBelow is a list of supported hour cycle types.",
+    "parameters": [
+      {
+        "name": "h12",
+        "optional": false,
+        "description": "Hour system using 1\u00e2\u0080\u009312; corresponds to 'h' in patterns. The 12 hour clock, with midnight starting at 12:00 am. As used, for example, in the United States."
+      },
+      {
+        "name": "h23",
+        "optional": false,
+        "description": "Hour system using 0\u00e2\u0080\u009323; corresponds to 'H' in patterns. The 24 hour clock, with midnight starting at 0:00."
+      },
+      {
+        "name": "h11",
+        "optional": false,
+        "description": "Hour system using 0\u00e2\u0080\u009311; corresponds to 'K' in patterns. The 12 hour clock, with midnight starting at 0:00 am. Mostly used in Japan."
+      },
+      {
+        "name": "h24",
+        "optional": false,
+        "description": "Hour system using 1\u00e2\u0080\u009324; corresponds to 'k' in pattern. The 24 hour clock, with midnight starting at 24:00. Not used anywhere."
+      }
+    ]
+  },
+  {
+    "name": "Intl.Locale.prototype.getNumberingSystems()",
+    "description": "Returns an Array of numbering system identifiers available according to the locale's rules.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getNumberingSystems",
+    "return_value": "An array of strings representing all numbering systems commonly used for the Locale, sorted in descending preference. If the Locale already has a numberingSystem, then the returned array contains that single value.\nA table of the standard Unicode numeral systems can be seen below.",
+    "parameters": []
+  },
+  {
+    "name": "Intl.Locale.prototype.getTextInfo()",
+    "description": "Returns the part indicating the ordering of characters ltr (left-to-right) or rtl (right-to-left).",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getTextInfo",
+    "return_value": "An object representing text typesetting information associated with the Locale data specified in UTS 35's Layouts Elements. It has the following properties:\n\ndirection\n\nA string indicating the direction of text for the locale. Can be either \"ltr\" (left-to-right) or \"rtl\" (right-to-left).",
+    "parameters": [
+      {
+        "name": "direction",
+        "optional": false,
+        "description": "A string indicating the direction of text for the locale. Can be either \"ltr\" (left-to-right) or \"rtl\" (right-to-left)."
+      }
+    ]
+  },
+  {
+    "name": "Intl.Locale.prototype.getTimeZones()",
+    "description": "Returns an Array of time zone identifiers, associated with the Locale.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getTimeZones",
+    "return_value": "An array of strings representing supported time zones for the associated Locale, where each value is an IANA time zone canonical name, sorted in alphabetical order. If the locale identifier does not contain a region subtag, the returned value is undefined.",
+    "parameters": []
+  },
+  {
+    "name": "Intl.Locale.prototype.getWeekInfo()",
+    "description": "Returns UTS 35's Week Elements according to the locale rules.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getWeekInfo",
+    "return_value": "An object representing week information associated with the Locale data specified in UTS 35's Week Elements. It has the following properties:\n\nfirstDay\n\nAn integer indicating the first day of the week for the locale. Can be either 1 (Monday) or 7 (Sunday).\n\nweekend\n\nAn array of integers indicating the weekend days for the locale, where 1 is Monday and 7 is Sunday.\n\nminimalDays\n\nAn integer between 1 and 7 indicating the minimal days required in the first week of a month or year, for calendar purposes.",
+    "parameters": [
+      {
+        "name": "firstDay",
+        "optional": false,
+        "description": "An integer indicating the first day of the week for the locale. Can be either 1 (Monday) or 7 (Sunday)."
+      },
+      {
+        "name": "weekend",
+        "optional": false,
+        "description": "An array of integers indicating the weekend days for the locale, where 1 is Monday and 7 is Sunday."
+      },
+      {
+        "name": "minimalDays",
+        "optional": false,
+        "description": "An integer between 1 and 7 indicating the minimal days required in the first week of a month or year, for calendar purposes."
+      }
+    ]
+  },
+  {
+    "name": "Intl.Locale.prototype.maximize()",
+    "description": "Gets the most likely values for the language, script, and region of the locale based on existing values.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/maximize",
+    "return_value": "A Intl.Locale instance whose baseName property returns\n  the result of the Add Likely Subtags algorithm executed against locale.baseName.",
+    "parameters": []
+  },
+  {
+    "name": "Intl.Locale.prototype.minimize()",
+    "description": "Attempts to remove information about the locale that would be added by calling maximize().",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/minimize",
+    "return_value": "A Intl.Locale instance whose baseName property returns\n  the result of the Remove Likely Subtags algorithm\n  executed against locale.baseName.",
+    "parameters": []
+  },
+  {
+    "name": "Intl.Locale.prototype.toString()",
+    "description": "Returns the Locale's full locale identifier string.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/toString",
+    "return_value": "The locale's Unicode locale identifier string.",
+    "parameters": []
+  }
+]

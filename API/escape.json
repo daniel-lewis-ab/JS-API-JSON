@@ -1,0 +1,8 @@
+[
+  {
+    "name": "str",
+    "description": "A string to be encoded.",
+    "link": "https://developer.mozilla.org/#str",
+    "parameters": []
+  }
+]

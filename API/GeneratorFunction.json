@@ -1,0 +1,26 @@
+[
+  {
+    "name": "GeneratorFunction()",
+    "description": "Creates a new GeneratorFunction object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction/GeneratorFunction",
+    "parameters": []
+  },
+  {
+    "name": "GeneratorFunction.prototype.constructor",
+    "description": "The constructor function that created the instance object. For GeneratorFunction instances, the initial value is the GeneratorFunction constructor.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor",
+    "parameters": []
+  },
+  {
+    "name": "GeneratorFunction.prototype.prototype",
+    "description": "All generator functions share the same prototype property, which is Generator.prototype. Each generator function instance also has its own prototype property. When the generator function is called, the returned generator object inherits from the generator function's prototype property, which in turn inherits from GeneratorFunction.prototype.prototype.",
+    "link": "https://developer.mozilla.org/#generatorfunction.prototype.prototype",
+    "parameters": []
+  },
+  {
+    "name": "GeneratorFunction.prototype[@@toStringTag]",
+    "description": "The initial value of the @@toStringTag property is the string \"GeneratorFunction\". This property is used in Object.prototype.toString().",
+    "link": "https://developer.mozilla.org/#generatorfunction.prototypetostringtag",
+    "parameters": []
+  }
+]

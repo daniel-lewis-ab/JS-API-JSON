@@ -1,0 +1,705 @@
+[
+  {
+    "name": "Intl.NumberFormat()",
+    "description": "Creates a new NumberFormat object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat",
+    "return_value": "A new Intl.NumberFormat object.\n\nNote: The text below describes behavior that is marked by the specification as \"optional\". It may not work in all environments. Check the browser compatibility table.\n\nNormally, Intl.NumberFormat() can be called with or without new, and a new Intl.NumberFormat instance is returned in both cases. However, if the this value is an object that is instanceof Intl.NumberFormat (doesn't necessarily mean it's created via new Intl.NumberFormat; just that it has Intl.NumberFormat.prototype in its prototype chain), then the value of this is returned instead, with the newly created Intl.NumberFormat object hidden in a [Symbol(IntlLegacyConstructedSymbol)] property (a unique symbol that's reused between instances).\njsconst formatter = Intl.NumberFormat.call(\n  { __proto__: Intl.NumberFormat.prototype },\n  \"en-US\",\n  { notation: \"scientific\" },\n);\nconsole.log(Object.getOwnPropertyDescriptors(formatter));\n// {\n//   [Symbol(IntlLegacyConstructedSymbol)]: {\n//     value: NumberFormat [Intl.NumberFormat] {},\n//     writable: false,\n//     enumerable: false,\n//     configurable: false\n//   }\n// }\n\nNote that there's only one actual Intl.NumberFormat instance here: the one hidden in [Symbol(IntlLegacyConstructedSymbol)]. Calling the format() and resolvedOptions() methods on formatter would correctly use the options stored in that instance, but calling all other methods (e.g. formatRange()) would fail with \"TypeError: formatRange method called on incompatible Object\", because those methods don't consult the hidden instance's options.\nThis behavior, called ChainNumberFormat, does not happen when Intl.NumberFormat() is called without new but with this set to anything else that's not an instanceof Intl.NumberFormat. If you call it directly as Intl.NumberFormat(), the this value is Intl, and a new Intl.NumberFormat instance is created normally.",
+    "parameters": [
+      {
+        "name": "locales",
+        "optional": true,
+        "description": "A string with a BCP 47 language tag or an Intl.Locale instance, or an array of such locale identifiers. For the general form and interpretation of the locales argument, see the parameter description on the Intl main page.\nThe following Unicode extension key is allowed:\n\nnu\n\nSee numberingSystem.\n\n\nThis key can also be set with options (as listed below). When both are set, the options property takes precedence."
+      },
+      {
+        "name": "nu",
+        "optional": false,
+        "description": "See numberingSystem."
+      },
+      {
+        "name": "options",
+        "optional": true,
+        "description": "An object. For ease of reading, the property list is broken into sections based on their purposes, including locale options, style options, digit options, and other options."
+      },
+      {
+        "name": "localeMatcher",
+        "optional": false,
+        "description": "The locale matching algorithm to use. Possible values are \"lookup\" and \"best fit\"; the default is \"best fit\".\n      For information about this option, see Locale identification and negotiation."
+      },
+      {
+        "name": "numberingSystem",
+        "optional": false,
+        "description": "The numbering system to use for number formatting, such as \"arab\", \"hans\", \"mathsans\", and so on. For a list of supported numbering system types, see Intl.Locale.prototype.getNumberingSystems(). This option can also be set through the nu Unicode extension key; if both are provided, this options property takes precedence."
+      },
+      {
+        "name": "style",
+        "optional": false,
+        "description": "The formatting style to use.\n\n\"decimal\" (default)\n\nFor plain number formatting.\n\n\"currency\"\n\nFor currency formatting.\n\n\"percent\"\n\nFor percent formatting.\n\n\"unit\"\n\nFor unit formatting."
+      },
+      {
+        "name": "\"decimal\"",
+        "optional": false,
+        "description": "For plain number formatting."
+      },
+      {
+        "name": "\"currency\"",
+        "optional": false,
+        "description": "For currency formatting."
+      },
+      {
+        "name": "\"percent\"",
+        "optional": false,
+        "description": "For percent formatting."
+      },
+      {
+        "name": "\"unit\"",
+        "optional": false,
+        "description": "For unit formatting."
+      },
+      {
+        "name": "currency",
+        "optional": false,
+        "description": "The currency to use in currency formatting. Possible values are the ISO 4217 currency codes, such as \"USD\" for the US dollar, \"EUR\" for the euro, or \"CNY\" for the Chinese RMB \u00e2\u0080\u0094 see the Current currency & funds code list. There is no default value; if the style is \"currency\", the currency property must be provided."
+      },
+      {
+        "name": "currencyDisplay",
+        "optional": false,
+        "description": "How to display the currency in currency formatting.\n\n\"code\"\n\nUse the ISO currency code.\n\n\"symbol\" (default)\n\nUse a localized currency symbol such as \u00e2\u0082\u00ac.\n\n\"narrowSymbol\"\n\nUse a narrow format symbol (\"$100\" rather than \"US$100\").\n\n\"name\"\n\nUse a localized currency name such as \"dollar\"."
+      },
+      {
+        "name": "\"code\"",
+        "optional": false,
+        "description": "Use the ISO currency code."
+      },
+      {
+        "name": "\"symbol\"",
+        "optional": false,
+        "description": "Use a localized currency symbol such as \u00e2\u0082\u00ac."
+      },
+      {
+        "name": "\"narrowSymbol\"",
+        "optional": false,
+        "description": "Use a narrow format symbol (\"$100\" rather than \"US$100\")."
+      },
+      {
+        "name": "\"name\"",
+        "optional": false,
+        "description": "Use a localized currency name such as \"dollar\"."
+      },
+      {
+        "name": "currencySign",
+        "optional": false,
+        "description": "In many locales, accounting format means to wrap the number with parentheses instead of appending a minus sign. Possible values are \"standard\" and \"accounting\"; the default is \"standard\"."
+      },
+      {
+        "name": "unit",
+        "optional": false,
+        "description": "The unit to use in unit formatting, Possible values are core unit identifiers, defined in UTS #35, Part 2, Section 6. A subset of units from the full list was selected for use in ECMAScript. Pairs of simple units can be concatenated with \"-per-\" to make a compound unit. There is no default value; if the style is \"unit\", the unit property must be provided."
+      },
+      {
+        "name": "unitDisplay",
+        "optional": false,
+        "description": "The unit formatting style to use in unit formatting. Possible values are:\n\n\"short\" (default)\n\nE.g., 16 l.\n\n\"narrow\"\n\nE.g., 16l.\n\n\"long\"\n\nE.g., 16 litres."
+      },
+      {
+        "name": "\"short\"",
+        "optional": false,
+        "description": "E.g., 16 l."
+      },
+      {
+        "name": "\"narrow\"",
+        "optional": false,
+        "description": "E.g., 16l."
+      },
+      {
+        "name": "\"long\"",
+        "optional": false,
+        "description": "E.g., 16 litres."
+      },
+      {
+        "name": "minimumIntegerDigits",
+        "optional": false,
+        "description": "The minimum number of integer digits to use. A value with a smaller number of integer digits than this number will be left-padded with zeros (to the specified length) when formatted. Possible values are from 1 to 21; the default is 1."
+      },
+      {
+        "name": "minimumFractionDigits",
+        "optional": false,
+        "description": "The minimum number of fraction digits to use. Possible values are from 0 to 20; the default for plain number and percent formatting is 0; the default for currency formatting is the number of minor unit digits provided by the ISO 4217 currency code list (2 if the list doesn't provide that information)."
+      },
+      {
+        "name": "maximumFractionDigits",
+        "optional": false,
+        "description": "The maximum number of fraction digits to use. Possible values are from 0 to 20; the default for plain number formatting is the larger of minimumFractionDigits and 3; the default for currency formatting is the larger of minimumFractionDigits and the number of minor unit digits provided by the ISO 4217 currency code list (2 if the list doesn't provide that information); the default for percent formatting is the larger of minimumFractionDigits and 0."
+      },
+      {
+        "name": "minimumSignificantDigits",
+        "optional": false,
+        "description": "The minimum number of significant digits to use. Possible values are from 1 to 21; the default is 1."
+      },
+      {
+        "name": "maximumSignificantDigits",
+        "optional": false,
+        "description": "The maximum number of significant digits to use. Possible values are from 1 to 21; the default is 21."
+      },
+      {
+        "name": "roundingPriority",
+        "optional": false,
+        "description": "Specify how rounding conflicts will be resolved if both \"FractionDigits\" (minimumFractionDigits/maximumFractionDigits) and \"SignificantDigits\" (minimumSignificantDigits/maximumSignificantDigits) are specified.\n      Possible values are:\n    \n\n\"auto\" (default)\n\nThe result from the significant digits property is used.\n\n\"morePrecision\"\n\nThe result from the property that results in more precision is used.\n\n\"lessPrecision\"\n\nThe result from the property that results in less precision is used.\n\n\nNote that for values other than auto the result with more precision is calculated from the maximumSignificantDigits and maximumFractionDigits (minimum fractional and significant digit settings are ignored)."
+      },
+      {
+        "name": "\"auto\"",
+        "optional": false,
+        "description": "The result from the significant digits property is used."
+      },
+      {
+        "name": "\"morePrecision\"",
+        "optional": false,
+        "description": "The result from the property that results in more precision is used."
+      },
+      {
+        "name": "\"lessPrecision\"",
+        "optional": false,
+        "description": "The result from the property that results in less precision is used."
+      },
+      {
+        "name": "roundingIncrement",
+        "optional": false,
+        "description": "Indicates the increment at which rounding should take place relative to the calculated rounding magnitude. Possible values are 1, 2, 5, 10, 20, 25, 50, 100, 200, 250, 500, 1000, 2000, 2500, and 5000. It cannot be mixed with significant-digits rounding or any setting of roundingPriority other than auto."
+      },
+      {
+        "name": "roundingMode",
+        "optional": false,
+        "description": "How decimals should be rounded. Possible values are:\n\n\"ceil\"\n\nRound toward +\u00e2\u0088\u009e. Positive values round up. Negative values round \"more positive\".\n\n\"floor\"\n\nRound toward -\u00e2\u0088\u009e. Positive values round down. Negative values round \"more negative\".\n\n\"expand\"\n\nround away from 0. The magnitude of the value is always increased by rounding. Positive values round up. Negative values round \"more negative\".\n\n\"trunc\"\n\nRound toward 0. This magnitude of the value is always reduced by rounding. Positive values round down. Negative values round \"less negative\".\n\n\"halfCeil\"\n\nties toward +\u00e2\u0088\u009e. Values above the half-increment round like \"ceil\" (towards +\u00e2\u0088\u009e), and below like \"floor\" (towards -\u00e2\u0088\u009e). On the half-increment, values round like \"ceil\".\n\n\"halfFloor\"\n\nTies toward -\u00e2\u0088\u009e. Values above the half-increment round like \"ceil\" (towards +\u00e2\u0088\u009e), and below like \"floor\" (towards -\u00e2\u0088\u009e). On the half-increment, values round like \"floor\".\n\n\"halfExpand\" (default)\n\nTies away from 0. Values above the half-increment round like \"expand\" (away from zero), and below like \"trunc\" (towards 0). On the half-increment, values round like \"expand\".\n\n\"halfTrunc\"\n\nTies toward 0. Values above the half-increment round like \"expand\" (away from zero), and below like \"trunc\" (towards 0). On the half-increment, values round like \"trunc\".\n\n\"halfEven\"\n\nTies towards the nearest even integer. Values above the half-increment round like \"expand\" (away from zero), and below like \"trunc\" (towards 0). On the half-increment values round towards the nearest even digit.\n\n\n\n      These options reflect the ICU user guide, where \"expand\" and \"trunc\" map to ICU \"UP\" and \"DOWN\", respectively.\n      The rounding modes example below demonstrates how each mode works."
+      },
+      {
+        "name": "\"ceil\"",
+        "optional": false,
+        "description": "Round toward +\u00e2\u0088\u009e. Positive values round up. Negative values round \"more positive\"."
+      },
+      {
+        "name": "\"floor\"",
+        "optional": false,
+        "description": "Round toward -\u00e2\u0088\u009e. Positive values round down. Negative values round \"more negative\"."
+      },
+      {
+        "name": "\"expand\"",
+        "optional": false,
+        "description": "round away from 0. The magnitude of the value is always increased by rounding. Positive values round up. Negative values round \"more negative\"."
+      },
+      {
+        "name": "\"trunc\"",
+        "optional": false,
+        "description": "Round toward 0. This magnitude of the value is always reduced by rounding. Positive values round down. Negative values round \"less negative\"."
+      },
+      {
+        "name": "\"halfCeil\"",
+        "optional": false,
+        "description": "ties toward +\u00e2\u0088\u009e. Values above the half-increment round like \"ceil\" (towards +\u00e2\u0088\u009e), and below like \"floor\" (towards -\u00e2\u0088\u009e). On the half-increment, values round like \"ceil\"."
+      },
+      {
+        "name": "\"halfFloor\"",
+        "optional": false,
+        "description": "Ties toward -\u00e2\u0088\u009e. Values above the half-increment round like \"ceil\" (towards +\u00e2\u0088\u009e), and below like \"floor\" (towards -\u00e2\u0088\u009e). On the half-increment, values round like \"floor\"."
+      },
+      {
+        "name": "\"halfExpand\"",
+        "optional": false,
+        "description": "Ties away from 0. Values above the half-increment round like \"expand\" (away from zero), and below like \"trunc\" (towards 0). On the half-increment, values round like \"expand\"."
+      },
+      {
+        "name": "\"halfTrunc\"",
+        "optional": false,
+        "description": "Ties toward 0. Values above the half-increment round like \"expand\" (away from zero), and below like \"trunc\" (towards 0). On the half-increment, values round like \"trunc\"."
+      },
+      {
+        "name": "\"halfEven\"",
+        "optional": false,
+        "description": "Ties towards the nearest even integer. Values above the half-increment round like \"expand\" (away from zero), and below like \"trunc\" (towards 0). On the half-increment values round towards the nearest even digit."
+      },
+      {
+        "name": "trailingZeroDisplay",
+        "optional": false,
+        "description": "The strategy for displaying trailing zeros on whole numbers. Possible values are:\n\n\"auto\" (default)\n\nKeep trailing zeros according to minimumFractionDigits and minimumSignificantDigits.\n\n\"stripIfInteger\"\n\nRemove the fraction digits if they are all zero. This is the same as \"auto\" if any of the fraction digits is non-zero."
+      },
+      {
+        "name": "\"auto\"",
+        "optional": false,
+        "description": "Keep trailing zeros according to minimumFractionDigits and minimumSignificantDigits."
+      },
+      {
+        "name": "\"stripIfInteger\"",
+        "optional": false,
+        "description": "Remove the fraction digits if they are all zero. This is the same as \"auto\" if any of the fraction digits is non-zero."
+      },
+      {
+        "name": "notation",
+        "optional": false,
+        "description": "The formatting that should be displayed for the number. Possible values are:\n\n\"standard\" (default)\n\nPlain number formatting.\n\n\"scientific\"\n\nReturn the order-of-magnitude for formatted number.\n\n\"engineering\"\n\nReturn the exponent of ten when divisible by three.\n\n\"compact\"\n\nString representing exponent; defaults to using the \"short\" form."
+      },
+      {
+        "name": "\"standard\"",
+        "optional": false,
+        "description": "Plain number formatting."
+      },
+      {
+        "name": "\"scientific\"",
+        "optional": false,
+        "description": "Return the order-of-magnitude for formatted number."
+      },
+      {
+        "name": "\"engineering\"",
+        "optional": false,
+        "description": "Return the exponent of ten when divisible by three."
+      },
+      {
+        "name": "\"compact\"",
+        "optional": false,
+        "description": "String representing exponent; defaults to using the \"short\" form."
+      },
+      {
+        "name": "compactDisplay",
+        "optional": false,
+        "description": "Only used when notation is \"compact\". Possible values are \"short\" and \"long\"; the default is \"short\"."
+      },
+      {
+        "name": "useGrouping",
+        "optional": false,
+        "description": "Whether to use grouping separators, such as thousands separators or thousand/lakh/crore separators.\n\n\"always\"\n\nDisplay grouping separators even if the locale prefers otherwise.\n\n\"auto\"\n\nDisplay grouping separators based on the locale preference, which may also be dependent on the currency.\n\n\"min2\"\n\nDisplay grouping separators when there are at least 2 digits in a group.\n\ntrue\n\nSame as \"always\".\n\nfalse\n\nDisplay no grouping separators.\n\n\nThe default is \"min2\" if notation is \"compact\", and \"auto\" otherwise. The string values \"true\" and \"false\" are accepted, but are always converted to the default value."
+      },
+      {
+        "name": "\"always\"",
+        "optional": false,
+        "description": "Display grouping separators even if the locale prefers otherwise."
+      },
+      {
+        "name": "\"auto\"",
+        "optional": false,
+        "description": "Display grouping separators based on the locale preference, which may also be dependent on the currency."
+      },
+      {
+        "name": "\"min2\"",
+        "optional": false,
+        "description": "Display grouping separators when there are at least 2 digits in a group."
+      },
+      {
+        "name": "true",
+        "optional": false,
+        "description": "Same as \"always\"."
+      },
+      {
+        "name": "false",
+        "optional": false,
+        "description": "Display no grouping separators."
+      },
+      {
+        "name": "signDisplay",
+        "optional": false,
+        "description": "When to display the sign for the number. Possible values are:\n\n\"auto\" (default)\n\nSign display for negative numbers only, including negative zero.\n\n\"always\"\n\nAlways display sign.\n\n\"exceptZero\"\n\nSign display for positive and negative numbers, but not zero.\n\n\"negative\"\n\nSign display for negative numbers only, excluding negative zero.\n\n\"never\"\n\nNever display sign."
+      },
+      {
+        "name": "\"auto\"",
+        "optional": false,
+        "description": "Sign display for negative numbers only, including negative zero."
+      },
+      {
+        "name": "\"always\"",
+        "optional": false,
+        "description": "Always display sign."
+      },
+      {
+        "name": "\"exceptZero\"",
+        "optional": false,
+        "description": "Sign display for positive and negative numbers, but not zero."
+      },
+      {
+        "name": "\"negative\"",
+        "optional": false,
+        "description": "Sign display for negative numbers only, excluding negative zero."
+      },
+      {
+        "name": "\"never\"",
+        "optional": false,
+        "description": "Never display sign."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown in one of the following cases:\n\nA property that takes enumerated values (such as style, units, currency, and so on) is set to an invalid value.\n\n        Both maximumFractionDigits and minimumFractionDigits are set, and they are set to different values.\n        Note that depending on various formatting options, these properties can have default values.\n        It is therefore possible to get this error even if you only set one of the properties."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown if the options.style property is set to \"unit\" or \"currency\", and no value has been set for the corresponding property options.unit or options.currency."
+      }
+    ]
+  },
+  {
+    "name": "Intl.NumberFormat.supportedLocalesOf()",
+    "description": "Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/supportedLocalesOf",
+    "return_value": "An array of strings representing a subset of the given locale tags that are supported in number formatting without having to fall back to the runtime's default locale.",
+    "parameters": [
+      {
+        "name": "locales",
+        "optional": false,
+        "description": "A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the locales argument, see the parameter description on the Intl main page."
+      },
+      {
+        "name": "options",
+        "optional": true,
+        "description": "An object that may have the following property:\n\nlocaleMatcher\n\nThe locale matching algorithm to use. Possible values are \"lookup\" and \"best fit\"; the default is \"best fit\". For information about this option, see the Intl page."
+      },
+      {
+        "name": "localeMatcher",
+        "optional": false,
+        "description": "The locale matching algorithm to use. Possible values are \"lookup\" and \"best fit\"; the default is \"best fit\". For information about this option, see the Intl page."
+      }
+    ]
+  },
+  {
+    "name": "Intl.NumberFormat.prototype.constructor",
+    "description": "The constructor function that created the instance object. For Intl.NumberFormat instances, the initial value is the Intl.NumberFormat constructor.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor",
+    "parameters": []
+  },
+  {
+    "name": "Intl.NumberFormat.prototype[@@toStringTag]",
+    "description": "The initial value of the @@toStringTag property is the string \"Intl.NumberFormat\". This property is used in Object.prototype.toString().",
+    "link": "https://developer.mozilla.org/#intl.numberformat.prototypetostringtag",
+    "parameters": []
+  },
+  {
+    "name": "Intl.NumberFormat.prototype.format()",
+    "description": "Getter function that formats a number according to the locale and formatting options of this Intl.NumberFormat object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format",
+    "return_value": "A string representing the given number formatted according to the locale and formatting options of this Intl.NumberFormat object.",
+    "parameters": [
+      {
+        "name": "number",
+        "optional": false,
+        "description": "A Number, BigInt, or string, to format. Strings are parsed in the same way as in number conversion, except that format() will use the exact value that the string represents, avoiding loss of precision during implicitly conversion to a number."
+      }
+    ]
+  },
+  {
+    "name": "Intl.NumberFormat.prototype.formatRange()",
+    "description": "Getter function that formats a range of numbers according to the locale and formatting options of the Intl.NumberFormat object from which the method is called.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatRange",
+    "return_value": "A string representing the given range of numbers formatted according to the locale and formatting options of this Intl.NumberFormat object.",
+    "parameters": [
+      {
+        "name": "startRange",
+        "optional": false,
+        "description": "A Number or BigInt."
+      },
+      {
+        "name": "endRange",
+        "optional": false,
+        "description": "A Number or BigInt."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if startRange is less than endRange, or either value is NaN."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown if either startRange or endRange is undefined."
+      }
+    ]
+  },
+  {
+    "name": "Intl.NumberFormat.prototype.formatRangeToParts()",
+    "description": "Returns an Array of objects representing the range of number strings in parts that can be used for custom locale-aware formatting.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatRangeToParts",
+    "return_value": "An Array of objects containing the formatted range of numbers in parts.\nThe structure of the returned looks like this:\njs[\n  { type: \"integer\", value: \"3\", source: \"startRange\" },\n  { type: \"literal\", value: \"-\", source: \"shared\" },\n  { type: \"integer\", value: \"5\", source: \"endRange\" },\n  { type: \"literal\", value: \" \", source: \"shared\" },\n  { type: \"currency\", value: \"\u00e2\u0082\u00ac\", source: \"shared\" },\n];\n\nPossible values for the type property include:\n\ncurrency\n\nThe currency string, such as the symbols \"$\" and \"\u00e2\u0082\u00ac\" or the name \"Dollar\", \"Euro\", depending on how currencyDisplay is specified.\n\ndecimal\n\nThe decimal separator string (\".\").\n\nfraction\n\nThe fraction number.\n\ngroup\n\nThe group separator string (\",\").\n\ninfinity\n\nThe Infinity string (\"\u00e2\u0088\u009e\").\n\ninteger\n\nThe integer number.\n\nliteral\n\nAny literal strings or whitespace in the formatted number.\n\nminusSign\n\nThe minus sign string (\"-\").\n\nnan\n\nThe NaN string (\"NaN\").\n\nplusSign\n\nThe plus sign string (\"+\").\n\npercentSign\n\nThe percent sign string (\"%\").\n\nunit\n\nThe unit string, such as the \"l\" or \"litres\", depending on how unitDisplay is specified.\n\n\nPossible values for the source property include:\n\nstartRange\n\nThe object is the start part of the range.\n\nendRange\n\nThe object is the end part of the range.\n\nshared\n\nThe object is a \"shared\" part of the range, such as a separator or currency.",
+    "parameters": [
+      {
+        "name": "startRange",
+        "optional": false,
+        "description": "A Number or BigInt."
+      },
+      {
+        "name": "endRange",
+        "optional": false,
+        "description": "A Number or BigInt."
+      },
+      {
+        "name": "currency",
+        "optional": false,
+        "description": "The currency string, such as the symbols \"$\" and \"\u00e2\u0082\u00ac\" or the name \"Dollar\", \"Euro\", depending on how currencyDisplay is specified."
+      },
+      {
+        "name": "decimal",
+        "optional": false,
+        "description": "The decimal separator string (\".\")."
+      },
+      {
+        "name": "fraction",
+        "optional": false,
+        "description": "The fraction number."
+      },
+      {
+        "name": "group",
+        "optional": false,
+        "description": "The group separator string (\",\")."
+      },
+      {
+        "name": "infinity",
+        "optional": false,
+        "description": "The Infinity string (\"\u00e2\u0088\u009e\")."
+      },
+      {
+        "name": "integer",
+        "optional": false,
+        "description": "The integer number."
+      },
+      {
+        "name": "literal",
+        "optional": false,
+        "description": "Any literal strings or whitespace in the formatted number."
+      },
+      {
+        "name": "minusSign",
+        "optional": false,
+        "description": "The minus sign string (\"-\")."
+      },
+      {
+        "name": "nan",
+        "optional": false,
+        "description": "The NaN string (\"NaN\")."
+      },
+      {
+        "name": "plusSign",
+        "optional": false,
+        "description": "The plus sign string (\"+\")."
+      },
+      {
+        "name": "percentSign",
+        "optional": false,
+        "description": "The percent sign string (\"%\")."
+      },
+      {
+        "name": "unit",
+        "optional": false,
+        "description": "The unit string, such as the \"l\" or \"litres\", depending on how unitDisplay is specified."
+      },
+      {
+        "name": "startRange",
+        "optional": false,
+        "description": "The object is the start part of the range."
+      },
+      {
+        "name": "endRange",
+        "optional": false,
+        "description": "The object is the end part of the range."
+      },
+      {
+        "name": "shared",
+        "optional": false,
+        "description": "The object is a \"shared\" part of the range, such as a separator or currency."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if startRange is less than endRange, or either value is NaN."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown if either startRange or endRange is undefined."
+      }
+    ]
+  },
+  {
+    "name": "Intl.NumberFormat.prototype.formatToParts()",
+    "description": "Returns an Array of objects representing the number string in parts that can be used for custom locale-aware formatting.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatToParts",
+    "return_value": "An Array of objects containing the formatted number in parts.",
+    "parameters": [
+      {
+        "name": "number",
+        "optional": true,
+        "description": "A Number or BigInt to format."
+      },
+      {
+        "name": "compact",
+        "optional": false,
+        "description": "The exponent in \"long\" or \"short\" form, depending on how compactDisplay (which defaults to short) is specified when notation is set to compact."
+      },
+      {
+        "name": "currency",
+        "optional": false,
+        "description": "The currency string, such as the symbols \"$\" and \"\u00e2\u0082\u00ac\" or the name \"Dollar\", \"Euro\", depending on how currencyDisplay is specified."
+      },
+      {
+        "name": "decimal",
+        "optional": false,
+        "description": "The decimal separator string (\".\")."
+      },
+      {
+        "name": "exponentInteger",
+        "optional": false,
+        "description": "The exponent integer value, when notation is set to scientific or engineering."
+      },
+      {
+        "name": "exponentMinusSign",
+        "optional": false,
+        "description": "The exponent minus sign string (\"-\")."
+      },
+      {
+        "name": "exponentSeparator",
+        "optional": false,
+        "description": "The exponent separator, when notation is set to scientific or engineering."
+      },
+      {
+        "name": "fraction",
+        "optional": false,
+        "description": "The fraction number."
+      },
+      {
+        "name": "group",
+        "optional": false,
+        "description": "The group separator string (\",\")."
+      },
+      {
+        "name": "infinity",
+        "optional": false,
+        "description": "The Infinity string (\"\u00e2\u0088\u009e\")."
+      },
+      {
+        "name": "integer",
+        "optional": false,
+        "description": "The integer number."
+      },
+      {
+        "name": "literal",
+        "optional": false,
+        "description": "Any literal strings or whitespace in the formatted number."
+      },
+      {
+        "name": "minusSign",
+        "optional": false,
+        "description": "The minus sign string (\"-\")."
+      },
+      {
+        "name": "nan",
+        "optional": false,
+        "description": "The NaN string (\"NaN\")."
+      },
+      {
+        "name": "plusSign",
+        "optional": false,
+        "description": "The plus sign string (\"+\")."
+      },
+      {
+        "name": "percentSign",
+        "optional": false,
+        "description": "The percent sign string (\"%\")."
+      },
+      {
+        "name": "unit",
+        "optional": false,
+        "description": "The unit string, such as the \"l\" or \"litres\", depending on how unitDisplay is specified."
+      },
+      {
+        "name": "unknown",
+        "optional": false,
+        "description": "The string for unknown type results."
+      }
+    ]
+  },
+  {
+    "name": "Intl.NumberFormat.prototype.resolvedOptions()",
+    "description": "Returns a new object with properties reflecting the locale and collation options computed during initialization of the object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/resolvedOptions",
+    "return_value": "A new object with properties reflecting the locale and number formatting options computed during the construction of the given Intl.NumberFormat object.\nThe resulting object has the following properties:\n\ncompactDisplay\n\n\n      Whether to use short or long form when using compact notation.\n      This is the value provided in the options.compactDisplay argument of the constructor, or the default value: \"short\".\n      The value is only present if notation is set to \"compact\", and otherwise is undefined.\n    \n\ncurrency\n\n\n      The currency to use in currency formatting.\n      The value is defined if style is \"currency\", and is otherwise undefined.\n      This is the value provided in the options.currency argument of the constructor.\n    \n\ncurrencyDisplay\n\n\n      The display format for the currency, such as a symbol, or currency code.\n      The value is defined if style is \"currency\", and otherwise is undefined.\n      This is the value provided in the options.currencyDisplay argument of the constructor, or the default value: \"symbol\".\n    \n\ncurrencySign\n\n\n      The method used to specify the sign of the currency value: standard or accounting.\n      The value is present if style is \"currency\", and otherwise is undefined.\n      This is the value provided in the options.currencySign argument of the constructor, or the default value: \"standard\".\n    \n\nlocale\n\n\n      The BCP 47 language tag for the locale that was actually used.\n      The key-value pairs that were requested in the constructor locale and are supported for this locale are included.\n    \n\nnotation\n\n\n      The formatting that should be applied to the number, such as standard or engineering.\n      This is the value provided in the options.notation argument of the constructor, or the default value: \"standard\".\n    \n\nnumberingSystem\n\n\n      The numbering system.\n      This is the value provided in the options.numberingSystem argument of the constructor, if present, or the value set using the Unicode extension key nu, or filled in as a default.\n    \n\nroundingMode\n\n\n      The rounding mode.\n      This is the value provided for the options.roundingMode argument in the constructor, or the default value: halfExpand.\n    \n\nroundingPriority\n\n\n      The priority for resolving rounding conflicts if both \"FractionDigits\" and \"SignificantDigits\" are specified.\n      This is the value provided for the options.roundingPriority argument in the constructor, or the default value: auto.\n    \n\nroundingIncrement\n\n\n      The rounding-increment precision (the increment used when rounding numbers).\n      This is the value specified in the options.roundingIncrement argument in the constructor.\n    \n\nsignDisplay\n\n\n      Whether or not to display the positive/negative sign.\n      This is the value specified in the options.signDisplay argument in the constructor, or the default value: \"auto\".\n    \n\nunit\n\n\n      The unit to use in unit formatting.\n      The value is only present if style is \"unit\", and is otherwise undefined.\n      This is the value specified in the options.unit argument in the constructor.\n    \n\nunitDisplay\n\n\n      The display format to use for units in unit formatting, such as \"long\", \"short\" or \"narrow\".\n      The value is only present if style is \"unit\", and is otherwise undefined.\n      This is the value specified in the options.unitDisplay argument in the constructor, or the default value: short.\n    \n\nuseGrouping\n\n\n      Whether or not to use grouping separators to indicate \"thousands\", \"millions\" and son on.\n      This is the value specified in the options.useGrouping argument in the constructor, or the default value: \"auto\".\n    \n\ntrailingZeroDisplay\n\n\n      The strategy for displaying trailing zeros on whole numbers.\n      This is the value specified in the options.trailingZeroDisplay argument in the constructor, or the default value: \"auto\".\n    \n\n\nOnly one of the following two groups of properties is included:\n\nminimumIntegerDigits, minimumFractionDigits, maximumFractionDigits\n\n\n      The values provided for these properties in the options argument or filled in as defaults.\n      These properties are present only if neither minimumSignificantDigits nor maximumSignificantDigits was provided in the options argument.\n    \n\nminimumSignificantDigits, maximumSignificantDigits\n\n\n      The values provided for these properties in the options argument or filled in as defaults.\n      These properties are present only if at least one of them was provided in the options argument.",
+    "parameters": [
+      {
+        "name": "compactDisplay",
+        "optional": false,
+        "description": "Whether to use short or long form when using compact notation.\n      This is the value provided in the options.compactDisplay argument of the constructor, or the default value: \"short\".\n      The value is only present if notation is set to \"compact\", and otherwise is undefined."
+      },
+      {
+        "name": "currency",
+        "optional": false,
+        "description": "The currency to use in currency formatting.\n      The value is defined if style is \"currency\", and is otherwise undefined.\n      This is the value provided in the options.currency argument of the constructor."
+      },
+      {
+        "name": "currencyDisplay",
+        "optional": false,
+        "description": "The display format for the currency, such as a symbol, or currency code.\n      The value is defined if style is \"currency\", and otherwise is undefined.\n      This is the value provided in the options.currencyDisplay argument of the constructor, or the default value: \"symbol\"."
+      },
+      {
+        "name": "currencySign",
+        "optional": false,
+        "description": "The method used to specify the sign of the currency value: standard or accounting.\n      The value is present if style is \"currency\", and otherwise is undefined.\n      This is the value provided in the options.currencySign argument of the constructor, or the default value: \"standard\"."
+      },
+      {
+        "name": "locale",
+        "optional": false,
+        "description": "The BCP 47 language tag for the locale that was actually used.\n      The key-value pairs that were requested in the constructor locale and are supported for this locale are included."
+      },
+      {
+        "name": "notation",
+        "optional": false,
+        "description": "The formatting that should be applied to the number, such as standard or engineering.\n      This is the value provided in the options.notation argument of the constructor, or the default value: \"standard\"."
+      },
+      {
+        "name": "numberingSystem",
+        "optional": false,
+        "description": "The numbering system.\n      This is the value provided in the options.numberingSystem argument of the constructor, if present, or the value set using the Unicode extension key nu, or filled in as a default."
+      },
+      {
+        "name": "roundingMode",
+        "optional": false,
+        "description": "The rounding mode.\n      This is the value provided for the options.roundingMode argument in the constructor, or the default value: halfExpand."
+      },
+      {
+        "name": "roundingPriority",
+        "optional": false,
+        "description": "The priority for resolving rounding conflicts if both \"FractionDigits\" and \"SignificantDigits\" are specified.\n      This is the value provided for the options.roundingPriority argument in the constructor, or the default value: auto."
+      },
+      {
+        "name": "roundingIncrement",
+        "optional": false,
+        "description": "The rounding-increment precision (the increment used when rounding numbers).\n      This is the value specified in the options.roundingIncrement argument in the constructor."
+      },
+      {
+        "name": "signDisplay",
+        "optional": false,
+        "description": "Whether or not to display the positive/negative sign.\n      This is the value specified in the options.signDisplay argument in the constructor, or the default value: \"auto\"."
+      },
+      {
+        "name": "unit",
+        "optional": false,
+        "description": "The unit to use in unit formatting.\n      The value is only present if style is \"unit\", and is otherwise undefined.\n      This is the value specified in the options.unit argument in the constructor."
+      },
+      {
+        "name": "unitDisplay",
+        "optional": false,
+        "description": "The display format to use for units in unit formatting, such as \"long\", \"short\" or \"narrow\".\n      The value is only present if style is \"unit\", and is otherwise undefined.\n      This is the value specified in the options.unitDisplay argument in the constructor, or the default value: short."
+      },
+      {
+        "name": "useGrouping",
+        "optional": false,
+        "description": "Whether or not to use grouping separators to indicate \"thousands\", \"millions\" and son on.\n      This is the value specified in the options.useGrouping argument in the constructor, or the default value: \"auto\"."
+      },
+      {
+        "name": "trailingZeroDisplay",
+        "optional": false,
+        "description": "The strategy for displaying trailing zeros on whole numbers.\n      This is the value specified in the options.trailingZeroDisplay argument in the constructor, or the default value: \"auto\"."
+      },
+      {
+        "name": "minimumIntegerDigits",
+        "optional": false,
+        "description": "The values provided for these properties in the options argument or filled in as defaults.\n      These properties are present only if neither minimumSignificantDigits nor maximumSignificantDigits was provided in the options argument."
+      },
+      {
+        "name": "minimumSignificantDigits",
+        "optional": false,
+        "description": "The values provided for these properties in the options argument or filled in as defaults.\n      These properties are present only if at least one of them was provided in the options argument."
+      }
+    ]
+  }
+]

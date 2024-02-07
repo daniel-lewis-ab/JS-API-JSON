@@ -1,0 +1,687 @@
+[
+  {
+    "name": "Date()",
+    "description": "When called as a constructor, returns a new Date object. When called as a function, returns a string representation of the current date and time.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date",
+    "return_value": "Calling new Date() (the Date() constructor) returns a Date object. If called with an invalid date string, or if the date to be constructed will have a timestamp less than -8,640,000,000,000,000 or greater than 8,640,000,000,000,000 milliseconds, it returns an invalid date (a Date object whose toString() method returns \"Invalid Date\" and valueOf() method returns NaN).\nCalling the Date() function (without the new keyword) returns a string representation of the current date and time, exactly as new Date().toString() does. Any arguments given in a Date() function call (without the new keyword) are ignored; regardless of whether it's called with an invalid date string \u00e2\u0080\u0094 or even called with any arbitrary object or other primitive as an argument \u00e2\u0080\u0094 it always returns a string representation of the current date and time.",
+    "parameters": [
+      {
+        "name": "value",
+        "optional": false,
+        "description": "An integer value representing the timestamp (the number of milliseconds since midnight at the beginning of January 1, 1970, UTC \u00e2\u0080\u0094 a.k.a. the epoch)."
+      },
+      {
+        "name": "dateString",
+        "optional": false,
+        "description": "A string value representing a date, parsed and interpreted using the same algorithm implemented by Date.parse(). See date time string format for caveats on using different formats."
+      },
+      {
+        "name": "dateObject",
+        "optional": false,
+        "description": "An existing Date object. This effectively makes a copy of the existing Date object with the same date and time. This is equivalent to new Date(dateObject.valueOf()), except the valueOf() method is not called."
+      },
+      {
+        "name": "year",
+        "optional": false,
+        "description": "Integer value representing the year. Values from 0 to 99 map to the years 1900 to 1999. All other values are the actual year. See the example."
+      },
+      {
+        "name": "monthIndex",
+        "optional": false,
+        "description": "Integer value representing the month, beginning with 0 for January to 11 for December."
+      },
+      {
+        "name": "day",
+        "optional": true,
+        "description": "Integer value representing the day of the month. Defaults to 1."
+      },
+      {
+        "name": "hours",
+        "optional": true,
+        "description": "Integer value between 0 and 23 representing the hour of the day. Defaults to 0."
+      },
+      {
+        "name": "minutes",
+        "optional": true,
+        "description": "Integer value representing the minute segment of a time. Defaults to 0."
+      },
+      {
+        "name": "seconds",
+        "optional": true,
+        "description": "Integer value representing the second segment of a time. Defaults to 0."
+      },
+      {
+        "name": "milliseconds",
+        "optional": true,
+        "description": "Integer value representing the millisecond segment of a time. Defaults to 0."
+      }
+    ]
+  },
+  {
+    "name": "Date.now()",
+    "description": "Returns the numeric value corresponding to the current time\u00e2\u0080\u0094the number of milliseconds elapsed since January 1, 1970 00:00:00 UTC, with leap seconds ignored.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now",
+    "return_value": "A number representing the timestamp, in milliseconds, of the current time.",
+    "parameters": []
+  },
+  {
+    "name": "Date.parse()",
+    "description": "Parses a string representation of a date and returns the number of milliseconds since 1 January, 1970, 00:00:00 UTC, with leap seconds ignored.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse",
+    "return_value": "A number representing the timestamp of the given date. If dateString fails to be parsed as a valid date, NaN is returned.",
+    "parameters": [
+      {
+        "name": "dateString",
+        "optional": false,
+        "description": "A string in the date time string format. See the linked reference for caveats on using different formats."
+      }
+    ]
+  },
+  {
+    "name": "Date.UTC()",
+    "description": "Accepts the same parameters as the longest form of the constructor (i.e. 2 to 7) and returns the number of milliseconds since January 1, 1970, 00:00:00 UTC, with leap seconds ignored.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/UTC",
+    "return_value": "A number representing the timestamp of the given date. Returns NaN if the date is invalid.",
+    "parameters": [
+      {
+        "name": "year",
+        "optional": false,
+        "description": "Integer value representing the year. Values from 0 to 99 map to the years 1900 to 1999. All other values are the actual year. See the example."
+      },
+      {
+        "name": "monthIndex",
+        "optional": true,
+        "description": "Integer value representing the month, beginning with 0 for January to 11 for December. Defaults to 0."
+      },
+      {
+        "name": "day",
+        "optional": true,
+        "description": "Integer value representing the day of the month. Defaults to 1."
+      },
+      {
+        "name": "hours",
+        "optional": true,
+        "description": "Integer value between 0 and 23 representing the hour of the day. Defaults to 0."
+      },
+      {
+        "name": "minutes",
+        "optional": true,
+        "description": "Integer value representing the minute segment of a time. Defaults to 0."
+      },
+      {
+        "name": "seconds",
+        "optional": true,
+        "description": "Integer value representing the second segment of a time. Defaults to 0."
+      },
+      {
+        "name": "milliseconds",
+        "optional": true,
+        "description": "Integer value representing the millisecond segment of a time. Defaults to 0."
+      }
+    ]
+  },
+  {
+    "name": "Date.prototype.constructor",
+    "description": "The constructor function that created the instance object. For Date instances, the initial value is the Date constructor.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor",
+    "parameters": []
+  },
+  {
+    "name": "Date.prototype.getDate()",
+    "description": "Returns the day of the month (1 \u00e2\u0080\u0093 31) for the specified date according to local time.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getDate",
+    "return_value": "An integer, between 1 and 31, representing the day of the month for the given date according to local time. Returns NaN if the date is invalid.",
+    "parameters": []
+  },
+  {
+    "name": "Date.prototype.getDay()",
+    "description": "Returns the day of the week (0 \u00e2\u0080\u0093 6) for the specified date according to local time.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getDay",
+    "return_value": "An integer, between 0 and 6, representing the day of the week for the given date according to local time: 0 for Sunday, 1 for Monday, 2 for Tuesday, and so on. Returns NaN if the date is invalid.",
+    "parameters": []
+  },
+  {
+    "name": "Date.prototype.getFullYear()",
+    "description": "Returns the year (4 digits for 4-digit years) of the specified date according to local time.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getFullYear",
+    "return_value": "An integer representing the year for the given date according to local time. Returns NaN if the date is invalid.",
+    "parameters": []
+  },
+  {
+    "name": "Date.prototype.getHours()",
+    "description": "Returns the hour (0 \u00e2\u0080\u0093 23) in the specified date according to local time.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getHours",
+    "return_value": "An integer, between 0 and 23, representing the hours for the given date according to local time. Returns NaN if the date is invalid.",
+    "parameters": []
+  },
+  {
+    "name": "Date.prototype.getMilliseconds()",
+    "description": "Returns the milliseconds (0 \u00e2\u0080\u0093 999) in the specified date according to local time.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getMilliseconds",
+    "return_value": "An integer, between 0 and 999, representing the milliseconds for the given date according to local time. Returns NaN if the date is invalid.",
+    "parameters": []
+  },
+  {
+    "name": "Date.prototype.getMinutes()",
+    "description": "Returns the minutes (0 \u00e2\u0080\u0093 59) in the specified date according to local time.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getMinutes",
+    "return_value": "An integer, between 0 and 59, representing the minutes for the given date according to local time. Returns NaN if the date is invalid.",
+    "parameters": []
+  },
+  {
+    "name": "Date.prototype.getMonth()",
+    "description": "Returns the month (0 \u00e2\u0080\u0093 11) in the specified date according to local time.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getMonth",
+    "return_value": "An integer, between 0 and 11, representing the month for the given date according to local time: 0 for January, 1 for February, and so on. Returns NaN if the date is invalid.",
+    "parameters": []
+  },
+  {
+    "name": "Date.prototype.getSeconds()",
+    "description": "Returns the seconds (0 \u00e2\u0080\u0093 59) in the specified date according to local time.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getSeconds",
+    "return_value": "An integer, between 0 and 59, representing the seconds for the given date according to local time. Returns NaN if the date is invalid.",
+    "parameters": []
+  },
+  {
+    "name": "Date.prototype.getTime()",
+    "description": "Returns the numeric value of the specified date as the number of milliseconds since January 1, 1970, 00:00:00 UTC. (Negative values are returned for prior times.)",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime",
+    "return_value": "A number representing the timestamp, in milliseconds, of this date. Returns NaN if the date is invalid.",
+    "parameters": []
+  },
+  {
+    "name": "Date.prototype.getTimezoneOffset()",
+    "description": "Returns the time-zone offset in minutes for the current locale.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset",
+    "return_value": "A number representing the difference, in minutes, between the date as evaluated in the UTC time zone and as evaluated in the local time zone. The actual local time algorithm is implementation-defined, and the return value is allowed to be zero in runtimes without appropriate data. Returns NaN if the date is invalid.",
+    "parameters": []
+  },
+  {
+    "name": "Date.prototype.getUTCDate()",
+    "description": "Returns the day (date) of the month (1 \u00e2\u0080\u0093 31) in the specified date according to universal time.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getUTCDate",
+    "return_value": "An integer, between 1 and 31, representing day of month for the given date according to universal time. Returns NaN if the date is invalid.",
+    "parameters": []
+  },
+  {
+    "name": "Date.prototype.getUTCDay()",
+    "description": "Returns the day of the week (0 \u00e2\u0080\u0093 6) in the specified date according to universal time.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getUTCDay",
+    "return_value": "An integer corresponding to the day of the week for the given date according to universal time: 0 for Sunday, 1 for Monday, 2 for Tuesday, and so on. Returns NaN if the date is invalid.",
+    "parameters": []
+  },
+  {
+    "name": "Date.prototype.getUTCFullYear()",
+    "description": "Returns the year (4 digits for 4-digit years) in the specified date according to universal time.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getUTCFullYear",
+    "return_value": "An integer representing the year for the given date according to universal time. Returns NaN if the date is invalid.",
+    "parameters": []
+  },
+  {
+    "name": "Date.prototype.getUTCHours()",
+    "description": "Returns the hours (0 \u00e2\u0080\u0093 23) in the specified date according to universal time.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getUTCHours",
+    "return_value": "An integer, between 0 and 23, representing the hours for the given date according to universal time. Returns NaN if the date is invalid.",
+    "parameters": []
+  },
+  {
+    "name": "Date.prototype.getUTCMilliseconds()",
+    "description": "Returns the milliseconds (0 \u00e2\u0080\u0093 999) in the specified date according to universal time.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getUTCMilliseconds",
+    "return_value": "An integer, between 0 and 999, representing the milliseconds for the given date according to universal time. Returns NaN if the date is invalid.\nNot to be confused with the timestamp. To get the total milliseconds since the epoch, use the getTime() method.",
+    "parameters": []
+  },
+  {
+    "name": "Date.prototype.getUTCMinutes()",
+    "description": "Returns the minutes (0 \u00e2\u0080\u0093 59) in the specified date according to universal time.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getUTCMinutes",
+    "return_value": "An integer, between 0 and 59, representing the minutes for the given date according to universal time. Returns NaN if the date is invalid.",
+    "parameters": []
+  },
+  {
+    "name": "Date.prototype.getUTCMonth()",
+    "description": "Returns the month (0 \u00e2\u0080\u0093 11) in the specified date according to universal time.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getUTCMonth",
+    "return_value": "An integer, between 0 and 11, representing the month for the given date according to universal time: 0 for January, 1 for February, and so on. Returns NaN if the date is invalid.",
+    "parameters": []
+  },
+  {
+    "name": "Date.prototype.getUTCSeconds()",
+    "description": "Returns the seconds (0 \u00e2\u0080\u0093 59) in the specified date according to universal time.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getUTCSeconds",
+    "return_value": "An integer, between 0 and 59, representing the seconds for the given date according to universal time. Returns NaN if the date is invalid.",
+    "parameters": []
+  },
+  {
+    "name": "Date.prototype.getYear()",
+    "description": "Returns the year (usually 2\u00e2\u0080\u00933 digits) in the specified date according to local time. Use getFullYear() instead.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getYear",
+    "return_value": "An integer representing the year for the given date according to local time, minus 1900. Returns NaN if the date is invalid.\n\nFor years greater than or equal to 2000, the value is 100 or greater. For example, if the year is 2026, getYear() returns 126.\nFor years between and including 1900 and 1999, the value returned by getYear() is between 0 and 99. For example, if the year is 1976, getYear() returns 76.\nFor years less than 1900, the value returned by getYear() is less than 0. For example, if the year is 1800, getYear() returns -100.\n\nThis method essentially returns the value of getFullYear() minus 1900. You should use getFullYear() instead, so that the year is specified in full.",
+    "parameters": []
+  },
+  {
+    "name": "Date.prototype.setDate()",
+    "description": "Sets the day of the month for a specified date according to local time.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setDate",
+    "return_value": "Changes the Date object in place, and returns its new timestamp. If dateValue is NaN (or other values that get coerced to NaN, such as undefined), the date is set to Invalid Date and NaN is returned.",
+    "parameters": [
+      {
+        "name": "dateValue",
+        "optional": false,
+        "description": "An integer representing the day of the month."
+      }
+    ]
+  },
+  {
+    "name": "Date.prototype.setFullYear()",
+    "description": "Sets the full year (e.g. 4 digits for 4-digit years) for a specified date according to local time.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setFullYear",
+    "return_value": "Changes the Date object in place, and returns its new timestamp. If a parameter is NaN (or other values that get coerced to NaN, such as undefined), the date is set to Invalid Date and NaN is returned.",
+    "parameters": [
+      {
+        "name": "yearValue",
+        "optional": false,
+        "description": "An integer representing the year. For example, 1995."
+      },
+      {
+        "name": "monthValue",
+        "optional": true,
+        "description": "An integer representing the month: 0 for January, 1 for February, and so on."
+      },
+      {
+        "name": "dateValue",
+        "optional": true,
+        "description": "An integer between 1 and 31 representing the day of the month. If you specify dateValue, you must also specify monthValue."
+      }
+    ]
+  },
+  {
+    "name": "Date.prototype.setHours()",
+    "description": "Sets the hours for a specified date according to local time.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setHours",
+    "return_value": "Changes the Date object in place, and returns its new timestamp. If a parameter is NaN (or other values that get coerced to NaN, such as undefined), the date is set to Invalid Date and NaN is returned.",
+    "parameters": [
+      {
+        "name": "hoursValue",
+        "optional": false,
+        "description": "An integer between 0 and 23 representing the hours."
+      },
+      {
+        "name": "minutesValue",
+        "optional": true,
+        "description": "An integer between 0 and 59 representing the minutes."
+      },
+      {
+        "name": "secondsValue",
+        "optional": true,
+        "description": "An integer between 0 and 59 representing the seconds. If you specify secondsValue, you must also specify minutesValue."
+      },
+      {
+        "name": "msValue",
+        "optional": true,
+        "description": "An integer between 0 and 999 representing the milliseconds. If you specify msValue, you must also specify minutesValue and secondsValue."
+      }
+    ]
+  },
+  {
+    "name": "Date.prototype.setMilliseconds()",
+    "description": "Sets the milliseconds for a specified date according to local time.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setMilliseconds",
+    "return_value": "Changes the Date object in place, and returns its new timestamp. If millisecondsValue is NaN (or other values that get coerced to NaN, such as undefined), the date is set to Invalid Date and NaN is returned.",
+    "parameters": [
+      {
+        "name": "millisecondsValue",
+        "optional": false,
+        "description": "An integer between 0 and 999 representing the milliseconds."
+      }
+    ]
+  },
+  {
+    "name": "Date.prototype.setMinutes()",
+    "description": "Sets the minutes for a specified date according to local time.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setMinutes",
+    "return_value": "Changes the Date object in place, and returns its new timestamp. If a parameter is NaN (or other values that get coerced to NaN, such as undefined), the date is set to Invalid Date and NaN is returned.",
+    "parameters": [
+      {
+        "name": "minutesValue",
+        "optional": false,
+        "description": "An integer between 0 and 59 representing the minutes."
+      },
+      {
+        "name": "secondsValue",
+        "optional": true,
+        "description": "An integer between 0 and 59 representing the seconds. If you specify secondsValue, you must also specify minutesValue."
+      },
+      {
+        "name": "msValue",
+        "optional": true,
+        "description": "An integer between 0 and 999 representing the milliseconds. If you specify msValue, you must also specify minutesValue and secondsValue."
+      }
+    ]
+  },
+  {
+    "name": "Date.prototype.setMonth()",
+    "description": "Sets the month for a specified date according to local time.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setMonth",
+    "return_value": "Changes the Date object in place, and returns its new timestamp. If a parameter is NaN (or other values that get coerced to NaN, such as undefined), the date is set to Invalid Date and NaN is returned.",
+    "parameters": [
+      {
+        "name": "monthValue",
+        "optional": false,
+        "description": "An integer representing the month: 0 for January, 1 for February, and so on."
+      },
+      {
+        "name": "dateValue",
+        "optional": true,
+        "description": "An integer from 1 to 31 representing the day of the month."
+      }
+    ]
+  },
+  {
+    "name": "Date.prototype.setSeconds()",
+    "description": "Sets the seconds for a specified date according to local time.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setSeconds",
+    "return_value": "Changes the Date object in place, and returns its new timestamp. If a parameter is NaN (or other values that get coerced to NaN, such as undefined), the date is set to Invalid Date and NaN is returned.",
+    "parameters": [
+      {
+        "name": "secondsValue",
+        "optional": false,
+        "description": "An integer between 0 and 59 representing the seconds."
+      },
+      {
+        "name": "msValue",
+        "optional": true,
+        "description": "An integer between 0 and 999 representing the milliseconds."
+      }
+    ]
+  },
+  {
+    "name": "Date.prototype.setTime()",
+    "description": "Sets the Date object to the time represented by a number of milliseconds since January 1, 1970, 00:00:00 UTC. Use negative numbers for times prior.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setTime",
+    "return_value": "Changes the Date object in place, and returns its new timestamp. If timeValue is NaN (or other values that get coerced to NaN, such as undefined), the date is set to Invalid Date and NaN is returned.",
+    "parameters": [
+      {
+        "name": "timeValue",
+        "optional": false,
+        "description": "An integer representing the new timestamp \u00e2\u0080\u0094 the number of milliseconds since the midnight at the beginning of January 1, 1970, UTC."
+      }
+    ]
+  },
+  {
+    "name": "Date.prototype.setUTCDate()",
+    "description": "Sets the day of the month for a specified date according to universal time.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setUTCDate",
+    "return_value": "Changes the Date object in place, and returns its new timestamp. If dateValue is NaN (or other values that get coerced to NaN, such as undefined), the date is set to Invalid Date and NaN is returned.",
+    "parameters": [
+      {
+        "name": "dateValue",
+        "optional": false,
+        "description": "An integer from 1 to 31 representing the day of the month."
+      }
+    ]
+  },
+  {
+    "name": "Date.prototype.setUTCFullYear()",
+    "description": "Sets the full year (e.g. 4 digits for 4-digit years) for a specified date according to universal time.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setUTCFullYear",
+    "return_value": "Changes the Date object in place, and returns its new timestamp. If a parameter is NaN (or other values that get coerced to NaN, such as undefined), the date is set to Invalid Date and NaN is returned.",
+    "parameters": [
+      {
+        "name": "yearValue",
+        "optional": false,
+        "description": "An integer representing the year. For example, 1995."
+      },
+      {
+        "name": "monthValue",
+        "optional": true,
+        "description": "An integer representing the month: 0 for January, 1 for February, and so on."
+      },
+      {
+        "name": "dateValue",
+        "optional": true,
+        "description": "An integer between 1 and 31 representing the day of the month. If you specify dateValue, you must also specify monthValue."
+      }
+    ]
+  },
+  {
+    "name": "Date.prototype.setUTCHours()",
+    "description": "Sets the hour for a specified date according to universal time.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setUTCHours",
+    "return_value": "Changes the Date object in place, and returns its new timestamp. If a parameter is NaN (or other values that get coerced to NaN, such as undefined), the date is set to Invalid Date and NaN is returned.",
+    "parameters": [
+      {
+        "name": "hoursValue",
+        "optional": false,
+        "description": "An integer between 0 and 23 representing the hours."
+      },
+      {
+        "name": "minutesValue",
+        "optional": true,
+        "description": "An integer between 0 and 59 representing the minutes."
+      },
+      {
+        "name": "secondsValue",
+        "optional": true,
+        "description": "An integer between 0 and 59 representing the seconds. If you specify secondsValue, you must also specify minutesValue."
+      },
+      {
+        "name": "msValue",
+        "optional": true,
+        "description": "An integer between 0 and 999 representing the milliseconds. If you specify msValue, you must also specify minutesValue and secondsValue."
+      }
+    ]
+  },
+  {
+    "name": "Date.prototype.setUTCMilliseconds()",
+    "description": "Sets the milliseconds for a specified date according to universal time.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setUTCMilliseconds",
+    "return_value": "Changes the Date object in place, and returns its new timestamp. If millisecondsValue is NaN (or other values that get coerced to NaN, such as undefined), the date is set to Invalid Date and NaN is returned.",
+    "parameters": [
+      {
+        "name": "millisecondsValue",
+        "optional": false,
+        "description": "An integer between 0 and 999 representing the milliseconds."
+      }
+    ]
+  },
+  {
+    "name": "Date.prototype.setUTCMinutes()",
+    "description": "Sets the minutes for a specified date according to universal time.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setUTCMinutes",
+    "return_value": "Changes the Date object in place, and returns its new timestamp. If a parameter is NaN (or other values that get coerced to NaN, such as undefined), the date is set to Invalid Date and NaN is returned.",
+    "parameters": [
+      {
+        "name": "minutesValue",
+        "optional": false,
+        "description": "An integer between 0 and 59 representing the minutes."
+      },
+      {
+        "name": "secondsValue",
+        "optional": true,
+        "description": "An integer between 0 and 59 representing the seconds. If you specify secondsValue, you must also specify minutesValue."
+      },
+      {
+        "name": "msValue",
+        "optional": true,
+        "description": "An integer between 0 and 999 representing the milliseconds. If you specify msValue, you must also specify minutesValue and secondsValue."
+      }
+    ]
+  },
+  {
+    "name": "Date.prototype.setUTCMonth()",
+    "description": "Sets the month for a specified date according to universal time.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setUTCMonth",
+    "return_value": "Changes the Date object in place, and returns its new timestamp. If a parameter is NaN (or other values that get coerced to NaN, such as undefined), the date is set to Invalid Date and NaN is returned.",
+    "parameters": [
+      {
+        "name": "monthValue",
+        "optional": false,
+        "description": "An integer representing the month: 0 for January, 1 for February, and so on."
+      },
+      {
+        "name": "dateValue",
+        "optional": true,
+        "description": "An integer from 1 to 31 representing the day of the month."
+      }
+    ]
+  },
+  {
+    "name": "Date.prototype.setUTCSeconds()",
+    "description": "Sets the seconds for a specified date according to universal time.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setUTCSeconds",
+    "return_value": "Changes the Date object in place, and returns its new timestamp. If a parameter is NaN (or other values that get coerced to NaN, such as undefined), the date is set to Invalid Date and NaN is returned.",
+    "parameters": [
+      {
+        "name": "secondsValue",
+        "optional": false,
+        "description": "An integer between 0 and 59 representing the seconds."
+      },
+      {
+        "name": "msValue",
+        "optional": true,
+        "description": "An integer between 0 and 999 representing the milliseconds."
+      }
+    ]
+  },
+  {
+    "name": "Date.prototype.setYear()",
+    "description": "Sets the year (usually 2\u00e2\u0080\u00933 digits) for a specified date according to local time. Use setFullYear() instead.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setYear",
+    "return_value": "Changes the Date object in place, and returns its new timestamp. If yearValue is NaN (or other values that get coerced to NaN, such as undefined), the date is set to Invalid Date and NaN is returned.",
+    "parameters": [
+      {
+        "name": "yearValue",
+        "optional": false,
+        "description": "An integer."
+      }
+    ]
+  },
+  {
+    "name": "Date.prototype.toDateString()",
+    "description": "Returns the \"date\" portion of the Date as a human-readable string like 'Thu Apr 12 2018'.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toDateString",
+    "return_value": "A string representing the date portion of the given date (see description for the format). Returns \"Invalid Date\" if the date is invalid.",
+    "parameters": []
+  },
+  {
+    "name": "Date.prototype.toISOString()",
+    "description": "Converts a date to a string following the ISO 8601 Extended Format.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString",
+    "return_value": "A string representing the given date in the date time string format according to universal time. It's the same format as the one required to be recognized by Date.parse().",
+    "parameters": [
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if the date is invalid or if it corresponds to a year that cannot be represented in the date string format."
+      }
+    ]
+  },
+  {
+    "name": "Date.prototype.toJSON()",
+    "description": "Returns a string representing the Date using toISOString(). Intended for use by JSON.stringify().",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toJSON",
+    "return_value": "A string representing the given date in the date time string format according to universal time, or null when the date is invalid. For valid dates, the return value is the same as that of toISOString().",
+    "parameters": []
+  },
+  {
+    "name": "Date.prototype.toLocaleDateString()",
+    "description": "Returns a string with a locality sensitive representation of the date portion of this date based on system settings.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString",
+    "return_value": "A string representing the date portion of the given date according to language-specific conventions.\nIn implementations with Intl.DateTimeFormat, this is equivalent to new Intl.DateTimeFormat(locales, options).format(date), where options has been normalized as described above.\n\nNote: Most of the time, the formatting returned by toLocaleDateString() is consistent. However, the output may vary with time, language, and implementation \u00e2\u0080\u0094 output variations are by design and allowed by the specification. You should not compare the results of toLocaleDateString() to static values.",
+    "parameters": [
+      {
+        "name": "locales",
+        "optional": true,
+        "description": "A string with a BCP 47 language tag, or an array of such strings. Corresponds to the locales parameter of the Intl.DateTimeFormat() constructor.\nIn implementations without Intl.DateTimeFormat support, this parameter is ignored and the host's locale is usually used."
+      },
+      {
+        "name": "options",
+        "optional": true,
+        "description": "An object adjusting the output format. Corresponds to the options parameter of the Intl.DateTimeFormat() constructor. The timeStyle option must be undefined, or a TypeError would be thrown. If weekday, year, month, and day are all undefined, then year, month, and day will be set to \"numeric\".\nIn implementations without Intl.DateTimeFormat support, this parameter is ignored."
+      }
+    ]
+  },
+  {
+    "name": "Date.prototype.toLocaleString()",
+    "description": "Returns a string with a locality-sensitive representation of this date. Overrides the Object.prototype.toLocaleString() method.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString",
+    "return_value": "A string representing the given date according to language-specific conventions.\nIn implementations with Intl.DateTimeFormat, this is equivalent to new Intl.DateTimeFormat(locales, options).format(date).\n\nNote: Most of the time, the formatting returned by toLocaleString() is consistent. However, the output may vary with time, language, and implementation \u00e2\u0080\u0094 output variations are by design and allowed by the specification. You should not compare the results of toLocaleString() to static values.",
+    "parameters": [
+      {
+        "name": "locales",
+        "optional": true,
+        "description": "A string with a BCP 47 language tag, or an array of such strings. Corresponds to the locales parameter of the Intl.DateTimeFormat() constructor.\nIn implementations without Intl.DateTimeFormat support, this parameter is ignored and the host's locale is usually used."
+      },
+      {
+        "name": "options",
+        "optional": true,
+        "description": "An object adjusting the output format. Corresponds to the options parameter of the Intl.DateTimeFormat() constructor. If weekday, year, month, day, dayPeriod, hour, minute, second, and fractionalSecondDigits are all undefined, then year, month, day, hour, minute, second will be set to \"numeric\".\nIn implementations without Intl.DateTimeFormat support, this parameter is ignored."
+      }
+    ]
+  },
+  {
+    "name": "Date.prototype.toLocaleTimeString()",
+    "description": "Returns a string with a locality-sensitive representation of the time portion of this date, based on system settings.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString",
+    "return_value": "A string representing the time portion of the given date according to language-specific conventions.\nIn implementations with Intl.DateTimeFormat, this is equivalent to new Intl.DateTimeFormat(locales, options).format(date), where options has been normalized as described above.\n\nNote: Most of the time, the formatting returned by toLocaleTimeString() is consistent. However, the output may vary with time, language, and implementation \u00e2\u0080\u0094 output variations are by design and allowed by the specification. You should not compare the results of toLocaleTimeString() to static values.",
+    "parameters": [
+      {
+        "name": "locales",
+        "optional": true,
+        "description": "A string with a BCP 47 language tag, or an array of such strings. Corresponds to the locales parameter of the Intl.DateTimeFormat() constructor.\nIn implementations without Intl.DateTimeFormat support, this parameter is ignored and the host's locale is usually used."
+      },
+      {
+        "name": "options",
+        "optional": true,
+        "description": "An object adjusting the output format. Corresponds to the options parameter of the Intl.DateTimeFormat() constructor. If dayPeriod, hour, minute, second, and fractionalSecondDigits are all undefined, then hour, minute, second will be set to \"numeric\".\nIn implementations without Intl.DateTimeFormat support, this parameter is ignored."
+      }
+    ]
+  },
+  {
+    "name": "Date.prototype.toString()",
+    "description": "Returns a string representing the specified Date object. Overrides the Object.prototype.toString() method.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toString",
+    "return_value": "A string representing the given date (see description for the format). Returns \"Invalid Date\" if the date is invalid.",
+    "parameters": []
+  },
+  {
+    "name": "Date.prototype.toTimeString()",
+    "description": "Returns the \"time\" portion of the Date as a human-readable string.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toTimeString",
+    "return_value": "A string representing the time portion of the given date (see description for the format). Returns \"Invalid Date\" if the date is invalid.",
+    "parameters": []
+  },
+  {
+    "name": "Date.prototype.toUTCString()",
+    "description": "Converts a date to a string using the UTC timezone.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toUTCString",
+    "return_value": "A string representing the given date using the UTC time zone (see description for the format). Returns \"Invalid Date\" if the date is invalid.",
+    "parameters": []
+  },
+  {
+    "name": "Date.prototype.valueOf()",
+    "description": "Returns the primitive value of a Date object. Overrides the Object.prototype.valueOf() method.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/valueOf",
+    "return_value": "A number representing the timestamp, in milliseconds, of this date. Returns NaN if the date is invalid.",
+    "parameters": []
+  },
+  {
+    "name": "Date.prototype[@@toPrimitive]()",
+    "description": "Converts this Date object to a primitive value.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive",
+    "return_value": "If hint is \"string\" or \"default\", this method returns a string by coercing the this value to a string (first trying toString() then trying valueOf()).\nIf hint is \"number\", this method returns a number by coercing the this value to a number (first trying valueOf() then trying toString()).",
+    "parameters": [
+      {
+        "name": "hint",
+        "optional": false,
+        "description": "A string representing the type of the primitive value to return. The following values are valid:\n\n\"string\" or \"default\": The method should return a string.\n\"number\": The method should return a number."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown if the hint argument is not one of the three valid values."
+      }
+    ]
+  }
+]

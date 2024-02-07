@@ -1,0 +1,962 @@
+[
+  {
+    "name": "element",
+    "description": "The current element being processed in the array.",
+    "link": "https://developer.mozilla.org/#element",
+    "parameters": []
+  },
+  {
+    "name": "index",
+    "description": "The index of the current element being processed in the array.",
+    "link": "https://developer.mozilla.org/#index",
+    "parameters": []
+  },
+  {
+    "name": "array",
+    "description": "The array that the method was called upon.",
+    "link": "https://developer.mozilla.org/#array",
+    "parameters": []
+  },
+  {
+    "name": "Array()",
+    "description": "Creates a new Array object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Array",
+    "parameters": [
+      {
+        "name": "element1",
+        "optional": false,
+        "description": "A JavaScript array is initialized with the given elements, except in the case where\n      a single argument is passed to the Array constructor and that argument is\n      a number (see the arrayLength parameter below). Note that this special case only\n      applies to JavaScript arrays created with the Array constructor, not\n      array literals created with the square bracket syntax."
+      },
+      {
+        "name": "arrayLength",
+        "optional": false,
+        "description": "If the only argument passed to the Array constructor is an integer\n      between 0 and 232 - 1 (inclusive), this returns a new JavaScript array with\n      its length property set to that number (Note: this\n      implies an array of arrayLength empty slots, not slots with actual\n      undefined values \u00e2\u0080\u0094 see sparse arrays)."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if there's only one argument (arrayLength) that is a number, but its value is not an integer or not between 0 and 232 - 1 (inclusive)."
+      }
+    ]
+  },
+  {
+    "name": "Array[@@species]",
+    "description": "Returns the Array constructor.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@species",
+    "return_value": "The value of the constructor (this) on which get @@species was called. The return value is used to construct return values from array methods that create new arrays.",
+    "parameters": []
+  },
+  {
+    "name": "Array.from()",
+    "description": "Creates a new Array instance from an iterable or array-like object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from",
+    "return_value": "A new Array instance.",
+    "parameters": [
+      {
+        "name": "arrayLike",
+        "optional": false,
+        "description": "An iterable or array-like object to convert to an array."
+      },
+      {
+        "name": "mapFn",
+        "optional": true,
+        "description": "A function to call on every element of the array. If provided, every value to be added to the array is first passed through this function, and mapFn's return value is added to the array instead. The function is called with the following arguments:\n\nelement\n\nThe current element being processed in the array.\n\nindex\n\nThe index of the current element being processed in the array."
+      },
+      {
+        "name": "element",
+        "optional": false,
+        "description": "The current element being processed in the array."
+      },
+      {
+        "name": "index",
+        "optional": false,
+        "description": "The index of the current element being processed in the array."
+      },
+      {
+        "name": "thisArg",
+        "optional": true,
+        "description": "Value to use as this when executing mapFn."
+      }
+    ]
+  },
+  {
+    "name": "Array.fromAsync()",
+    "description": "Creates a new Array instance from an async iterable, iterable, or array-like object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fromAsync",
+    "return_value": "A new Promise whose fulfillment value is a new Array instance.",
+    "parameters": [
+      {
+        "name": "arrayLike",
+        "optional": false,
+        "description": "An async iterable, iterable, or array-like object to convert to an array."
+      },
+      {
+        "name": "mapFn",
+        "optional": true,
+        "description": "A function to call on every element of the array. If provided, every value to be added to the array is first passed through this function, and mapFn's return value is added to the array instead (after being awaited). The function is called with the following arguments:\n\nelement\n\nThe current element being processed in the array. Because all elements are first awaited, this value will never be a thenable.\n\nindex\n\nThe index of the current element being processed in the array."
+      },
+      {
+        "name": "element",
+        "optional": false,
+        "description": "The current element being processed in the array. Because all elements are first awaited, this value will never be a thenable."
+      },
+      {
+        "name": "index",
+        "optional": false,
+        "description": "The index of the current element being processed in the array."
+      },
+      {
+        "name": "thisArg",
+        "optional": true,
+        "description": "Value to use as this when executing mapFn."
+      }
+    ]
+  },
+  {
+    "name": "Array.isArray()",
+    "description": "Returns true if the argument is an array, or false otherwise.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray",
+    "return_value": "true if value is an Array; otherwise, false. false is always returned if value is a TypedArray instance.",
+    "parameters": [
+      {
+        "name": "value",
+        "optional": false,
+        "description": "The value to be checked."
+      }
+    ]
+  },
+  {
+    "name": "Array.of()",
+    "description": "Creates a new Array instance with a variable number of arguments, regardless of number or type of the arguments.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/of",
+    "return_value": "A new Array instance.",
+    "parameters": [
+      {
+        "name": "element1",
+        "optional": false,
+        "description": "Elements used to create the array."
+      }
+    ]
+  },
+  {
+    "name": "Array.prototype.constructor",
+    "description": "The constructor function that created the instance object. For Array instances, the initial value is the Array constructor.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor",
+    "parameters": []
+  },
+  {
+    "name": "Array.prototype[@@unscopables]",
+    "description": "Contains property names that were not included in the ECMAScript standard prior to the ES2015 version and that are ignored for with statement-binding purposes.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@unscopables",
+    "parameters": []
+  },
+  {
+    "name": "length",
+    "description": "Reflects the number of elements in an array.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length",
+    "parameters": []
+  },
+  {
+    "name": "Array.prototype.at()",
+    "description": "Returns the array item at the given index. Accepts negative integers, which count back from the last item.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/at",
+    "return_value": "The element in the array matching the given index. Always returns undefined if index < -array.length or index >= array.length without attempting to access the corresponding property.",
+    "parameters": [
+      {
+        "name": "index",
+        "optional": false,
+        "description": "Zero-based index of the array element to be returned, converted to an integer. Negative index counts back from the end of the array \u00e2\u0080\u0094 if index < 0, index + array.length is accessed."
+      }
+    ]
+  },
+  {
+    "name": "Array.prototype.concat()",
+    "description": "Returns a new array that is the calling array joined with other array(s) and/or value(s).",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat",
+    "return_value": "A new Array instance.",
+    "parameters": [
+      {
+        "name": "value1",
+        "optional": true,
+        "description": "Arrays and/or values to concatenate into a new array. If all\n      valueN parameters are omitted, concat returns a\n      shallow copy of the existing array on which it is called. See the description below\n      for more details."
+      }
+    ]
+  },
+  {
+    "name": "Array.prototype.copyWithin()",
+    "description": "Copies a sequence of array elements within an array.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/copyWithin",
+    "return_value": "The modified array.",
+    "parameters": [
+      {
+        "name": "target",
+        "optional": false,
+        "description": "Zero-based index at which to copy the sequence to, converted to an integer. This corresponds to where the element at start will be copied to, and all elements between start and end are copied to succeeding indices.\n\nNegative index counts back from the end of the array \u00e2\u0080\u0094 if target < 0, target + array.length is used.\nIf target < -array.length, 0 is used.\nIf target >= array.length, nothing is copied.\nIf target is positioned after start after normalization, copying only happens until the end of array.length (in other words, copyWithin() never extends the array)."
+      },
+      {
+        "name": "start",
+        "optional": false,
+        "description": "Zero-based index at which to start copying elements from, converted to an integer.\n\nNegative index counts back from the end of the array \u00e2\u0080\u0094 if start < 0, start + array.length is used.\nIf start < -array.length, 0 is used.\nIf start >= array.length, nothing is copied."
+      },
+      {
+        "name": "end",
+        "optional": true,
+        "description": "Zero-based index at which to end copying elements from, converted to an integer. copyWithin() copies up to but not including end.\n\nNegative index counts back from the end of the array \u00e2\u0080\u0094 if end < 0, end + array.length is used.\nIf end < -array.length, 0 is used.\nIf end >= array.length or end is omitted, array.length is used, causing all elements until the end to be copied.\nIf end is positioned before or at start after normalization, nothing is copied."
+      }
+    ]
+  },
+  {
+    "name": "Array.prototype.entries()",
+    "description": "Returns a new array iterator object that contains the key/value pairs for each index in an array.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/entries",
+    "return_value": "A new iterable iterator object.",
+    "parameters": []
+  },
+  {
+    "name": "Array.prototype.every()",
+    "description": "Returns true if every element in the calling array satisfies the testing function.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every",
+    "return_value": "true unless callbackFn returns a falsy value for an array element, in which case false is immediately returned.",
+    "parameters": [
+      {
+        "name": "callbackFn",
+        "optional": false,
+        "description": "A function to execute for each element in the array. It should return a truthy value to indicate the element passes the test, and a falsy value otherwise. The function is called with the following arguments:\n\nelement\n\nThe current element being processed in the array.\n\nindex\n\nThe index of the current element being processed in the array.\n\narray\n\nThe array every() was called upon."
+      },
+      {
+        "name": "element",
+        "optional": false,
+        "description": "The current element being processed in the array."
+      },
+      {
+        "name": "index",
+        "optional": false,
+        "description": "The index of the current element being processed in the array."
+      },
+      {
+        "name": "array",
+        "optional": false,
+        "description": "The array every() was called upon."
+      },
+      {
+        "name": "thisArg",
+        "optional": true,
+        "description": "A value to use as this when executing callbackFn. See iterative methods."
+      }
+    ]
+  },
+  {
+    "name": "Array.prototype.fill()",
+    "description": "Fills all the elements of an array from a start index to an end index with a static value.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fill",
+    "return_value": "The modified array, filled with value.",
+    "parameters": [
+      {
+        "name": "value",
+        "optional": false,
+        "description": "Value to fill the array with. Note all elements in the array will be this exact value: if value is an object, each slot in the array will reference that object."
+      },
+      {
+        "name": "start",
+        "optional": true,
+        "description": "Zero-based index at which to start filling, converted to an integer.\n\nNegative index counts back from the end of the array \u00e2\u0080\u0094 if start < 0, start + array.length is used.\nIf start < -array.length or start is omitted, 0 is used.\nIf start >= array.length, no index is filled."
+      },
+      {
+        "name": "end",
+        "optional": true,
+        "description": "Zero-based index at which to end filling, converted to an integer. fill() fills up to but not including end.\n\nNegative index counts back from the end of the array \u00e2\u0080\u0094 if end < 0, end + array.length is used.\nIf end < -array.length, 0 is used.\nIf end >= array.length or end is omitted, array.length is used, causing all indices until the end to be filled.\nIf end is positioned before or at start after normalization, no index is filled."
+      }
+    ]
+  },
+  {
+    "name": "Array.prototype.filter()",
+    "description": "Returns a new array containing all elements of the calling array for which the provided filtering function returns true.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter",
+    "return_value": "A shallow copy of the given array containing just the elements that pass the test. If no elements pass the test, an empty array is returned.",
+    "parameters": [
+      {
+        "name": "callbackFn",
+        "optional": false,
+        "description": "A function to execute for each element in the array. It should return a truthy value to keep the element in the resulting array, and a falsy value otherwise. The function is called with the following arguments:\n\nelement\n\nThe current element being processed in the array.\n\nindex\n\nThe index of the current element being processed in the array.\n\narray\n\nThe array filter() was called upon."
+      },
+      {
+        "name": "element",
+        "optional": false,
+        "description": "The current element being processed in the array."
+      },
+      {
+        "name": "index",
+        "optional": false,
+        "description": "The index of the current element being processed in the array."
+      },
+      {
+        "name": "array",
+        "optional": false,
+        "description": "The array filter() was called upon."
+      },
+      {
+        "name": "thisArg",
+        "optional": true,
+        "description": "A value to use as this when executing callbackFn. See iterative methods."
+      }
+    ]
+  },
+  {
+    "name": "Array.prototype.find()",
+    "description": "Returns the value of the first element in the array that satisfies the provided testing function, or undefined if no appropriate element is found.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find",
+    "return_value": "The first element in the array that satisfies the provided testing function.\n  Otherwise, undefined is returned.",
+    "parameters": [
+      {
+        "name": "callbackFn",
+        "optional": false,
+        "description": "A function to execute for each element in the array. It should return a truthy value to indicate a matching element has been found, and a falsy value otherwise. The function is called with the following arguments:\n\nelement\n\nThe current element being processed in the array.\n\nindex\n\nThe index of the current element being processed in the array.\n\narray\n\nThe array find() was called upon."
+      },
+      {
+        "name": "element",
+        "optional": false,
+        "description": "The current element being processed in the array."
+      },
+      {
+        "name": "index",
+        "optional": false,
+        "description": "The index of the current element being processed in the array."
+      },
+      {
+        "name": "array",
+        "optional": false,
+        "description": "The array find() was called upon."
+      },
+      {
+        "name": "thisArg",
+        "optional": true,
+        "description": "A value to use as this when executing callbackFn. See iterative methods."
+      }
+    ]
+  },
+  {
+    "name": "Array.prototype.findIndex()",
+    "description": "Returns the index of the first element in the array that satisfies the provided testing function, or -1 if no appropriate element was found.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex",
+    "return_value": "The index of the first element in the array that passes the test. Otherwise, -1.",
+    "parameters": [
+      {
+        "name": "callbackFn",
+        "optional": false,
+        "description": "A function to execute for each element in the array. It should return a truthy value to indicate a matching element has been found, and a falsy value otherwise. The function is called with the following arguments:\n\nelement\n\nThe current element being processed in the array.\n\nindex\n\nThe index of the current element being processed in the array.\n\narray\n\nThe array findIndex() was called upon."
+      },
+      {
+        "name": "element",
+        "optional": false,
+        "description": "The current element being processed in the array."
+      },
+      {
+        "name": "index",
+        "optional": false,
+        "description": "The index of the current element being processed in the array."
+      },
+      {
+        "name": "array",
+        "optional": false,
+        "description": "The array findIndex() was called upon."
+      },
+      {
+        "name": "thisArg",
+        "optional": true,
+        "description": "A value to use as this when executing callbackFn. See iterative methods."
+      }
+    ]
+  },
+  {
+    "name": "Array.prototype.findLast()",
+    "description": "Returns the value of the last element in the array that satisfies the provided testing function, or undefined if no appropriate element is found.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findLast",
+    "return_value": "The last (highest-index) element in the array that satisfies the provided testing function; undefined if no matching element is found.",
+    "parameters": [
+      {
+        "name": "callbackFn",
+        "optional": false,
+        "description": "A function to execute for each element in the array. It should return a truthy value to indicate a matching element has been found, and a falsy value otherwise. The function is called with the following arguments:\n\nelement\n\nThe current element being processed in the array.\n\nindex\n\nThe index of the current element being processed in the array.\n\narray\n\nThe array findLast() was called upon."
+      },
+      {
+        "name": "element",
+        "optional": false,
+        "description": "The current element being processed in the array."
+      },
+      {
+        "name": "index",
+        "optional": false,
+        "description": "The index of the current element being processed in the array."
+      },
+      {
+        "name": "array",
+        "optional": false,
+        "description": "The array findLast() was called upon."
+      },
+      {
+        "name": "thisArg",
+        "optional": true,
+        "description": "A value to use as this when executing callbackFn. See iterative methods."
+      }
+    ]
+  },
+  {
+    "name": "Array.prototype.findLastIndex()",
+    "description": "Returns the index of the last element in the array that satisfies the provided testing function, or -1 if no appropriate element was found.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findLastIndex",
+    "return_value": "The index of the last (highest-index) element in the array that passes the test.\n  Otherwise -1 if no matching element is found.",
+    "parameters": [
+      {
+        "name": "callbackFn",
+        "optional": false,
+        "description": "A function to execute for each element in the array. It should return a truthy value to indicate a matching element has been found, and a falsy value otherwise. The function is called with the following arguments:\n\nelement\n\nThe current element being processed in the array.\n\nindex\n\nThe index of the current element being processed in the array.\n\narray\n\nThe array findLastIndex() was called upon."
+      },
+      {
+        "name": "element",
+        "optional": false,
+        "description": "The current element being processed in the array."
+      },
+      {
+        "name": "index",
+        "optional": false,
+        "description": "The index of the current element being processed in the array."
+      },
+      {
+        "name": "array",
+        "optional": false,
+        "description": "The array findLastIndex() was called upon."
+      },
+      {
+        "name": "thisArg",
+        "optional": true,
+        "description": "A value to use as this when executing callbackFn. See iterative methods."
+      }
+    ]
+  },
+  {
+    "name": "Array.prototype.flat()",
+    "description": "Returns a new array with all sub-array elements concatenated into it recursively up to the specified depth.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat",
+    "return_value": "A new array with the sub-array elements concatenated into it.",
+    "parameters": [
+      {
+        "name": "depth",
+        "optional": true,
+        "description": "The depth level specifying how deep a nested array structure should be flattened.\n      Defaults to 1."
+      }
+    ]
+  },
+  {
+    "name": "Array.prototype.flatMap()",
+    "description": "Returns a new array formed by applying a given callback function to each element of the calling array, and then flattening the result by one level.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap",
+    "return_value": "A new array with each element being the result of the callback function and flattened\n  by a depth of 1.",
+    "parameters": [
+      {
+        "name": "callbackFn",
+        "optional": false,
+        "description": "A function to execute for each element in the array. It should return an array containing new elements of the new array, or a single non-array value to be added to the new array. The function is called with the following arguments:\n\nelement\n\nThe current element being processed in the array.\n\nindex\n\nThe index of the current element being processed in the array.\n\narray\n\nThe array flatMap() was called upon."
+      },
+      {
+        "name": "element",
+        "optional": false,
+        "description": "The current element being processed in the array."
+      },
+      {
+        "name": "index",
+        "optional": false,
+        "description": "The index of the current element being processed in the array."
+      },
+      {
+        "name": "array",
+        "optional": false,
+        "description": "The array flatMap() was called upon."
+      },
+      {
+        "name": "thisArg",
+        "optional": true,
+        "description": "A value to use as this when executing callbackFn. See iterative methods."
+      }
+    ]
+  },
+  {
+    "name": "Array.prototype.forEach()",
+    "description": "Calls a function for each element in the calling array.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach",
+    "return_value": "None (undefined).",
+    "parameters": [
+      {
+        "name": "callbackFn",
+        "optional": false,
+        "description": "A function to execute for each element in the array. Its return value is discarded. The function is called with the following arguments:\n\nelement\n\nThe current element being processed in the array.\n\nindex\n\nThe index of the current element being processed in the array.\n\narray\n\nThe array forEach() was called upon."
+      },
+      {
+        "name": "element",
+        "optional": false,
+        "description": "The current element being processed in the array."
+      },
+      {
+        "name": "index",
+        "optional": false,
+        "description": "The index of the current element being processed in the array."
+      },
+      {
+        "name": "array",
+        "optional": false,
+        "description": "The array forEach() was called upon."
+      },
+      {
+        "name": "thisArg",
+        "optional": true,
+        "description": "A value to use as this when executing callbackFn. See iterative methods."
+      }
+    ]
+  },
+  {
+    "name": "Array.prototype.includes()",
+    "description": "Determines whether the calling array contains a value, returning true or false as appropriate.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes",
+    "return_value": "A boolean value which is true if the value searchElement is found within the array (or the part of the array indicated by the index fromIndex, if specified).",
+    "parameters": [
+      {
+        "name": "searchElement",
+        "optional": false,
+        "description": "The value to search for."
+      },
+      {
+        "name": "fromIndex",
+        "optional": true,
+        "description": "Zero-based index at which to start searching, converted to an integer.\n\nNegative index counts back from the end of the array \u00e2\u0080\u0094 if fromIndex < 0, fromIndex + array.length is used. However, the array is still searched from front to back in this case.\nIf fromIndex < -array.length or fromIndex is omitted, 0 is used, causing the entire array to be searched.\nIf fromIndex >= array.length, the array is not searched and false is returned."
+      }
+    ]
+  },
+  {
+    "name": "Array.prototype.indexOf()",
+    "description": "Returns the first (least) index at which a given element can be found in the calling array.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf",
+    "return_value": "The first index of searchElement in the array; -1 if not found.",
+    "parameters": [
+      {
+        "name": "searchElement",
+        "optional": false,
+        "description": "Element to locate in the array."
+      },
+      {
+        "name": "fromIndex",
+        "optional": true,
+        "description": "Zero-based index at which to start searching, converted to an integer.\n\nNegative index counts back from the end of the array \u00e2\u0080\u0094 if fromIndex < 0, fromIndex + array.length is used. Note, the array is still searched from front to back in this case.\nIf fromIndex < -array.length or fromIndex is omitted, 0 is used, causing the entire array to be searched.\nIf fromIndex >= array.length, the array is not searched and -1 is returned."
+      }
+    ]
+  },
+  {
+    "name": "Array.prototype.join()",
+    "description": "Joins all elements of an array into a string.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join",
+    "return_value": "A string with all array elements joined. If array.length is 0, the empty string is returned.",
+    "parameters": [
+      {
+        "name": "separator",
+        "optional": true,
+        "description": "A string to separate each pair of adjacent elements of the array. If omitted, the array elements are separated with a comma (\",\")."
+      }
+    ]
+  },
+  {
+    "name": "Array.prototype.keys()",
+    "description": "Returns a new array iterator that contains the keys for each index in the calling array.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/keys",
+    "return_value": "A new iterable iterator object.",
+    "parameters": []
+  },
+  {
+    "name": "Array.prototype.lastIndexOf()",
+    "description": "Returns the last (greatest) index at which a given element can be found in the calling array, or -1 if none is found.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf",
+    "return_value": "The last index of searchElement in the array; -1 if not found.",
+    "parameters": [
+      {
+        "name": "searchElement",
+        "optional": false,
+        "description": "Element to locate in the array."
+      },
+      {
+        "name": "fromIndex",
+        "optional": true,
+        "description": "Zero-based index at which to start searching backwards, converted to an integer.\n\nNegative index counts back from the end of the array \u00e2\u0080\u0094 if fromIndex < 0, fromIndex + array.length is used.\nIf fromIndex < -array.length, the array is not searched and -1 is returned. You can think of it conceptually as starting at a nonexistent position before the beginning of the array and going backwards from there. There are no array elements on the way, so searchElement is never found.\nIf fromIndex >= array.length or fromIndex is omitted, array.length - 1 is used, causing the entire array to be searched. You can think of it conceptually as starting at a nonexistent position beyond the end of the array and going backwards from there. It eventually reaches the real end position of the array, at which point it starts searching backwards through the actual array elements."
+      }
+    ]
+  },
+  {
+    "name": "Array.prototype.map()",
+    "description": "Returns a new array containing the results of invoking a function on every element in the calling array.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map",
+    "return_value": "A new array with each element being the result of the callback function.",
+    "parameters": [
+      {
+        "name": "callbackFn",
+        "optional": false,
+        "description": "A function to execute for each element in the array. Its return value is added as a single element in the new array. The function is called with the following arguments:\n\nelement\n\nThe current element being processed in the array.\n\nindex\n\nThe index of the current element being processed in the array.\n\narray\n\nThe array map() was called upon."
+      },
+      {
+        "name": "element",
+        "optional": false,
+        "description": "The current element being processed in the array."
+      },
+      {
+        "name": "index",
+        "optional": false,
+        "description": "The index of the current element being processed in the array."
+      },
+      {
+        "name": "array",
+        "optional": false,
+        "description": "The array map() was called upon."
+      },
+      {
+        "name": "thisArg",
+        "optional": true,
+        "description": "A value to use as this when executing callbackFn. See iterative methods."
+      }
+    ]
+  },
+  {
+    "name": "Array.prototype.pop()",
+    "description": "Removes the last element from an array and returns that element.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop",
+    "return_value": "The removed element from the array; undefined if the array is empty.",
+    "parameters": []
+  },
+  {
+    "name": "Array.prototype.push()",
+    "description": "Adds one or more elements to the end of an array, and returns the new length of the array.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push",
+    "return_value": "The new length property of the object upon which the method was called.",
+    "parameters": [
+      {
+        "name": "element1",
+        "optional": false,
+        "description": "The element(s) to add to the end of the array."
+      }
+    ]
+  },
+  {
+    "name": "Array.prototype.reduce()",
+    "description": "Executes a user-supplied \"reducer\" callback function on each element of the array (from left to right), to reduce it to a single value.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce",
+    "return_value": "The value that results from running the \"reducer\" callback function to completion over the entire array.",
+    "parameters": [
+      {
+        "name": "callbackFn",
+        "optional": false,
+        "description": "A function to execute for each element in the array. Its return value becomes the value of the accumulator parameter on the next invocation of callbackFn. For the last invocation, the return value becomes the return value of reduce(). The function is called with the following arguments:\n\naccumulator\n\nThe value resulting from the previous call to callbackFn. On the first call, its value is initialValue if the latter is specified; otherwise its value is array[0].\n\ncurrentValue\n\nThe value of the current element. On the first call, its value is array[0] if initialValue is specified; otherwise its value is array[1].\n\ncurrentIndex\n\nThe index position of currentValue in the array. On the first call, its value is 0 if initialValue is specified, otherwise 1.\n\narray\n\nThe array reduce() was called upon."
+      },
+      {
+        "name": "accumulator",
+        "optional": false,
+        "description": "The value resulting from the previous call to callbackFn. On the first call, its value is initialValue if the latter is specified; otherwise its value is array[0]."
+      },
+      {
+        "name": "currentValue",
+        "optional": false,
+        "description": "The value of the current element. On the first call, its value is array[0] if initialValue is specified; otherwise its value is array[1]."
+      },
+      {
+        "name": "currentIndex",
+        "optional": false,
+        "description": "The index position of currentValue in the array. On the first call, its value is 0 if initialValue is specified, otherwise 1."
+      },
+      {
+        "name": "array",
+        "optional": false,
+        "description": "The array reduce() was called upon."
+      },
+      {
+        "name": "initialValue",
+        "optional": true,
+        "description": "A value to which accumulator is initialized the first time the callback is called.\n      If initialValue is specified, callbackFn starts executing with the first value in the array as currentValue.\n      If initialValue is not specified, accumulator is initialized to the first value in the array, and callbackFn starts executing with the second value in the array as currentValue. In this case, if the array is empty (so that there's no first value to return as accumulator), an error is thrown."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown if the array contains no elements and initialValue is not provided."
+      }
+    ]
+  },
+  {
+    "name": "Array.prototype.reduceRight()",
+    "description": "Executes a user-supplied \"reducer\" callback function on each element of the array (from right to left), to reduce it to a single value.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight",
+    "return_value": "The value that results from the reduction.",
+    "parameters": [
+      {
+        "name": "callbackFn",
+        "optional": false,
+        "description": "A function to execute for each element in the array. Its return value becomes the value of the accumulator parameter on the next invocation of callbackFn. For the last invocation, the return value becomes the return value of reduceRight(). The function is called with the following arguments:\n\naccumulator\n\nThe value resulting from the previous call to callbackFn. On the first call, its value is initialValue if the latter is specified; otherwise its value is the last element of the array.\n\ncurrentValue\n\nThe value of the current element. On the first call, its value is the last element if initialValue is specified; otherwise its value is the second-to-last element.\n\ncurrentIndex\n\nThe index position of currentValue in the array. On the first call, its value is array.length - 1 if initialValue is specified, otherwise array.length - 2.\n\narray\n\nThe array reduceRight() was called upon."
+      },
+      {
+        "name": "accumulator",
+        "optional": false,
+        "description": "The value resulting from the previous call to callbackFn. On the first call, its value is initialValue if the latter is specified; otherwise its value is the last element of the array."
+      },
+      {
+        "name": "currentValue",
+        "optional": false,
+        "description": "The value of the current element. On the first call, its value is the last element if initialValue is specified; otherwise its value is the second-to-last element."
+      },
+      {
+        "name": "currentIndex",
+        "optional": false,
+        "description": "The index position of currentValue in the array. On the first call, its value is array.length - 1 if initialValue is specified, otherwise array.length - 2."
+      },
+      {
+        "name": "array",
+        "optional": false,
+        "description": "The array reduceRight() was called upon."
+      },
+      {
+        "name": "initialValue",
+        "optional": true,
+        "description": "Value to use as accumulator to the first call of the callbackFn. If no initial value is supplied, the last element in the array will be used and skipped. Calling reduceRight() on an empty array without an initial value creates a TypeError."
+      }
+    ]
+  },
+  {
+    "name": "Array.prototype.reverse()",
+    "description": "Reverses the order of the elements of an array in place. (First becomes the last, last becomes first.)",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse",
+    "return_value": "The reference to the original array, now reversed. Note that the array is reversed in place, and no copy is made.",
+    "parameters": []
+  },
+  {
+    "name": "Array.prototype.shift()",
+    "description": "Removes the first element from an array and returns that element.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift",
+    "return_value": "The removed element from the array; undefined if the array is empty.",
+    "parameters": []
+  },
+  {
+    "name": "Array.prototype.slice()",
+    "description": "Extracts a section of the calling array and returns a new array.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice",
+    "return_value": "A new array containing the extracted elements.",
+    "parameters": [
+      {
+        "name": "start",
+        "optional": true,
+        "description": "Zero-based index at which to start extraction, converted to an integer.\n\nNegative index counts back from the end of the array \u00e2\u0080\u0094 if start < 0, start + array.length is used.\nIf start < -array.length or start is omitted, 0 is used.\nIf start >= array.length, nothing is extracted."
+      },
+      {
+        "name": "end",
+        "optional": true,
+        "description": "Zero-based index at which to end extraction, converted to an integer. slice() extracts up to but not including end.\n\nNegative index counts back from the end of the array \u00e2\u0080\u0094 if end < 0, end + array.length is used.\nIf end < -array.length, 0 is used.\nIf end >= array.length or end is omitted, array.length is used, causing all elements until the end to be extracted.\nIf end is positioned before or at start after normalization, nothing is extracted."
+      }
+    ]
+  },
+  {
+    "name": "Array.prototype.some()",
+    "description": "Returns true if at least one element in the calling array satisfies the provided testing function.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some",
+    "return_value": "false unless callbackFn returns a truthy value for an array element, in which case true is immediately returned.",
+    "parameters": [
+      {
+        "name": "callbackFn",
+        "optional": false,
+        "description": "A function to execute for each element in the array. It should return a truthy value to indicate the element passes the test, and a falsy value otherwise. The function is called with the following arguments:\n\nelement\n\nThe current element being processed in the array.\n\nindex\n\nThe index of the current element being processed in the array.\n\narray\n\nThe array some() was called upon."
+      },
+      {
+        "name": "element",
+        "optional": false,
+        "description": "The current element being processed in the array."
+      },
+      {
+        "name": "index",
+        "optional": false,
+        "description": "The index of the current element being processed in the array."
+      },
+      {
+        "name": "array",
+        "optional": false,
+        "description": "The array some() was called upon."
+      },
+      {
+        "name": "thisArg",
+        "optional": true,
+        "description": "A value to use as this when executing callbackFn. See iterative methods."
+      }
+    ]
+  },
+  {
+    "name": "Array.prototype.sort()",
+    "description": "Sorts the elements of an array in place and returns the array.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort",
+    "return_value": "The reference to the original array, now sorted. Note that the array is sorted in place, and no copy is made.",
+    "parameters": [
+      {
+        "name": "compareFn",
+        "optional": true,
+        "description": "A function that defines the sort order. The return value should be a number whose sign indicates the relative order of the two elements: negative if a is less than b, positive if a is greater than b, and zero if they are equal. NaN is treated as 0. The function is called with the following arguments:\n\na\n\nThe first element for comparison. Will never be undefined.\n\nb\n\nThe second element for comparison. Will never be undefined.\n\n\nIf omitted, the array elements are converted to strings, then sorted according to each character's Unicode code point value."
+      },
+      {
+        "name": "a",
+        "optional": false,
+        "description": "The first element for comparison. Will never be undefined."
+      },
+      {
+        "name": "b",
+        "optional": false,
+        "description": "The second element for comparison. Will never be undefined."
+      }
+    ]
+  },
+  {
+    "name": "Array.prototype.splice()",
+    "description": "Adds and/or removes elements from an array.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice",
+    "return_value": "An array containing the deleted elements.\nIf only one element is removed, an array of one element is returned.\nIf no elements are removed, an empty array is returned.",
+    "parameters": [
+      {
+        "name": "start",
+        "optional": false,
+        "description": "Zero-based index at which to start changing the array, converted to an integer.\n\nNegative index counts back from the end of the array \u00e2\u0080\u0094 if start < 0, start + array.length is used.\nIf start < -array.length, 0 is used.\nIf start >= array.length, no element will be deleted, but the method will behave as an adding function, adding as many elements as provided.\nIf start is omitted (and splice() is called with no arguments), nothing is deleted. This is different from passing undefined, which is converted to 0."
+      },
+      {
+        "name": "deleteCount",
+        "optional": true,
+        "description": "An integer indicating the number of elements in the array to remove from start.\nIf deleteCount is omitted, or if its value is greater than or equal to the number of elements after the position specified by start, then all the elements from start to the end of the array will be deleted. However, if you wish to pass any itemN parameter, you should pass Infinity as deleteCount to delete all elements after start, because an explicit undefined gets converted to 0.\n\n      If deleteCount is 0 or negative, no elements are removed.\n      In this case, you should specify at least one new element (see below)."
+      },
+      {
+        "name": "item1",
+        "optional": true,
+        "description": "The elements to add to the array, beginning from start.\nIf you do not specify any elements, splice() will only remove elements from the array."
+      }
+    ]
+  },
+  {
+    "name": "Array.prototype.toLocaleString()",
+    "description": "Returns a localized string representing the calling array and its elements. Overrides the Object.prototype.toLocaleString() method.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toLocaleString",
+    "return_value": "A string representing the elements of the array.",
+    "parameters": [
+      {
+        "name": "locales",
+        "optional": true,
+        "description": "A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the locales argument, see the parameter description on the Intl main page."
+      },
+      {
+        "name": "options",
+        "optional": true,
+        "description": "An object with configuration properties. For numbers, see Number.prototype.toLocaleString(); for dates, see Date.prototype.toLocaleString()."
+      }
+    ]
+  },
+  {
+    "name": "Array.prototype.toReversed()",
+    "description": "Returns a new array with the elements in reversed order, without modifying the original array.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toReversed",
+    "return_value": "A new array containing the elements in reversed order.",
+    "parameters": []
+  },
+  {
+    "name": "Array.prototype.toSorted()",
+    "description": "Returns a new array with the elements sorted in ascending order, without modifying the original array.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSorted",
+    "return_value": "A new array with the elements sorted in ascending order.",
+    "parameters": [
+      {
+        "name": "compareFn",
+        "optional": true,
+        "description": "Specifies a function that defines the sort order. If omitted, the array elements are converted to strings, then sorted according to each character's Unicode code point value.\n\na\n\nThe first element for comparison.\n\nb\n\nThe second element for comparison."
+      },
+      {
+        "name": "a",
+        "optional": false,
+        "description": "The first element for comparison."
+      },
+      {
+        "name": "b",
+        "optional": false,
+        "description": "The second element for comparison."
+      }
+    ]
+  },
+  {
+    "name": "Array.prototype.toSpliced()",
+    "description": "Returns a new array with some elements removed and/or replaced at a given index, without modifying the original array.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSpliced",
+    "return_value": "A new array that consists of all elements before start, item1, item2, \u00e2\u0080\u00a6, itemN, and all elements after start + deleteCount.",
+    "parameters": [
+      {
+        "name": "start",
+        "optional": false,
+        "description": "Zero-based index at which to start changing the array, converted to an integer.\n\nNegative index counts back from the end of the array \u00e2\u0080\u0094 if start < 0, start + array.length is used.\nIf start < -array.length or start is omitted, 0 is used.\nIf start >= array.length, no element will be deleted, but the method will behave as an adding function, adding as many elements as provided."
+      },
+      {
+        "name": "deleteCount",
+        "optional": true,
+        "description": "An integer indicating the number of elements in the array to remove from start.\nIf deleteCount is omitted, or if its value is greater than or equal to the number of elements after the position specified by start, then all the elements from start to the end of the array will be deleted. However, if you wish to pass any itemN parameter, you should pass Infinity as deleteCount to delete all elements after start, because an explicit undefined gets converted to 0.\n\n      If deleteCount is 0 or negative, no elements are removed.\n      In this case, you should specify at least one new element (see below)."
+      },
+      {
+        "name": "item1",
+        "optional": true,
+        "description": "The elements to add to the array, beginning from start.\nIf you do not specify any elements, toSpliced() will only remove elements from the array."
+      }
+    ]
+  },
+  {
+    "name": "Array.prototype.toString()",
+    "description": "Returns a string representing the calling array and its elements. Overrides the Object.prototype.toString() method.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toString",
+    "return_value": "A string representing the elements of the array.",
+    "parameters": []
+  },
+  {
+    "name": "Array.prototype.unshift()",
+    "description": "Adds one or more elements to the front of an array, and returns the new length of the array.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift",
+    "return_value": "The new length property of the object upon which the\n  method was called.",
+    "parameters": [
+      {
+        "name": "element1",
+        "optional": false,
+        "description": "The elements to add to the front of the arr."
+      }
+    ]
+  },
+  {
+    "name": "Array.prototype.values()",
+    "description": "Returns a new array iterator object that contains the values for each index in the array.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/values",
+    "return_value": "A new iterable iterator object.",
+    "parameters": []
+  },
+  {
+    "name": "Array.prototype.with()",
+    "description": "Returns a new array with the element at the given index replaced with the given value, without modifying the original array.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/with",
+    "return_value": "A new array with the element at index replaced with value.",
+    "parameters": [
+      {
+        "name": "index",
+        "optional": false,
+        "description": "Zero-based index at which to change the array, converted to an integer.\n\nNegative index counts back from the end of the array \u00e2\u0080\u0094 if index < 0, index + array.length is used.\nIf the index after normalization is out of bounds, a RangeError is thrown."
+      },
+      {
+        "name": "value",
+        "optional": false,
+        "description": "Any value to be assigned to the given index."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if index >= array.length or index < -array.length."
+      }
+    ]
+  },
+  {
+    "name": "Array.prototype[@@iterator]()",
+    "description": "An alias for the values() method by default.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator",
+    "return_value": "The same return value as Array.prototype.values(): a new iterable iterator object that yields the value of each index in the array.",
+    "parameters": []
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "name": "AggregateError()",
+    "description": "Creates a new AggregateError object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AggregateError/AggregateError",
+    "parameters": [
+      {
+        "name": "errors",
+        "optional": false,
+        "description": "An iterable of errors, may not actually be Error instances."
+      },
+      {
+        "name": "message",
+        "optional": true,
+        "description": "An optional human-readable description of the aggregate error."
+      },
+      {
+        "name": "options",
+        "optional": true,
+        "description": "An object that has the following properties:\n\ncause Optional\n\n\n          A property indicating the specific cause of the error.\n          When catching and re-throwing an error with a more-specific or useful error message, this property can be used to pass the original error."
+      },
+      {
+        "name": "cause",
+        "optional": true,
+        "description": "A property indicating the specific cause of the error.\n          When catching and re-throwing an error with a more-specific or useful error message, this property can be used to pass the original error."
+      }
+    ]
+  },
+  {
+    "name": "AggregateError.prototype.constructor",
+    "description": "The constructor function that created the instance object. For AggregateError instances, the initial value is the AggregateError constructor.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor",
+    "parameters": []
+  },
+  {
+    "name": "AggregateError.prototype.name",
+    "description": "Represents the name for the type of error. For AggregateError.prototype.name, the initial value is \"AggregateError\".",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/name",
+    "parameters": []
+  },
+  {
+    "name": "errors",
+    "description": "An array representing the errors that were aggregated.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AggregateError/errors",
+    "parameters": []
+  }
+]

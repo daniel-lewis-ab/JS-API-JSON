@@ -1,0 +1,326 @@
+[
+  {
+    "name": "RegExp()",
+    "description": "Creates a new RegExp object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/RegExp",
+    "return_value": "RegExp(pattern) returns pattern directly if all of the following are true:\n\nRegExp() is called without new;\npattern is a regex;\npattern.constructor === RegExp (usually meaning it's not a subclass);\nflags is undefined.\n\nIn all other cases, calling RegExp() with or without new both create a new RegExp object. If pattern is a regex, the new object's source is pattern.source; otherwise, its source is pattern coerced to a string. If the flags parameter is not undefined, the new object's flags is the parameter's value; otherwise, its flags is pattern.flags (if pattern is a regex).",
+    "parameters": [
+      {
+        "name": "pattern",
+        "optional": false,
+        "description": "The text of the regular expression. This can also be another RegExp object."
+      },
+      {
+        "name": "flags",
+        "optional": true,
+        "description": "If specified, flags is a string that contains the flags to add. Alternatively, if a RegExp object is supplied for the pattern, the flags string will replace any of that object's flags (and lastIndex will be reset to 0).\nflags may contain any combination of the following characters:\n\nd (indices)\n\nGenerate indices for substring matches.\n\ng (global)\n\nFind all matches rather than stopping after the first match.\n\ni (ignore case)\n\nWhen matching, casing differences are ignored.\n\nm (multiline)\n\nTreat beginning and end assertions (^ and $) as working over multiple lines. In other words, match the beginning or end of each line (delimited by \\n or \\r), not only the very beginning or end of the whole input string.\n\ns (dotAll)\n\nAllows . to match newlines.\n\nu (unicode)\n\nTreat pattern as a sequence of Unicode code points.\n\nv (unicodeSets)\n\nAn upgrade to the u flag that enables set notation in character classes as well as properties of strings.\n\ny (sticky)\n\nMatches only from the index indicated by the lastIndex property of this regular expression in the target string. Does not attempt to match from any later indexes."
+      },
+      {
+        "name": "d",
+        "optional": false,
+        "description": "Generate indices for substring matches."
+      },
+      {
+        "name": "g",
+        "optional": false,
+        "description": "Find all matches rather than stopping after the first match."
+      },
+      {
+        "name": "i",
+        "optional": false,
+        "description": "When matching, casing differences are ignored."
+      },
+      {
+        "name": "m",
+        "optional": false,
+        "description": "Treat beginning and end assertions (^ and $) as working over multiple lines. In other words, match the beginning or end of each line (delimited by \\n or \\r), not only the very beginning or end of the whole input string."
+      },
+      {
+        "name": "s",
+        "optional": false,
+        "description": "Allows . to match newlines."
+      },
+      {
+        "name": "u",
+        "optional": false,
+        "description": "Treat pattern as a sequence of Unicode code points."
+      },
+      {
+        "name": "v",
+        "optional": false,
+        "description": "An upgrade to the u flag that enables set notation in character classes as well as properties of strings."
+      },
+      {
+        "name": "y",
+        "optional": false,
+        "description": "Matches only from the index indicated by the lastIndex property of this regular expression in the target string. Does not attempt to match from any later indexes."
+      },
+      {
+        "name": "SyntaxError",
+        "optional": false,
+        "description": "Thrown in one of the following cases:\n\npattern cannot be parsed as a valid regular expression.\nflags contains repeated characters or any character outside of those allowed."
+      }
+    ]
+  },
+  {
+    "name": "RegExp.$1, \u00e2\u0080\u00a6, RegExp.$9",
+    "description": "Static read-only properties that contain parenthesized substring matches.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/n",
+    "parameters": []
+  },
+  {
+    "name": "RegExp.input ($_)",
+    "description": "A static property that contains the last string against which a regular expression was successfully matched.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/input",
+    "parameters": []
+  },
+  {
+    "name": "RegExp.lastMatch ($&)",
+    "description": "A static read-only property that contains the last matched substring.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastMatch",
+    "parameters": []
+  },
+  {
+    "name": "RegExp.lastParen ($+)",
+    "description": "A static read-only property that contains the last parenthesized substring match.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastParen",
+    "parameters": []
+  },
+  {
+    "name": "RegExp.leftContext ($`)",
+    "description": "A static read-only property that contains the substring preceding the most recent match.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/leftContext",
+    "parameters": []
+  },
+  {
+    "name": "RegExp.rightContext ($')",
+    "description": "A static read-only property that contains the substring following the most recent match.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/rightContext",
+    "parameters": []
+  },
+  {
+    "name": "RegExp[@@species]",
+    "description": "The constructor function that is used to create derived objects.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@species",
+    "return_value": "The value of the constructor (this) on which get @@species was called. The return value is used to construct copied RegExp instances.",
+    "parameters": []
+  },
+  {
+    "name": "RegExp.prototype.constructor",
+    "description": "The constructor function that created the instance object. For RegExp instances, the initial value is the RegExp constructor.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor",
+    "parameters": []
+  },
+  {
+    "name": "RegExp.prototype.dotAll",
+    "description": "Whether . matches newlines or not.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/dotAll",
+    "parameters": []
+  },
+  {
+    "name": "RegExp.prototype.flags",
+    "description": "A string that contains the flags of the RegExp object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/flags",
+    "parameters": []
+  },
+  {
+    "name": "RegExp.prototype.global",
+    "description": "Whether to test the regular expression against all possible matches in a string, or only against the first.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/global",
+    "parameters": []
+  },
+  {
+    "name": "RegExp.prototype.hasIndices",
+    "description": "Whether the regular expression result exposes the start and end indices of captured substrings.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices",
+    "parameters": []
+  },
+  {
+    "name": "RegExp.prototype.ignoreCase",
+    "description": "Whether to ignore case while attempting a match in a string.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase",
+    "parameters": []
+  },
+  {
+    "name": "RegExp.prototype.multiline",
+    "description": "Whether or not to search in strings across multiple lines.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/multiline",
+    "parameters": []
+  },
+  {
+    "name": "RegExp.prototype.source",
+    "description": "The text of the pattern.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/source",
+    "parameters": []
+  },
+  {
+    "name": "RegExp.prototype.sticky",
+    "description": "Whether or not the search is sticky.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky",
+    "parameters": []
+  },
+  {
+    "name": "RegExp.prototype.unicode",
+    "description": "Whether or not Unicode features are enabled.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode",
+    "parameters": []
+  },
+  {
+    "name": "RegExp.prototype.unicodeSets",
+    "description": "Whether or not the v flag, an upgrade to the u mode, is enabled.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets",
+    "parameters": []
+  },
+  {
+    "name": "lastIndex",
+    "description": "The index at which to start the next match.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex",
+    "parameters": []
+  },
+  {
+    "name": "RegExp.prototype.compile()",
+    "description": "(Re-)compiles a regular expression during execution of a script.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/compile",
+    "return_value": "None (undefined).",
+    "parameters": [
+      {
+        "name": "pattern",
+        "optional": false,
+        "description": "The text of the regular expression."
+      },
+      {
+        "name": "flags",
+        "optional": false,
+        "description": "Any combination of flag values."
+      }
+    ]
+  },
+  {
+    "name": "RegExp.prototype.exec()",
+    "description": "Executes a search for a match in its string parameter.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec",
+    "return_value": "If the match fails, the exec() method returns null, and sets the regex's lastIndex to 0.\nIf the match succeeds, the exec() method returns an array and updates the lastIndex property of the regular expression object. The returned array has the matched text as the first item, and then one item for each capturing group of the matched text. The array also has the following additional properties:\n\nindex\n\nThe 0-based index of the match in the string.\n\ninput\n\nThe original string that was matched against.\n\ngroups\n\nA null-prototype object of named capturing groups, whose keys are the names, and values are the capturing groups, or undefined if no named capturing groups were defined. See capturing groups for more information.\n\nindices Optional\n\nThis property is only present when the d flag is set. It is an array where each entry represents the bounds of a substring match. The index of each element in this array corresponds to the index of the respective substring match in the array returned by exec(). In other words, the first indices entry represents the entire match, the second indices entry represents the first capturing group, etc. Each entry itself is a two-element array, where the first number represents the match's start index, and the second number, its end index.\nThe indices array additionally has a groups property, which holds a null-prototype object of all named capturing groups. The keys are the names of the capturing groups, and each value is a two-element array, with the first number being the start index, and the second number being the end index of the capturing group. If the regular expression doesn't contain any named capturing groups, groups is undefined.",
+    "parameters": [
+      {
+        "name": "str",
+        "optional": false,
+        "description": "The string against which to match the regular expression. All values are coerced to strings, so omitting it or passing undefined causes exec() to search for the string \"undefined\", which is rarely what you want."
+      },
+      {
+        "name": "index",
+        "optional": false,
+        "description": "The 0-based index of the match in the string."
+      },
+      {
+        "name": "input",
+        "optional": false,
+        "description": "The original string that was matched against."
+      },
+      {
+        "name": "groups",
+        "optional": false,
+        "description": "A null-prototype object of named capturing groups, whose keys are the names, and values are the capturing groups, or undefined if no named capturing groups were defined. See capturing groups for more information."
+      },
+      {
+        "name": "indices",
+        "optional": true,
+        "description": "This property is only present when the d flag is set. It is an array where each entry represents the bounds of a substring match. The index of each element in this array corresponds to the index of the respective substring match in the array returned by exec(). In other words, the first indices entry represents the entire match, the second indices entry represents the first capturing group, etc. Each entry itself is a two-element array, where the first number represents the match's start index, and the second number, its end index.\nThe indices array additionally has a groups property, which holds a null-prototype object of all named capturing groups. The keys are the names of the capturing groups, and each value is a two-element array, with the first number being the start index, and the second number being the end index of the capturing group. If the regular expression doesn't contain any named capturing groups, groups is undefined."
+      }
+    ]
+  },
+  {
+    "name": "RegExp.prototype.test()",
+    "description": "Tests for a match in its string parameter.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test",
+    "return_value": "true if there is a match between the regular expression and the string\n  str. Otherwise, false.",
+    "parameters": [
+      {
+        "name": "str",
+        "optional": false,
+        "description": "The string against which to match the regular expression. All values are coerced to strings, so omitting it or passing undefined causes test() to search for the string \"undefined\", which is rarely what you want."
+      }
+    ]
+  },
+  {
+    "name": "RegExp.prototype.toString()",
+    "description": "Returns a string representing the specified object. Overrides the Object.prototype.toString() method.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString",
+    "return_value": "A string representing the given object.",
+    "parameters": []
+  },
+  {
+    "name": "RegExp.prototype[@@match]()",
+    "description": "Performs match to given string and returns match result.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@match",
+    "return_value": "An Array whose contents depend on the presence or absence of the global (g) flag, or null if no matches are found.\n\nIf the g flag is used, all results matching the complete regular expression will be returned, but capturing groups are not included.\nIf the g flag is not used, only the first complete match and its related capturing groups are returned. In this case, match() will return the same result as RegExp.prototype.exec() (an array with some extra properties).",
+    "parameters": [
+      {
+        "name": "str",
+        "optional": false,
+        "description": "A String that is a target of the match."
+      }
+    ]
+  },
+  {
+    "name": "RegExp.prototype[@@matchAll]()",
+    "description": "Returns all matches of the regular expression against a string.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll",
+    "return_value": "An iterable iterator object (which is not restartable) of matches. Each match is an array with the same shape as the return value of RegExp.prototype.exec().",
+    "parameters": [
+      {
+        "name": "str",
+        "optional": false,
+        "description": "A String that is a target of the match."
+      }
+    ]
+  },
+  {
+    "name": "RegExp.prototype[@@replace]()",
+    "description": "Replaces matches in given string with new substring.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace",
+    "return_value": "A new string, with one, some, or all matches of the pattern replaced by the specified replacement.",
+    "parameters": [
+      {
+        "name": "str",
+        "optional": false,
+        "description": "A String that is a target of the replacement."
+      },
+      {
+        "name": "replacement",
+        "optional": false,
+        "description": "Can be a string or a function.\n\nIf it's a string, it will replace the substring matched by the current regexp. A number of special replacement patterns are supported; see the Specifying a string as the replacement section of String.prototype.replace.\nIf it's a function, it will be invoked for every match and the return value is used as the replacement text. The arguments supplied to this function are described in the Specifying a function as the replacement section of String.prototype.replace."
+      }
+    ]
+  },
+  {
+    "name": "RegExp.prototype[@@search]()",
+    "description": "Searches the match in given string and returns the index the pattern found in the string.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@search",
+    "return_value": "The index of the first match between the regular expression and the given string, or -1 if no match was found.",
+    "parameters": [
+      {
+        "name": "str",
+        "optional": false,
+        "description": "A String that is a target of the search."
+      }
+    ]
+  },
+  {
+    "name": "RegExp.prototype[@@split]()",
+    "description": "Splits given string into an array by separating the string into substrings.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@split",
+    "return_value": "An Array containing substrings as its elements. Capturing groups are included.",
+    "parameters": [
+      {
+        "name": "str",
+        "optional": false,
+        "description": "The target of the split operation."
+      },
+      {
+        "name": "limit",
+        "optional": true,
+        "description": "Integer specifying a limit on the number of splits to be found. The [@@split]() method still splits on every match of this RegExp pattern (or, in the Syntax above, regexp), until the number of split items match the limit or the string falls short of this pattern."
+      }
+    ]
+  }
+]

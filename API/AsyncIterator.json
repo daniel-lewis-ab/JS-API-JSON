@@ -1,0 +1,9 @@
+[
+  {
+    "name": "AsyncIterator.prototype[@@asyncIterator]()",
+    "description": "Returns the async iterator object itself. This allows async iterator objects to also be async iterable.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncIterator/@@asyncIterator",
+    "return_value": "The value of this, which is the async iterator object itself.",
+    "parameters": []
+  }
+]

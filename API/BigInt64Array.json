@@ -1,0 +1,26 @@
+[
+  {
+    "name": "BigInt64Array()",
+    "description": "Creates a new BigInt64Array object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt64Array/BigInt64Array",
+    "parameters": []
+  },
+  {
+    "name": "BigInt64Array.BYTES_PER_ELEMENT",
+    "description": "Returns a number value of the element size. 8 in the case of BigInt64Array.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT",
+    "parameters": []
+  },
+  {
+    "name": "BigInt64Array.prototype.BYTES_PER_ELEMENT",
+    "description": "Returns a number value of the element size. 8 in the case of a BigInt64Array.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT",
+    "parameters": []
+  },
+  {
+    "name": "BigInt64Array.prototype.constructor",
+    "description": "The constructor function that created the instance object. For BigInt64Array instances, the initial value is the BigInt64Array constructor.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor",
+    "parameters": []
+  }
+]

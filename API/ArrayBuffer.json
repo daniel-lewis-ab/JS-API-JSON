@@ -1,0 +1,168 @@
+[
+  {
+    "name": "ArrayBuffer()",
+    "description": "Creates a new ArrayBuffer object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer",
+    "return_value": "A new ArrayBuffer object of the specified size, with its maxByteLength property set to the specified maxByteLength if one was specified. Its contents are initialized to 0.",
+    "parameters": [
+      {
+        "name": "length",
+        "optional": false,
+        "description": "The size, in bytes, of the array buffer to create."
+      },
+      {
+        "name": "options",
+        "optional": true,
+        "description": "An object, which can contain the following properties:\n\nmaxByteLength Optional\n\nThe maximum size, in bytes, that the array buffer can be resized to."
+      },
+      {
+        "name": "maxByteLength",
+        "optional": true,
+        "description": "The maximum size, in bytes, that the array buffer can be resized to."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown in one of the following cases:\n\nlength or maxByteLength is larger than Number.MAX_SAFE_INTEGER (\u00e2\u0089\u00a5 253) or negative.\nlength is larger than maxByteLength."
+      }
+    ]
+  },
+  {
+    "name": "ArrayBuffer[@@species]",
+    "description": "The constructor function that is used to create derived objects.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/@@species",
+    "return_value": "The value of the constructor (this) on which get @@species was called. The return value is used to construct return values from array buffer methods that create new array buffers.",
+    "parameters": []
+  },
+  {
+    "name": "ArrayBuffer.isView()",
+    "description": "Returns true if arg is one of the ArrayBuffer views, such as typed array objects or a DataView. Returns false otherwise.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/isView",
+    "return_value": "true if the given argument is one of the ArrayBuffer views;\n  otherwise, false.",
+    "parameters": [
+      {
+        "name": "value",
+        "optional": false,
+        "description": "The value to be checked."
+      }
+    ]
+  },
+  {
+    "name": "ArrayBuffer.prototype.byteLength",
+    "description": "The size, in bytes, of the ArrayBuffer. This is established when the array is constructed and can only be changed using the ArrayBuffer.prototype.resize() method if the ArrayBuffer is resizable.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/byteLength",
+    "parameters": []
+  },
+  {
+    "name": "ArrayBuffer.prototype.constructor",
+    "description": "The constructor function that created the instance object. For ArrayBuffer instances, the initial value is the ArrayBuffer constructor.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor",
+    "parameters": []
+  },
+  {
+    "name": "ArrayBuffer.prototype.detached",
+    "description": "Read-only. Returns true if the ArrayBuffer has been detached (transferred), or false if not.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/detached",
+    "parameters": []
+  },
+  {
+    "name": "ArrayBuffer.prototype.maxByteLength",
+    "description": "The read-only maximum length, in bytes, that the ArrayBuffer can be resized to. This is established when the array is constructed and cannot be changed.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/maxByteLength",
+    "parameters": []
+  },
+  {
+    "name": "ArrayBuffer.prototype.resizable",
+    "description": "Read-only. Returns true if the ArrayBuffer can be resized, or false if not.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/resizable",
+    "parameters": []
+  },
+  {
+    "name": "ArrayBuffer.prototype[@@toStringTag]",
+    "description": "The initial value of the @@toStringTag property is the string \"ArrayBuffer\". This property is used in Object.prototype.toString().",
+    "link": "https://developer.mozilla.org/#arraybuffer.prototypetostringtag",
+    "parameters": []
+  },
+  {
+    "name": "ArrayBuffer.prototype.resize()",
+    "description": "Resizes the ArrayBuffer to the specified size, in bytes.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/resize",
+    "return_value": "None (undefined).",
+    "parameters": [
+      {
+        "name": "newLength",
+        "optional": false,
+        "description": "The new length, in bytes, to resize the ArrayBuffer to."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown if the ArrayBuffer is detached or is not resizable."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if newLength is larger than the maxByteLength of the ArrayBuffer."
+      }
+    ]
+  },
+  {
+    "name": "ArrayBuffer.prototype.slice()",
+    "description": "Returns a new ArrayBuffer whose contents are a copy of this ArrayBuffer's bytes from begin (inclusive) up to end (exclusive). If either begin or end is negative, it refers to an index from the end of the array, as opposed to from the beginning.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/slice",
+    "return_value": "A new ArrayBuffer containing the extracted elements.",
+    "parameters": [
+      {
+        "name": "start",
+        "optional": true,
+        "description": "Zero-based index at which to start extraction, converted to an integer.\n\nNegative index counts back from the end of the buffer \u00e2\u0080\u0094 if start < 0, start + buffer.length is used.\nIf start < -buffer.length or start is omitted, 0 is used.\nIf start >= buffer.length, nothing is extracted."
+      },
+      {
+        "name": "end",
+        "optional": true,
+        "description": "Zero-based index at which to end extraction, converted to an integer. slice() extracts up to but not including end.\n\nNegative index counts back from the end of the buffer \u00e2\u0080\u0094 if end < 0, end + buffer.length is used.\nIf end < -buffer.length, 0 is used.\nIf end >= buffer.length or end is omitted, buffer.length is used, causing all elements until the end to be extracted.\nIf end is positioned before or at start after normalization, nothing is extracted."
+      }
+    ]
+  },
+  {
+    "name": "ArrayBuffer.prototype.transfer()",
+    "description": "Creates a new ArrayBuffer with the same byte content as this buffer, then detaches this buffer.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/transfer",
+    "return_value": "A new ArrayBuffer object. Its contents are initialized to the contents of this ArrayBuffer, and extra bytes, if any, are filled with zeros. The new ArrayBuffer is resizable if and only if this ArrayBuffer is resizable, in which case its maxByteLength is the same as this ArrayBuffer's. The original ArrayBuffer is detached.",
+    "parameters": [
+      {
+        "name": "newByteLength",
+        "optional": true,
+        "description": "The byteLength of the new ArrayBuffer. Defaults to the byteLength of this ArrayBuffer.\n\nIf newByteLength is smaller than the byteLength of this ArrayBuffer, the \"overflowing\" bytes are dropped.\nIf newByteLength is larger than the byteLength of this ArrayBuffer, the extra bytes are filled with zeros.\nIf this ArrayBuffer is resizable, newByteLength must not be greater than its maxByteLength."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if this ArrayBuffer is resizable and newByteLength is greater than the maxByteLength of this ArrayBuffer."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown if this ArrayBuffer is already detached."
+      }
+    ]
+  },
+  {
+    "name": "ArrayBuffer.prototype.transferToFixedLength()",
+    "description": "Creates a new non-resizable ArrayBuffer with the same byte content as this buffer, then detaches this buffer.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/transferToFixedLength",
+    "return_value": "A new ArrayBuffer object. Its contents are initialized to the contents of this ArrayBuffer, and extra bytes, if any, are filled with zeros. The new ArrayBuffer is always non-resizable. The original ArrayBuffer is detached.",
+    "parameters": [
+      {
+        "name": "newByteLength",
+        "optional": false,
+        "description": "The byteLength of the new ArrayBuffer. Defaults to the byteLength of this ArrayBuffer.\n\nIf newByteLength is smaller than the byteLength of this ArrayBuffer, the \"overflowing\" bytes are dropped.\nIf newByteLength is larger than the byteLength of this ArrayBuffer, the extra bytes are filled with zeros."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown if this ArrayBuffer is already detached."
+      }
+    ]
+  }
+]

@@ -1,0 +1,675 @@
+[
+  {
+    "name": "Object()",
+    "description": "Turns the input into an object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/Object",
+    "return_value": "When the Object() constructor itself is called or constructed, its return value is an object:\n\nIf the value is null or undefined, it creates and returns an empty object.\nIf the value is an object already, it returns the value.\nOtherwise, it returns an object of a type that corresponds to the given value. For example, passing a BigInt primitive returns a BigInt wrapper object.\n\nWhen Object() is constructed but new.target is not the Object constructor itself, the behavior is slightly different \u00e2\u0080\u0094 it initializes a new object with new.target.prototype as its prototype. Any argument value is ignored. This may happen, for example, when Object() is implicitly called via super() in the constructor of a class that extends Object. In this case, even if you pass a number to super(), the this value inside the constructor does not become a Number instance.",
+    "parameters": [
+      {
+        "name": "value",
+        "optional": true,
+        "description": "Any value."
+      }
+    ]
+  },
+  {
+    "name": "Object.assign()",
+    "description": "Copies the values of all enumerable own properties from one or more source objects to a target object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign",
+    "return_value": "The target object.",
+    "parameters": [
+      {
+        "name": "target",
+        "optional": false,
+        "description": "The target object \u00e2\u0080\u0094 what to apply the sources' properties to, which is returned\n      after it is modified."
+      },
+      {
+        "name": "source1",
+        "optional": false,
+        "description": "The source object(s) \u00e2\u0080\u0094 objects containing the properties you want to apply."
+      }
+    ]
+  },
+  {
+    "name": "Object.create()",
+    "description": "Creates a new object with the specified prototype object and properties.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create",
+    "return_value": "A new object with the specified prototype object and properties.",
+    "parameters": [
+      {
+        "name": "proto",
+        "optional": false,
+        "description": "The object which should be the prototype of the newly-created object."
+      },
+      {
+        "name": "propertiesObject",
+        "optional": true,
+        "description": "If specified and not undefined, an object whose enumerable own properties specify property descriptors to be added to the newly-created object, with the corresponding property names. These properties correspond to the second argument of Object.defineProperties()."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown if proto is neither null nor an Object."
+      }
+    ]
+  },
+  {
+    "name": "Object.defineProperties()",
+    "description": "Adds the named properties described by the given descriptors to an object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties",
+    "return_value": "The object that was passed to the function.",
+    "parameters": [
+      {
+        "name": "obj",
+        "optional": false,
+        "description": "The object on which to define or modify properties."
+      },
+      {
+        "name": "props",
+        "optional": false,
+        "description": "An object whose keys represent the names of properties to be defined or modified and\n      whose values are objects describing those properties. Each value in props\n      must be either a data descriptor or an accessor descriptor; it cannot be both (see\n      Object.defineProperty() for more details).\n    \nData descriptors and accessor descriptors may optionally contain the following keys:\n\nconfigurable\n\n\ntrue if and only if the type of this property descriptor may be\n          changed and if the property may be deleted from the corresponding object.\n          Defaults to false.\n\n\nenumerable\n\n\ntrue if and only if this property shows up during enumeration of\n          the properties on the corresponding object.\n          Defaults to false.\n\n\n\nA data descriptor also has the following optional keys:\n\nvalue\n\n\n          The value associated with the property. Can be any valid JavaScript value\n          (number, object, function, etc.).\n          Defaults to undefined.\n\n\nwritable\n\n\ntrue if and only if the value associated with the property may be\n          changed with an assignment operator.\n          Defaults to false.\n\n\n\nAn accessor descriptor also has the following optional keys:\n\nget\n\n\n          A function which serves as a getter for the property, or undefined\n          if there is no getter. The function's return value will be used as the value of\n          the property.\n          Defaults to undefined.\n\n\nset\n\n\n          A function which serves as a setter for the property, or undefined\n          if there is no setter. The function will receive as its only argument the new\n          value being assigned to the property.\n          Defaults to undefined.\n\n\n\n\n      If a descriptor has neither of value, writable,\n      get and set keys, it is treated as a data descriptor. If a\n      descriptor has both value or writable and get\n      or set keys, an exception is thrown."
+      },
+      {
+        "name": "configurable",
+        "optional": false,
+        "description": "true if and only if the type of this property descriptor may be\n          changed and if the property may be deleted from the corresponding object.\n          Defaults to false."
+      },
+      {
+        "name": "enumerable",
+        "optional": false,
+        "description": "true if and only if this property shows up during enumeration of\n          the properties on the corresponding object.\n          Defaults to false."
+      },
+      {
+        "name": "value",
+        "optional": false,
+        "description": "The value associated with the property. Can be any valid JavaScript value\n          (number, object, function, etc.).\n          Defaults to undefined."
+      },
+      {
+        "name": "writable",
+        "optional": false,
+        "description": "true if and only if the value associated with the property may be\n          changed with an assignment operator.\n          Defaults to false."
+      },
+      {
+        "name": "get",
+        "optional": false,
+        "description": "A function which serves as a getter for the property, or undefined\n          if there is no getter. The function's return value will be used as the value of\n          the property.\n          Defaults to undefined."
+      },
+      {
+        "name": "set",
+        "optional": false,
+        "description": "A function which serves as a setter for the property, or undefined\n          if there is no setter. The function will receive as its only argument the new\n          value being assigned to the property.\n          Defaults to undefined."
+      }
+    ]
+  },
+  {
+    "name": "Object.defineProperty()",
+    "description": "Adds the named property described by a given descriptor to an object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty",
+    "return_value": "The object that was passed to the function, with the specified property added or modified.",
+    "parameters": [
+      {
+        "name": "obj",
+        "optional": false,
+        "description": "The object on which to define the property."
+      },
+      {
+        "name": "prop",
+        "optional": false,
+        "description": "A string or Symbol specifying the key of the property to be defined or modified."
+      },
+      {
+        "name": "descriptor",
+        "optional": false,
+        "description": "The descriptor for the property being defined or modified."
+      },
+      {
+        "name": "configurable",
+        "optional": false,
+        "description": "when this is set to false,\n\nthe type of this property cannot be changed between data property and accessor property, and\nthe property may not be deleted, and\nother attributes of its descriptor cannot be changed (however, if it's a data descriptor with writable: true, the value can be changed, and writable can be changed to false).\n\nDefaults to false."
+      },
+      {
+        "name": "enumerable",
+        "optional": false,
+        "description": "true if and only if this property shows up during enumeration of the properties on the corresponding object. Defaults to false."
+      },
+      {
+        "name": "value",
+        "optional": false,
+        "description": "The value associated with the property. Can be any valid JavaScript value (number, object, function, etc.). Defaults to undefined."
+      },
+      {
+        "name": "writable",
+        "optional": false,
+        "description": "true if the value associated with the property may be changed with an assignment operator. Defaults to false."
+      },
+      {
+        "name": "get",
+        "optional": false,
+        "description": "A function which serves as a getter for the property, or undefined if there is no getter. When the property is accessed, this function is called without arguments and with this set to the object through which the property is accessed (this may not be the object on which the property is defined due to inheritance). The return value will be used as the value of the property. Defaults to undefined."
+      },
+      {
+        "name": "set",
+        "optional": false,
+        "description": "A function which serves as a setter for the property, or undefined if there is no setter. When the property is assigned, this function is called with one argument (the value being assigned to the property) and with this set to the object through which the property is assigned. Defaults to undefined."
+      }
+    ]
+  },
+  {
+    "name": "Object.entries()",
+    "description": "Returns an array containing all of the [key, value] pairs of a given object's own enumerable string properties.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries",
+    "return_value": "An array of the given object's own enumerable string-keyed property key-value pairs. Each key-value pair is an array with two elements: the first element is the property key (which is always a string), and the second element is the property value.",
+    "parameters": [
+      {
+        "name": "obj",
+        "optional": false,
+        "description": "An object."
+      }
+    ]
+  },
+  {
+    "name": "Object.freeze()",
+    "description": "Freezes an object. Other code cannot delete or change its properties.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze",
+    "return_value": "The object that was passed to the function.",
+    "parameters": [
+      {
+        "name": "obj",
+        "optional": false,
+        "description": "The object to freeze."
+      }
+    ]
+  },
+  {
+    "name": "Object.fromEntries()",
+    "description": "Returns a new object from an iterable of [key, value] pairs. (This is the reverse of Object.entries).",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries",
+    "return_value": "A new object whose properties are given by the entries of the iterable.",
+    "parameters": [
+      {
+        "name": "iterable",
+        "optional": false,
+        "description": "An iterable, such as an Array or Map, containing a list of objects. Each object should have two properties:\n\n0\n\nA string or symbol representing the property key.\n\n1\n\nThe property value.\n\n\nTypically, this object is implemented as a two-element array, with the first element being the property key and the second element being the property value."
+      },
+      {
+        "name": "0",
+        "optional": false,
+        "description": "A string or symbol representing the property key."
+      },
+      {
+        "name": "1",
+        "optional": false,
+        "description": "The property value."
+      }
+    ]
+  },
+  {
+    "name": "Object.getOwnPropertyDescriptor()",
+    "description": "Returns a property descriptor for a named property on an object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor",
+    "return_value": "A property descriptor of the given property if it exists on the object,\n  undefined otherwise.",
+    "parameters": [
+      {
+        "name": "obj",
+        "optional": false,
+        "description": "The object in which to look for the property."
+      },
+      {
+        "name": "prop",
+        "optional": false,
+        "description": "The name or Symbol of the property whose description is to be\n      retrieved."
+      },
+      {
+        "name": "value",
+        "optional": false,
+        "description": "The value associated with the property (data descriptors only)."
+      },
+      {
+        "name": "writable",
+        "optional": false,
+        "description": "true if and only if the value associated with the property may be\n      changed (data descriptors only)."
+      },
+      {
+        "name": "get",
+        "optional": false,
+        "description": "A function which serves as a getter for the property, or undefined if\n      there is no getter (accessor descriptors only)."
+      },
+      {
+        "name": "set",
+        "optional": false,
+        "description": "A function which serves as a setter for the property, or undefined if\n      there is no setter (accessor descriptors only)."
+      },
+      {
+        "name": "configurable",
+        "optional": false,
+        "description": "true if and only if the type of this property descriptor may be changed\n      and if the property may be deleted from the corresponding object."
+      },
+      {
+        "name": "enumerable",
+        "optional": false,
+        "description": "true if and only if this property shows up during enumeration of the\n      properties on the corresponding object."
+      }
+    ]
+  },
+  {
+    "name": "Object.getOwnPropertyDescriptors()",
+    "description": "Returns an object containing all own property descriptors for an object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors",
+    "return_value": "An object containing all own property descriptors of an object. Might be an empty\n  object, if there are no properties.",
+    "parameters": [
+      {
+        "name": "obj",
+        "optional": false,
+        "description": "The object for which to get all own property descriptors."
+      },
+      {
+        "name": "value",
+        "optional": false,
+        "description": "The value associated with the property (data descriptors only)."
+      },
+      {
+        "name": "writable",
+        "optional": false,
+        "description": "true if and only if the value associated with the property may be\n      changed (data descriptors only)."
+      },
+      {
+        "name": "get",
+        "optional": false,
+        "description": "A function which serves as a getter for the property, or undefined if\n      there is no getter (accessor descriptors only)."
+      },
+      {
+        "name": "set",
+        "optional": false,
+        "description": "A function which serves as a setter for the property, or undefined if\n      there is no setter (accessor descriptors only)."
+      },
+      {
+        "name": "configurable",
+        "optional": false,
+        "description": "true if and only if the type of this property descriptor may be changed\n      and if the property may be deleted from the corresponding object."
+      },
+      {
+        "name": "enumerable",
+        "optional": false,
+        "description": "true if and only if this property shows up during enumeration of the\n      properties on the corresponding object."
+      }
+    ]
+  },
+  {
+    "name": "Object.getOwnPropertyNames()",
+    "description": "Returns an array containing the names of all of the given object's own enumerable and non-enumerable properties.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames",
+    "return_value": "An array of strings that corresponds to the properties found directly in the given object.",
+    "parameters": [
+      {
+        "name": "obj",
+        "optional": false,
+        "description": "The object whose enumerable and non-enumerable properties are to be returned."
+      }
+    ]
+  },
+  {
+    "name": "Object.getOwnPropertySymbols()",
+    "description": "Returns an array of all symbol properties found directly upon a given object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols",
+    "return_value": "An array of all symbol properties found directly upon the given object.",
+    "parameters": [
+      {
+        "name": "obj",
+        "optional": false,
+        "description": "The object whose symbol properties are to be returned."
+      }
+    ]
+  },
+  {
+    "name": "Object.getPrototypeOf()",
+    "description": "Returns the prototype (internal [[Prototype]] property) of the specified object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf",
+    "return_value": "The prototype of the given object, which may be null.",
+    "parameters": [
+      {
+        "name": "obj",
+        "optional": false,
+        "description": "The object whose prototype is to be returned."
+      }
+    ]
+  },
+  {
+    "name": "Object.groupBy()",
+    "description": "Groups the elements of a given iterable according to the string values returned by a provided callback function. The returned object has separate properties for each group, containing arrays with the elements in the group.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/groupBy",
+    "return_value": "A null-prototype object with properties for all groups, each assigned to an array containing the elements of the associated group.",
+    "parameters": [
+      {
+        "name": "items",
+        "optional": false,
+        "description": "An iterable (such as an Array) whose elements will be grouped."
+      },
+      {
+        "name": "callbackFn",
+        "optional": false,
+        "description": "A function to execute for each element in the iterable. It should return a value that can get coerced into a property key (string or symbol) indicating the group of the current element. The function is called with the following arguments:\n\nelement\n\nThe current element being processed.\n\nindex\n\nThe index of the current element being processed."
+      },
+      {
+        "name": "element",
+        "optional": false,
+        "description": "The current element being processed."
+      },
+      {
+        "name": "index",
+        "optional": false,
+        "description": "The index of the current element being processed."
+      }
+    ]
+  },
+  {
+    "name": "Object.hasOwn()",
+    "description": "Returns true if the specified object has the indicated property as its own property, or false if the property is inherited or does not exist.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn",
+    "return_value": "true if the specified object has directly defined the specified property.\n  Otherwise false",
+    "parameters": [
+      {
+        "name": "obj",
+        "optional": false,
+        "description": "The JavaScript object instance to test."
+      },
+      {
+        "name": "prop",
+        "optional": false,
+        "description": "The String name or Symbol of the property to test."
+      }
+    ]
+  },
+  {
+    "name": "Object.is()",
+    "description": "Compares if two values are the same value. Equates all NaN values (which differs from both IsLooselyEqual used by == and IsStrictlyEqual used by ===).",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is",
+    "return_value": "A boolean indicating whether or not the two arguments are the same value.",
+    "parameters": [
+      {
+        "name": "value1",
+        "optional": false,
+        "description": "The first value to compare."
+      },
+      {
+        "name": "value2",
+        "optional": false,
+        "description": "The second value to compare."
+      }
+    ]
+  },
+  {
+    "name": "Object.isExtensible()",
+    "description": "Determines if extending of an object is allowed.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isExtensible",
+    "return_value": "A Boolean indicating whether or not the given object is extensible.",
+    "parameters": [
+      {
+        "name": "obj",
+        "optional": false,
+        "description": "The object which should be checked."
+      }
+    ]
+  },
+  {
+    "name": "Object.isFrozen()",
+    "description": "Determines if an object was frozen.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isFrozen",
+    "return_value": "A Boolean indicating whether or not the given object is frozen.",
+    "parameters": [
+      {
+        "name": "obj",
+        "optional": false,
+        "description": "The object which should be checked."
+      }
+    ]
+  },
+  {
+    "name": "Object.isSealed()",
+    "description": "Determines if an object is sealed.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isSealed",
+    "return_value": "A Boolean indicating whether or not the given object is sealed.",
+    "parameters": [
+      {
+        "name": "obj",
+        "optional": false,
+        "description": "The object which should be checked."
+      }
+    ]
+  },
+  {
+    "name": "Object.keys()",
+    "description": "Returns an array containing the names of all of the given object's own enumerable string properties.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys",
+    "return_value": "An array of strings representing the given object's own enumerable string-keyed property keys.",
+    "parameters": [
+      {
+        "name": "obj",
+        "optional": false,
+        "description": "An object."
+      }
+    ]
+  },
+  {
+    "name": "Object.preventExtensions()",
+    "description": "Prevents any extensions of an object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions",
+    "return_value": "The object being made non-extensible.",
+    "parameters": [
+      {
+        "name": "obj",
+        "optional": false,
+        "description": "The object which should be made non-extensible."
+      }
+    ]
+  },
+  {
+    "name": "Object.seal()",
+    "description": "Prevents other code from deleting properties of an object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/seal",
+    "return_value": "The object being sealed.",
+    "parameters": [
+      {
+        "name": "obj",
+        "optional": false,
+        "description": "The object which should be sealed."
+      }
+    ]
+  },
+  {
+    "name": "Object.setPrototypeOf()",
+    "description": "Sets the object's prototype (its internal [[Prototype]] property).",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf",
+    "return_value": "The specified object.",
+    "parameters": [
+      {
+        "name": "obj",
+        "optional": false,
+        "description": "The object which is to have its prototype set."
+      },
+      {
+        "name": "prototype",
+        "optional": false,
+        "description": "The object's new prototype (an object or null)."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown in one of the following cases:\n\nThe obj parameter is undefined or null.\nThe obj parameter is non-extensible, or it's an immutable prototype exotic object, such as Object.prototype or window. However, the error is not thrown if the new prototype is the same value as the original prototype of obj.\nThe prototype parameter is not an object or null."
+      }
+    ]
+  },
+  {
+    "name": "Object.values()",
+    "description": "Returns an array containing the values that correspond to all of a given object's own enumerable string properties.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/values",
+    "return_value": "An array containing the given object's own enumerable string-keyed property values.",
+    "parameters": [
+      {
+        "name": "obj",
+        "optional": false,
+        "description": "An object."
+      }
+    ]
+  },
+  {
+    "name": "Object.prototype.__proto__",
+    "description": "Points to the object which was used as prototype when the object was instantiated.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto",
+    "return_value": "If used as a getter, returns the object's [[Prototype]].",
+    "parameters": [
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown if attempting to set the prototype of a non-extensible object or an immutable prototype exotic object, such as Object.prototype or window."
+      }
+    ]
+  },
+  {
+    "name": "Object.prototype.constructor",
+    "description": "The constructor function that created the instance object. For plain Object instances, the initial value is the Object constructor. Instances of other constructors each inherit the constructor property from their respective Constructor.prototype object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor",
+    "parameters": []
+  },
+  {
+    "name": "Object.prototype.__defineGetter__()",
+    "description": "Associates a function with a property that, when accessed, executes that function and returns its return value.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__",
+    "return_value": "None (undefined).",
+    "parameters": [
+      {
+        "name": "prop",
+        "optional": false,
+        "description": "A string containing the name of the property that the getter func is bound to."
+      },
+      {
+        "name": "func",
+        "optional": false,
+        "description": "A function to be bound to a lookup of the specified property."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown if func is not a function."
+      }
+    ]
+  },
+  {
+    "name": "Object.prototype.__defineSetter__()",
+    "description": "Associates a function with a property that, when set, executes that function which modifies the property.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__",
+    "return_value": "None (undefined).",
+    "parameters": [
+      {
+        "name": "prop",
+        "optional": false,
+        "description": "A string containing the name of the property that the setter func is bound to."
+      },
+      {
+        "name": "func",
+        "optional": false,
+        "description": "A function to be called when there is an attempt to set the specified property. This function receives the following parameter:\n\nval\n\nThe value attempted to be assigned to prop."
+      },
+      {
+        "name": "val",
+        "optional": false,
+        "description": "The value attempted to be assigned to prop."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown if func is not a function."
+      }
+    ]
+  },
+  {
+    "name": "Object.prototype.__lookupGetter__()",
+    "description": "Returns the function bound as a getter to the specified property.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__",
+    "return_value": "The function bound as a getter to the specified property. Returns undefined if no such property is found, or the property is a data property.",
+    "parameters": [
+      {
+        "name": "prop",
+        "optional": false,
+        "description": "A string containing the name of the property whose getter should be returned."
+      }
+    ]
+  },
+  {
+    "name": "Object.prototype.__lookupSetter__()",
+    "description": "Returns the function bound as a setter to the specified property.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__",
+    "return_value": "The function bound as a setter to the specified property. Returns undefined if no such property is found, or the property is a data property.",
+    "parameters": [
+      {
+        "name": "prop",
+        "optional": false,
+        "description": "A string containing the name of the property whose setter should be returned."
+      }
+    ]
+  },
+  {
+    "name": "Object.prototype.hasOwnProperty()",
+    "description": "Returns a boolean indicating whether an object contains the specified property as a direct property of that object and not inherited through the prototype chain.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty",
+    "return_value": "Returns true if the object has the specified property as own property; false\n  otherwise.",
+    "parameters": [
+      {
+        "name": "prop",
+        "optional": false,
+        "description": "The String name or Symbol of the property to test."
+      }
+    ]
+  },
+  {
+    "name": "Object.prototype.isPrototypeOf()",
+    "description": "Returns a boolean indicating whether the object this method is called upon is in the prototype chain of the specified object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf",
+    "return_value": "A boolean indicating whether the calling object (this) lies in the prototype chain of object. Directly returns false when object is not an object (i.e. a primitive).",
+    "parameters": [
+      {
+        "name": "object",
+        "optional": false,
+        "description": "The object whose prototype chain will be searched."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown if this is null or undefined (because it can't be converted to an object)."
+      }
+    ]
+  },
+  {
+    "name": "Object.prototype.propertyIsEnumerable()",
+    "description": "Returns a boolean indicating whether the specified property is the object's enumerable own property.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable",
+    "return_value": "A boolean value indicating whether the specified property is enumerable and is the object's own property.",
+    "parameters": [
+      {
+        "name": "prop",
+        "optional": false,
+        "description": "The name of the property to test. Can be a string or a Symbol."
+      }
+    ]
+  },
+  {
+    "name": "Object.prototype.toLocaleString()",
+    "description": "Calls toString().",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString",
+    "return_value": "The return value of calling this.toString().",
+    "parameters": []
+  },
+  {
+    "name": "Object.prototype.toString()",
+    "description": "Returns a string representation of the object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString",
+    "return_value": "A string representing the object.",
+    "parameters": []
+  },
+  {
+    "name": "Object.prototype.valueOf()",
+    "description": "Returns the primitive value of the specified object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf",
+    "return_value": "The this value, converted to an object.\n\nNote: In order for valueOf to be useful during type conversion, it must return a primitive. Because all primitive types have their own valueOf() methods, calling aPrimitiveValue.valueOf() generally does not invoke Object.prototype.valueOf().",
+    "parameters": []
+  }
+]

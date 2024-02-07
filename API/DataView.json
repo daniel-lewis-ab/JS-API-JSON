@@ -1,0 +1,550 @@
+[
+  {
+    "name": "DataView()",
+    "description": "Creates a new DataView object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/DataView",
+    "return_value": "A new DataView object representing the specified data buffer.",
+    "parameters": [
+      {
+        "name": "buffer",
+        "optional": false,
+        "description": "An existing ArrayBuffer or SharedArrayBuffer to use as\n      the storage backing the new DataView object."
+      },
+      {
+        "name": "byteOffset",
+        "optional": true,
+        "description": "The offset, in bytes, to the first byte in the above buffer for the new view to\n      reference. If unspecified, the buffer view starts with the first byte."
+      },
+      {
+        "name": "byteLength",
+        "optional": true,
+        "description": "The number of elements in the byte array. If unspecified, the view's length will\n      match the buffer's length."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if the byteOffset or byteLength parameter values result in the view extending past the end of the buffer. In other words, byteOffset + byteLength > buffer.byteLength."
+      }
+    ]
+  },
+  {
+    "name": "DataView.prototype.buffer",
+    "description": "The ArrayBuffer referenced by this view. Fixed at construction time and thus read only.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/buffer",
+    "parameters": []
+  },
+  {
+    "name": "DataView.prototype.byteLength",
+    "description": "The length (in bytes) of this view. Fixed at construction time and thus read only.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/byteLength",
+    "parameters": []
+  },
+  {
+    "name": "DataView.prototype.byteOffset",
+    "description": "The offset (in bytes) of this view from the start of its ArrayBuffer. Fixed at construction time and thus read only.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/byteOffset",
+    "parameters": []
+  },
+  {
+    "name": "DataView.prototype.constructor",
+    "description": "The constructor function that created the instance object. For DataView instances, the initial value is the DataView constructor.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor",
+    "parameters": []
+  },
+  {
+    "name": "DataView.prototype[@@toStringTag]",
+    "description": "The initial value of the @@toStringTag property is the string \"DataView\". This property is used in Object.prototype.toString().",
+    "link": "https://developer.mozilla.org/#dataview.prototypetostringtag",
+    "parameters": []
+  },
+  {
+    "name": "DataView.prototype.getBigInt64()",
+    "description": "Reads 8 bytes starting at the specified byte offset of this DataView and interprets them as a 64-bit signed integer.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/getBigInt64",
+    "return_value": "A BigInt from -263 to 263-1, inclusive.",
+    "parameters": [
+      {
+        "name": "byteOffset",
+        "optional": false,
+        "description": "The offset, in bytes, from the start of the view to read the data from."
+      },
+      {
+        "name": "littleEndian",
+        "optional": true,
+        "description": "Indicates whether the data is stored in little- or big-endian format. If false or undefined, a big-endian value is read."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if the byteOffset is set such that it would read beyond the end of the view."
+      }
+    ]
+  },
+  {
+    "name": "DataView.prototype.getBigUint64()",
+    "description": "Reads 8 bytes starting at the specified byte offset of this DataView and interprets them as a 64-bit unsigned integer.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/getBigUint64",
+    "return_value": "A BigInt from 0 to 264-1, inclusive.",
+    "parameters": [
+      {
+        "name": "byteOffset",
+        "optional": false,
+        "description": "The offset, in bytes, from the start of the view to read the data from."
+      },
+      {
+        "name": "littleEndian",
+        "optional": true,
+        "description": "Indicates whether the data is stored in little- or big-endian format. If false or undefined, a big-endian value is read."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if the byteOffset is set such that it would read beyond the end of the view."
+      }
+    ]
+  },
+  {
+    "name": "DataView.prototype.getFloat32()",
+    "description": "Reads 4 bytes starting at the specified byte offset of this DataView and interprets them as a 32-bit floating point number.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/getFloat32",
+    "return_value": "A floating point number from -3.4e38 to 3.4e38.",
+    "parameters": [
+      {
+        "name": "byteOffset",
+        "optional": false,
+        "description": "The offset, in bytes, from the start of the view to read the data from."
+      },
+      {
+        "name": "littleEndian",
+        "optional": true,
+        "description": "Indicates whether the data is stored in little- or big-endian format. If false or undefined, a big-endian value is read."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if the byteOffset is set such that it would read beyond the end of the view."
+      }
+    ]
+  },
+  {
+    "name": "DataView.prototype.getFloat64()",
+    "description": "Reads 8 bytes starting at the specified byte offset of this DataView and interprets them as a 64-bit floating point number.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/getFloat64",
+    "return_value": "Any number value.",
+    "parameters": [
+      {
+        "name": "byteOffset",
+        "optional": false,
+        "description": "The offset, in bytes, from the start of the view to read the data from."
+      },
+      {
+        "name": "littleEndian",
+        "optional": true,
+        "description": "Indicates whether the data is stored in little- or big-endian format. If false or undefined, a big-endian value is read."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if the byteOffset is set such that it would read beyond the end of the view."
+      }
+    ]
+  },
+  {
+    "name": "DataView.prototype.getInt16()",
+    "description": "Reads 2 bytes starting at the specified byte offset of this DataView and interprets them as a 16-bit signed integer.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/getInt16",
+    "return_value": "An integer from -32768 to 32767, inclusive.",
+    "parameters": [
+      {
+        "name": "byteOffset",
+        "optional": false,
+        "description": "The offset, in bytes, from the start of the view to read the data from."
+      },
+      {
+        "name": "littleEndian",
+        "optional": true,
+        "description": "Indicates whether the data is stored in little- or big-endian format. If false or undefined, a big-endian value is read."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if the byteOffset is set such that it would read beyond the end of the view."
+      }
+    ]
+  },
+  {
+    "name": "DataView.prototype.getInt32()",
+    "description": "Reads 4 bytes starting at the specified byte offset of this DataView and interprets them as a 32-bit signed integer.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/getInt32",
+    "return_value": "An integer from -2147483648 to 2147483647, inclusive.",
+    "parameters": [
+      {
+        "name": "byteOffset",
+        "optional": false,
+        "description": "The offset, in bytes, from the start of the view to read the data from."
+      },
+      {
+        "name": "littleEndian",
+        "optional": true,
+        "description": "Indicates whether the data is stored in little- or big-endian format. If false or undefined, a big-endian value is read."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if the byteOffset is set such that it would read beyond the end of the view."
+      }
+    ]
+  },
+  {
+    "name": "DataView.prototype.getInt8()",
+    "description": "Reads 1 byte at the specified byte offset of this DataView and interprets it as an 8-bit signed integer.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/getInt8",
+    "return_value": "An integer from -128 to 127, inclusive.",
+    "parameters": [
+      {
+        "name": "byteOffset",
+        "optional": false,
+        "description": "The offset, in bytes, from the start of the view to read the data from."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if the byteOffset is set such that it would read beyond the end of the view."
+      }
+    ]
+  },
+  {
+    "name": "DataView.prototype.getUint16()",
+    "description": "Reads 2 bytes starting at the specified byte offset of this DataView and interprets them as a 16-bit unsigned integer.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/getUint16",
+    "return_value": "An integer from 0 to 65535, inclusive.",
+    "parameters": [
+      {
+        "name": "byteOffset",
+        "optional": false,
+        "description": "The offset, in bytes, from the start of the view to read the data from."
+      },
+      {
+        "name": "littleEndian",
+        "optional": true,
+        "description": "Indicates whether the data is stored in little- or big-endian format. If false or undefined, a big-endian value is read."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if the byteOffset is set such that it would read beyond the end of the view."
+      }
+    ]
+  },
+  {
+    "name": "DataView.prototype.getUint32()",
+    "description": "Reads 4 bytes starting at the specified byte offset of this DataView and interprets them as a 32-bit unsigned integer.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/getUint32",
+    "return_value": "An integer from 0 to 4294967295, inclusive.",
+    "parameters": [
+      {
+        "name": "byteOffset",
+        "optional": false,
+        "description": "The offset, in bytes, from the start of the view to read the data from."
+      },
+      {
+        "name": "littleEndian",
+        "optional": true,
+        "description": "Indicates whether the data is stored in little- or big-endian format. If false or undefined, a big-endian value is read."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if the byteOffset is set such that it would read beyond the end of the view."
+      }
+    ]
+  },
+  {
+    "name": "DataView.prototype.getUint8()",
+    "description": "Reads 1 byte at the specified byte offset of this DataView and interprets it as an 8-bit unsigned integer.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/getUint8",
+    "return_value": "An integer from 0 to 255, inclusive.",
+    "parameters": [
+      {
+        "name": "byteOffset",
+        "optional": false,
+        "description": "The offset, in bytes, from the start of the view to read the data from."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if the byteOffset is set such that it would read beyond the end of the view."
+      }
+    ]
+  },
+  {
+    "name": "DataView.prototype.setBigInt64()",
+    "description": "Takes a BigInt and stores it as a 64-bit signed integer in the 8 bytes starting at the specified byte offset of this DataView.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/setBigInt64",
+    "return_value": "undefined.",
+    "parameters": [
+      {
+        "name": "byteOffset",
+        "optional": false,
+        "description": "The offset, in bytes, from the start of the view to store the data in."
+      },
+      {
+        "name": "value",
+        "optional": false,
+        "description": "The value to set as a BigInt. For how the value is encoded in bytes, see Value encoding and normalization."
+      },
+      {
+        "name": "littleEndian",
+        "optional": true,
+        "description": "Indicates whether the data is stored in little- or big-endian format. If false or undefined, a big-endian value is written."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if the byteOffset is set such that it would store beyond the end of the view."
+      }
+    ]
+  },
+  {
+    "name": "DataView.prototype.setBigUint64()",
+    "description": "Takes a BigInt and stores it as a 64-bit unsigned integer in the 8 bytes starting at the specified byte offset of this DataView.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/setBigUint64",
+    "return_value": "undefined.",
+    "parameters": [
+      {
+        "name": "byteOffset",
+        "optional": false,
+        "description": "The offset, in bytes, from the start of the view to store the data in."
+      },
+      {
+        "name": "value",
+        "optional": false,
+        "description": "The value to set as a BigInt. For how the value is encoded in bytes, see Value encoding and normalization."
+      },
+      {
+        "name": "littleEndian",
+        "optional": true,
+        "description": "Indicates whether the data is stored in little- or big-endian format. If false or undefined, a big-endian value is written."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if the byteOffset is set such that it would store beyond the end of the view."
+      }
+    ]
+  },
+  {
+    "name": "DataView.prototype.setFloat32()",
+    "description": "Takes a number and stores it as a 32-bit float in the 4 bytes starting at the specified byte offset of this DataView.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/setFloat32",
+    "return_value": "undefined.",
+    "parameters": [
+      {
+        "name": "byteOffset",
+        "optional": false,
+        "description": "The offset, in bytes, from the start of the view to store the data in."
+      },
+      {
+        "name": "value",
+        "optional": false,
+        "description": "The value to set. For how the value is encoded in bytes, see Value encoding and normalization."
+      },
+      {
+        "name": "littleEndian",
+        "optional": true,
+        "description": "Indicates whether the data is stored in little- or big-endian format. If false or undefined, a big-endian value is written."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if the byteOffset is set such that it would store beyond the end of the view."
+      }
+    ]
+  },
+  {
+    "name": "DataView.prototype.setFloat64()",
+    "description": "Takes a number and stores it as a 64-bit float in the 8 bytes starting at the specified byte offset of this DataView.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/setFloat64",
+    "return_value": "undefined.",
+    "parameters": [
+      {
+        "name": "byteOffset",
+        "optional": false,
+        "description": "The offset, in bytes, from the start of the view to store the data in."
+      },
+      {
+        "name": "value",
+        "optional": false,
+        "description": "The value to set. For how the value is encoded in bytes, see Value encoding and normalization."
+      },
+      {
+        "name": "littleEndian",
+        "optional": true,
+        "description": "Indicates whether the data is stored in little- or big-endian format. If false or undefined, a big-endian value is written."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if the byteOffset is set such that it would store beyond the end of the view."
+      }
+    ]
+  },
+  {
+    "name": "DataView.prototype.setInt16()",
+    "description": "Takes a number and stores it as a 16-bit signed integer in the 2 bytes at the specified byte offset of this DataView.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/setInt16",
+    "return_value": "undefined.",
+    "parameters": [
+      {
+        "name": "byteOffset",
+        "optional": false,
+        "description": "The offset, in bytes, from the start of the view to store the data in."
+      },
+      {
+        "name": "value",
+        "optional": false,
+        "description": "The value to set. For how the value is encoded in bytes, see Value encoding and normalization."
+      },
+      {
+        "name": "littleEndian",
+        "optional": true,
+        "description": "Indicates whether the data is stored in little- or big-endian format. If false or undefined, a big-endian value is written."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if the byteOffset is set such that it would store beyond the end of the view."
+      }
+    ]
+  },
+  {
+    "name": "DataView.prototype.setInt32()",
+    "description": "Takes a number and stores it as a 32-bit signed integer in the 4 bytes at the specified byte offset of this DataView.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/setInt32",
+    "return_value": "undefined.",
+    "parameters": [
+      {
+        "name": "byteOffset",
+        "optional": false,
+        "description": "The offset, in bytes, from the start of the view to store the data in."
+      },
+      {
+        "name": "value",
+        "optional": false,
+        "description": "The value to set. For how the value is encoded in bytes, see Value encoding and normalization."
+      },
+      {
+        "name": "littleEndian",
+        "optional": true,
+        "description": "Indicates whether the data is stored in little- or big-endian format. If false or undefined, a big-endian value is written."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if the byteOffset is set such that it would store beyond the end of the view."
+      }
+    ]
+  },
+  {
+    "name": "DataView.prototype.setInt8()",
+    "description": "Takes a number and stores it as an 8-bit signed integer in the byte at the specified byte offset of this DataView.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/setInt8",
+    "return_value": "undefined.",
+    "parameters": [
+      {
+        "name": "byteOffset",
+        "optional": false,
+        "description": "The offset, in bytes, from the start of the view to store the data in."
+      },
+      {
+        "name": "value",
+        "optional": false,
+        "description": "The value to set. For how the value is encoded in bytes, see Value encoding and normalization."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if the byteOffset is set such that it would store beyond the end of the view."
+      }
+    ]
+  },
+  {
+    "name": "DataView.prototype.setUint16()",
+    "description": "Takes a number and stores it as a 16-bit unsigned integer in the 2 bytes at the specified byte offset of this DataView.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/setUint16",
+    "return_value": "undefined.",
+    "parameters": [
+      {
+        "name": "byteOffset",
+        "optional": false,
+        "description": "The offset, in bytes, from the start of the view to store the data in."
+      },
+      {
+        "name": "value",
+        "optional": false,
+        "description": "The value to set. For how the value is encoded in bytes, see Value encoding and normalization."
+      },
+      {
+        "name": "littleEndian",
+        "optional": true,
+        "description": "Indicates whether the data is stored in little- or big-endian format. If false or undefined, a big-endian value is written."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if the byteOffset is set such that it would store beyond the end of the view."
+      }
+    ]
+  },
+  {
+    "name": "DataView.prototype.setUint32()",
+    "description": "Takes a number and stores it as a 32-bit unsigned integer in the 4 bytes at the specified byte offset of this DataView.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/setUint32",
+    "return_value": "undefined.",
+    "parameters": [
+      {
+        "name": "byteOffset",
+        "optional": false,
+        "description": "The offset, in bytes, from the start of the view to store the data in."
+      },
+      {
+        "name": "value",
+        "optional": false,
+        "description": "The value to set. For how the value is encoded in bytes, see Value encoding and normalization."
+      },
+      {
+        "name": "littleEndian",
+        "optional": true,
+        "description": "Indicates whether the data is stored in little- or big-endian format. If false or undefined, a big-endian value is written."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if the byteOffset is set such that it would store beyond the end of the view."
+      }
+    ]
+  },
+  {
+    "name": "DataView.prototype.setUint8()",
+    "description": "Takes a number and stores it as an 8-bit unsigned integer in the byte at the specified byte offset of this DataView.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/setUint8",
+    "return_value": "undefined.",
+    "parameters": [
+      {
+        "name": "byteOffset",
+        "optional": false,
+        "description": "The offset, in bytes, from the start of the view to store the data in."
+      },
+      {
+        "name": "value",
+        "optional": false,
+        "description": "The value to set. For how the value is encoded in bytes, see Value encoding and normalization."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if the byteOffset is set such that it would store beyond the end of the view."
+      }
+    ]
+  }
+]

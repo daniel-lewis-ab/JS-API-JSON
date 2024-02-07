@@ -1,0 +1,163 @@
+[
+  {
+    "name": "Intl.PluralRules()",
+    "description": "Creates a new Intl.PluralRules object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules",
+    "parameters": [
+      {
+        "name": "locales",
+        "optional": true,
+        "description": "A string with a BCP 47 language tag or an Intl.Locale instance, or an array of such locale identifiers. For the general form and interpretation of the locales argument, see the parameter description on the Intl main page."
+      },
+      {
+        "name": "options",
+        "optional": true,
+        "description": "An object containing the following properties, in the order they are retrieved (all of them are optional):\n\nlocaleMatcher\n\nThe locale matching algorithm to use. Possible values are \"lookup\" and \"best fit\"; the default is \"best fit\". For information about this option, see Locale identification and negotiation.\n\ntype\n\nThe type to use. Possible values are:\n\n\"cardinal\" (default)\n\nFor cardinal numbers (referring to the quantity of things).\n\n\"ordinal\"\n\nFor ordinal number (referring to the ordering or ranking of things, e.g. \"1st\", \"2nd\", \"3rd\" in English).\n\n\n\n\nIntl.PluralRules also supports the Intl.NumberFormat() digit options (see Intl.NumberFormat() for details):\n\nminimumIntegerDigits\nminimumFractionDigits\nmaximumFractionDigits\nminimumSignificantDigits\nmaximumSignificantDigits\nroundingPriority\nroundingIncrement\nroundingMode\n\nThese options are interpreted as if the notation option from Intl.NumberFormat is \"standard\" and style is \"decimal\"."
+      },
+      {
+        "name": "localeMatcher",
+        "optional": false,
+        "description": "The locale matching algorithm to use. Possible values are \"lookup\" and \"best fit\"; the default is \"best fit\". For information about this option, see Locale identification and negotiation."
+      },
+      {
+        "name": "type",
+        "optional": false,
+        "description": "The type to use. Possible values are:\n\n\"cardinal\" (default)\n\nFor cardinal numbers (referring to the quantity of things).\n\n\"ordinal\"\n\nFor ordinal number (referring to the ordering or ranking of things, e.g. \"1st\", \"2nd\", \"3rd\" in English)."
+      },
+      {
+        "name": "\"cardinal\"",
+        "optional": false,
+        "description": "For cardinal numbers (referring to the quantity of things)."
+      },
+      {
+        "name": "\"ordinal\"",
+        "optional": false,
+        "description": "For ordinal number (referring to the ordering or ranking of things, e.g. \"1st\", \"2nd\", \"3rd\" in English)."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if locales or options contain invalid values."
+      }
+    ]
+  },
+  {
+    "name": "Intl.PluralRules.supportedLocalesOf()",
+    "description": "Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/supportedLocalesOf",
+    "return_value": "An array of strings representing a subset of the given locale tags that are supported in plural rules without having to fall back to the runtime's default locale.",
+    "parameters": [
+      {
+        "name": "locales",
+        "optional": false,
+        "description": "A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the locales argument, see the parameter description on the Intl main page."
+      },
+      {
+        "name": "options",
+        "optional": true,
+        "description": "An object that may have the following property:\n\nlocaleMatcher\n\nThe locale matching algorithm to use. Possible values are \"lookup\" and \"best fit\"; the default is \"best fit\". For information about this option, see the Intl page."
+      },
+      {
+        "name": "localeMatcher",
+        "optional": false,
+        "description": "The locale matching algorithm to use. Possible values are \"lookup\" and \"best fit\"; the default is \"best fit\". For information about this option, see the Intl page."
+      }
+    ]
+  },
+  {
+    "name": "Intl.PluralRules.prototype.constructor",
+    "description": "The constructor function that created the instance object. For Intl.PluralRules instances, the initial value is the Intl.PluralRules constructor.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor",
+    "parameters": []
+  },
+  {
+    "name": "Intl.PluralRules.prototype[@@toStringTag]",
+    "description": "The initial value of the @@toStringTag property is the string \"Intl.PluralRules\". This property is used in Object.prototype.toString().",
+    "link": "https://developer.mozilla.org/#intl.pluralrules.prototypetostringtag",
+    "parameters": []
+  },
+  {
+    "name": "Intl.PluralRules.prototype.resolvedOptions()",
+    "description": "Returns a new object with properties reflecting the locale and collation options computed during initialization of the object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/resolvedOptions",
+    "return_value": "A new object with properties reflecting the locale and plural formatting options computed during the initialization of the given Intl.PluralRules object.\nThe object has the following properties:\n\nlocale\n\nThe BCP 47 language tag for the locale actually used. If any Unicode extension values were requested in the input BCP 47 language tag that led to this locale, the key-value pairs that were requested and are supported for this locale are included in locale.\n\npluralCategories\n\nAn Array of plural categories used by the given locale, selected from the list \"zero\", \"one\", \"two\", \"few\", \"many\" and \"other\".\n\ntype\n\nThe type used (cardinal or ordinal).\n\nroundingMode \nExperimental\n\n\n\n      The rounding mode.\n      This is the value provided for the options.roundingMode argument in the constructor, or the default value: halfExpand.\n    \n\nroundingPriority \nExperimental\n\n\n\n      The priority for resolving rounding conflicts if both \"FractionDigits\" and \"SignificantDigits\" are specified.\n      This is the value provided for the options.roundingPriority argument in the constructor, or the default value: auto.\n    \n\nroundingIncrement \nExperimental\n\n\n\n      The rounding-increment precision (the increment used when rounding numbers).\n      This is the value specified in the options.roundingIncrement argument in the constructor.\n    \n\ntrailingZeroDisplay \nExperimental\n\n\n\n      The strategy for displaying trailing zeros on whole numbers.\n      This is the value specified in the options.trailingZeroDisplay argument in the constructor, or the default value: \"auto\".\n    \n\n\nOnly one of the following two groups of properties is included:\n\nminimumIntegerDigits, minimumFractionDigits, maximumFractionDigits\n\n\n      The values provided for these properties in the options argument or filled in as defaults.\n      These properties are present only if neither minimumSignificantDigits nor maximumSignificantDigits was provided in the options argument.\n    \n\nminimumSignificantDigits, maximumSignificantDigits\n\n\n      The values provided for these properties in the options argument or filled in as defaults.\n      These properties are present only if at least one of them was provided in the options argument.",
+    "parameters": [
+      {
+        "name": "locale",
+        "optional": false,
+        "description": "The BCP 47 language tag for the locale actually used. If any Unicode extension values were requested in the input BCP 47 language tag that led to this locale, the key-value pairs that were requested and are supported for this locale are included in locale."
+      },
+      {
+        "name": "pluralCategories",
+        "optional": false,
+        "description": "An Array of plural categories used by the given locale, selected from the list \"zero\", \"one\", \"two\", \"few\", \"many\" and \"other\"."
+      },
+      {
+        "name": "type",
+        "optional": false,
+        "description": "The type used (cardinal or ordinal)."
+      },
+      {
+        "name": "roundingMode",
+        "optional": false,
+        "description": "The rounding mode.\n      This is the value provided for the options.roundingMode argument in the constructor, or the default value: halfExpand."
+      },
+      {
+        "name": "roundingPriority",
+        "optional": false,
+        "description": "The priority for resolving rounding conflicts if both \"FractionDigits\" and \"SignificantDigits\" are specified.\n      This is the value provided for the options.roundingPriority argument in the constructor, or the default value: auto."
+      },
+      {
+        "name": "roundingIncrement",
+        "optional": false,
+        "description": "The rounding-increment precision (the increment used when rounding numbers).\n      This is the value specified in the options.roundingIncrement argument in the constructor."
+      },
+      {
+        "name": "trailingZeroDisplay",
+        "optional": false,
+        "description": "The strategy for displaying trailing zeros on whole numbers.\n      This is the value specified in the options.trailingZeroDisplay argument in the constructor, or the default value: \"auto\"."
+      },
+      {
+        "name": "minimumIntegerDigits",
+        "optional": false,
+        "description": "The values provided for these properties in the options argument or filled in as defaults.\n      These properties are present only if neither minimumSignificantDigits nor maximumSignificantDigits was provided in the options argument."
+      },
+      {
+        "name": "minimumSignificantDigits",
+        "optional": false,
+        "description": "The values provided for these properties in the options argument or filled in as defaults.\n      These properties are present only if at least one of them was provided in the options argument."
+      }
+    ]
+  },
+  {
+    "name": "Intl.PluralRules.prototype.select()",
+    "description": "Returns a string indicating which plural rule to use for locale-aware formatting.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/select",
+    "return_value": "A string representing the pluralization category of the number.\n  This can be one of zero, one, two, few, many, or other.",
+    "parameters": [
+      {
+        "name": "number",
+        "optional": false,
+        "description": "The number to get a plural rule for."
+      }
+    ]
+  },
+  {
+    "name": "Intl.PluralRules.prototype.selectRange()",
+    "description": "This method receives two values and returns a string indicating which plural rule to use for locale-aware formatting.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/selectRange",
+    "return_value": "A string representing the pluralization category of the specified range.\n  This can be one of zero, one, two, few, many or other, that are relevant for the locale whose localization is specified in LDML Language Plural Rules.",
+    "parameters": [
+      {
+        "name": "startRange",
+        "optional": false,
+        "description": "A number representing the start of the range."
+      },
+      {
+        "name": "endRange",
+        "optional": false,
+        "description": "A number representing the end of the range."
+      }
+    ]
+  }
+]

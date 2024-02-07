@@ -1,0 +1,544 @@
+[
+  {
+    "name": "Intl.Collator",
+    "description": "Constructor for collators, which are objects that enable language-sensitive string comparison.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator",
+    "parameters": [
+      {
+        "name": "Intl.Collator()",
+        "optional": false,
+        "description": "Creates a new Collator object."
+      },
+      {
+        "name": "Intl.Collator.supportedLocalesOf()",
+        "optional": false,
+        "description": "Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale."
+      },
+      {
+        "name": "Intl.Collator.prototype.constructor",
+        "optional": false,
+        "description": "The constructor function that created the instance object. For Intl.Collator instances, the initial value is the Intl.Collator constructor."
+      },
+      {
+        "name": "Intl.Collator.prototype[@@toStringTag]",
+        "optional": false,
+        "description": "The initial value of the @@toStringTag property is the string \"Intl.Collator\". This property is used in Object.prototype.toString()."
+      },
+      {
+        "name": "Intl.Collator.prototype.compare()",
+        "optional": false,
+        "description": "Getter function that compares two strings according to the sort order of this Intl.Collator object."
+      },
+      {
+        "name": "Intl.Collator.prototype.resolvedOptions()",
+        "optional": false,
+        "description": "Returns a new object with properties reflecting the locale and collation options computed during initialization of the object."
+      }
+    ]
+  },
+  {
+    "name": "Intl.DateTimeFormat",
+    "description": "Constructor for objects that enable language-sensitive date and time formatting.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat",
+    "parameters": [
+      {
+        "name": "Intl.DateTimeFormat()",
+        "optional": false,
+        "description": "Creates a new Intl.DateTimeFormat object."
+      },
+      {
+        "name": "Intl.DateTimeFormat.supportedLocalesOf()",
+        "optional": false,
+        "description": "Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale."
+      },
+      {
+        "name": "Intl.DateTimeFormat.prototype.constructor",
+        "optional": false,
+        "description": "The constructor function that created the instance object. For Intl.DateTimeFormat instances, the initial value is the Intl.DateTimeFormat constructor."
+      },
+      {
+        "name": "Intl.DateTimeFormat.prototype[@@toStringTag]",
+        "optional": false,
+        "description": "The initial value of the @@toStringTag property is the string \"Intl.DateTimeFormat\". This property is used in Object.prototype.toString()."
+      },
+      {
+        "name": "Intl.DateTimeFormat.prototype.format()",
+        "optional": false,
+        "description": "Getter function that formats a date according to the locale and formatting options of this DateTimeFormat object."
+      },
+      {
+        "name": "Intl.DateTimeFormat.prototype.formatRange()",
+        "optional": false,
+        "description": "This method receives two Dates and formats the date range in the most concise way based on the locale and options provided when instantiating DateTimeFormat."
+      },
+      {
+        "name": "Intl.DateTimeFormat.prototype.formatRangeToParts()",
+        "optional": false,
+        "description": "This method receives two Dates and returns an Array of objects containing the locale-specific tokens representing each part of the formatted date range."
+      },
+      {
+        "name": "Intl.DateTimeFormat.prototype.formatToParts()",
+        "optional": false,
+        "description": "Returns an Array of objects representing the date string in parts that can be used for custom locale-aware formatting."
+      },
+      {
+        "name": "Intl.DateTimeFormat.prototype.resolvedOptions()",
+        "optional": false,
+        "description": "Returns a new object with properties reflecting the locale and formatting options computed during initialization of the object."
+      }
+    ]
+  },
+  {
+    "name": "Intl.DisplayNames",
+    "description": "Constructor for objects that enable the consistent translation of language, region and script display names.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames",
+    "parameters": [
+      {
+        "name": "Intl.DisplayNames()",
+        "optional": false,
+        "description": "Creates a new Intl.DisplayNames object."
+      },
+      {
+        "name": "Intl.DisplayNames.supportedLocalesOf()",
+        "optional": false,
+        "description": "Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale."
+      },
+      {
+        "name": "Intl.DisplayNames.prototype.constructor",
+        "optional": false,
+        "description": "The constructor function that created the instance object. For Intl.DisplayNames instances, the initial value is the Intl.DisplayNames constructor."
+      },
+      {
+        "name": "Intl.DisplayNames.prototype[@@toStringTag]",
+        "optional": false,
+        "description": "The initial value of the @@toStringTag property is the string \"Intl.DisplayNames\". This property is used in Object.prototype.toString()."
+      },
+      {
+        "name": "Intl.DisplayNames.prototype.of()",
+        "optional": false,
+        "description": "This method receives a code and returns a string based on the locale and options provided when instantiating Intl.DisplayNames."
+      },
+      {
+        "name": "Intl.DisplayNames.prototype.resolvedOptions()",
+        "optional": false,
+        "description": "Returns a new object with properties reflecting the locale and formatting options computed during initialization of the object."
+      }
+    ]
+  },
+  {
+    "name": "Intl.DurationFormat",
+    "description": "Constructor for objects that enable locale-sensitive duration formatting.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat",
+    "parameters": [
+      {
+        "name": "Intl.DurationFormat()",
+        "optional": false,
+        "description": "Creates a new Intl.DurationFormat object."
+      },
+      {
+        "name": "Intl.DurationFormat.supportedLocalesOf()",
+        "optional": false,
+        "description": "Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale."
+      },
+      {
+        "name": "Intl.DurationFormat.prototype.constructor",
+        "optional": false,
+        "description": "The constructor function that created the instance object. For Intl.DurationFormat instances, the initial value is the Intl.DurationFormat constructor."
+      },
+      {
+        "name": "Intl.DurationFormat.prototype[@@toStringTag]",
+        "optional": false,
+        "description": "The initial value of the @@toStringTag property is the string \"Intl.DurationFormat\". This property is used in Object.prototype.toString()."
+      },
+      {
+        "name": "Intl.DurationFormat.prototype.format()",
+        "optional": false,
+        "description": "Getter function that formats a duration according to the locale and formatting options of this DurationFormat object."
+      },
+      {
+        "name": "Intl.DurationFormat.prototype.formatToParts()",
+        "optional": false,
+        "description": "Returns an Array of objects representing the formatted duration in parts."
+      },
+      {
+        "name": "Intl.DurationFormat.prototype.resolvedOptions()",
+        "optional": false,
+        "description": "Returns a new object with properties reflecting the locale and formatting options computed during initialization of the object."
+      }
+    ]
+  },
+  {
+    "name": "Intl.ListFormat",
+    "description": "Constructor for objects that enable language-sensitive list formatting.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat",
+    "parameters": [
+      {
+        "name": "Intl.ListFormat()",
+        "optional": false,
+        "description": "Creates a new Intl.ListFormat object."
+      },
+      {
+        "name": "Intl.ListFormat.supportedLocalesOf()",
+        "optional": false,
+        "description": "Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale."
+      },
+      {
+        "name": "Intl.ListFormat.prototype.constructor",
+        "optional": false,
+        "description": "The constructor function that created the instance object. For Intl.ListFormat instances, the initial value is the Intl.ListFormat constructor."
+      },
+      {
+        "name": "Intl.ListFormat.prototype[@@toStringTag]",
+        "optional": false,
+        "description": "The initial value of the @@toStringTag property is the string \"Intl.ListFormat\". This property is used in Object.prototype.toString()."
+      },
+      {
+        "name": "Intl.ListFormat.prototype.format()",
+        "optional": false,
+        "description": "Returns a language-specific formatted string representing the elements of the list."
+      },
+      {
+        "name": "Intl.ListFormat.prototype.formatToParts()",
+        "optional": false,
+        "description": "Returns an array of objects representing the different components that can be used to format a list of values in a locale-aware fashion."
+      },
+      {
+        "name": "Intl.ListFormat.prototype.resolvedOptions()",
+        "optional": false,
+        "description": "Returns a new object with properties reflecting the locale and style formatting options computed during the construction of the current Intl.ListFormat object."
+      }
+    ]
+  },
+  {
+    "name": "Intl.Locale",
+    "description": "Constructor for objects that represents a Unicode locale identifier.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale",
+    "parameters": [
+      {
+        "name": "Intl.Locale()",
+        "optional": false,
+        "description": "Creates a new Locale object."
+      },
+      {
+        "name": "Intl.Locale.prototype.baseName",
+        "optional": false,
+        "description": "Returns basic, core information about the Locale in the form of a substring of the complete data string."
+      },
+      {
+        "name": "Intl.Locale.prototype.calendar",
+        "optional": false,
+        "description": "Returns the part of the Locale that indicates the Locale's calendar era."
+      },
+      {
+        "name": "Intl.Locale.prototype.caseFirst",
+        "optional": false,
+        "description": "Returns whether case is taken into account for the locale's collation rules."
+      },
+      {
+        "name": "Intl.Locale.prototype.collation",
+        "optional": false,
+        "description": "Returns the collation type for the Locale, which is used to order strings according to the locale's rules."
+      },
+      {
+        "name": "Intl.Locale.prototype.constructor",
+        "optional": false,
+        "description": "The constructor function that created the instance object. For Intl.Locale instances, the initial value is the Intl.Locale constructor."
+      },
+      {
+        "name": "Intl.Locale.prototype.hourCycle",
+        "optional": false,
+        "description": "Returns the time keeping format convention used by the locale."
+      },
+      {
+        "name": "Intl.Locale.prototype.language",
+        "optional": false,
+        "description": "Returns the language associated with the locale."
+      },
+      {
+        "name": "Intl.Locale.prototype.numberingSystem",
+        "optional": false,
+        "description": "Returns the numeral system used by the locale."
+      },
+      {
+        "name": "Intl.Locale.prototype.numeric",
+        "optional": false,
+        "description": "Returns whether the locale has special collation handling for numeric characters."
+      },
+      {
+        "name": "Intl.Locale.prototype.region",
+        "optional": false,
+        "description": "Returns the region of the world (usually a country) associated with the locale."
+      },
+      {
+        "name": "Intl.Locale.prototype.script",
+        "optional": false,
+        "description": "Returns the script used for writing the particular language used in the locale."
+      },
+      {
+        "name": "Intl.Locale.prototype[@@toStringTag]",
+        "optional": false,
+        "description": "The initial value of the @@toStringTag property is the string \"Intl.Locale\". This property is used in Object.prototype.toString()."
+      },
+      {
+        "name": "Intl.Locale.prototype.getCalendars()",
+        "optional": false,
+        "description": "Returns an Array of available calendar identifiers, according to the locale's rules."
+      },
+      {
+        "name": "Intl.Locale.prototype.getCollations()",
+        "optional": false,
+        "description": "Returns an Array of the collation types for the Locale."
+      },
+      {
+        "name": "Intl.Locale.prototype.getHourCycles()",
+        "optional": false,
+        "description": "Returns an Array of hour cycle identifiers, indicating either the 12-hour clock (\"h12\"), the Japanese 12-hour clock (\"h11\"), the 24-hour clock (\"h23\"), or the unused format \"h24\"."
+      },
+      {
+        "name": "Intl.Locale.prototype.getNumberingSystems()",
+        "optional": false,
+        "description": "Returns an Array of numbering system identifiers available according to the locale's rules."
+      },
+      {
+        "name": "Intl.Locale.prototype.getTextInfo()",
+        "optional": false,
+        "description": "Returns the part indicating the ordering of characters ltr (left-to-right) or rtl (right-to-left)."
+      },
+      {
+        "name": "Intl.Locale.prototype.getTimeZones()",
+        "optional": false,
+        "description": "Returns an Array of time zone identifiers, associated with the Locale."
+      },
+      {
+        "name": "Intl.Locale.prototype.getWeekInfo()",
+        "optional": false,
+        "description": "Returns UTS 35's Week Elements according to the locale rules."
+      },
+      {
+        "name": "Intl.Locale.prototype.maximize()",
+        "optional": false,
+        "description": "Gets the most likely values for the language, script, and region of the locale based on existing values."
+      },
+      {
+        "name": "Intl.Locale.prototype.minimize()",
+        "optional": false,
+        "description": "Attempts to remove information about the locale that would be added by calling maximize()."
+      },
+      {
+        "name": "Intl.Locale.prototype.toString()",
+        "optional": false,
+        "description": "Returns the Locale's full locale identifier string."
+      }
+    ]
+  },
+  {
+    "name": "Intl.NumberFormat",
+    "description": "Constructor for objects that enable language-sensitive number formatting.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat",
+    "parameters": [
+      {
+        "name": "Intl.NumberFormat()",
+        "optional": false,
+        "description": "Creates a new NumberFormat object."
+      },
+      {
+        "name": "Intl.NumberFormat.supportedLocalesOf()",
+        "optional": false,
+        "description": "Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale."
+      },
+      {
+        "name": "Intl.NumberFormat.prototype.constructor",
+        "optional": false,
+        "description": "The constructor function that created the instance object. For Intl.NumberFormat instances, the initial value is the Intl.NumberFormat constructor."
+      },
+      {
+        "name": "Intl.NumberFormat.prototype[@@toStringTag]",
+        "optional": false,
+        "description": "The initial value of the @@toStringTag property is the string \"Intl.NumberFormat\". This property is used in Object.prototype.toString()."
+      },
+      {
+        "name": "Intl.NumberFormat.prototype.format()",
+        "optional": false,
+        "description": "Getter function that formats a number according to the locale and formatting options of this Intl.NumberFormat object."
+      },
+      {
+        "name": "Intl.NumberFormat.prototype.formatRange()",
+        "optional": false,
+        "description": "Getter function that formats a range of numbers according to the locale and formatting options of the Intl.NumberFormat object from which the method is called."
+      },
+      {
+        "name": "Intl.NumberFormat.prototype.formatRangeToParts()",
+        "optional": false,
+        "description": "Returns an Array of objects representing the range of number strings in parts that can be used for custom locale-aware formatting."
+      },
+      {
+        "name": "Intl.NumberFormat.prototype.formatToParts()",
+        "optional": false,
+        "description": "Returns an Array of objects representing the number string in parts that can be used for custom locale-aware formatting."
+      },
+      {
+        "name": "Intl.NumberFormat.prototype.resolvedOptions()",
+        "optional": false,
+        "description": "Returns a new object with properties reflecting the locale and collation options computed during initialization of the object."
+      }
+    ]
+  },
+  {
+    "name": "Intl.PluralRules",
+    "description": "Constructor for objects that enable plural-sensitive formatting and language-specific rules for plurals.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules",
+    "parameters": [
+      {
+        "name": "Intl.PluralRules()",
+        "optional": false,
+        "description": "Creates a new Intl.PluralRules object."
+      },
+      {
+        "name": "Intl.PluralRules.supportedLocalesOf()",
+        "optional": false,
+        "description": "Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale."
+      },
+      {
+        "name": "Intl.PluralRules.prototype.constructor",
+        "optional": false,
+        "description": "The constructor function that created the instance object. For Intl.PluralRules instances, the initial value is the Intl.PluralRules constructor."
+      },
+      {
+        "name": "Intl.PluralRules.prototype[@@toStringTag]",
+        "optional": false,
+        "description": "The initial value of the @@toStringTag property is the string \"Intl.PluralRules\". This property is used in Object.prototype.toString()."
+      },
+      {
+        "name": "Intl.PluralRules.prototype.resolvedOptions()",
+        "optional": false,
+        "description": "Returns a new object with properties reflecting the locale and collation options computed during initialization of the object."
+      },
+      {
+        "name": "Intl.PluralRules.prototype.select()",
+        "optional": false,
+        "description": "Returns a string indicating which plural rule to use for locale-aware formatting."
+      },
+      {
+        "name": "Intl.PluralRules.prototype.selectRange()",
+        "optional": false,
+        "description": "This method receives two values and returns a string indicating which plural rule to use for locale-aware formatting."
+      }
+    ]
+  },
+  {
+    "name": "Intl.RelativeTimeFormat",
+    "description": "Constructor for objects that enable language-sensitive relative time formatting.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat",
+    "parameters": [
+      {
+        "name": "Intl.RelativeTimeFormat()",
+        "optional": false,
+        "description": "Creates a new Intl.RelativeTimeFormat object."
+      },
+      {
+        "name": "Intl.RelativeTimeFormat.supportedLocalesOf()",
+        "optional": false,
+        "description": "Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale."
+      },
+      {
+        "name": "Intl.RelativeTimeFormat.prototype.constructor",
+        "optional": false,
+        "description": "The constructor function that created the instance object. For Intl.RelativeTimeFormat instances, the initial value is the Intl.RelativeTimeFormat constructor."
+      },
+      {
+        "name": "Intl.RelativeTimeFormat.prototype[@@toStringTag]",
+        "optional": false,
+        "description": "The initial value of the @@toStringTag property is the string \"Intl.RelativeTimeFormat\". This property is used in Object.prototype.toString()."
+      },
+      {
+        "name": "Intl.RelativeTimeFormat.prototype.format()",
+        "optional": false,
+        "description": "Formats a value and a unit according to the locale and formatting options of the given Intl.RelativeTimeFormat object."
+      },
+      {
+        "name": "Intl.RelativeTimeFormat.prototype.formatToParts()",
+        "optional": false,
+        "description": "Returns an Array of objects representing the relative time format in parts that can be used for custom locale-aware formatting."
+      },
+      {
+        "name": "Intl.RelativeTimeFormat.prototype.resolvedOptions()",
+        "optional": false,
+        "description": "Returns a new object with properties reflecting the locale and formatting options computed during initialization of the object."
+      }
+    ]
+  },
+  {
+    "name": "Intl.Segmenter",
+    "description": "Constructor for objects that enable locale-sensitive text segmentation.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter",
+    "parameters": [
+      {
+        "name": "Intl.Segmenter()",
+        "optional": false,
+        "description": "Creates a new Intl.Segmenter object."
+      },
+      {
+        "name": "Intl.Segmenter.supportedLocalesOf()",
+        "optional": false,
+        "description": "Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale."
+      },
+      {
+        "name": "Intl.Segmenter.prototype.constructor",
+        "optional": false,
+        "description": "The constructor function that created the instance object. For Intl.Segmenter instances, the initial value is the Intl.Segmenter constructor."
+      },
+      {
+        "name": "Intl.Segmenter.prototype[@@toStringTag]",
+        "optional": false,
+        "description": "The initial value of the @@toStringTag property is the string \"Intl.Segmenter\". This property is used in Object.prototype.toString()."
+      },
+      {
+        "name": "Intl.Segmenter.prototype.resolvedOptions()",
+        "optional": false,
+        "description": "Returns a new object with properties reflecting the locale and granularity options computed during initialization of this Intl.Segmenter object."
+      },
+      {
+        "name": "Intl.Segmenter.prototype.segment()",
+        "optional": false,
+        "description": "Returns a new iterable Segments instance representing the segments of a string according to the locale and granularity of this Intl.Segmenter instance."
+      }
+    ]
+  },
+  {
+    "name": "Intl[@@toStringTag]",
+    "description": "The initial value of the @@toStringTag property is the string \"Intl\". This property is used in Object.prototype.toString().",
+    "link": "https://developer.mozilla.org/#intltostringtag",
+    "parameters": []
+  },
+  {
+    "name": "Intl.getCanonicalLocales()",
+    "description": "Returns canonical locale names.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/getCanonicalLocales",
+    "return_value": "An array containing the canonical locale names.",
+    "parameters": [
+      {
+        "name": "locales",
+        "optional": false,
+        "description": "A list of String values for which to get the canonical locale names."
+      }
+    ]
+  },
+  {
+    "name": "Intl.supportedValuesOf()",
+    "description": "Returns a sorted array containing the supported unique calendar, collation, currency, numbering systems, or unit values supported by the implementation.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf",
+    "return_value": "A sorted array of unique string values indicating the values supported by the implementation for the given key.",
+    "parameters": [
+      {
+        "name": "key",
+        "optional": false,
+        "description": "A key string indicating the category of values to be returned. This is one of: \"calendar\", \"collation\", \"currency\", \"numberingSystem\", \"timeZone\", \"unit\"."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if an unsupported key was passed as a parameter."
+      }
+    ]
+  }
+]

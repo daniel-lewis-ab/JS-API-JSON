@@ -1,0 +1,26 @@
+[
+  {
+    "name": "AsyncGeneratorFunction()",
+    "description": "Creates a new AsyncGeneratorFunction object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction/AsyncGeneratorFunction",
+    "parameters": []
+  },
+  {
+    "name": "AsyncGeneratorFunction.prototype.constructor",
+    "description": "The constructor function that created the instance object. For AsyncGeneratorFunction instances, the initial value is the AsyncGeneratorFunction constructor.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor",
+    "parameters": []
+  },
+  {
+    "name": "AsyncGeneratorFunction.prototype.prototype",
+    "description": "All async generator functions share the same prototype property, which is AsyncGenerator.prototype. Each async generator function instance also has its own prototype property. When the async generator function is called, the returned async generator object inherits from the async generator function's prototype property, which in turn inherits from AsyncGeneratorFunction.prototype.prototype.",
+    "link": "https://developer.mozilla.org/#asyncgeneratorfunction.prototype.prototype",
+    "parameters": []
+  },
+  {
+    "name": "AsyncGeneratorFunction.prototype[@@toStringTag]",
+    "description": "The initial value of the @@toStringTag property is the string \"AsyncGeneratorFunction\". This property is used in Object.prototype.toString().",
+    "link": "https://developer.mozilla.org/#asyncgeneratorfunction.prototypetostringtag",
+    "parameters": []
+  }
+]

@@ -1,0 +1,8 @@
+[
+  {
+    "name": "script",
+    "description": "A string representing a JavaScript expression, statement, or sequence of statements. The expression can include variables and properties of existing objects. It will be parsed as a script, so import declarations (which can only exist in modules) are not allowed.",
+    "link": "https://developer.mozilla.org/#script",
+    "parameters": []
+  }
+]

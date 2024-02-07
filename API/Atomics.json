@@ -1,0 +1,437 @@
+[
+  {
+    "name": "Atomics[@@toStringTag]",
+    "description": "The initial value of the @@toStringTag property is the string \"Atomics\". This property is used in Object.prototype.toString().",
+    "link": "https://developer.mozilla.org/#atomicstostringtag",
+    "parameters": []
+  },
+  {
+    "name": "Atomics.add()",
+    "description": "Adds the provided value to the existing value at the specified index of the array. Returns the old value at that index.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/add",
+    "return_value": "The old value at the given position\n  (typedArray[index]).",
+    "parameters": [
+      {
+        "name": "typedArray",
+        "optional": false,
+        "description": "An integer typed array. One of Int8Array, Uint8Array,\n      Int16Array, Uint16Array, Int32Array,\n      Uint32Array, BigInt64Array, or\n      BigUint64Array."
+      },
+      {
+        "name": "index",
+        "optional": false,
+        "description": "The position in the typedArray to add a\n      value to."
+      },
+      {
+        "name": "value",
+        "optional": false,
+        "description": "The number to add."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown if typedArray is not one of the allowed integer types."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if index is out of bounds in the typedArray."
+      }
+    ]
+  },
+  {
+    "name": "Atomics.and()",
+    "description": "Computes a bitwise AND on the value at the specified index of the array with the provided value. Returns the old value at that index.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/and",
+    "return_value": "The old value at the given position\n  (typedArray[index]).",
+    "parameters": [
+      {
+        "name": "typedArray",
+        "optional": false,
+        "description": "An integer typed array. One of Int8Array, Uint8Array,\n      Int16Array, Uint16Array, Int32Array,\n      Uint32Array, BigInt64Array, or\n      BigUint64Array."
+      },
+      {
+        "name": "index",
+        "optional": false,
+        "description": "The position in the typedArray to compute the bitwise AND."
+      },
+      {
+        "name": "value",
+        "optional": false,
+        "description": "The number to compute the bitwise AND with."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown if typedArray is not one of the allowed integer types."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if index is out of bounds in the typedArray."
+      }
+    ]
+  },
+  {
+    "name": "Atomics.compareExchange()",
+    "description": "Stores a value at the specified index of the array, if it equals a value. Returns the old value.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/compareExchange",
+    "return_value": "The old value at the given position (typedArray[index]).",
+    "parameters": [
+      {
+        "name": "typedArray",
+        "optional": false,
+        "description": "An integer typed array. One of Int8Array, Uint8Array, Int16Array, Uint16Array, Int32Array, Uint32Array, BigInt64Array, or BigUint64Array."
+      },
+      {
+        "name": "index",
+        "optional": false,
+        "description": "The position in the typedArray to exchange a replacementValue."
+      },
+      {
+        "name": "expectedValue",
+        "optional": false,
+        "description": "The value to check for equality."
+      },
+      {
+        "name": "replacementValue",
+        "optional": false,
+        "description": "The number to exchange."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown if typedArray is not one of the allowed integer types."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if index is out of bounds in the typedArray."
+      }
+    ]
+  },
+  {
+    "name": "Atomics.exchange()",
+    "description": "Stores a value at the specified index of the array. Returns the old value.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/exchange",
+    "return_value": "The old value at the given position (typedArray[index]).",
+    "parameters": [
+      {
+        "name": "typedArray",
+        "optional": false,
+        "description": "An integer typed array. One of Int8Array, Uint8Array, Int16Array, Uint16Array, Int32Array, Uint32Array, BigInt64Array, or BigUint64Array."
+      },
+      {
+        "name": "index",
+        "optional": false,
+        "description": "The position in the typedArray to exchange a value."
+      },
+      {
+        "name": "value",
+        "optional": false,
+        "description": "The number to exchange."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown if typedArray is not one of the allowed integer types."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if index is out of bounds in the typedArray."
+      }
+    ]
+  },
+  {
+    "name": "Atomics.isLockFree()",
+    "description": "An optimization primitive that can be used to determine whether to use locks or atomic operations. Returns true if an atomic operation on arrays of the given element size will be implemented using a hardware atomic operation (as opposed to a lock). Experts only.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/isLockFree",
+    "return_value": "A true or false value indicating whether the operation is lock free.",
+    "parameters": [
+      {
+        "name": "size",
+        "optional": false,
+        "description": "The size in bytes to check."
+      }
+    ]
+  },
+  {
+    "name": "Atomics.load()",
+    "description": "Returns the value at the specified index of the array.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/load",
+    "return_value": "The value at the given position (typedArray[index]).",
+    "parameters": [
+      {
+        "name": "typedArray",
+        "optional": false,
+        "description": "An integer typed array. One of Int8Array, Uint8Array,\n      Int16Array, Uint16Array, Int32Array,\n      Uint32Array, BigInt64Array, or\n      BigUint64Array."
+      },
+      {
+        "name": "index",
+        "optional": false,
+        "description": "The position in the typedArray to load from."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown if typedArray is not one of the allowed integer types."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if index is out of bounds in the typedArray."
+      }
+    ]
+  },
+  {
+    "name": "Atomics.notify()",
+    "description": "Notifies agents that are waiting on the specified index of the array. Returns the number of agents that were notified.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/notify",
+    "return_value": "Returns the number of woken up agents.\nReturns 0, if a non-shared ArrayBuffer object is used.",
+    "parameters": [
+      {
+        "name": "typedArray",
+        "optional": false,
+        "description": "An Int32Array or BigInt64Array that views a SharedArrayBuffer."
+      },
+      {
+        "name": "index",
+        "optional": false,
+        "description": "The position in the typedArray to wake up on."
+      },
+      {
+        "name": "count",
+        "optional": true,
+        "description": "The number of sleeping agents to notify. Defaults to Infinity."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown if typedArray is not an Int32Array or BigInt64Array that views a SharedArrayBuffer."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if index is out of bounds in the typedArray."
+      }
+    ]
+  },
+  {
+    "name": "Atomics.or()",
+    "description": "Computes a bitwise OR on the value at the specified index of the array with the provided value. Returns the old value at that index.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/or",
+    "return_value": "The old value at the given position\n  (typedArray[index]).",
+    "parameters": [
+      {
+        "name": "typedArray",
+        "optional": false,
+        "description": "An integer typed array. One of Int8Array, Uint8Array,\n      Int16Array, Uint16Array, Int32Array,\n      Uint32Array, BigInt64Array, or\n      BigUint64Array."
+      },
+      {
+        "name": "index",
+        "optional": false,
+        "description": "The position in the typedArray to compute the bitwise OR."
+      },
+      {
+        "name": "value",
+        "optional": false,
+        "description": "The number to compute the bitwise OR with."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown if typedArray is not one of the allowed integer types."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if index is out of bounds in the typedArray."
+      }
+    ]
+  },
+  {
+    "name": "Atomics.store()",
+    "description": "Stores a value at the specified index of the array. Returns the value.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/store",
+    "return_value": "The value that has been stored.",
+    "parameters": [
+      {
+        "name": "typedArray",
+        "optional": false,
+        "description": "An integer typed array. One of Int8Array, Uint8Array,\n      Int16Array, Uint16Array, Int32Array,\n      Uint32Array, BigInt64Array, or\n      BigUint64Array."
+      },
+      {
+        "name": "index",
+        "optional": false,
+        "description": "The position in the typedArray to store a\n      value in."
+      },
+      {
+        "name": "value",
+        "optional": false,
+        "description": "The number to store."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown if typedArray is not one of the allowed integer types."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if index is out of bounds in the typedArray."
+      }
+    ]
+  },
+  {
+    "name": "Atomics.sub()",
+    "description": "Subtracts a value at the specified index of the array. Returns the old value at that index.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/sub",
+    "return_value": "The old value at the given position\n  (typedArray[index]).",
+    "parameters": [
+      {
+        "name": "typedArray",
+        "optional": false,
+        "description": "An integer typed array. One of Int8Array, Uint8Array,\n      Int16Array, Uint16Array, Int32Array,\n      Uint32Array, BigInt64Array, or\n      BigUint64Array."
+      },
+      {
+        "name": "index",
+        "optional": false,
+        "description": "The position in the typedArray to subtract a\n      value from."
+      },
+      {
+        "name": "value",
+        "optional": false,
+        "description": "The number to subtract."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown if typedArray is not one of the allowed integer types."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if index is out of bounds in the typedArray."
+      }
+    ]
+  },
+  {
+    "name": "Atomics.wait()",
+    "description": "Verifies that the specified index of the array still contains a value and sleeps awaiting or times out. Returns either \"ok\", \"not-equal\", or \"timed-out\". If waiting is not allowed in the calling agent then it throws an exception. (Most browsers will not allow wait() on the browser's main thread.)",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/wait",
+    "return_value": "A string which is either \"ok\", \"not-equal\", or \"timed-out\".",
+    "parameters": [
+      {
+        "name": "typedArray",
+        "optional": false,
+        "description": "An Int32Array or BigInt64Array that views a SharedArrayBuffer."
+      },
+      {
+        "name": "index",
+        "optional": false,
+        "description": "The position in the typedArray to wait on."
+      },
+      {
+        "name": "value",
+        "optional": false,
+        "description": "The expected value to test."
+      },
+      {
+        "name": "timeout",
+        "optional": true,
+        "description": "Time to wait in milliseconds. NaN (and values that get converted to NaN, such as undefined) becomes Infinity. Negative values become 0."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown in one of the following cases:\n\nIf typedArray is not an Int32Array or BigInt64Array that views a SharedArrayBuffer.\nIf the current thread cannot be blocked (for example, because it's the main thread)."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if index is out of bounds in the typedArray."
+      }
+    ]
+  },
+  {
+    "name": "Atomics.waitAsync()",
+    "description": "Waits asynchronously (i.e. without blocking, unlike Atomics.wait) on a shared memory location and returns a Promise.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/waitAsync",
+    "return_value": "An Object with the following properties:\n\nasync\n\nA boolean indicating whether the value property is a Promise or not.\n\nvalue\n\nIf async is false, it will be a string which is either \"not-equal\" or \"timed-out\" (only when the timeout parameter is 0). If async is true, it will be a Promise which is fulfilled with a string value, either \"ok\" or \"timed-out\". The promise is never rejected.",
+    "parameters": [
+      {
+        "name": "typedArray",
+        "optional": false,
+        "description": "An Int32Array or BigInt64Array that views a SharedArrayBuffer."
+      },
+      {
+        "name": "index",
+        "optional": false,
+        "description": "The position in the typedArray to wait on."
+      },
+      {
+        "name": "value",
+        "optional": false,
+        "description": "The expected value to test."
+      },
+      {
+        "name": "timeout",
+        "optional": true,
+        "description": "Time to wait in milliseconds. NaN (and values that get converted to NaN, such as undefined) becomes Infinity. Negative values become 0."
+      },
+      {
+        "name": "async",
+        "optional": false,
+        "description": "A boolean indicating whether the value property is a Promise or not."
+      },
+      {
+        "name": "value",
+        "optional": false,
+        "description": "If async is false, it will be a string which is either \"not-equal\" or \"timed-out\" (only when the timeout parameter is 0). If async is true, it will be a Promise which is fulfilled with a string value, either \"ok\" or \"timed-out\". The promise is never rejected."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown if typedArray is not an Int32Array or BigInt64Array that views a SharedArrayBuffer."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if index is out of bounds in the typedArray."
+      }
+    ]
+  },
+  {
+    "name": "Atomics.xor()",
+    "description": "Computes a bitwise XOR on the value at the specified index of the array with the provided value. Returns the old value at that index.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/xor",
+    "return_value": "The old value at the given position (typedArray[index]).",
+    "parameters": [
+      {
+        "name": "typedArray",
+        "optional": false,
+        "description": "An integer typed array. One of Int8Array, Uint8Array,\n      Int16Array, Uint16Array, Int32Array,\n      Uint32Array, BigInt64Array, or\n      BigUint64Array."
+      },
+      {
+        "name": "index",
+        "optional": false,
+        "description": "The position in the typedArray to compute the bitwise XOR."
+      },
+      {
+        "name": "value",
+        "optional": false,
+        "description": "The number to compute the bitwise XOR with."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown if typedArray is not one of the allowed integer types."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if index is out of bounds in the typedArray."
+      }
+    ]
+  }
+]

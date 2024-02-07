@@ -1,0 +1,112 @@
+[
+  {
+    "name": "Proxy()",
+    "description": "Creates a new Proxy object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy",
+    "parameters": [
+      {
+        "name": "target",
+        "optional": false,
+        "description": "A target object to wrap with Proxy. It can be any sort of object,\n      including a native array, a function, or even another proxy."
+      },
+      {
+        "name": "handler",
+        "optional": false,
+        "description": "An object whose properties are functions that define the behavior of the proxy when\n      an operation is performed on it."
+      },
+      {
+        "name": "handler.apply()",
+        "optional": false,
+        "description": "A trap for a function call."
+      },
+      {
+        "name": "handler.construct()",
+        "optional": false,
+        "description": "A trap for the new operator."
+      },
+      {
+        "name": "handler.defineProperty()",
+        "optional": false,
+        "description": "A trap for Object.defineProperty."
+      },
+      {
+        "name": "handler.deleteProperty()",
+        "optional": false,
+        "description": "A trap for the delete operator."
+      },
+      {
+        "name": "handler.get()",
+        "optional": false,
+        "description": "A trap for getting property values."
+      },
+      {
+        "name": "handler.getOwnPropertyDescriptor()",
+        "optional": false,
+        "description": "A trap for Object.getOwnPropertyDescriptor."
+      },
+      {
+        "name": "handler.getPrototypeOf()",
+        "optional": false,
+        "description": "A trap for Object.getPrototypeOf."
+      },
+      {
+        "name": "handler.has()",
+        "optional": false,
+        "description": "A trap for the in operator."
+      },
+      {
+        "name": "handler.isExtensible()",
+        "optional": false,
+        "description": "A trap for Object.isExtensible."
+      },
+      {
+        "name": "handler.ownKeys()",
+        "optional": false,
+        "description": "A trap for Object.getOwnPropertyNames and\n      Object.getOwnPropertySymbols."
+      },
+      {
+        "name": "handler.preventExtensions()",
+        "optional": false,
+        "description": "A trap for Object.preventExtensions."
+      },
+      {
+        "name": "handler.set()",
+        "optional": false,
+        "description": "A trap for setting property values."
+      },
+      {
+        "name": "handler.setPrototypeOf()",
+        "optional": false,
+        "description": "A trap for Object.setPrototypeOf."
+      }
+    ]
+  },
+  {
+    "name": "Proxy.revocable()",
+    "description": "Creates a revocable Proxy object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/revocable",
+    "return_value": "A plain object with the following two properties:\n\nproxy\n\nA Proxy object exactly the same as one created with a new Proxy(target, handler) call.\n\nrevoke\n\nA function with no parameters to revoke (switch off) the proxy.",
+    "parameters": [
+      {
+        "name": "target",
+        "optional": false,
+        "description": "A target object to wrap with Proxy. It can be any sort of object, including a native array, a function, or even another proxy."
+      },
+      {
+        "name": "handler",
+        "optional": false,
+        "description": "An object whose properties are functions defining the behavior of proxy when an operation is performed on it."
+      },
+      {
+        "name": "proxy",
+        "optional": false,
+        "description": "A Proxy object exactly the same as one created with a new Proxy(target, handler) call."
+      },
+      {
+        "name": "revoke",
+        "optional": false,
+        "description": "A function with no parameters to revoke (switch off) the proxy."
+      }
+    ]
+  }
+]

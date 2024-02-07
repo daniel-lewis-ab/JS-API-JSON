@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Boolean()",
+    "description": "Creates a new Boolean object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean/Boolean",
+    "return_value": "When Boolean() is called as a constructor (with new), it creates a Boolean object, which is not a primitive.\nWhen Boolean() is called as a function (without new), it coerces the parameter to a boolean primitive.\n\nWarning: You should rarely find yourself using Boolean as a constructor.",
+    "parameters": [
+      {
+        "name": "value",
+        "optional": false,
+        "description": "The initial value of the Boolean object."
+      }
+    ]
+  },
+  {
+    "name": "Boolean.prototype.constructor",
+    "description": "The constructor function that created the instance object. For Boolean instances, the initial value is the Boolean constructor.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor",
+    "parameters": []
+  },
+  {
+    "name": "Boolean.prototype.toString()",
+    "description": "Returns a string of either true or false depending upon the value of the object. Overrides the Object.prototype.toString() method.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean/toString",
+    "return_value": "A string representing the specified boolean value.",
+    "parameters": []
+  },
+  {
+    "name": "Boolean.prototype.valueOf()",
+    "description": "Returns the primitive value of the Boolean object. Overrides the Object.prototype.valueOf() method.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean/valueOf",
+    "return_value": "The primitive value of the given Boolean object.",
+    "parameters": []
+  }
+]

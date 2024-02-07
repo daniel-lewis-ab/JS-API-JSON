@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Uint8Array()",
+    "description": "Creates a new Uint8Array object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array/Uint8Array",
+    "parameters": []
+  },
+  {
+    "name": "Uint8Array.BYTES_PER_ELEMENT",
+    "description": "Returns a number value of the element size. 1 in the case of Uint8Array.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT",
+    "parameters": []
+  },
+  {
+    "name": "Uint8Array.prototype.BYTES_PER_ELEMENT",
+    "description": "Returns a number value of the element size. 1 in the case of a Uint8Array.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT",
+    "parameters": []
+  },
+  {
+    "name": "Uint8Array.prototype.constructor",
+    "description": "The constructor function that created the instance object. For Uint8Array instances, the initial value is the Uint8Array constructor.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor",
+    "parameters": []
+  }
+]

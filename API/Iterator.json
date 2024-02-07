@@ -1,0 +1,316 @@
+[
+  {
+    "name": "next()",
+    "description": "Calls the next() method of the underlying iterator, applies the helper method to the result, and returns the result.",
+    "link": "https://developer.mozilla.org/#next",
+    "parameters": []
+  },
+  {
+    "name": "return()",
+    "description": "Calls the return() method of the underlying iterator, and returns the result.",
+    "link": "https://developer.mozilla.org/#return",
+    "parameters": []
+  },
+  {
+    "name": "Iterator()",
+    "description": "Intended to be extended by other classes that create iterators. Throws an error when constructed by itself.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/Iterator",
+    "return_value": "A new Iterator object.",
+    "parameters": [
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "When new.target is the Iterator function itself, i.e. when the Iterator constructor itself is constructed."
+      }
+    ]
+  },
+  {
+    "name": "Iterator.from()",
+    "description": "Creates a new Iterator object from an iterator or iterable object.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/from",
+    "return_value": "If object is an iterable, its @@iterator method is called to obtain the iterator. Otherwise, object is assumed to be an iterator. If the iterator is already instanceof Iterator (which means it has Iterator.prototype in its prototype chain), it is returned directly. Otherwise, a new Iterator object is created that wraps the original iterator.",
+    "parameters": [
+      {
+        "name": "object",
+        "optional": false,
+        "description": "An object that implements the iterable protocol or the iterator protocol."
+      },
+      {
+        "name": "next()",
+        "optional": false,
+        "description": "Calls the underlying iterator's next() method and returns the result."
+      },
+      {
+        "name": "return()",
+        "optional": false,
+        "description": "Calls the underlying iterator's return() method and returns the result, or returns { value: undefined, done: true } if the underlying iterator doesn't have a return() method."
+      }
+    ]
+  },
+  {
+    "name": "Iterator.prototype.constructor",
+    "description": "The constructor function that created the instance object. For Iterator instances, the initial value is the Iterator constructor.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor",
+    "parameters": []
+  },
+  {
+    "name": "Iterator.prototype[@@toStringTag]",
+    "description": "The initial value of the @@toStringTag property is the string \"Iterator\". This property is used in Object.prototype.toString().",
+    "link": "https://developer.mozilla.org/#iterator.prototypetostringtag",
+    "parameters": []
+  },
+  {
+    "name": "Iterator.prototype.drop()",
+    "description": "Returns a new iterator helper that skips the given number of elements at the start of this iterator.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/drop",
+    "return_value": "A new iterator helper. The first time the returned iterator helper's next() method is called, the current iterator is immediately advanced by limit elements, and then the next element (the limit+1-th element) is yielded. The iterator helper then yields the remaining elements one-by-one. If the current iterator has fewer than limit elements, the new iterator helper will be immediately completed the first time next() is called.",
+    "parameters": [
+      {
+        "name": "limit",
+        "optional": false,
+        "description": "The number of elements to drop from the start of the iteration."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if limit becomes NaN or negative when converted to an integer."
+      }
+    ]
+  },
+  {
+    "name": "Iterator.prototype.every()",
+    "description": "Tests whether all elements produced by the iterator pass the test implemented by the provided function.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/every",
+    "return_value": "true if callbackFn returns a truthy value for every element. Otherwise, false.",
+    "parameters": [
+      {
+        "name": "callbackFn",
+        "optional": false,
+        "description": "A function to execute for each element produced by the iterator. It should return a truthy value to indicate the element passes the test, and a falsy value otherwise. The function is called with the following arguments:\n\nelement\n\nThe current element being processed.\n\nindex\n\nThe index of the current element being processed."
+      },
+      {
+        "name": "element",
+        "optional": false,
+        "description": "The current element being processed."
+      },
+      {
+        "name": "index",
+        "optional": false,
+        "description": "The index of the current element being processed."
+      }
+    ]
+  },
+  {
+    "name": "Iterator.prototype.filter()",
+    "description": "Returns a new iterator helper that yields only those elements of the iterator for which the provided callback function returns true.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/filter",
+    "return_value": "A new iterator helper. Each time the iterator helper's next() method is called, it returns the next element in the iterator for which the callback function returns true. When the underlying iterator is completed, the iterator helper is also completed (the next() method produces { value: undefined, done: true }).",
+    "parameters": [
+      {
+        "name": "callbackFn",
+        "optional": false,
+        "description": "A function to execute for each element produced by the iterator. It should return a truthy value to make the element yielded by the iterator helper, and a falsy value otherwise. The function is called with the following arguments:\n\nelement\n\nThe current element being processed.\n\nindex\n\nThe index of the current element being processed."
+      },
+      {
+        "name": "element",
+        "optional": false,
+        "description": "The current element being processed."
+      },
+      {
+        "name": "index",
+        "optional": false,
+        "description": "The index of the current element being processed."
+      }
+    ]
+  },
+  {
+    "name": "Iterator.prototype.find()",
+    "description": "Returns the first element produced by the iterator that satisfies the provided testing function. If no values satisfy the testing function, undefined is returned.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/find",
+    "return_value": "The first element produced by the iterator that satisfies the provided testing function. Otherwise, undefined is returned.",
+    "parameters": [
+      {
+        "name": "callbackFn",
+        "optional": false,
+        "description": "A function to execute for each element produced by the iterator. It should return a truthy value to indicate a matching element has been found, and a falsy value otherwise. The function is called with the following arguments:\n\nelement\n\nThe current element being processed.\n\nindex\n\nThe index of the current element being processed."
+      },
+      {
+        "name": "element",
+        "optional": false,
+        "description": "The current element being processed."
+      },
+      {
+        "name": "index",
+        "optional": false,
+        "description": "The index of the current element being processed."
+      }
+    ]
+  },
+  {
+    "name": "Iterator.prototype.flatMap()",
+    "description": "Returns a new iterator helper that takes each element in the original iterator, runs it through a mapping function, and yields elements returned by the mapping function (which are contained in another iterator or iterable).",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/flatMap",
+    "return_value": "A new iterator helper. The first time the iterator helper's next() method is called, it calls callbackFn on the first element produced by the underlying iterator, and the return value, which should be an iterator or iterable, is yielded one-by-one by the iterator helper (like yield*). The next element is fetched from the underlying iterator when the previous one returned by callbackFn is completed. When the underlying iterator is completed, the iterator helper is also completed (the next() method produces { value: undefined, done: true }).",
+    "parameters": [
+      {
+        "name": "callbackFn",
+        "optional": false,
+        "description": "A function to execute for each element produced by the iterator. It should return an iterator or iterable that yields elements to be yielded by flatMap(), or a single non-iterator/iterable value to be yielded. The function is called with the following arguments:\n\nelement\n\nThe current element being processed in the array.\n\nindex\n\nThe index of the current element being processed in the array."
+      },
+      {
+        "name": "element",
+        "optional": false,
+        "description": "The current element being processed in the array."
+      },
+      {
+        "name": "index",
+        "optional": false,
+        "description": "The index of the current element being processed in the array."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown if callbackFn returns a non-iterator/iterable value or a string primitive."
+      }
+    ]
+  },
+  {
+    "name": "Iterator.prototype.forEach()",
+    "description": "Executes a provided function once for each element produced by the iterator.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/forEach",
+    "return_value": "undefined.",
+    "parameters": [
+      {
+        "name": "callbackFn",
+        "optional": false,
+        "description": "A function to execute for each element produced by the iterator. Its return value is discarded. The function is called with the following arguments:\n\nelement\n\nThe current element being processed.\n\nindex\n\nThe index of the current element being processed."
+      },
+      {
+        "name": "element",
+        "optional": false,
+        "description": "The current element being processed."
+      },
+      {
+        "name": "index",
+        "optional": false,
+        "description": "The index of the current element being processed."
+      }
+    ]
+  },
+  {
+    "name": "Iterator.prototype.map()",
+    "description": "Returns a new iterator helper that yields elements of the iterator, each transformed by a mapping function.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/map",
+    "return_value": "A new iterator helper. Each time the iterator helper's next() method is called, it gets the next element from the underlying iterator, applies callbackFn, and yields the return value. When the underlying iterator is completed, the iterator helper is also completed (the next() method produces { value: undefined, done: true }).",
+    "parameters": [
+      {
+        "name": "callbackFn",
+        "optional": false,
+        "description": "A function to execute for each element produced by the iterator. Its return value is yielded by the iterator helper. The function is called with the following arguments:\n\nelement\n\nThe current element being processed.\n\nindex\n\nThe index of the current element being processed."
+      },
+      {
+        "name": "element",
+        "optional": false,
+        "description": "The current element being processed."
+      },
+      {
+        "name": "index",
+        "optional": false,
+        "description": "The index of the current element being processed."
+      }
+    ]
+  },
+  {
+    "name": "Iterator.prototype.reduce()",
+    "description": "Executes a user-supplied \"reducer\" callback function on each element produced by the iterator, passing in the return value from the calculation on the preceding element. The final result of running the reducer across all elements is a single value.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/reduce",
+    "return_value": "The value that results from running the \"reducer\" callback function to completion over the entire iterator.",
+    "parameters": [
+      {
+        "name": "callbackFn",
+        "optional": false,
+        "description": "A function to execute for each element produced by the iterator. Its return value becomes the value of the accumulator parameter on the next invocation of callbackFn. For the last invocation, the return value becomes the return value of reduce(). The function is called with the following arguments:\n\naccumulator\n\nThe value resulting from the previous call to callbackFn. On the first call, its value is initialValue if the latter is specified; otherwise its value is the first element of the iterator.\n\ncurrentValue\n\nThe value of the current element. On the first call, its value is the first element of the iterator if initialValue is specified; otherwise its value is the second element.\n\ncurrentIndex\n\nThe index position of currentValue. On the first call, its value is 0 if initialValue is specified, otherwise 1."
+      },
+      {
+        "name": "accumulator",
+        "optional": false,
+        "description": "The value resulting from the previous call to callbackFn. On the first call, its value is initialValue if the latter is specified; otherwise its value is the first element of the iterator."
+      },
+      {
+        "name": "currentValue",
+        "optional": false,
+        "description": "The value of the current element. On the first call, its value is the first element of the iterator if initialValue is specified; otherwise its value is the second element."
+      },
+      {
+        "name": "currentIndex",
+        "optional": false,
+        "description": "The index position of currentValue. On the first call, its value is 0 if initialValue is specified, otherwise 1."
+      },
+      {
+        "name": "initialValue",
+        "optional": true,
+        "description": "A value to which accumulator is initialized the first time the callback is called. If initialValue is specified, callbackFn starts executing with the first element as currentValue. If initialValue is not specified, accumulator is initialized to the first element, and callbackFn starts executing with the second element as currentValue. In this case, if the iterator is empty (so that there's no first value to return as accumulator), an error is thrown."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown if the iterator contains no elements and initialValue is not provided."
+      }
+    ]
+  },
+  {
+    "name": "Iterator.prototype.some()",
+    "description": "Tests whether at least one element in the iterator passes the test implemented by the provided function. It returns a boolean value.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/some",
+    "return_value": "true if the callback function returns a truthy value for at least one element. Otherwise, false.",
+    "parameters": [
+      {
+        "name": "callbackFn",
+        "optional": false,
+        "description": "A function to execute for each element produced by the iterator. It should return a truthy value to indicate the element passes the test, and a falsy value otherwise. The function is called with the following arguments:\n\nelement\n\nThe current element being processed.\n\nindex\n\nThe index of the current element being processed."
+      },
+      {
+        "name": "element",
+        "optional": false,
+        "description": "The current element being processed."
+      },
+      {
+        "name": "index",
+        "optional": false,
+        "description": "The index of the current element being processed."
+      }
+    ]
+  },
+  {
+    "name": "Iterator.prototype.take()",
+    "description": "Returns a new iterator helper that yields the given number of elements in this iterator and then terminates.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/take",
+    "return_value": "A new iterator helper. The returned iterator helper yields the elements in the original iterator one-by-one, and then completes (the next() method produces { value: undefined, done: true }) once limit elements have been yielded, or when the original iterator is exhausted, whichever comes first.",
+    "parameters": [
+      {
+        "name": "limit",
+        "optional": false,
+        "description": "The number of elements to take from the start of the iteration."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if limit becomes NaN or negative when converted to an integer."
+      }
+    ]
+  },
+  {
+    "name": "Iterator.prototype.toArray()",
+    "description": "Creates a new Array instance populated with the elements yielded from the iterator.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/toArray",
+    "return_value": "A new Array instance containing the elements from the iterator in the order they were produced.",
+    "parameters": []
+  },
+  {
+    "name": "Iterator.prototype[@@iterator]()",
+    "description": "Returns the iterator object itself. This allows iterator objects to also be iterable.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/@@iterator",
+    "return_value": "The value of this, which is the iterator object itself.",
+    "parameters": []
+  }
+]

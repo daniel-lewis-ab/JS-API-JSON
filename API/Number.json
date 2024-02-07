@@ -1,0 +1,259 @@
+[
+  {
+    "name": "Number()",
+    "description": "Creates a new Number value.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/Number",
+    "return_value": "When Number is called as a constructor (with new), it creates a Number object, which is not a primitive.\nWhen Number is called as a function, it coerces the parameter to a number primitive. BigInts are converted to numbers. If the value can't be converted, it returns NaN.\n\nWarning: You should rarely find yourself using Number as a constructor.",
+    "parameters": [
+      {
+        "name": "value",
+        "optional": false,
+        "description": "The numeric value of the object being created."
+      }
+    ]
+  },
+  {
+    "name": "Number.EPSILON",
+    "description": "The smallest interval between two representable numbers.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/EPSILON",
+    "parameters": []
+  },
+  {
+    "name": "Number.MAX_SAFE_INTEGER",
+    "description": "The maximum safe integer in JavaScript (253 - 1).",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER",
+    "parameters": []
+  },
+  {
+    "name": "Number.MAX_VALUE",
+    "description": "The largest positive representable number.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE",
+    "parameters": []
+  },
+  {
+    "name": "Number.MIN_SAFE_INTEGER",
+    "description": "The minimum safe integer in JavaScript (-(253 - 1)).",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER",
+    "parameters": []
+  },
+  {
+    "name": "Number.MIN_VALUE",
+    "description": "The smallest positive representable number\u00e2\u0080\u0094that is, the positive number closest to zero (without actually being zero).",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MIN_VALUE",
+    "parameters": []
+  },
+  {
+    "name": "Number.NaN",
+    "description": "Special \"Not a Number\" value.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/NaN",
+    "parameters": []
+  },
+  {
+    "name": "Number.NEGATIVE_INFINITY",
+    "description": "Special value representing negative infinity. Returned on overflow.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY",
+    "parameters": []
+  },
+  {
+    "name": "Number.POSITIVE_INFINITY",
+    "description": "Special value representing infinity. Returned on overflow.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY",
+    "parameters": []
+  },
+  {
+    "name": "Number.isFinite()",
+    "description": "Determine whether the passed value is a finite number.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isFinite",
+    "return_value": "The boolean value true if the given value is a finite number. Otherwise false.",
+    "parameters": [
+      {
+        "name": "value",
+        "optional": false,
+        "description": "The value to be tested for finiteness."
+      }
+    ]
+  },
+  {
+    "name": "Number.isInteger()",
+    "description": "Determine whether the passed value is an integer.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isInteger",
+    "return_value": "The boolean value true if the given value is an integer. Otherwise false.",
+    "parameters": [
+      {
+        "name": "value",
+        "optional": false,
+        "description": "The value to be tested for being an integer."
+      }
+    ]
+  },
+  {
+    "name": "Number.isNaN()",
+    "description": "Determine whether the passed value is NaN.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN",
+    "return_value": "The boolean value true if the given value is a number with value NaN. Otherwise, false.",
+    "parameters": [
+      {
+        "name": "value",
+        "optional": false,
+        "description": "The value to be tested for NaN."
+      }
+    ]
+  },
+  {
+    "name": "Number.isSafeInteger()",
+    "description": "Determine whether the passed value is a safe integer (number between -(253 - 1) and 253 - 1).",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger",
+    "return_value": "The boolean value true if the given value is a number that is a safe integer. Otherwise false.",
+    "parameters": [
+      {
+        "name": "testValue",
+        "optional": false,
+        "description": "The value to be tested for being a safe integer."
+      }
+    ]
+  },
+  {
+    "name": "Number.parseFloat()",
+    "description": "This is the same as the global parseFloat() function.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/parseFloat",
+    "return_value": "A floating point number parsed from the given string.\nOr NaN when the first non-whitespace character cannot be converted to a number.",
+    "parameters": [
+      {
+        "name": "string",
+        "optional": false,
+        "description": "The value to parse, coerced to a string. Leading whitespace in this argument is ignored."
+      }
+    ]
+  },
+  {
+    "name": "Number.parseInt()",
+    "description": "This is the same as the global parseInt() function.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/parseInt",
+    "return_value": "An integer parsed from the given string.\n\n  If the radix is smaller than 2 or bigger than\n  36, or the first non-whitespace character cannot be converted to a number,\n  NaN is returned.",
+    "parameters": [
+      {
+        "name": "string",
+        "optional": false,
+        "description": "The value to parse, coerced to a string. Leading whitespace in this argument is ignored."
+      },
+      {
+        "name": "radix",
+        "optional": true,
+        "description": "An integer between 2 and 36 that represents the\n      radix (the base in mathematical numeral systems) of the\n      string.\n    \nIf radix is undefined or 0, it is assumed to be 10 except when the number begins with the code unit pairs 0x or 0X, in which case a radix of 16 is assumed."
+      }
+    ]
+  },
+  {
+    "name": "Number.prototype.constructor",
+    "description": "The constructor function that created the instance object. For Number instances, the initial value is the Number constructor.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor",
+    "parameters": []
+  },
+  {
+    "name": "Number.prototype.toExponential()",
+    "description": "Returns a string representing the number in exponential notation.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toExponential",
+    "return_value": "A string representing the given Number object in exponential notation\n  with one digit before the decimal point, rounded to\n  fractionDigits digits after the decimal point.",
+    "parameters": [
+      {
+        "name": "fractionDigits",
+        "optional": true,
+        "description": "Optional. An integer specifying the number of digits after the decimal point.\n      Defaults to as many digits as necessary to specify the number."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if fractionDigits is not between 0 and 100 (inclusive)."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown if this method is invoked on an object that is not a Number."
+      }
+    ]
+  },
+  {
+    "name": "Number.prototype.toFixed()",
+    "description": "Returns a string representing the number in fixed-point notation.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed",
+    "return_value": "A string representing the given number using fixed-point notation.",
+    "parameters": [
+      {
+        "name": "digits",
+        "optional": true,
+        "description": "The number of digits to appear after the decimal point; should be a value between 0 and 100, inclusive. If this argument is omitted, it is treated as 0."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if digits is not between 0 and 100 (inclusive)."
+      },
+      {
+        "name": "TypeError",
+        "optional": false,
+        "description": "Thrown if this method is invoked on an object that is not a Number."
+      }
+    ]
+  },
+  {
+    "name": "Number.prototype.toLocaleString()",
+    "description": "Returns a string with a language sensitive representation of this number. Overrides the Object.prototype.toLocaleString() method.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString",
+    "return_value": "A string representing the given number according to language-specific conventions.\nIn implementations with Intl.NumberFormat, this is equivalent to new Intl.NumberFormat(locales, options).format(number).\n\nNote: Most of the time, the formatting returned by toLocaleString() is consistent. However, the output may vary with time, language, and implementation \u00e2\u0080\u0094 output variations are by design and allowed by the specification. You should not compare the results of toLocaleString() to static values.",
+    "parameters": [
+      {
+        "name": "locales",
+        "optional": true,
+        "description": "A string with a BCP 47 language tag, or an array of such strings. Corresponds to the locales parameter of the Intl.NumberFormat() constructor.\nIn implementations without Intl.NumberFormat support, this parameter is ignored and the host's locale is usually used."
+      },
+      {
+        "name": "options",
+        "optional": true,
+        "description": "An object adjusting the output format. Corresponds to the options parameter of the Intl.NumberFormat() constructor.\nIn implementations without Intl.NumberFormat support, this parameter is ignored."
+      }
+    ]
+  },
+  {
+    "name": "Number.prototype.toPrecision()",
+    "description": "Returns a string representing the number to a specified precision in fixed-point or exponential notation.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toPrecision",
+    "return_value": "A string representing a Number object in fixed-point or exponential\n  notation rounded to precision significant digits. See the discussion of\n  rounding in the description of the Number.prototype.toFixed() method,\n  which also applies to toPrecision().\n\n\n  If the precision argument is omitted, behaves as\n  Number.prototype.toString(). If the precision argument is a\n  non-integer value, it is rounded to the nearest integer.",
+    "parameters": [
+      {
+        "name": "precision",
+        "optional": true,
+        "description": "An integer specifying the number of significant digits."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if precision is not between 1 and 100 (inclusive)."
+      }
+    ]
+  },
+  {
+    "name": "Number.prototype.toString()",
+    "description": "Returns a string representing the specified object in the specified radix (\"base\"). Overrides the Object.prototype.toString() method.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString",
+    "return_value": "A string representing the specified number value.",
+    "parameters": [
+      {
+        "name": "radix",
+        "optional": true,
+        "description": "An integer in the range 2 through 36 specifying the base to use for representing the number value. Defaults to 10."
+      },
+      {
+        "name": "RangeError",
+        "optional": false,
+        "description": "Thrown if radix is less than 2 or greater than 36."
+      }
+    ]
+  },
+  {
+    "name": "Number.prototype.valueOf()",
+    "description": "Returns the primitive value of the specified object. Overrides the Object.prototype.valueOf() method.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/valueOf",
+    "return_value": "A number representing the primitive value of the specified Number object.",
+    "parameters": []
+  }
+]
